@@ -9,14 +9,14 @@ import { isObject } from '@frontend/utils';
 import { Item } from '../models';
 import { ItemService } from '../services/item.service';
 
-export abstract class ItemDetailBaseComponent extends BaseComponent
-  implements OnInit, OnDestroy {
+export abstract class ItemDetailBaseComponent extends BaseComponent implements OnInit, OnDestroy {
+
   public item: Item;
 
   constructor(
     protected log: LogService,
     protected itemService: ItemService,
-    protected route: ActivatedRoute
+    protected route: ActivatedRoute,
   ) {
     super();
   }

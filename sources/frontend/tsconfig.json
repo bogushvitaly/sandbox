@@ -24,11 +24,36 @@
       ],
       "@frontend/web/*": [
         "xplat/web/*"
+      ],
+      "@frontend/electron": [
+        "xplat/electron/index.ts"
+      ],
+      "@frontend/electron/*": [
+        "xplat/electron/*"
+      ],
+      "@frontend/ionic": [
+        "xplat/ionic/index.ts"
+      ],
+      "@frontend/ionic/*": [
+        "xplat/ionic/*"
+      ],
+      "@frontend/nativescript": [
+        "xplat/nativescript/index.ts"
+      ],
+      "@frontend/nativescript/*": [
+        "xplat/nativescript/*"
+      ],
+      "@frontend/nest": [
+        "xplat/nest/index.ts"
+      ],
+      "@frontend/nest/*": [
+        "xplat/nest/*"
       ]
     }
   },
   "exclude": [
     "node_modules",
-    "tmp"
+    "tmp",
+    "references.d.ts"
   ]
 }

@@ -5,6 +5,4 @@ import { InjectionToken, Type } from '@angular/core';
  * Always suffix with 'Token' for clarity and consistency
  */
 
-export const PlatformLanguageToken = new InjectionToken<string>(
-  'PlatformLanguage'
-);
+export const PlatformLanguageToken = new InjectionToken<string>('PlatformLanguage');

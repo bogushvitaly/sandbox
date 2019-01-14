@@ -17,11 +17,7 @@ export class WindowPlatformService {
     return 0;
   }
   public clearTimeout(timeoutId: number) {}
-  public setInterval(
-    handler: (...args: any[]) => void,
-    ms?: number,
-    ...args: any[]
-  ) {
+  public setInterval(handler: (...args: any[]) => void, ms?: number, ...args: any[]) {
     return 0;
   }
   public clearInterval(intervalId: number) {}
@@ -31,6 +27,7 @@ export class WindowPlatformService {
 
 @Injectable()
 export class WindowService {
+
   constructor(private _platformWindow: WindowPlatformService) {}
 
   public get navigator() {
@@ -61,15 +58,9 @@ export class WindowService {
     });
   }
 
-  public confirm(
-    msg: any,
-    action?: Function /* used for fancyalerts on mobile*/
-  ): Promise<any> {
+  public confirm(msg: any, action?: Function /* used for fancyalerts on mobile*/): Promise<any> {
     return new Promise((resolve, reject) => {
-      const result: any = (<any>this._platformWindow).confirm(
-        msg,
-        isNativeScript() ? action : undefined
-      );
+      const result: any = (<any>this._platformWindow).confirm(msg, isNativeScript() ? action : undefined);
       if (isObject(result) && result.then) {
         result.then(resolve, reject);
       } else if (result) {
@@ -80,10 +71,7 @@ export class WindowService {
     });
   }
 
-  public setTimeout(
-    handler: (...args: any[]) => void,
-    timeout?: number
-  ): number {
+  public setTimeout(handler: (...args: any[]) => void, timeout?: number): number {
     return this._platformWindow.setTimeout(handler, timeout);
   }
 
@@ -91,11 +79,7 @@ export class WindowService {
     return this._platformWindow.clearTimeout(timeoutId);
   }
 
-  public setInterval(
-    handler: (...args: any[]) => void,
-    ms?: number,
-    ...args: any[]
-  ): number {
+  public setInterval(handler: (...args: any[]) => void, ms?: number, ...args: any[]): number {
     return this._platformWindow.setInterval(handler, ms, args);
   }
 

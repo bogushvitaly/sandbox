@@ -7,11 +7,7 @@ export interface IRouteBase {
   base: string;
 }
 
-export function routeBase(
-  lazyLoad: IRouteBase,
-  additional: Routes = [],
-  redirectTo: string = homePath
-): Routes {
+export function routeBase(lazyLoad: IRouteBase, additional: Routes = [], redirectTo: string = homePath): Routes {
   return [
     {
       path: environment.baseRoutePath,
@@ -29,7 +25,7 @@ export function routeItems(index: any, detail: any): Routes {
     },
     {
       path: ':id',
-      component: detail
-    }
+      component: detail,
+    },
   ];
 }

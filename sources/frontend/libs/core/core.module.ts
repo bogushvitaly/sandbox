@@ -1,10 +1,4 @@
-import {
-  ModuleWithProviders,
-  NgModule,
-  Optional,
-  SkipSelf,
-  Inject
-} from '@angular/core';
+import { ModuleWithProviders, NgModule, Optional, SkipSelf, Inject } from '@angular/core';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
 
 // libs
@@ -31,7 +25,10 @@ export const BASE_PROVIDERS: any[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, NxModule.forRoot()]
+  imports: [
+    CommonModule,
+    NxModule.forRoot()
+  ]
 })
 export class CoreModule {
   // configuredProviders: *required to configure WindowService and others per platform
@@ -50,7 +47,7 @@ export class CoreModule {
     translate: TranslateService
   ) {
     throwIfAlreadyLoaded(parentModule, 'CoreModule');
-
+    
     // ensure default platform language is set
     translate.use(lang);
   }
