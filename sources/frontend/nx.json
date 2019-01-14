@@ -13,6 +13,12 @@
     },
     "xplat": {
       "tags": []
+    },
+    "web-application": {
+      "tags": []
+    },
+    "web-application-e2e": {
+      "tags": []
     }
   }
 }
