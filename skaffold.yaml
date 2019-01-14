@@ -1,0 +1,13 @@
+apiVersion: skaffold/v1beta2
+kind: Config
+build:
+  artifacts:
+    - image: gcr.io/sandbox-228621/sandbox-backend
+      context: ./sources/backend/
+    - image: gcr.io/sandbox-228621/sandbox-frontend
+      context: ./sources/frontend/
+deploy:
+  kubectl:
+    manifests:
+      - ./sources/backend/k8s/*
+      - ./sources/frontend/k8s/*
