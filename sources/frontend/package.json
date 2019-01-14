@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "frontend",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "workspace-schematic": "./node_modules/.bin/nx workspace-schematic",
     "dep-graph": "./node_modules/.bin/nx dep-graph",
     "help": "./node_modules/.bin/nx help",
-    "dev": "nodemon index.js"
+    "clean.shared": "cd libs/ && git clean -dfX && cd ../xplat/ && git clean -dfX"
   },
   "private": true,
   "dependencies": {
@@ -48,7 +48,11 @@
     "shelljs": "0.8.3",
     "sync-files": "1.0.3",
     "webpack-bundle-analyzer": "3.0.3",
-    "zone.js": "0.8.27"
+    "zone.js": "0.8.27",
+    "@ngx-translate/core": "11.0.0",
+    "@ngx-translate/http-loader": "4.0.0",
+    "@frontend/scss": "file:libs/scss",
+    "reflect-metadata": "0.1.12"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.12.1",
@@ -84,5 +88,8 @@
     "tslint": "5.12.1",
     "typescript": "3.2.2",
     "wait-on": "3.2.0"
+  },
+  "xplat": {
+    "prefix": "app"
   }
 }
