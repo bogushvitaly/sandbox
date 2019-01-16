@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 // xplat
 import { AppBaseComponent } from '@frontend/web';
 

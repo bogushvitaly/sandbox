@@ -1,17 +1,16 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-
-// libs
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { throwIfAlreadyLoaded } from '@frontend/utils';
 import {
   CoreModule,
   PlatformLanguageToken,
   WindowPlatformService
 } from '@frontend/core';
 import { ITEM_PROVIDERS } from '@frontend/features';
+import { throwIfAlreadyLoaded } from '@frontend/utils';
+// libs
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // bring in custom web services here...
 

@@ -1,7 +1,17 @@
 /**
  * Element tag overrides
  */
-body {
-  padding: 0;
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 0;
+  margin: 0;
+  padding: 0;
 }

@@ -1,8 +1,7 @@
-FROM node:8.12.0-alpine
+FROM node:alpine
 
-WORKDIR /opt/backend
-EXPOSE 9000
-CMD ["npm", "run", "dev"]
+WORKDIR /opt/app
 
-COPY . .
-RUN npm install
+COPY dist /opt/app/dist
+
+CMD [ "/opt/app/dist/apps/api/main.js" ]

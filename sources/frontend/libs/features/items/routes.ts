@@ -1,22 +1,5 @@
 import { Routes } from '@angular/router';
 
-import { environment } from '@frontend/core';
-const homePath = `/${environment.baseRoutePath}`;
-
-export interface IRouteBase {
-  base: string;
-}
-
-export function routeBase(lazyLoad: IRouteBase, additional: Routes = [], redirectTo: string = homePath): Routes {
-  return [
-    {
-      path: environment.baseRoutePath,
-      loadChildren: lazyLoad.base
-    },
-    ...additional
-  ];
-}
-
 export function routeItems(index: any, detail: any): Routes {
   return [
     {
@@ -25,7 +8,7 @@ export function routeItems(index: any, detail: any): Routes {
     },
     {
       path: ':id',
-      component: detail,
-    },
+      component: detail
+    }
   ];
 }

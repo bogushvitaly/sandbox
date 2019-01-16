@@ -1,4 +1,4 @@
-image: busybox:latest
+image: bohushvitali/frontend-ci
 
 stages:
   - build
@@ -6,11 +6,6 @@ stages:
   - staging
   - analyze
   - deploy
-
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - sources/frontend/node_modules/
 
 before_script:
   - echo "Before script section"

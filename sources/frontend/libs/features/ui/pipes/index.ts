@@ -1,5 +1,3 @@
 import { DateOrderPipe } from './date-order.pipe';
 
-export const PIPES = [
-  DateOrderPipe
-];
+export const PIPES = [DateOrderPipe];

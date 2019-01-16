@@ -1,7 +1,6 @@
 // angular
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 // libs
 import { routeBase } from '@frontend/features';
 
@@ -13,7 +12,11 @@ import { SharedModule } from './features/shared/shared.module';
     SharedModule,
     RouterModule.forRoot(
       routeBase({
-        base: './features/items/items.loader.module#ItemsLoaderModule'
+        base: './features/shell/shell.loader.module#ShellLoaderModule',
+        items: './features/items/items.loader.module#ItemsLoaderModule',
+        version: './features/version/version.loader.module#VersionLoaderModule',
+        authorization:
+          './features/authorization/authorization.loader.module#AuthorizationLoaderModule'
       }),
       { preloadingStrategy: PreloadAllModules }
     )

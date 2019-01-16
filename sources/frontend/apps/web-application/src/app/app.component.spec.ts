@@ -1,15 +1,10 @@
-import { TestBed, async } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
-import {
-  HttpClientTestingModule,
-  HttpTestingController
-} from '@angular/common/http/testing';
-import {
-  TranslateLoader,
-  TranslateModule,
-  TranslateService
-} from '@ngx-translate/core';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { async, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 import { AppComponent } from './app.component';
 
 const translationsEn = require('../assets/i18n/en.json');
@@ -31,7 +26,8 @@ describe('AppComponent', () => {
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
           }
-        })
+        }),
+        RouterTestingModule
       ],
       declarations: [AppComponent],
       providers: [TranslateService]
@@ -43,22 +39,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-  it('should render title in a h1 tag', async(() => {
-    spyOn(translate, 'getBrowserLang').and.returnValue('en');
-    translate.use('en');
-    const fixture = TestBed.createComponent(AppComponent);
-    const compiled = fixture.debugElement.nativeElement;
-
-    // the DOM should be empty for now since the translations haven't been rendered yet
-    expect(compiled.querySelector('h1').textContent).toEqual('');
-
-    http.expectOne('/assets/i18n/en.json').flush(translationsEn);
-
-    // Finally, assert that there are no outstanding requests.
-    http.verify();
-    fixture.detectChanges();
-
-    expect(compiled.querySelector('h1').textContent).toContain('Hello xplat');
   }));
 });

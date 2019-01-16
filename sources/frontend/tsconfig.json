@@ -7,53 +7,26 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@frontend/*": [
-        "libs/*"
+      "@frontend/web-application/environment/*": [
+        "apps/web-application/src/environments/*"
       ],
-      "@frontend/web": [
-        "xplat/web/index.ts"
-      ],
-      "@frontend/web/*": [
-        "xplat/web/*"
-      ],
-      "@frontend/electron": [
-        "xplat/electron/index.ts"
-      ],
-      "@frontend/electron/*": [
-        "xplat/electron/*"
-      ],
-      "@frontend/ionic": [
-        "xplat/ionic/index.ts"
-      ],
-      "@frontend/ionic/*": [
-        "xplat/ionic/*"
-      ],
-      "@frontend/nativescript": [
-        "xplat/nativescript/index.ts"
-      ],
-      "@frontend/nativescript/*": [
-        "xplat/nativescript/*"
-      ],
-      "@frontend/nest": [
-        "xplat/nest/index.ts"
-      ],
-      "@frontend/nest/*": [
-        "xplat/nest/*"
-      ]
+      "@frontend/version": ["libs/features/version/data/index.ts"],
+      "@frontend/*": ["libs/*"],
+      "@frontend/web": ["xplat/web/index.ts"],
+      "@frontend/web/*": ["xplat/web/*"],
+      "@frontend/electron": ["xplat/electron/index.ts"],
+      "@frontend/electron/*": ["xplat/electron/*"],
+      "@frontend/ionic": ["xplat/ionic/index.ts"],
+      "@frontend/ionic/*": ["xplat/ionic/*"],
+      "@frontend/nativescript": ["xplat/nativescript/index.ts"],
+      "@frontend/nativescript/*": ["xplat/nativescript/*"],
+      "@frontend/nest": ["xplat/nest/index.ts"],
+      "@frontend/nest/*": ["xplat/nest/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp",
-    "references.d.ts"
-  ]
+  "exclude": ["node_modules", "tmp", "references.d.ts"]
 }

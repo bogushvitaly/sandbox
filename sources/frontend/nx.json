@@ -19,6 +19,12 @@
     },
     "web-application-e2e": {
       "tags": []
+    },
+    "nest-application": {
+      "tags": []
+    },
+    "web-application-ssr": {
+      "tags": []
     }
   }
 }

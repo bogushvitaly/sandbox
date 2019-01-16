@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 // xplat
 import { UIModule } from '@frontend/web';
 
