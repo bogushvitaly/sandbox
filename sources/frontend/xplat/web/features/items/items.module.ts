@@ -1,22 +1,14 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
 // libs
 import { routeItems } from '@frontend/features';
-import { UIModule } from '../ui/ui.module';
 
+import { UIModule } from '../ui/ui.module';
 // app
-import {
-  ITEM_COMPONENTS,
-  ItemsComponent,
-  ItemDetailComponent
-} from './components';
+import { ITEM_COMPONENTS, ItemDetailComponent, ItemsComponent } from './components';
 
 @NgModule({
-  imports: [
-    UIModule,
-    RouterModule.forChild(routeItems(ItemsComponent, ItemDetailComponent))
-  ],
+  imports: [UIModule, RouterModule.forChild(routeItems(ItemsComponent, ItemDetailComponent))],
   declarations: [...ITEM_COMPONENTS],
   schemas: [NO_ERRORS_SCHEMA]
 })

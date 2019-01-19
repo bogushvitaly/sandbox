@@ -9,4 +9,3 @@ export * from './demo-design-patterns';
 export * from './demo-covalent-ui';
 export * from './demo-angular-material';
 export * from './authorization';
-

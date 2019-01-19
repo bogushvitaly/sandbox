@@ -2,10 +2,7 @@ import { of as observableOf } from 'rxjs';
 
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
-import {
-  MatTreeFlatDataSource,
-  MatTreeFlattener
-} from '@angular/material/tree';
+import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { TreeBaseComponent } from '@frontend/features';
 
 import { files } from './example-data';
@@ -45,18 +42,10 @@ export class TreeComponent extends TreeBaseComponent {
 
   constructor() {
     super();
-    this.treeFlattener = new MatTreeFlattener(
-      this.transformer,
-      this.getLevel,
-      this.isExpandable,
-      this.getChildren
-    );
+    this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
 
     this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-    this.dataSource = new MatTreeFlatDataSource(
-      this.treeControl,
-      this.treeFlattener
-    );
+    this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
     this.dataSource.data = files;
   }
 
@@ -65,7 +54,7 @@ export class TreeComponent extends TreeBaseComponent {
     return {
       name: node.name,
       type: node.type,
-      level: level,
+      level,
       expandable: !!node.children
     };
   }

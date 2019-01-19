@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "node",
+      "webpack-env"
+    ],
+    "resolveJsonModule": true,
+  },
+  "exclude": ["node_modules"],
+  "include": ["../apps/storybook/src/stories/**/*", "./*"]
+}

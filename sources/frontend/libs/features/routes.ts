@@ -10,11 +10,7 @@ export interface IRouteBase {
   authorization: string;
 }
 
-export function routeBase(
-  lazyLoad: IRouteBase,
-  additional: Routes = [],
-  redirectTo: string = homePath
-): Routes {
+export function routeBase(lazyLoad: IRouteBase, additional: Routes = [], redirectTo: string = homePath): Routes {
   return [
     {
       path: environment.baseRoutePath,
@@ -32,6 +28,7 @@ export function routeBase(
       path: environment.authorizationRoutePath,
       loadChildren: lazyLoad.authorization
     },
+    { path: '**', pathMatch: 'full', redirectTo },
     ...additional
   ];
 }

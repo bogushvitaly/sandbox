@@ -10,13 +10,9 @@ import { Item } from '../models';
 import { ItemService } from '../services/item.service';
 
 export abstract class ItemsBaseComponent extends BaseComponent implements OnInit {
-
   public items: Item[];
 
-  constructor(
-    protected log: LogService,
-    protected itemService: ItemService,
-  ) {
+  constructor(protected log: LogService, protected itemService: ItemService) {
     super();
   }
 

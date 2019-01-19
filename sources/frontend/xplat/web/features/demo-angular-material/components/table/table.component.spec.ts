@@ -11,12 +11,7 @@ describe('TableComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [TableComponent],
-      imports: [
-        NoopAnimationsModule,
-        MatPaginatorModule,
-        MatSortModule,
-        MatTableModule
-      ]
+      imports: [NoopAnimationsModule, MatPaginatorModule, MatSortModule, MatTableModule]
     }).compileComponents();
   }));
 

@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 // libs
 import { UISharedModule } from '@frontend/features';
 
+import { NOTFOUND_COMPONENTS, NotFoundComponent } from './components';
 import { MaterialModule } from './material.module';
 
 const MODULES = [
@@ -23,6 +24,7 @@ const MODULES = [
 
 @NgModule({
   imports: [...MODULES],
+  declarations: [...NOTFOUND_COMPONENTS],
   exports: [...MODULES]
 })
 export class UIModule {}

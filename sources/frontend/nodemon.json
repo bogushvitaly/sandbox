@@ -1,0 +1,5 @@
+{
+  "ignore": ["node_modules", "dist"],
+  "watch": ["apps", "libs", "xplat"],
+  "ext": "js json ts html scss"
+}

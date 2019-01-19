@@ -1,8 +1,15 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-const { join } = require('path');
-const { constants } = require('karma');
+const process = require('process');
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
+const {
+  join
+} = require('path');
+const {
+  constants
+} = require('karma');
 
 module.exports = () => {
   return {
@@ -19,7 +26,7 @@ module.exports = () => {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: join(__dirname, '../../coverage'),
+      dir: join(__dirname, '../../reports'),
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
@@ -28,7 +35,19 @@ module.exports = () => {
     colors: true,
     logLevel: constants.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
+    customLaunchers: {
+      'ChromeHeadless': {
+        base: 'Chrome',
+        flags: [
+          '--headless',
+          '--disable-gpu',
+          // Without a remote debugging port, Google Chrome exits immediately.
+          '--remote-debugging-port=9222'
+        ],
+        debug: true
+      }
+    },
     singleRun: true
   };
 };

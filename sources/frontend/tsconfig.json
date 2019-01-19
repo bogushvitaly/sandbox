@@ -8,14 +8,11 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
+    "lib": ["es2018", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@frontend/web-application/environment/*": [
-        "apps/web-application/src/environments/*"
-      ],
+      "@frontend/web-application/environment/*": ["apps/web-application/src/environments/*"],
       "@frontend/version": ["libs/features/version/data/index.ts"],
-      "@frontend/*": ["libs/*"],
       "@frontend/web": ["xplat/web/index.ts"],
       "@frontend/web/*": ["xplat/web/*"],
       "@frontend/electron": ["xplat/electron/index.ts"],
@@ -25,7 +22,9 @@
       "@frontend/nativescript": ["xplat/nativescript/index.ts"],
       "@frontend/nativescript/*": ["xplat/nativescript/*"],
       "@frontend/nest": ["xplat/nest/index.ts"],
-      "@frontend/nest/*": ["xplat/nest/*"]
+      "@frontend/nest/*": ["xplat/nest/*"],
+      "@frontend/*": ["libs/*"],
+      "@frontend/fan-menu": ["libs/fan-menu/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", "references.d.ts"]

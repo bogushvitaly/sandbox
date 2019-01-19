@@ -3,10 +3,7 @@ import { RouterModule } from '@angular/router';
 import { DemoDesignPatternsModule as SharedDemoDesignPatternsModule } from '@frontend/features';
 
 import { UIModule } from '../ui/ui.module';
-import {
-  DEMODESIGNPATTERNS_COMPONENTS,
-  DemoDesignPatternsComponent
-} from './components';
+import { DEMODESIGNPATTERNS_COMPONENTS, DemoDesignPatternsComponent } from './components';
 
 @NgModule({
   imports: [

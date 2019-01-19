@@ -1,0 +1,152 @@
+---
+- name: I am on Tour of Heroes
+  uid: 8288f607-5fbd-4e98-ba90-308ae05df0a4
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I see the dashboard
+  uid: 622e5d25-8813-40c9-b7d2-c8058eddce3b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on "p1" button from top heroes grid
+  uid: c86dc024-7351-467f-91b8-8cfec4ba26a6
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on the "p1" hero details page
+  uid: 2740d1e3-0625-4ded-9aa6-ba3465771029
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I see the search bar
+  uid: 5fe11171-7641-4ee2-a692-5348ad196646
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I write "p1" in the search bar
+  uid: 76ee179d-b859-477d-be30-2cbfd25c4cdf
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I see "p1" button in the search result
+  uid: d56b51a5-ccb6-4c17-9de9-440b5f2c8f58
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on the "p1" button from the search result
+  uid: da9c9f14-0fac-4223-9441-168464029673
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on the clear button
+  uid: e54f6be5-838c-43dd-8eff-19eabbf3f4bc
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I can't see the messages page anymore
+  uid: 12344ebd-ece1-4a00-afe5-ed6bdb3c008c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on the toh heroes page
+  uid: 2b2ca49e-ce8e-4017-915a-e7d21c30d9c1
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I see the message page
+  uid: 06c321ea-1b26-463c-abf2-98adcc167a02
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on the "p1" detail page
+  uid: b170eb8d-68b9-45d6-a7e0-421780e487a2
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I see that the page has the title "p1"
+  uid: d706bc25-417a-425a-a48d-127089bdb723
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I see the Dashboard button
+  uid: bca03c7a-a6d7-4a87-9032-5f94953f065e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I see the Heroes button
+  uid: faecafcb-6ac0-4cc9-b2ed-5bf8710665d9
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on Tou
+  uid: b1f2d487-e66e-4641-9158-ea3c3c035e08
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on heroes button
+  uid: a9c82d78-e40a-4389-9e34-098fb11a1bb3
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on the heroes page
+  uid: 04a6f909-e28d-4571-9a10-250ee2d9fbe6
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on dashboard button
+  uid: 0d8a36ce-e59e-4f3a-bf95-31e2614a6c1f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on the dashboard page
+  uid: 63c6cac5-3905-423d-8578-2628df1fed0e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on the "p1" button
+  uid: 5add93cf-6e50-468c-aff4-442005671b6a
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on the "p1" delete button
+  uid: 5e6f03fc-bd98-4df9-a935-34b9b1ad03e3
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I can't see "p1" in the heroes list anymore
+  uid: 8290bf8d-e21a-428a-941c-7992f729d2cc
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I write "p1" in the add bar
+  uid: 791de217-708e-458a-b2f4-a45a68ff156c
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on the add button
+  uid: 7f2980d9-606c-4110-a1a9-0e1f07cac7ed
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I can see "p1" in the heroes list
+  uid: 7ace7ebf-459d-4916-ac68-d0071c0b08f7
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I type "p1" in the name bar
+  uid: 92b040f0-a94a-4a1d-a9cd-d389b5efdeda
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on the save button
+  uid: 4a295919-ddb2-4fdf-acd7-44b8b2e3d338
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I come back to the dashboard page
+  uid: e9e064e2-4824-424a-b303-71bd86d82ac3
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I can see "p1" in the top heroes grid
+  uid: 3b013b74-5a1e-46f1-9b74-a75eca99bcf2
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on the back button
+  uid: ba861bec-e5a3-46a4-b0f4-94996e3c2f23
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I can see "p1" button in the search result
+  uid: 51a1d89c-af36-4c60-8ac4-2b8538f2dd34
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I on the hero de
+  uid: abdf9bf2-bda1-4e13-b292-11d0aba3a160
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e

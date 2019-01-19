@@ -25,6 +25,12 @@
     },
     "web-application-ssr": {
       "tags": []
+    },
+    "fan-menu": {
+      "tags": []
+    },
+    "storybook": {
+      "tags": []
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "firestore": {
+    "rules": "config/firebase/firestore.rules",
+    "indexes": "config/firebase/firestore.indexes.json"
+  },
+  "functions": {
+    "predeploy": [
+      "cross-env-shell npm --prefix \"$RESOURCE_DIR\" run lint",
+      "cross-env-shell npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
+  "storage": {
+    "rules": "config/firebase/storage.rules"
+  },
+  "database": {
+    "rules": "config/firebase/database.rules.json"
+  }
+}

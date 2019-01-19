@@ -21,7 +21,7 @@ export class LogService {
 
   // info (extra messages like analytics)
   // use LEVEL_5 to see only these
-  public info(...msg: Array<any>) {
+  public info(...msg: any[]) {
     if (LogService.DEBUG.LEVEL_5 || LogService.DEBUG.LEVEL_4) {
       // extra messages
       console.info(msg);
@@ -29,7 +29,7 @@ export class LogService {
   }
 
   // debug (standard output)
-  public debug(...msg: Array<any>) {
+  public debug(...msg: any[]) {
     if (LogService.DEBUG.LEVEL_4 || LogService.DEBUG.LEVEL_3) {
       // console.debug does not work on {N} apps... use `log`
       console.log(msg);
@@ -37,14 +37,14 @@ export class LogService {
   }
 
   // error
-  public error(...err: Array<any>) {
+  public error(...err: any[]) {
     if (LogService.DEBUG.LEVEL_4 || LogService.DEBUG.LEVEL_3 || LogService.DEBUG.LEVEL_2) {
       console.error(err);
     }
   }
 
   // warn
-  public warn(...warn: Array<any>) {
+  public warn(...warn: any[]) {
     if (LogService.DEBUG.LEVEL_4 || LogService.DEBUG.LEVEL_3 || LogService.DEBUG.LEVEL_1) {
       console.warn(warn);
     }

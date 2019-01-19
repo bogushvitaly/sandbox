@@ -1,15 +1,50 @@
+const path = require('path');
+
+const REPORTS_PATH = path.join(process.cwd(), 'reports', 'web-application');
+
 exports.config = {
-  tests: './*_test.js',
-  output: '../../coverage/web-application-e2e',
+  output: path.join(REPORTS_PATH, 'codecept'),
   helpers: {
     Puppeteer: {
-      url: 'http://localhost'
+      url: 'http://localhost:4200',
+      chrome: {
+        executablePath: process.env.BIN
+      }
+    },
+    Mochawesome: {
+      uniqueScreenshotNames: true
     }
   },
   include: {
     I: './steps_file.js'
   },
+  mocha: {
+    reporterOptions: {
+      reportDir: path.join(REPORTS_PATH, 'mochawesome'),
+      inlineAssets: true,
+      reportPageTitle: 'E2E Test Reports',
+      reportTitle: 'E2E Test Reports'
+    }
+  },
   bootstrap: null,
-  mocha: {},
+  teardown: null,
+  hooks: [],
+  gherkin: {
+    features: './features/*.feature',
+    steps: ['./step_definitions/steps.js']
+  },
+  plugins: {
+    screenshotOnFail: {
+      enabled: true
+    },
+    stepByStepReport: {
+      enabled: true
+    },
+    allure: {
+      enabled: true
+    }
+  },
+  tests: './*_test.js',
+  timeout: 10000,
   name: 'web-application-e2e'
-}
+};

@@ -2,12 +2,21 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-    - image: gcr.io/sandbox-228621/sandbox-backend
-      context: ./sources/backend/
-    - image: gcr.io/sandbox-228621/sandbox-frontend
+    - image: gcr.io/sandbox-228621/example-go
+      context: ./sources/services/example-go/
+    - image: gcr.io/sandbox-228621/example-java
+      context: ./sources/services/example-java/
+    - image: gcr.io/sandbox-228621/example-node
+      context: ./sources/services/example-node/
+    - image: gcr.io/sandbox-228621/example-python
+      context: ./sources/services/example-python/
+    - image: gcr.io/sandbox-228621/frontend
       context: ./sources/frontend/
 deploy:
   kubectl:
     manifests:
-      - ./sources/backend/k8s/*
+      - ./sources/services/example-go/k8s/*
+      - ./sources/services/example-java/k8s/*
+      - ./sources/services/example-node/k8s/*
+      - ./sources/services/example-python/k8s/*
       - ./sources/frontend/k8s/*

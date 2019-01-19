@@ -2,18 +2,10 @@ import { writeFileSync } from 'fs-extra';
 import { gitDescribeSync } from 'git-describe';
 import { join, relative } from 'path';
 
-const {
-  version,
-  name,
-  description,
-  repository,
-  homepage
-} = require('../package.json');
+const { version, name, description, repository, homepage } = require('../package.json');
 
 // On now we don't have access to .git :/
-const git = process.env.NOW
-  ? { raw: 'now.sh build' }
-  : gitDescribeSync({ dirtyMark: false, dirtySemver: false });
+const git = process.env.NOW ? { raw: 'now.sh build' } : gitDescribeSync({ dirtyMark: false, dirtySemver: false });
 
 const result = {
   name,
@@ -24,14 +16,7 @@ const result = {
   ...git
 };
 
-const file = join(
-  process.cwd(),
-  'libs',
-  'features',
-  'version',
-  'data',
-  'version.ts'
-);
+const file = join(process.cwd(), 'libs', 'features', 'version', 'data', 'version.ts');
 
 writeFileSync(
   file,
@@ -43,9 +28,4 @@ export const VERSION = ${JSON.stringify(result, null, 4)};
   { encoding: 'utf-8' }
 );
 
-console.log(
-  `Wrote version info ${result.raw || 'unknown'} to ${relative(
-    process.cwd(),
-    file
-  )}`
-);
+console.log(`Wrote version info ${result.raw || 'unknown'} to ${relative(process.cwd(), file)}`);

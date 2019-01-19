@@ -8,13 +8,7 @@ import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
 
 @NgModule({
-  imports: [
-    AppModule,
-    ServerModule,
-    ServerTransferStateModule,
-    FlexLayoutServerModule,
-    ModuleMapLoaderModule
-  ],
+  imports: [AppModule, ServerModule, ServerTransferStateModule, FlexLayoutServerModule, ModuleMapLoaderModule],
   bootstrap: [AppComponent],
   declarations: []
 })

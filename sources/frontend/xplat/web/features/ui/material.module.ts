@@ -5,6 +5,8 @@
  *
  * To optimize your production builds, you should only import the components used in your app.
  */
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkTableModule } from '@angular/cdk/table';
 import { NgModule } from '@angular/core';
 import {
   MatAutocompleteModule,
@@ -49,6 +51,10 @@ import {
 
 @NgModule({
   exports: [
+    // CDK
+    CdkTableModule,
+    OverlayModule,
+    // Material
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -81,12 +87,12 @@ import {
     MatSliderModule,
     MatSnackBarModule,
     MatSortModule,
-    MatStepperModule,
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule {}

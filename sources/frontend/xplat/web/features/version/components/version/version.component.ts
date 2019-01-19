@@ -8,11 +8,10 @@ import { stack, VERSION } from '@frontend/version';
   selector: 'app-version',
   templateUrl: 'version.component.html'
 })
-export class VersionComponent extends VersionBaseComponent
-  implements OnInit, OnDestroy {
+export class VersionComponent extends VersionBaseComponent implements OnInit, OnDestroy {
   public client = {
     version: VERSION,
-    stack: stack
+    stack
   };
   public server = {};
 
@@ -23,9 +22,7 @@ export class VersionComponent extends VersionBaseComponent
   }
 
   ngOnInit() {
-    this.sub = this.service
-      .getStatus()
-      .subscribe(status => (this.server = status));
+    this.sub = this.service.getStatus().subscribe(status => (this.server = status));
   }
 
   ngOnDestroy() {

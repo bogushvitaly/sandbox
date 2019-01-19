@@ -4,6 +4,7 @@ import { DemoHeroesModule as SharedDemoHeroesModule } from '@frontend/features';
 
 import { UIModule } from '../ui/ui.module';
 import { DEMOHEROES_COMPONENTS, DemoHeroesComponent } from './components';
+import { DEMOHEROES_PROVIDERS } from './services';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { DEMOHEROES_COMPONENTS, DemoHeroesComponent } from './components';
     ])
   ],
   declarations: [...DEMOHEROES_COMPONENTS],
-  exports: [...DEMOHEROES_COMPONENTS]
+  exports: [...DEMOHEROES_COMPONENTS],
+  providers: [...DEMOHEROES_PROVIDERS]
 })
 export class DemoHeroesModule {}

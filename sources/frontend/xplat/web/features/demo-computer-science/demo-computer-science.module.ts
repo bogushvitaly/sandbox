@@ -3,10 +3,7 @@ import { RouterModule } from '@angular/router';
 import { DemoComputerScienceModule as SharedDemoComputerScienceModule } from '@frontend/features';
 
 import { UIModule } from '../ui/ui.module';
-import {
-  DEMOCOMPUTERSCIENCE_COMPONENTS,
-  DemoComputerScienceComponent
-} from './components';
+import { DEMOCOMPUTERSCIENCE_COMPONENTS, DemoComputerScienceComponent } from './components';
 
 @NgModule({
   imports: [

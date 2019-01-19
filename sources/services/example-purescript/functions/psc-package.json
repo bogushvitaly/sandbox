@@ -1,0 +1,13 @@
+{
+  "name": "functions",
+  "set": "master",
+  "source": "https://github.com/purescript/package-sets.git",
+  "depends": [
+    "assert",
+    "console",
+    "effect",
+    "functions",
+    "lists",
+    "prelude"
+  ]
+}

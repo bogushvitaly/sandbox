@@ -1,9 +1,19 @@
 {
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
   "rulesDirectory": [
     "node_modules/codelyzer",
     "node_modules/@nrwl/schematics/src/tslint"
   ],
   "rules": {
+
+    "forin": false,
+    "ban-types": false,
+    "interface-name": false,
+    "max-classes-per-file": [true, 5, "exclude-class-expressions"],
+    "only-arrow-functions": false,
+    "one-variable-per-declaration": false,
+    "no-var-requires": false,
+
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
@@ -87,18 +97,17 @@
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,
+
     "nx-enforce-module-boundaries": [
       true,
       {
         "allow": [],
-        "depConstraints": [
-          {
-            "sourceTag": "*",
-            "onlyDependOnLibsWithTags": [
-              "*"
-            ]
-          }
-        ]
+        "depConstraints": [{
+          "sourceTag": "*",
+          "onlyDependOnLibsWithTags": [
+            "*"
+          ]
+        }]
       }
     ]
   }

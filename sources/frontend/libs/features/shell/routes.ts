@@ -9,23 +9,19 @@ export function routeShell(index: any): Routes {
       children: [
         {
           path: 'demo-angular-material',
-          loadChildren:
-            '../demo-angular-material/demo-angular-material.module#DemoAngularMaterialModule'
+          loadChildren: '../demo-angular-material/demo-angular-material.module#DemoAngularMaterialModule'
         },
         {
           path: 'demo-computer-science',
-          loadChildren:
-            '../demo-computer-science/demo-computer-science.module#DemoComputerScienceModule'
+          loadChildren: '../demo-computer-science/demo-computer-science.module#DemoComputerScienceModule'
         },
         {
           path: 'demo-covalent-ui',
-          loadChildren:
-            '../demo-covalent-ui/demo-covalent-ui.module#DemoCovalentUiModule'
+          loadChildren: '../demo-covalent-ui/demo-covalent-ui.module#DemoCovalentUiModule'
         },
         {
           path: 'demo-design-patterns',
-          loadChildren:
-            '../demo-design-patterns/demo-design-patterns.module#DemoDesignPatternsModule'
+          loadChildren: '../demo-design-patterns/demo-design-patterns.module#DemoDesignPatternsModule'
         },
         {
           path: 'demo-heroes',

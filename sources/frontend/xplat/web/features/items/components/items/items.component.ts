@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 // libs
 import { LogService } from '@frontend/core';
 import { ItemsBaseComponent, ItemService } from '@frontend/features';

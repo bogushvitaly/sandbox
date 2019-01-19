@@ -3,10 +3,7 @@ import { RouterModule } from '@angular/router';
 import { DemoCovalentUiModule as SharedDemoCovalentUiModule } from '@frontend/features';
 
 import { UIModule } from '../ui/ui.module';
-import {
-  DEMOCOVALENTUI_COMPONENTS,
-  DemoCovalentUiComponent
-} from './components';
+import { DEMOCOVALENTUI_COMPONENTS, DemoCovalentUiComponent } from './components';
 
 @NgModule({
   imports: [

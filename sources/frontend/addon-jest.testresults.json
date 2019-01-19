@@ -1,0 +1,342 @@
+{
+  "numFailedTestSuites": 1,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 14,
+  "numPassedTests": 20,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 1,
+  "numTotalTestSuites": 15,
+  "numTotalTests": 20,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1547891046235,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["DashboardComponent"],
+          "failureMessages": [],
+          "fullName": "DashboardComponent should compile",
+          "location": null,
+          "status": "passed",
+          "title": "should compile"
+        }
+      ],
+      "endTime": 1547891054110,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\features\\demo-angular-material\\components\\dashboard\\dashboard.component.spec.ts",
+      "startTime": 1547891048875,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["TableComponent"],
+          "failureMessages": [],
+          "fullName": "TableComponent should compile",
+          "location": null,
+          "status": "passed",
+          "title": "should compile"
+        }
+      ],
+      "endTime": 1547891054282,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\features\\demo-angular-material\\components\\table\\table.component.spec.ts",
+      "startTime": 1547891048868,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["AddressComponent"],
+          "failureMessages": [],
+          "fullName": "AddressComponent should compile",
+          "location": null,
+          "status": "passed",
+          "title": "should compile"
+        }
+      ],
+      "endTime": 1547891054304,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\features\\demo-angular-material\\components\\address\\address.component.spec.ts",
+      "startTime": 1547891048727,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["AppController", "getData"],
+          "failureMessages": [],
+          "fullName": "AppController getData should return \"Welcome to api!\"",
+          "location": null,
+          "status": "passed",
+          "title": "should return \"Welcome to api!\""
+        }
+      ],
+      "endTime": 1547891054408,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\apps\\web-application-ssr\\src\\app\\app.controller.spec.ts",
+      "startTime": 1547891048724,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["NavigationComponent"],
+          "failureMessages": [],
+          "fullName": "NavigationComponent should compile",
+          "location": null,
+          "status": "passed",
+          "title": "should compile"
+        }
+      ],
+      "endTime": 1547891054417,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\features\\shell\\components\\navigation\\navigation.component.spec.ts",
+      "startTime": 1547891049022,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["AppController", "getHello"],
+          "failureMessages": [],
+          "fullName": "AppController getHello should return \"Hello world\" string",
+          "location": null,
+          "status": "passed",
+          "title": "should return \"Hello world\" string"
+        }
+      ],
+      "endTime": 1547891054746,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\apps\\nest-application\\src\\app.controller.spec.ts",
+      "startTime": 1547891048739,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["UIModule"],
+          "failureMessages": [],
+          "fullName": "UIModule should work",
+          "location": null,
+          "status": "passed",
+          "title": "should work"
+        }
+      ],
+      "endTime": 1547891054842,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\features\\ui\\ui.module.spec.ts",
+      "startTime": 1547891054383,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["DragDropComponent"],
+          "failureMessages": [],
+          "fullName": "DragDropComponent should compile",
+          "location": null,
+          "status": "passed",
+          "title": "should compile"
+        }
+      ],
+      "endTime": 1547891054871,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\features\\demo-angular-material\\components\\drag-drop\\drag-drop.component.spec.ts",
+      "startTime": 1547891054362,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["core: LogService", "api"],
+          "failureMessages": [],
+          "fullName": "core: LogService api sanity",
+          "location": null,
+          "status": "passed",
+          "title": "sanity"
+        },
+        {
+          "ancestorTitles": ["core: LogService", "api"],
+          "failureMessages": [],
+          "fullName": "core: LogService api should not log anything by default",
+          "location": null,
+          "status": "passed",
+          "title": "should not log anything by default"
+        },
+        {
+          "ancestorTitles": ["core: LogService", "debug levels"],
+          "failureMessages": [],
+          "fullName": "core: LogService debug levels LEVEL_5: info only",
+          "location": null,
+          "status": "passed",
+          "title": "LEVEL_5: info only"
+        },
+        {
+          "ancestorTitles": ["core: LogService", "debug levels"],
+          "failureMessages": [],
+          "fullName": "core: LogService debug levels LEVEL_4: everything",
+          "location": null,
+          "status": "passed",
+          "title": "LEVEL_4: everything"
+        },
+        {
+          "ancestorTitles": ["core: LogService", "debug levels"],
+          "failureMessages": [],
+          "fullName": "core: LogService debug levels LEVEL_3: log + all the above",
+          "location": null,
+          "status": "passed",
+          "title": "LEVEL_3: log + all the above"
+        },
+        {
+          "ancestorTitles": ["core: LogService", "debug levels"],
+          "failureMessages": [],
+          "fullName": "core: LogService debug levels LEVEL_2: error only",
+          "location": null,
+          "status": "passed",
+          "title": "LEVEL_2: error only"
+        },
+        {
+          "ancestorTitles": ["core: LogService", "debug levels"],
+          "failureMessages": [],
+          "fullName": "core: LogService debug levels LEVEL_1: warn only",
+          "location": null,
+          "status": "passed",
+          "title": "LEVEL_1: warn only"
+        }
+      ],
+      "endTime": 1547891054971,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\libs\\core\\services\\log.service.spec.ts",
+      "startTime": 1547891054484,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["AppCoreModule"],
+          "failureMessages": [],
+          "fullName": "AppCoreModule should work",
+          "location": null,
+          "status": "passed",
+          "title": "should work"
+        }
+      ],
+      "endTime": 1547891055069,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\core\\core.module.spec.ts",
+      "startTime": 1547891054501,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["AppService", "getData"],
+          "failureMessages": [],
+          "fullName": "AppService getData should return \"Welcome to api!\"",
+          "location": null,
+          "status": "passed",
+          "title": "should return \"Welcome to api!\""
+        }
+      ],
+      "endTime": 1547891055164,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\apps\\web-application-ssr\\src\\app\\app.service.spec.ts",
+      "startTime": 1547891048967,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [],
+      "coverage": {},
+      "endTime": 1547891055789,
+      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    Unable to find tsconfig file given \"src/tsconfig.spec.json\". If you gave a relative path, it'll be relative to the resolved \"rootDir\".\n    To avoid issues, use <rootDir> followed by a relative path to it in \"tsConfigFile\" config key.\n\n      \u001b[2mat findTSConfigPath (\u001b[22m\u001b[0m\u001b[36mnode_modules/jest-preset-angular/node_modules/ts-jest/dist/utils/get-ts-config.js\u001b[39m\u001b[0m\u001b[2m:73:19)\u001b[22m\n      \u001b[2mat Object.memoized [as default] (\u001b[22m\u001b[0m\u001b[36mnode_modules/lodash/lodash.js\u001b[39m\u001b[0m\u001b[2m:10553:27)\u001b[22m\n      \u001b[2mat Object.module.exports.process (\u001b[22m\u001b[0m\u001b[36mnode_modules/jest-preset-angular/preprocessor.js\u001b[39m\u001b[0m\u001b[2m:13:10)\u001b[22m\n",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\apps\\storybook\\src\\app\\app.component.spec.ts",
+      "startTime": 1547891055789,
+      "status": "failed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["TreeComponent"],
+          "failureMessages": [],
+          "fullName": "TreeComponent should compile",
+          "location": null,
+          "status": "passed",
+          "title": "should compile"
+        }
+      ],
+      "endTime": 1547891055248,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\xplat\\web\\features\\demo-angular-material\\components\\tree\\tree.component.spec.ts",
+      "startTime": 1547891054281,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["FanMenuModule"],
+          "failureMessages": [],
+          "fullName": "FanMenuModule should create",
+          "location": null,
+          "status": "passed",
+          "title": "should create"
+        }
+      ],
+      "endTime": 1547891055250,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\libs\\fan-menu\\src\\lib\\fan-menu.module.spec.ts",
+      "startTime": 1547891054935,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["AppComponent"],
+          "failureMessages": [],
+          "fullName": "AppComponent should create the app",
+          "location": null,
+          "status": "passed",
+          "title": "should create the app"
+        }
+      ],
+      "endTime": 1547891055780,
+      "message": "",
+      "name": "C:\\Users\\bohus\\Documents\\GitHub\\sandbox\\sources\\frontend\\apps\\web-application\\src\\app\\app.component.spec.ts",
+      "startTime": 1547891054904,
+      "status": "passed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}

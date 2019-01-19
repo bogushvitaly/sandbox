@@ -15,10 +15,12 @@ import { SharedModule } from './features/shared/shared.module';
         base: './features/shell/shell.loader.module#ShellLoaderModule',
         items: './features/items/items.loader.module#ItemsLoaderModule',
         version: './features/version/version.loader.module#VersionLoaderModule',
-        authorization:
-          './features/authorization/authorization.loader.module#AuthorizationLoaderModule'
+        authorization: './features/authorization/authorization.loader.module#AuthorizationLoaderModule'
       }),
-      { preloadingStrategy: PreloadAllModules }
+      {
+        preloadingStrategy: PreloadAllModules
+        // initialNavigation: true
+      }
     )
   ]
 })

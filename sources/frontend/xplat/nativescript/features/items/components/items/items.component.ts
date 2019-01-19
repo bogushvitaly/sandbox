@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 // libs
 import { LogService } from '@frontend/core';
 import { ItemsBaseComponent, ItemService } from '@frontend/features';
@@ -11,11 +10,7 @@ import { AppService } from '@frontend/nativescript/core';
   templateUrl: './items.component.html'
 })
 export class ItemsComponent extends ItemsBaseComponent {
-  constructor(
-    log: LogService,
-    itemService: ItemService,
-    public appService: AppService
-  ) {
+  constructor(log: LogService, itemService: ItemService, public appService: AppService) {
     super(log, itemService);
   }
 }

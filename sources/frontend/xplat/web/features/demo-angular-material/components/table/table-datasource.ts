@@ -54,11 +54,7 @@ export class TableDataSource extends DataSource<TableItem> {
   connect(): Observable<TableItem[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
-    const dataMutations = [
-      observableOf(this.data),
-      this.paginator.page,
-      this.sort.sortChange
-    ];
+    const dataMutations = [observableOf(this.data), this.paginator.page, this.sort.sortChange];
 
     // Set the paginator's length
     this.paginator.length = this.data.length;

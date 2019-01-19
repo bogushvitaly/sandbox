@@ -1,8 +1,7 @@
-import { OnInit, OnDestroy, NgZone } from '@angular/core';
+import { NgZone, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 // libs
-import { LogService, BaseComponent } from '@frontend/core';
+import { BaseComponent, LogService } from '@frontend/core';
 import { isObject } from '@frontend/utils';
 
 // app
@@ -10,14 +9,9 @@ import { Item } from '../models';
 import { ItemService } from '../services/item.service';
 
 export abstract class ItemDetailBaseComponent extends BaseComponent implements OnInit, OnDestroy {
-
   public item: Item;
 
-  constructor(
-    protected log: LogService,
-    protected itemService: ItemService,
-    protected route: ActivatedRoute,
-  ) {
+  constructor(protected log: LogService, protected itemService: ItemService, protected route: ActivatedRoute) {
     super();
   }
 

@@ -34,6 +34,16 @@ test2:
     - echo "Do another parallel test here"
     - echo "For example run a lint test"
 
+buildsize:
+  stage: test
+  script:
+    - echo 1
+
+depgraph:
+  stage: test
+  script:
+    - echo 1
+
 deploy1:
   stage: deploy
   script:

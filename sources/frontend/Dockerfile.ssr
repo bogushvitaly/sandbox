@@ -1,0 +1,25 @@
+FROM node:10-alpine as build-env
+
+WORKDIR /app
+
+COPY ./package.json ./package-lock.json /app/
+
+RUN npm install
+
+COPY . /app
+
+RUN npm run web-application:build
+
+FROM node:10-alpine
+
+WORKDIR /app
+
+COPY --from=build-env /app/package.json /app
+
+RUN npm ci --production
+
+COPY --from=build-env /app/dist /app/dist
+
+EXPOSE 4000
+
+CMD ["npm", "run", "start.web.application.ssr"]

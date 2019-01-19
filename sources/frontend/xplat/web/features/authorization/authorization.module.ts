@@ -7,11 +7,7 @@ import { UIModule } from '../ui/ui.module';
 import { AUTHORIZATION_COMPONENTS, AuthorizationComponent } from './components';
 
 @NgModule({
-  imports: [
-    SharedAuthorizationModule,
-    UIModule,
-    RouterModule.forChild(routeAuthorization(AuthorizationComponent))
-  ],
+  imports: [SharedAuthorizationModule, UIModule, RouterModule.forChild(routeAuthorization(AuthorizationComponent))],
   declarations: [...AUTHORIZATION_COMPONENTS],
   exports: [...AUTHORIZATION_COMPONENTS]
 })
