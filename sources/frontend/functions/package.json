@@ -1,23 +1,24 @@
 {
   "name": "functions",
+  "private": true,
+  "main": "lib/index.js",
   "scripts": {
-    "lint": "tslint --project tsconfig.json",
     "build": "tsc",
+    "deploy": "firebase deploy --only functions",
+    "lint": "tslint --project tsconfig.json",
+    "logs": "firebase functions:log",
     "serve": "npm run build && firebase serve --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "upgrade": "pnpx npm-check-updates -u && pnpx sort-package-json"
   },
-  "main": "lib/index.js",
   "dependencies": {
     "firebase-admin": "6.5.0",
     "firebase-functions": "2.1.0"
   },
   "devDependencies": {
+    "cross-env": "5.2.0",
     "tslint": "5.12.1",
-    "typescript": "3.2.2",
-    "cross-env": "5.2.0"
-  },
-  "private": true
+    "typescript": "3.2.4"
+  }
 }

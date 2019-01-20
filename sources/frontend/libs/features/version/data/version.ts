@@ -4,12 +4,12 @@ export const VERSION = {
     "name": "frontend",
     "version": "0.0.0",
     "dirty": true,
-    "raw": "fd76bf2-dirty",
-    "hash": "fd76bf2",
+    "raw": "5e58f0c-dirty",
+    "hash": "5e58f0c",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "fd76bf2-dirty",
+    "suffix": "5e58f0c-dirty",
     "semverString": null
 };
 /* tslint:enable */

@@ -48,7 +48,7 @@
     "format.check": "nx format:check",
     "format.write": "nx format:write",
     "help": "nx help",
-    "preinstall": "pnpx sort-package-json && pnpx npm-check-updates -u",
+    "upgrade": "pnpx npm-check-updates -u && pnpx sort-package-json",
     "postinstall": "node tools/web/postinstall && ts-node tools/generate-version",
     "lint": "npm run format.write && npm run lint.html && npm run lint.scss && ng lint --fix",
     "lint.check": "npm run format && npm run lint.html && npm run lint.scss && ng lint",

@@ -14,7 +14,7 @@
   "license": "ISC",
   "author": "",
   "scripts": {
-    "preinstall": "pnpx sort-package-json && pnpx npm-check-updates -u"
+    "upgrade": "pnpx sort-package-json && pnpx npm-check-updates -u"
   },
   "husky": {
     "hooks": {

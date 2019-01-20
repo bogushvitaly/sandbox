@@ -18,9 +18,9 @@ cache:
     - sources/frontend/functions/node_modules/
 
 before_script:
-  - echo "Install Dependencies"
-  - cd sources/frontend && pnpm install --shamefully-flatten
-  - cd sources/frontend/functions && pnpm install
+  - pnpm install --prefix sources/frontend --shamefully-flatten
+  - pnpm install --prefix sources/frontend/functions
+  - echo "Dependencies Installed"
 
 after_script:
   - echo "Pipeline Finished"
