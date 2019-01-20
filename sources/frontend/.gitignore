@@ -57,5 +57,8 @@ xplat/**/*.metadata.json
 xplat/**/*.ngfactory.ts
 xplat/**/*.ngsummary.json
 
-# Firebase Functions
+# Firebase functions
 /functions/node_modules/
+
+# generated reports
+reports

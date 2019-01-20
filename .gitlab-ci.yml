@@ -7,11 +7,16 @@ stages:
   - analyze
   - deploy
 
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - sources/frontend/node_modules/
+    - sources/frontend/functions/node_modules/
+
 before_script:
   - echo "Before script section"
-  - echo "For example you might run an update here or install a build dependency"
-  - echo "Or perhaps you might print out some debugging details"
   - npm --prefix sources/frontend ci
+  - npm --prefix sources/frontend/functions ci
 
 after_script:
   - echo "After script section"
@@ -21,6 +26,16 @@ build1:
   stage: build
   script:
     - echo "Do your build here"
+
+frontend-web-application-build:
+  stage: build
+  environment:
+    name: staging
+  script:
+    - npm --prefix sources/frontend run build.web.application
+  artifacts:
+    paths:
+      - sources/frontend/dist
 
 test1:
   stage: test

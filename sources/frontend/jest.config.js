@@ -8,4 +8,7 @@ module.exports = {
   collectCoverage: true,
   coverageReporters: ['html'],
   coveragePathIgnorePatterns: ['typings.d.ts'],
+  globals: {
+    window: true
+  }
 };

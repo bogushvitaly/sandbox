@@ -74,7 +74,7 @@
     "test": "run-s test.libs.coverage test.xplat.coverage test.web.application.coverage",
     "test.jest.coverage": "jest --config=jest.addon-config.js --coverage --coverageDirectory=reports/coverage",
     "test.jest.generate-output": "jest --json --config=jest.addon-config.js --outputFile=addon-jest.testresults.json",
-    "test.jest.watch": "jest --json --config=jest.addon-config.js --watch",
+    "test.jest.watch": "jest --json --config=jest.addon-config.js --watchAll",
     "test.libs.coverage": "ng test libs --no-watch --code-coverage",
     "test.libs.watch": "ng test libs --watch",
     "test.nest.application": "jest --config=apps/nest-application/jest.json",
