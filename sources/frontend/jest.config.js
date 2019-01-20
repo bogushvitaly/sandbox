@@ -1,6 +1,4 @@
 module.exports = {
-  cacheDirectory: '.cache/jest',
-  clearMocks: true,
   testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular/preprocessor.js',
