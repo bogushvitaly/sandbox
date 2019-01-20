@@ -1,6 +1,9 @@
 const path = require('path');
+const process = require('process');
 
 const REPORTS_PATH = path.join(process.cwd(), 'reports', 'web-application');
+
+process.env.CHROME_BIN = require('puppeteer').executablePath();
 
 exports.config = {
   output: path.join(REPORTS_PATH, 'codecept'),
@@ -8,7 +11,7 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost:4200',
       chrome: {
-        executablePath: process.env.BIN
+        executablePath: process.env.CHROME_BIN
       }
     },
     Mochawesome: {

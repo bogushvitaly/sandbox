@@ -39,11 +39,31 @@ frontend-web-application-build:
     paths:
       - sources/frontend/dist
 
-test1:
+check-formatting:
   stage: test
+  dependencies:
+    - frontend-web-application-build
   script:
-    - echo "Do a test here"
-    - echo "For example run a test suite"
+    - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+
+check-linting:
+  stage: test
+  dependencies:
+    - frontend-web-application-build
+  script:
+    - npm --prefix sources/frontend run affected.lint $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+
+test-application:
+  stage: test
+  environment:
+    name: staging
+  dependencies:
+    - build-application
+  script:
+    - npm --prefix sources/application run test.jest.coverage
+  artifacts:
+    paths:
+      - sources/frontend/reports
 
 frontend-web-application-e2e:
   stage: test
@@ -55,14 +75,7 @@ frontend-web-application-e2e:
     - npm --prefix sources/frontend run e2e.web.application.report
   artifacts:
     paths:
-      - sources/frontend/dist/reports/web-application/codecept
-
-check-formatting:
-  stage: test
-  dependencies:
-    - frontend-web-application-build
-  script:
-    - npm --prefix sources/frontend run format:check $(git rev-parse $CI_COMMIT_SHA^5) $CI_COMMIT_SHA
+      - sources/frontend/reports
 
 buildsize:
   stage: test
