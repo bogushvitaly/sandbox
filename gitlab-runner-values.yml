@@ -22,7 +22,7 @@ imagePullPolicy: IfNotPresent
 ## be retrieved from your GitLab Instance.
 ## ref: https://docs.gitlab.com/ce/ci/runners/README.html#creating-and-registering-a-runner
 ##
-# runnerRegistrationToken: ""
+runnerRegistrationToken: 4cNEjcCCG89nA1xRywMR
 
 ## The Runner Token for adding new Runners to the GitLab Server. This must
 ## be retrieved from your GitLab Instance. It is token of already registered runner.
