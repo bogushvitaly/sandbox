@@ -48,7 +48,7 @@ frontend-web-application-e2e:
   environment:
     name: staging
   dependencies:
-    - frontend-application-web-build
+    - frontend-web-application-build
   script:
     - npm --prefix sources/frontend run e2e.web.application.report
   artifacts:
