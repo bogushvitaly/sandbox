@@ -1,5 +1,7 @@
 image: bohushvitali/frontend-ci
 
+variables:
+  WEB_APPLIATOIN_STAGING_URL: https://sandbox-bcdc7.firebaseapp.com/
 stages:
   - build
   - test
