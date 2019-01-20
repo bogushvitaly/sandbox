@@ -10,6 +10,7 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "baseUrl": ".",
+    "skipLibCheck": true,
     "paths": {
       "@frontend/web-application/environment/*": ["apps/web-application/src/environments/*"],
       "@frontend/version": ["libs/features/version/data/index.ts"],

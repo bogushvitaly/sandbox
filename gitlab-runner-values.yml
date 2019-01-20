@@ -97,7 +97,7 @@ runners:
 
   ## Specify whether the runner should be locked to a specific project: true, false. Defaults to true.
   ##
-  # locked: true
+  locked: true
 
   ## Specify the tags associated with the runner. Comma-separated list of tags.
   ##

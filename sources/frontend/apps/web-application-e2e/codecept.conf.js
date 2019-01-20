@@ -1,9 +1,6 @@
 const path = require('path');
-const process = require('process');
 
 const REPORTS_PATH = path.join(process.cwd(), 'reports', 'web-application');
-
-process.env.CHROME_BIN = require('puppeteer').executablePath();
 
 exports.config = {
   output: path.join(REPORTS_PATH, 'codecept'),

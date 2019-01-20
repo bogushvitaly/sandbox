@@ -2,7 +2,7 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone-node';
 
-import { createServer } from 'http';
+import { createServer, IncomingMessage } from 'http';
 import { join } from 'path';
 
 import { enableProdMode } from '@angular/core';
@@ -39,7 +39,7 @@ enableProdMode();
 let requestListener = createApi(BROWSER_DIST_PATH, getNgRenderMiddlewareOptions());
 
 // Start up the Node server
-const server = createServer((req, res) => {
+const server = createServer((req: any, res: any) => {
   requestListener(req, res);
 });
 

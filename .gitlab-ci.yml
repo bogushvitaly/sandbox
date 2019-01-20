@@ -2,6 +2,7 @@ image: bohushvitali/frontend-ci
 
 variables:
   WEB_APPLIATOIN_STAGING_URL: https://sandbox-bcdc7.firebaseapp.com/
+
 stages:
   - build
   - test
@@ -12,17 +13,17 @@ stages:
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
+    - ~/.pnpm-store
     - sources/frontend/node_modules/
     - sources/frontend/functions/node_modules/
 
 before_script:
-  - echo "Before script section"
-  - npm --prefix sources/frontend ci
-  - npm --prefix sources/frontend/functions ci
+  - echo "Install Dependencies"
+  - cd sources/frontend && pnpm install --shamefully-flatten
+  - cd sources/frontend/functions && pnpm install
 
 after_script:
-  - echo "After script section"
-  - echo "For example you might do some cleanup here"
+  - echo "Pipeline Finished"
 
 build1:
   stage: build
@@ -35,6 +36,7 @@ frontend-web-application-build:
     name: staging
   script:
     - npm --prefix sources/frontend run build.web.application
+    - echo "Build Finished"
   artifacts:
     paths:
       - sources/frontend/dist
@@ -45,15 +47,17 @@ check-formatting:
     - frontend-web-application-build
   script:
     - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+    - echo "Format Check Finished"
 
 check-linting:
   stage: test
   dependencies:
     - frontend-web-application-build
   script:
-    - npm --prefix sources/frontend run affected.lint $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+    - npm --prefix sources/frontend run lint.check
+    - echo "Linting Check Finished"
 
-test-application:
+frontend-web-application-unit-tests:
   stage: test
   environment:
     name: staging
@@ -61,11 +65,12 @@ test-application:
     - build-application
   script:
     - npm --prefix sources/application run test.jest.coverage
+    - echo "Web Application Unit Tests Finished"
   artifacts:
     paths:
       - sources/frontend/reports
 
-frontend-web-application-e2e:
+frontend-web-application-e2e-tests:
   stage: test
   environment:
     name: staging
@@ -73,6 +78,7 @@ frontend-web-application-e2e:
     - frontend-web-application-build
   script:
     - npm --prefix sources/frontend run e2e.web.application.report
+    - echo "Web Application E2E Tests Finished"
   artifacts:
     paths:
       - sources/frontend/reports

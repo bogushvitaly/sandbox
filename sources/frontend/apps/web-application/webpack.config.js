@@ -44,7 +44,7 @@ module.exports = {
         renderAfterElementExists: 'my-app-element',
         renderAfterTime: 5000,
         headless: true,
-        executablePath: process.env.CHROME_PATH
+        executablePath: process.env.CHROME_BIN
       })
     })
     // new HelloWorldPlugin()
