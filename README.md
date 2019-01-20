@@ -6,14 +6,13 @@
 - Angular & NX Workspace & Xplat architecture [Xplat architecture](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U)
 - Acceptance Test Driven Development with Codecept & Jest & Storybook
 - Angular Material & Covalent UI Platform & Material Web Components
-- Server-side Rendering & Nest.js & Firebase Cloud Function
+- Server-side Rendering & Nest.js & Firebase Cloud Function & Universal Development Kit
 
 ## Links
 
 - GitLab CI Dashboard
 - Hiptest Living Documentation
-- Test Reports
-- Live Application
+- Custom Reports Aggregator
 
 ## Subprojects
 

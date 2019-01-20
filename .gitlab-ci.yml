@@ -43,11 +43,24 @@ test1:
     - echo "Do a test here"
     - echo "For example run a test suite"
 
-test2:
+frontend-web-application-e2e:
   stage: test
+  environment:
+    name: staging
+  dependencies:
+    - frontend-application-web-build
   script:
-    - echo "Do another parallel test here"
-    - echo "For example run a lint test"
+    - npm --prefix sources/frontend run e2e.web.application.report
+  artifacts:
+    paths:
+      - sources/frontend/dist/reports/web-application/codecept
+
+check-formatting:
+  stage: test
+  dependencies:
+    - frontend-web-application-build
+  script:
+    - npm --prefix sources/frontend run format:check $(git rev-parse $CI_COMMIT_SHA^5) $CI_COMMIT_SHA
 
 buildsize:
   stage: test
