@@ -34,7 +34,7 @@ module.exports = {
     '<rootDir>/node_modules/jest-preset-angular/AngularSnapshotSerializer.js',
     '<rootDir>/node_modules/jest-preset-angular/HTMLCommentSerializer.js',
   ],
-  testPathIgnorePatterns: ['/node_modules/', '/storybook-static/', 'angularshots.test.js', 'dist'],
+  testPathIgnorePatterns: ['/node_modules/', '/reports/', 'angularshots.test.js', 'dist'],
   transform: {
     '^.+\\.(ts|js|html)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
   },
