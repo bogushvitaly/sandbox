@@ -35,8 +35,8 @@ frontend-web-application-build:
 check-formatting:
   stage: test
   script:
-    - npm config set store .pnpm-store
-    - pnpm install --prefix sources/frontend --shamefully-flatten
+    # - npm config set store .pnpm-store
+    # - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo "Format Check Finished"
   cache:
@@ -45,8 +45,8 @@ check-formatting:
 check-linting:
   stage: test
   script:
-    - npm config set store .pnpm-store
-    - pnpm install --prefix sources/frontend --shamefully-flatten
+    # - npm config set store .pnpm-store
+    # - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run lint.check
     - echo "Linting Check Finished"
   cache:
@@ -57,8 +57,8 @@ frontend-web-application-unit-tests:
   environment:
     name: staging
   script:
-    - npm config set store .pnpm-store
-    - pnpm install --prefix sources/frontend --shamefully-flatten
+    # - npm config set store .pnpm-store
+    # - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/application run test.jest.coverage
     - echo "Web Application Unit Tests Finished"
   cache:
@@ -72,8 +72,8 @@ frontend-web-application-e2e-tests:
   environment:
     name: staging
   script:
-    - npm config set store .pnpm-store
-    - pnpm install --prefix sources/frontend --shamefully-flatten
+    # - npm config set store .pnpm-store
+    # - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run e2e.web.application.report
     - echo "Web Application E2E Tests Finished"
   cache:
