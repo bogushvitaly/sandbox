@@ -14,8 +14,11 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - .pnpm-store
+    - sources/frontend/node_modules
+    - sources/frontend/functions/node_modules
 
 before_script:
+  - npm config set store .pnpm-store
   - pnpm install --prefix sources/frontend --shamefully-flatten
   - pnpm install --prefix sources/frontend/functions
   - echo "Dependencies Installed"
@@ -54,8 +57,6 @@ frontend-web-application-unit-tests:
   stage: test
   environment:
     name: staging
-  dependencies:
-    - frontend-web-application-build
   script:
     - npm --prefix sources/application run test.jest.coverage
     - echo "Web Application Unit Tests Finished"
@@ -67,8 +68,6 @@ frontend-web-application-e2e-tests:
   stage: test
   environment:
     name: staging
-  dependencies:
-    - frontend-web-application-build
   script:
     - npm --prefix sources/frontend run e2e.web.application.report
     - echo "Web Application E2E Tests Finished"
