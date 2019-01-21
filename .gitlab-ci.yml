@@ -7,6 +7,7 @@ job A:
   script:
     - ls
     - mkdir public
+    - touch public/file.txt
     - ls public/
   cache:
     key: same-key
@@ -15,7 +16,7 @@ job A:
 
 job B:
   stage: test
-  script: make test
+  script:
     - ls
     - ls public/
     - ls vendor/
