@@ -48,7 +48,6 @@
     "format.check": "nx format:check",
     "format.write": "nx format:write",
     "help": "nx help",
-    "upgrade": "pnpx npm-check-updates -u && pnpx sort-package-json",
     "postinstall": "node tools/web/postinstall && ts-node tools/generate-version",
     "lint": "npm run format.write && npm run lint.html && npm run lint.scss && ng lint --fix",
     "lint.check": "npm run format && npm run lint.html && npm run lint.scss && ng lint",
@@ -57,6 +56,7 @@
     "lint.scss": "stylelint ./{apps,libs}/**/*.scss --syntax scss --fix",
     "mock.api": "json-server",
     "ng": "ng",
+    "postinstall.win": "npm rebuild node-sass",
     "precommit": "sort-package-json && npm run lint",
     "prettier": "prettier --write ./{apps,libs}/**/*.{ts,js,scss}",
     "prettier.check": "prettier --list-different ./{apps,libs}/**/*.{ts,js,scss}",
@@ -92,6 +92,7 @@
     "udk.web.application": "ng-udkc --project web-application",
     "update": "ng update @nrwl/schematics",
     "update.check": "ng update",
+    "upgrade": "pnpx sort-package-json && pnpx npm-check-updates -u",
     "workspace-schematic": "nx workspace-schematic"
   },
   "dependencies": {
@@ -228,7 +229,7 @@
     "on-headers": "1.0.1",
     "paper-css": "0.4.1",
     "parse-dds": "1.2.1",
-    "preboot": "6.0.0-beta.6",
+    "preboot": "7.0.0",
     "rdflib": "0.19.1",
     "reflect-metadata": "0.1.13",
     "regl": "1.3.11",

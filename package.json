@@ -14,7 +14,7 @@
   "license": "ISC",
   "author": "",
   "scripts": {
-    "upgrade": "pnpx npm-check-updates -u && pnpx sort-package-json"
+    "upgrade": "pnpx sort-package-json && pnpx npm-check-updates -u"
   },
   "devDependencies": {
     "@commitlint/cli": "7.3.2",
