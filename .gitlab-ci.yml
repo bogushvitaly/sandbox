@@ -22,33 +22,31 @@ cache:
     - sources/frontend/node_modules/
     - sources/frontend/functions/node_modules/
 
-before_script:
-  - ls .
-  - ls ~
-  - mkdir pnpm-store
-  - npm config set store pnpm-store
-  - npm set verify-store-integrity false
-  - pnpm install --prefix sources/frontend --shamefully-flatten
-  - ls .
-  - ls ~
-  - ls pnpm-store
-
-# frontend-web-application-build:
-#   stage: build
-#   environment:
-#     name: staging
-#   script:
-#     - ls
-#     - npm config set store pnpm-store
-#     - npm set verify-store-integrity false
-#     - pnpm install --prefix sources/frontend --shamefully-flatten
-#     - npm --prefix sources/frontend run build.web.application
-#     - echo "Build Finished"
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#   artifacts:
-#     paths:
-#       - sources/frontend/dist
+frontend-web-application-build:
+  stage: build
+  environment:
+    name: staging
+  script:
+    - ls .
+    - ls ~
+    - mkdir pnpm-store
+    - npm config set store pnpm-store
+    - npm set verify-store-integrity false
+    - pnpm install --prefix sources/frontend --shamefully-flatten
+    - ls .
+    - ls ~
+    - ls pnpm-store
+    # - ls
+    # - npm config set store pnpm-store
+    # - npm set verify-store-integrity false
+    # - pnpm install --prefix sources/frontend --shamefully-flatten
+    # - npm --prefix sources/frontend run build.web.application
+    # - echo "Build Finished"
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+  artifacts:
+    paths:
+      - sources/frontend/dist
 
 # check-formatting:
 #   stage: test

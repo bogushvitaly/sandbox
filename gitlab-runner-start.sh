@@ -4,6 +4,8 @@ NAME="sandbox"
 
 minikube status && kubectl cluster-info || minikube start --cpus 4 --memory 8192 --disk-size "30g"
 
+wait
+
 helm init
 helm repo add gitlab https://charts.gitlab.io
 
