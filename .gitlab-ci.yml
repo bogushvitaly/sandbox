@@ -19,9 +19,6 @@ cache:
 
 before_script:
   - npm config set store .pnpm-store
-  - pnpm install --prefix sources/frontend --shamefully-flatten
-  - pnpm install --prefix sources/frontend/functions
-  - echo "Dependencies Installed"
 
 after_script:
   - echo "Pipeline Finished"
@@ -31,6 +28,7 @@ frontend-web-application-build:
   environment:
     name: staging
   script:
+    - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run build.web.application
     - echo "Build Finished"
   cache:
@@ -44,12 +42,16 @@ check-formatting:
   script:
     - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo "Format Check Finished"
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
 
 check-linting:
   stage: test
   script:
     - npm --prefix sources/frontend run lint.check
     - echo "Linting Check Finished"
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
 
 frontend-web-application-unit-tests:
   stage: test
@@ -90,4 +92,13 @@ depgraph:
 deploy1:
   stage: deploy
   script:
+    # - pnpm install --prefix sources/frontend/functions
     - echo "Do your deploy here"
+
+build-master:
+  image: docker:dind
+  stage: build
+  script:
+    - docker run hello-world
+  only:
+    - master
