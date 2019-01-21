@@ -159,7 +159,7 @@ runners:
     # cachePath: "gitlab_runner"
     cacheShared: true
     ## S3 settings
-    s3ServerAddress: 10.101.242.62:9000
+    s3ServerAddress: http://s3-minio:9000
     s3BucketName: cache
     # s3BucketLocation:
     # s3CacheInsecure: false
