@@ -9,10 +9,7 @@ helm repo add gitlab https://charts.gitlab.io
 
 kubectl create clusterrolebinding gitlab-cluster-admin --clusterrole=cluster-admin --group=system:serviceaccounts --namespace=gitlab
 
+helm del --purge gitlab-runner-$NAME
 kubectl delete namespace gitlab
 
-helm del --purge gitlab-runner-$NAME
-
 helm install --namespace gitlab --name gitlab-runner-$NAME -f ./gitlab-runner-values.yml gitlab/gitlab-runner
- 
-minikube dashboard
