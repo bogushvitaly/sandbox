@@ -12,5 +12,6 @@ helm install --tiller-namespace gitlab-managed-apps --namespace gitlab-managed-a
 
 # helm upgrade --tiller-namespace gitlab-managed-apps --namespace gitlab-managed-apps -f minio-values.yaml s3 stable/minio
 # helm upgrade --tiller-namespace gitlab-managed-apps --namespace gitlab-managed-apps -f gitlab-runner-values.yaml runner gitlab/gitlab-runner
+
 # kubectl delete pods --namespace gitlab-managed-apps -l app=minio
 # kubectl delete pods --namespace gitlab-managed-apps -l app=runner-gitlab-runner

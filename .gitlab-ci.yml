@@ -5,21 +5,18 @@ stages:
 before_script:
   - echo "Hello"
 
+cache:
+  key: build-cache
+  paths:
+    - vendor/
+
 job A:
   stage: build
   script:
     - mkdir vendor/
     - echo "build" > vendor/hello.txt
-  cache:
-    key: build-cache
-    paths:
-      - vendor/
-  after_script:
-    - echo "World"
 
 job B:
   stage: test
   script:
     - cat vendor/hello.txt
-  cache:
-    key: build-cache
