@@ -6,7 +6,6 @@ job A:
   stage: build
   script:
     - ls
-    - mkdir public
     - touch public/file.txt
     - ls public/
   cache:
