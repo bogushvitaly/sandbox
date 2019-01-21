@@ -6,6 +6,7 @@ job A:
   stage: build
   script:
     - ls
+    - mkdir public
     - ls public/
   cache:
     key: same-key
@@ -21,4 +22,5 @@ job B:
   cache:
     key: same-key
     paths:
+      - public/
       - vendor/
