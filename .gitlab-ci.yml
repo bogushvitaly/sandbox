@@ -30,7 +30,7 @@ frontend-web-application-build:
     - npm config set store pnpm-store
     - npm set verify-store-integrity false
     - pnpm install --prefix sources/frontend --shamefully-flatten
-    - ls pnpm-store/2
+    - ls pnpm-store
     # - ls
     # - npm config set store pnpm-store
     # - npm set verify-store-integrity false
@@ -44,13 +44,13 @@ frontend-web-application-build:
       - sources/frontend/dist
 
 frontend-web-application:
-  stage: build
+  stage: test
   environment:
     name: staging
   script:
     - npm config set store pnpm-store
     - npm set verify-store-integrity false
-    - ls pnpm-store/2
+    - ls pnpm-store
 
     # - ls
     # - npm config set store pnpm-store
