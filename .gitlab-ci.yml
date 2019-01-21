@@ -27,15 +27,31 @@ frontend-web-application-build:
   environment:
     name: staging
   script:
-    - ls .
-    - ls ~
-    - mkdir pnpm-store
     - npm config set store pnpm-store
     - npm set verify-store-integrity false
     - pnpm install --prefix sources/frontend --shamefully-flatten
-    - ls .
-    - ls ~
-    - ls pnpm-store
+    - ls pnpm-store/2
+    # - ls
+    # - npm config set store pnpm-store
+    # - npm set verify-store-integrity false
+    # - pnpm install --prefix sources/frontend --shamefully-flatten
+    # - npm --prefix sources/frontend run build.web.application
+    # - echo "Build Finished"
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+  artifacts:
+    paths:
+      - sources/frontend/dist
+
+frontend-web-application:
+  stage: build
+  environment:
+    name: staging
+  script:
+    - npm config set store pnpm-store
+    - npm set verify-store-integrity false
+    - ls pnpm-store/2
+
     # - ls
     # - npm config set store pnpm-store
     # - npm set verify-store-integrity false
