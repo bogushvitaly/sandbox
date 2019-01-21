@@ -1,0 +1,12 @@
+{
+  "name": "babylonjs-mesh-writer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babylonjs.meshWriter.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "babylonjs.meshWriter.js"
+  ]
+}

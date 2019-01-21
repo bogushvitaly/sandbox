@@ -11,7 +11,10 @@
   },
   "hosting": {
     "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "rewrites": [{
+      "source": "**",
+      "function": "http"
+    }]
   },
   "storage": {
     "rules": "config/firebase/storage.rules"
