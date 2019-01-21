@@ -2,18 +2,24 @@ stages:
   - build
   - test
 
+before_script:
+  - echo "Hello"
+
 job A:
   stage: build
-  script: make build
+  script:
+    - mkdir vendor/
+    - echo "build" > vendor/hello.txt
   cache:
-    key: same-key
+    key: build-cache
     paths:
-      - public/
+      - vendor/
+  after_script:
+    - echo "World"
 
 job B:
   stage: test
-  script: make test
+  script:
+    - cat vendor/hello.txt
   cache:
-    key: same-key
-    paths:
-      - vendor/
+    key: build-cache
