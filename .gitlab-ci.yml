@@ -97,11 +97,10 @@ deploy1:
   script:
     # - pnpm install --prefix sources/frontend/functions
     - echo "Do your deploy here"
-
-build-master:
-  image: docker:dind
-  stage: build
-  script:
-    - docker run hello-world
-  only:
-    - master
+# build-master:
+#   image: docker:dind
+#   stage: build
+#   script:
+#     - docker run hello-world
+#   only:
+#     - master
