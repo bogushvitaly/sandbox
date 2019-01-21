@@ -33,22 +33,20 @@ frontend-web-application-build:
   script:
     - npm --prefix sources/frontend run build.web.application
     - echo "Build Finished"
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
   artifacts:
     paths:
       - sources/frontend/dist
 
 check-formatting:
   stage: test
-  dependencies:
-    - frontend-web-application-build
   script:
     - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo "Format Check Finished"
 
 check-linting:
   stage: test
-  dependencies:
-    - frontend-web-application-build
   script:
     - npm --prefix sources/frontend run lint.check
     - echo "Linting Check Finished"
@@ -60,6 +58,8 @@ frontend-web-application-unit-tests:
   script:
     - npm --prefix sources/application run test.jest.coverage
     - echo "Web Application Unit Tests Finished"
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
   artifacts:
     paths:
       - sources/frontend/reports
@@ -71,6 +71,8 @@ frontend-web-application-e2e-tests:
   script:
     - npm --prefix sources/frontend run e2e.web.application.report
     - echo "Web Application E2E Tests Finished"
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
   artifacts:
     paths:
       - sources/frontend/reports
