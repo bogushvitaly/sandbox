@@ -13,7 +13,7 @@ stages:
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-    - .pnpm-store/
+    - pnpm-store/
     - sources/frontend/node_modules/
     - sources/frontend/functions/node_modules/
 
@@ -22,7 +22,8 @@ frontend-web-application-build:
   environment:
     name: staging
   script:
-    - npm config set store .pnpm-store
+    - ls
+    - npm config set store pnpm-store
     - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run build.web.application
     - echo "Build Finished"
@@ -35,8 +36,9 @@ frontend-web-application-build:
 check-formatting:
   stage: test
   script:
-    # - npm config set store .pnpm-store
-    # - pnpm install --prefix sources/frontend --shamefully-flatten
+    - ls
+    - npm config set store pnpm-store
+    - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo "Format Check Finished"
   cache:
@@ -45,8 +47,9 @@ check-formatting:
 check-linting:
   stage: test
   script:
-    # - npm config set store .pnpm-store
-    # - pnpm install --prefix sources/frontend --shamefully-flatten
+    - ls
+    - npm config set store pnpm-store
+    - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run lint.check
     - echo "Linting Check Finished"
   cache:
@@ -57,8 +60,9 @@ frontend-web-application-unit-tests:
   environment:
     name: staging
   script:
-    # - npm config set store .pnpm-store
-    # - pnpm install --prefix sources/frontend --shamefully-flatten
+    - ls
+    - npm config set store pnpm-store
+    - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/application run test.jest.coverage
     - echo "Web Application Unit Tests Finished"
   cache:
@@ -72,8 +76,9 @@ frontend-web-application-e2e-tests:
   environment:
     name: staging
   script:
-    # - npm config set store .pnpm-store
-    # - pnpm install --prefix sources/frontend --shamefully-flatten
+    - ls
+    - npm config set store pnpm-store
+    - pnpm install --prefix sources/frontend --shamefully-flatten
     - npm --prefix sources/frontend run e2e.web.application.report
     - echo "Web Application E2E Tests Finished"
   cache:
@@ -97,10 +102,11 @@ deploy1:
   script:
     # - pnpm install --prefix sources/frontend/functions
     - echo "Do your deploy here"
-# build-master:
-#   image: docker:dind
-#   stage: build
-#   script:
-#     - docker run hello-world
-#   only:
-#     - master
+
+build-master:
+  image: docker:dind
+  stage: build
+  script:
+    - docker run hello-world
+  only:
+    - master
