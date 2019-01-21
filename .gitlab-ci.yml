@@ -2,6 +2,11 @@ image: bohushvitali/frontend-ci
 
 variables:
   WEB_APPLIATOIN_STAGING_URL: https://sandbox-bcdc7.firebaseapp.com/
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://localhost:2375
+
+services:
+  - docker:dind
 
 stages:
   - build
@@ -102,10 +107,11 @@ deploy1:
   script:
     # - pnpm install --prefix sources/frontend/functions
     - echo "Do your deploy here"
-# build-master:
-#   image: docker:dind
-#   stage: build
-#   script:
-#     - docker run hello-world
-#   only:
-#     - master
+
+build-master:
+  image: docker:stable
+  stage: build
+  script:
+    - docker run hello-world
+  only:
+    - master
