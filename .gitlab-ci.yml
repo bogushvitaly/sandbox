@@ -96,7 +96,8 @@ deploy1:
     - echo "Do your deploy here"
 
 build-master:
-  image: docker:dind
+  services:
+    - docker:dind
   stage: build
   script:
     - docker run hello-world
