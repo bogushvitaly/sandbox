@@ -23,7 +23,6 @@ cache:
     - sources/frontend/functions/node_modules/
 
 before_script:
-  - mkdir -p .pnpm-store
   - npm config set store .pnpm-store
   - npm set verify-store-integrity false
 
@@ -34,11 +33,6 @@ frontend-web-application-build:
   script:
     - pnpm install --prefix sources/frontend --shamefully-flatten
     - ls .pnpm-store
-    # - ls
-    # - npm config set store pnpm-store
-    # - npm set verify-store-integrity false
-    # - pnpm install --prefix sources/frontend --shamefully-flatten
-    # - npm --prefix sources/frontend run build.web.application
     - echo "Build Finished"
   cache:
     key: ${CI_COMMIT_REF_SLUG}
