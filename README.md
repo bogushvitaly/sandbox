@@ -1,5 +1,7 @@
 [![Hiptest Status](https://app.hiptest.com/badges/folder/722126)](https://app.hiptest.com/projects/105770/test-plan/folders/722126)
 
+[![pipeline status](https://gitlab.com/bohushvitali/sandbox/badges/master/pipeline.svg)](https://gitlab.com/bohushvitali/sandbox/commits/master)
+
 ## Project's goal is to demonstrate integration of:
 
 - Skaffold Workspace & Multi-Language services & Continuous Delivery Process

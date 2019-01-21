@@ -13,9 +13,7 @@ stages:
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-    - ~/.pnpm-store
-    - sources/frontend/node_modules/
-    - sources/frontend/functions/node_modules/
+    - .pnpm-store
 
 before_script:
   - pnpm install --prefix sources/frontend --shamefully-flatten
