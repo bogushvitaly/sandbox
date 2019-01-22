@@ -9,6 +9,7 @@ services:
   - docker:dind
 
 stages:
+  - prepare
   - build
   - test
   - staging
@@ -25,7 +26,7 @@ before_script:
   - npm set verify-store-integrity false
 
 frontend-dependencies-install:
-  stage: build
+  stage: prepare
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: push
