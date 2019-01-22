@@ -13,6 +13,7 @@ stages:
   - build
   - test
   - staging
+  - analyze
   - reports
   - production
 
@@ -77,218 +78,230 @@ frontend-web-application-build-production:
   script:
     - pnpm install --prefix sources/frontend --offline
     - npm run --prefix sources/frontend build.web.application
-    - mv sources/frontend/dist/apps/* sources/frontend/production
+    - cp -r sources/frontend/dist/apps/* sources/frontend/production
     - echo "Production Build Finished"
+  artifacts:
+    paths:
+      - sources/frontend/dist
+      - sources/frontend/production
+  only:
+    - master
+  when: always
+
+frontend-check-formatting:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/frontend format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+    - echo "Frontend Check Formatting Finished"
+  artifacts:
+    paths:
+      - sources/frontend/dist
+
+frontend-check-linting:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: push
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/frontend lint.check
+    - echo "Frontend Check Linting Finished"
+  artifacts:
+    paths:
+      - sources/frontend/dist
+
+frontend-unit-tests:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/application test.jest.coverage
+    - echo "Web Application Unit Tests Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-compodoc:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/frontend docs.compodoc
+    - echo "Web Application Compodoc Generation Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-storybook:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/frontend storybook.build
+    - echo "Storybook Building Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-dependencies-graph:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/frontend affected.dep-graph
+    - echo "Frontend Dependencies Graph Generation Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-web-application-bundle-analysis:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/frontend analyze.web.application.bundle
+    - echo "Web Application Bundle Analysis Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-web-application-e2e-tests:
+  stage: test
+  dependencies:
+    - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - npm run --prefix sources/frontend e2e.web.application
+    - echo "Web Application E2E Tests Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-application-web-lighthouse:
+  stage: analyze
+  dependencies:
+    - frontend-web-application-build-staging
+  script:
+    - mkdir -p sources/frontend/reports/lighthouse
+    - lighthouse-ci $WEB_APPLIATOIN_STAGING_URL --silent --report sources/frontend/reports/lighthouse
+    - echo "Web Application Lighthouse Analysis Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-application-web-deploy-staging:
+  stage: staging
+  dependencies:
+    - frontend-web-application-build-staging
+  environment:
+    name: staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - pnpm install --prefix sources/frontend/functions --offline
+    - npm run --prefix sources/application run deploy.web.application
+    - echo "Staging Deployment Finished"
+  artifacts:
+    paths:
+      - sources/frontend/dist
+  when: always
+
+frontend-application-web-deploy-production:
+  stage: production
+  dependencies:
+    - frontend-web-application-build-production
+  environment:
+    name: production
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --offline
+    - pnpm install --prefix sources/frontend/functions --offline
+    - mv sources/frontend/production/* sources/frontend/dist/apps
+    - npm run --prefix sources/application deploy.web.application
+    - echo "Production Deployment Finished"
   artifacts:
     paths:
       - sources/frontend/production
   only:
     - master
-  when: always
-# frontend-check-formatting:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: pull
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - npm run --prefix sources/frontend format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
-#     - echo "Frontend Check Formatting Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/dist
+  when: manual
 
-# frontend-check-linting:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: push
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - npm run --prefix sources/frontend lint.check
-#     - echo "Frontend Check Linting Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/dist
+pages:
+  stage: reports
+  before_script:
+    - echo Skip
+  dependencies:
+    - frontend-unit-tests
+    - frontend-compodoc
+    - frontend-storybook
+    - frontend-dependencies-graph
+    - frontend-web-application-bundle-analysis
+    - frontend-web-application-e2e-tests
+    - frontend-application-web-lighthouse
+  script:
+    - mkdir public
+    - cp -r sources/frontend/tools/report-wrapper/* public
+    - cp -r sources/frontend/reports/* public
+    - echo "Pages Publishing Finished"
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
 
-# frontend-unit-tests:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: pull
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - npm run --prefix sources/application test.jest.coverage
-#     - echo "Web Application Unit Tests Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/dist
-#       - sources/frontend/reports
-
-# frontend-compodoc:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: pull
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - npm run --prefix sources/frontend docs.compodoc
-#     - echo "Web Application Compodoc Generation Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/reports
-
-# frontend-storybook:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   script:
-#     - npm run --prefix sources/frontend storybook.build
-#     - echo "Storybook Building Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/reports
-
-# frontend-dependencies-graph:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   script:
-#     - npm run --prefix sources/frontend affected.dep-graph
-#     - echo "Frontend Dependencies Graph Generation Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/reports
-
-# frontend-web-application-bundle-analysis:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: pull
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - npm run --prefix sources/frontend analyze.web.application.bundle
-#     - echo "Web Application Bundle Analysis Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/reports
-
-# frontend-web-application-e2e-tests:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: pull
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - npm run --prefix sources/frontend e2e.web.application
-#     - echo "Web Application E2E Tests Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/dist
-#       - sources/frontend/reports
-
-# frontend-application-web-lighthouse:
-#   stage: test
-#   dependencies:
-#     - frontend-web-application-build-staging
-#   script:
-#     - mkdir -p sources/frontend/reports/lighthouse
-#     - lighthouse-ci $WEB_APPLIATOIN_STAGING_URL --silent --report sources/frontend/reports/lighthouse
-#     - echo "Web Application Lighthouse Analysis Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/reports
-
-# pages:
-#   stage: reports
-#   before_script:
-#     - echo Skip
-#   dependencies:
-#     - frontend-unit-tests
-#     - frontend-compodoc
-#     - frontend-storybook
-#     - frontend-dependencies-graph
-#     - frontend-web-application-bundle-analysis
-#     - frontend-web-application-e2e-tests
-#     - frontend-application-web-lighthouse
-#   script:
-#     - mkdir public
-#     - cp -r sources/frontend/tools/report-wrapper/* public
-#     - cp -r sources/frontend/reports/* public
-#     - echo "Pages Publishing Finished"
-#   artifacts:
-#     paths:
-#       - public
-#     expire_in: 30 days
-#   when: always
-
-# publish-hiptest:
-#   stage: reports
-#   image: docker:stable
-#   before_script:
-#     - echo Skip npm Commands
-#   cache: {}
-#   script:
-#     - docker run -it --rm -u $UID -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/frontend/hiptest-publisher.conf --push="sources/frontend/reports/apps/web-application/mocha/*.xml"
-#     - echo "Hiptest Report Pablishing Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/dist
-#   when: always
-
-# frontend-application-web-deploy-staging:
-#   stage: staging
-#   environment:
-#     name: staging
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: pull
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - npm run --prefix sources/application run deploy.web.application
-#     - echo "Staging Deployment Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/dist
-#   only:
-#     - master
-#   when: always
-
-# frontend-application-web-deploy-production:
-#   stage: production
-#   environment:
-#     name: production
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#     policy: pull
-#     paths:
-#       - .pnpm-store/
-#   script:
-#     - mv sources/frontend/production/* sources/frontend/dist/apps
-#     - npm run --prefix sources/application deploy.web.application
-#     - echo "Production Deployment Finished"
-#   artifacts:
-#     paths:
-#       - sources/frontend/production
-#   when: manual
-#   only:
-#     - master
+publish-hiptest:
+  stage: reports
+  image: docker:stable
+  before_script:
+    - echo Skip npm Commands Execution
+  cache: {}
+  script:
+    - docker run -it --rm -u $UID -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/frontend/hiptest-publisher.conf --push="sources/frontend/reports/apps/web-application/mocha/*.xml"
+    - echo "Hiptest Report Pablishing Finished"
+  artifacts:
+    paths:
+      - sources/frontend/dist
