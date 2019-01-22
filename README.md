@@ -19,7 +19,7 @@
 - [ ] Graphics Libraries: REGL, Babylon.js, Three.js
 - [ ] API Integrations: Google APIs, Trello API, Coinbase API
 - [ ] Machine Learning Capabilities: TensorFlow.js Brain.js
-- [ ] Blockchain Networks and Decentralized Platform Integrations: Blockchain API, Ethereum API, SingularityNET API, Solid Platform API
+- [ ] Blockchain Networks and Decentralized Platform Integrations: Blockchain API, Ethereum API, SingularityNET API, Solid Platform API, IPFS, IPLD
 
 ## Links
 
