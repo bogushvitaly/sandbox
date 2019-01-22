@@ -24,7 +24,7 @@ cache:
 before_script:
   - npm config set store .pnpm-store
   - npm set verify-store-integrity false
-  - npm config set unsafe-perm=true
+  - npm config set unsafe-perm true
 
 frontend-dependencies-install:
   stage: prepare
