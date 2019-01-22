@@ -1,14 +1,12 @@
 //  HIRUKOPRO-BOOK  HIRUKOPRO-BOOK  HIRUKOPRO-BOOK  HIRUKOPRO-BOOK
 //
 //
-module.exports = (function() {
-  return function(codeList) {
-    var hpb = {
-        reverseHoles: false,
-        reverseShapes: true
-      },
-      nbsp = '\u00A0'; // Letters seems to go from about -250 to 850
 
+define('fonts/hirukopro-book', [], function() {
+  return function(codeList) {
+    var hpb = { reverseHoles: false, reverseShapes: true },
+      nbsp = '\u00A0';
+    // Letters seems to go from about -250 to 850
     hpb['A'] = {
       sC: [
         'KPB, KPA}K-A[ J­A:JVA: I«A:IkA± IZB< H»CuH§Cw DgCw DVCwDTCk C¥A± C_A:B·A: B_A:B=A` A¿A§A¿B4 A¿BNB4B¥ E¥LR EÃLÃFoLÃ FoLÃ GNLÃGqL: KHBV KPB>KPB,'
@@ -1033,6 +1031,7 @@ module.exports = (function() {
           [154, 390, 101, 443]
         ]
       ],
+
       holeCmds: [
         [],
         [
@@ -1318,38 +1317,37 @@ module.exports = (function() {
       width: 290
     };
     hpb[' '] = hpb[nbsp];
+
     /*
-    // https://opentype.js.org/glyph-inspector.html
-    function coordinates(cmd){
-    if(cmd.x1){
+// https://opentype.js.org/glyph-inspector.html
+function coordinates(cmd){
+  if(cmd.x1){
     return " "+cmd.x1+" "+(0-cmd.y1)+" "+cmd.x+" "+(0-cmd.y)
-    }else{
+  }else{
     if(cmd.x){
       return " "+cmd.x+" "+(0-cmd.y)
     }else{
       return ""
     }
-    }
-    };
-    function makeD(path){
-    var d  = "";
-    path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
-    return d.slice(1)
-    }
-    */
+  }
+};
+function makeD(path){
+  var d  = "";
+  path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
+  return d.slice(1)
+}
+*/
 
     return hpb;
   };
-})(); //  HELVETICANEUE-MEDIUM  HELVETICANEUE-MEDIUM  HELVETICANEUE-MEDIUM  HELVETICANEUE-MEDIUM
+});
+//  HELVETICANEUE-MEDIUM  HELVETICANEUE-MEDIUM  HELVETICANEUE-MEDIUM  HELVETICANEUE-MEDIUM
 //
 //
 
-module.exports = (function() {
+define('fonts/helveticaneue-medium', [], function() {
   return function(codeList) {
-    var hnm = {
-        reverseHoles: false,
-        reverseShapes: true
-      },
+    var hnm = { reverseHoles: false, reverseShapes: true },
       nbsp = '\u00A0';
     hnm['A'] = {
       shapeCmds: [[[122, 0], [-7, 0], [267, 714], [400, 714], [675, 0], [541, 0], [474, 189], [189, 189], [122, 0]]],
@@ -3575,40 +3573,39 @@ module.exports = (function() {
       width: 278
     };
     hnm[' '] = hnm[nbsp];
+
     /*
-    // https://opentype.js.org/glyph-inspector.html
-    function coordinates(cmd){
-    if(cmd.x1){
+// https://opentype.js.org/glyph-inspector.html
+function coordinates(cmd){
+  if(cmd.x1){
     return " "+cmd.x1+" "+(0-cmd.y1)+" "+cmd.x+" "+(0-cmd.y)
-    }else{
+  }else{
     if(cmd.x){
       return " "+cmd.x+" "+(0-cmd.y)
     }else{
       return ""
     }
-    }
-    };
-    function makeD(path){
-    var d  = "";
-    path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
-    return d.slice(1)
-    }
-    */
+  }
+};
+function makeD(path){
+  var d  = "";
+  path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
+  return d.slice(1)
+}
+*/
+    return hnm;
 
-    return hnm; //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
+    //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
     // To support non-english letters, we need a variety of new symbols: acute, dieresis, etc.
     // It turns out that these symbols can be re-used, with some placement changes
     // To save space and code, that's what we do
     // These functions return the special symbols in compressed or raw forms
-
     function acuteRaw(dx, dy) {
       return [[128 + dx, 588 + dy], [45 + dx, 588 + dy], [135 + dx, 731 + dy], [270 + dx, 731 + dy]];
     }
-
     function acuteCoded(dx, dy) {
       return codeList(acuteRaw(dx, dy));
     }
-
     function circumflexRaw(dx, dy) {
       return [
         [120 + dx, 678 + dy],
@@ -3620,35 +3617,27 @@ module.exports = (function() {
         [191 + dx, 588 + dy]
       ];
     }
-
     function circumflexCoded(dx, dy) {
       return codeList(circumflexRaw(dx, dy));
     }
-
     function dieresisLeftRaw(dx, dy) {
       return [[92 + dx, 599 + dy], [-22 + dx, 599 + dy], [-22 + dx, 707 + dy], [92 + dx, 707 + dy]];
     }
-
     function dieresisLeftCoded(dx, dy) {
       return codeList(dieresisLeftRaw(dx, dy));
     }
-
     function dieresisRightRaw(dx, dy) {
       return [[150 + dx, 707 + dy], [264 + dx, 707 + dy], [264 + dx, 599 + dy], [150 + dx, 599 + dy]];
     }
-
     function dieresisRightCoded(dx, dy) {
       return codeList(dieresisRightRaw(dx, dy));
     }
-
     function graveRaw(dx, dy) {
       return [[113 + dx, 588 + dy], [-29 + dx, 731 + dy], [105 + dx, 731 + dy], [196 + dx, 588 + dy]];
     }
-
     function graveCoded(dx, dy) {
       return codeList(graveRaw(dx, dy));
     }
-
     function tildeRaw(dx, dy) {
       return [
         [297 + dx, 714 + dy],
@@ -3665,29 +3654,24 @@ module.exports = (function() {
         [229 + dx, 670 + dy, 241 + dx, 714 + dy]
       ];
     }
-
     function tildeCoded(dx, dy) {
       return codeList(tildeRaw(dx, dy));
     }
-
     function dotlessiRaw() {
       return [[177, 517], [177, 0], [63, 0], [63, 517]];
     }
-
     function dotlessiCoded() {
       return codeList(dotlessiRaw(dx, dy));
     }
   };
-})(); //  COMICSANS-NORMAL  COMICSANS-NORMAL  COMICSANS-NORMAL  COMICSANS-NORMAL
+});
+//  COMICSANS-NORMAL  COMICSANS-NORMAL  COMICSANS-NORMAL  COMICSANS-NORMAL
 //
 //
 
-module.exports = (function() {
+define('fonts/comicsans-normal', [], function() {
   return function(codeList) {
-    var csn = {
-        reverseHoles: false,
-        reverseShapes: true
-      },
+    var csn = { reverseHoles: false, reverseShapes: true },
       nbsp = '\u00A0';
     csn['A'] = {
       sC: [
@@ -4124,29 +4108,30 @@ module.exports = (function() {
     };
     csn[' '] = csn[nbsp];
     /* 
-    // https://opentype.js.org/glyph-inspector.html
-    function coordinates(cmd){
-    if(cmd.x1){
+// https://opentype.js.org/glyph-inspector.html
+function coordinates(cmd){
+  if(cmd.x1){
     return " "+(Math.floor(cmd.x1)/2)+" "+(Math.floor(0-cmd.y1)/2)+" "+(Math.floor(cmd.x)/2)+" "+(Math.floor(0-cmd.y)/2)
-    }else{
+  }else{
     if(cmd.x){
       return " "+(Math.floor(cmd.x)/2)+" "+(Math.floor(0-cmd.y)/2)
     }else{
       return ""
     }
-    }
-    };
-    function makeD(path){
-    var d  = "";
-    path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
-    return d.slice(1)
-    }
-    function doGLYPH(){return makeD(GLYPH.getPath(0,0,1024))}
-    function makeD(path){
-    var d  = "",lastX=NaN;lastY=NaN;
-    path.commands.forEach(function(cmd){var parms=coordinates(cmd);if((cmd.type!=="L"&&cmd.type!=="l")||parms.length){ d+=" "+cmd.type+parms}});
-    return d.slice(1);
-    function coordinates(cmd){
+  }
+};
+function makeD(path){
+  var d  = "";
+  path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
+  return d.slice(1)
+}
+function doGLYPH(){return makeD(GLYPH.getPath(0,0,1024))}
+function makeD(path){
+  var d  = "",lastX=NaN;lastY=NaN;
+  path.commands.forEach(function(cmd){var parms=coordinates(cmd);if((cmd.type!=="L"&&cmd.type!=="l")||parms.length){ d+=" "+cmd.type+parms}});
+  return d.slice(1);
+
+  function coordinates(cmd){
     if(cmd.x2){
       lastX  = cmd.x;
       lastY  = cmd.y;
@@ -4166,22 +4151,20 @@ module.exports = (function() {
         }
       }
     }
-    }
-    };
-    */
+  }
+};
+ */
 
     return csn;
   };
-})(); //  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM
+});
+//  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM  JURA-MEDIUM
 //
 //
 
-module.exports = (function() {
+define('fonts/jura-medium', [], function() {
   return function(codeList) {
-    var jur = {
-        reverseHoles: true,
-        reverseShapes: false
-      },
+    var jur = { reverseHoles: true, reverseShapes: false },
       nbsp = '\u00A0';
     jur['A'] = {
       shapeCmds: [
@@ -5335,12 +5318,12 @@ module.exports = (function() {
     };
     jur[' '] = jur[nbsp];
     /*  
-    // https://opentype.js.org/glyph-inspector.html
-    function makeD(path){
-    var d  = "",lastX=NaN;lastY=NaN;
-    path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
-    return d.slice(1)
-    function coordinates(cmd){
+// https://opentype.js.org/glyph-inspector.html
+function makeD(path){
+  var d  = "",lastX=NaN;lastY=NaN;
+  path.commands.forEach(function(cmd){d+=" "+cmd.type+coordinates(cmd)});
+  return d.slice(1)
+  function coordinates(cmd){
     if(cmd.x2){
       lastX  = cmd.x;
       lastY  = cmd.y;
@@ -5360,23 +5343,21 @@ module.exports = (function() {
         }
       }
     }
-    }
-    };
-    }
-    */
+  }
+};
+}
+ */
 
     return jur;
   };
-})(); //  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS
+});
+//  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS  WEBGL-DINGS
 //
 //
 
-module.exports = (function() {
+define('fonts/webgl-dings', [], function() {
   return function(codeList) {
-    var wgd = {
-        reverseHoles: false,
-        reverseShapes: true
-      },
+    var wgd = { reverseHoles: false, reverseShapes: true },
       nbsp = '\u00A0';
     wgd['A'] = {
       xMin: -7,
@@ -5619,10 +5600,8 @@ module.exports = (function() {
       reverseHole: false,
       xFactor: 7,
       yFactor: -7,
-      xShift: 350,
-      // These values are not calibrated
-      xMin: -340,
-      // Refer to the next symbol for an example
+      xShift: 350, // These values are not calibrated
+      xMin: -340, // Refer to the next symbol for an example
       xMax: 340,
       yMin: 47,
       yMax: 806,
@@ -5709,8 +5688,7 @@ module.exports = (function() {
       xFactor: 7,
       yFactor: -7,
       xShift: 475,
-      yShift: -312.6,
-      // The middle is at the bottom reference -- a kludge
+      yShift: -312.6, // The middle is at the bottom reference -- a kludge
       xMin: 20,
       xMax: 950,
       yMin: -145.6,
@@ -5950,9 +5928,10 @@ module.exports = (function() {
       width: 278
     };
     wgd[' '] = wgd[nbsp];
+
     return wgd;
   };
-})();
+});
 /*!
  * Babylon MeshWriter
  * https://github.com/BabylonJS/Babylon.js
@@ -5960,17 +5939,14 @@ module.exports = (function() {
  * Released under the MIT license
  */
 
-module.exports = (function() {
-  var HPB = require('./fonts/hirukopro-book');
-
-  var HNM = require('./fonts/helveticaneue-medium');
-
-  var CSN = require('./fonts/comicsans-normal');
-
-  var JUR = require('./fonts/jura-medium');
-
-  var WGD = require('./fonts/webgl-dings');
-
+define('index', [
+  './fonts/hirukopro-book',
+  './fonts/helveticaneue-medium',
+  './fonts/comicsans-normal',
+  './fonts/jura-medium',
+  './fonts/webgl-dings'
+], function(HPB, HNM, CSN, JUR, WGD) {
+  // Otherwise it assigns it to global variable 'BABYLONTYPE' // If BABYLON is loaded, it assigns the superconstructor to BABYLON.MeshWriter // This function loads the specific type-faces and returns the superconstructor // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
   var scene,
     FONTS,
     defaultColor,
@@ -6007,7 +5983,9 @@ module.exports = (function() {
   defaultColor = '#808080';
   defaultOpac = 1;
   curveSampleSize = 6;
-  naturalLetterHeight = 1000; // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
+  naturalLetterHeight = 1000;
+
+  // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
   //  SUPERCONSTRUCTOR  SUPERCONSTRUCTOR  SUPERCONSTRUCTOR
   // Parameters:
   //   ~ scene
@@ -6015,12 +5993,16 @@ module.exports = (function() {
 
   var Wrapper = function() {
     var proto, defaultFont, scale, meshOrigin, preferences;
+
     scene = arguments[0];
     preferences = makePreferences(arguments);
+
     defaultFont = isObject(FONTS[preferences.defaultFont]) ? preferences.defaultFont : 'HelveticaNeue-Medium';
     meshOrigin = preferences.meshOrigin === 'fontOrigin' ? preferences.meshOrigin : 'letterCenter';
     scale = isNumber(preferences.scale) ? preferences.scale : 1;
-    debug = isBoolean(preferences.debug) ? preferences.debug : false; // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
+    debug = isBoolean(preferences.debug) ? preferences.debug : false;
+
+    // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
     //  CONSTRUCTOR  CONSTRUCTOR  CONSTRUCTOR  CONSTRUCTOR
     // Called with 'new'
     // Parameters:
@@ -6028,10 +6010,11 @@ module.exports = (function() {
     //   ~ options
 
     function MeshWriter(lttrs, opt) {
-      var options = isObject(opt) ? opt : {}; //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
+      var options = isObject(opt) ? opt : {};
+
+      //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
       // Here we set all the parameters with incoming value or a default
       // See documentation on setOption below
-
       var position = setOption(options, 'position', isObject, {}),
         colors = setOption(options, 'colors', isObject, {}),
         fontFamily = setOption(options, 'font-family', supportedFont, defaultFont),
@@ -6051,7 +6034,9 @@ module.exports = (function() {
         letterScale = round((scale * rawheight) / naturalLetterHeight),
         thickness = round(scale * rawThickness),
         letters = isString(lttrs) ? lttrs : '';
+
       var material, meshesAndBoxes, offsetX, meshes, lettersBoxes, lettersOrigins, combo, sps, mesh;
+
       material = makeMaterial(scene, letters, emissive, ambient, specular, diffuse, opac);
       meshesAndBoxes = constructLetterPolygons(
         letters,
@@ -6072,6 +6057,7 @@ module.exports = (function() {
       combo = makeSPS(scene, meshesAndBoxes, material);
       sps = combo[0];
       mesh = combo[1];
+
       mesh.position.x = scale * x + offsetX;
       mesh.position.y = scale * y;
       mesh.position.z = scale * z;
@@ -6079,35 +6065,27 @@ module.exports = (function() {
       this.getSPS = function() {
         return sps;
       };
-
       this.getMesh = function() {
         return mesh;
       };
-
       this.getMaterial = function() {
         return material;
       };
-
       this.getOffsetX = function() {
         return offsetX;
       };
-
       this.getLettersBoxes = function() {
         return lettersBoxes;
       };
-
       this.getLettersOrigins = function() {
         return lettersOrigins;
       };
-
       this.color = function(c) {
         return isString(c) ? (color = c) : color;
       };
-
       this.alpha = function(o) {
         return isAmplitude(o) ? (opac = o) : opac;
       };
-
       this.clearall = function() {
         sps = null;
         mesh = null;
@@ -6119,83 +6097,67 @@ module.exports = (function() {
 
     proto.setColor = function(color) {
       var material = this.getMaterial();
-
       if (isString(color)) {
         material.emissiveColor = rgb2Bcolor3(this.color(color));
       }
     };
-
     proto.setAlpha = function(alpha) {
       var material = this.getMaterial();
-
       if (isAmplitude(alpha)) {
         material.alpha = this.alpha(alpha);
       }
     };
-
     proto.overrideAlpha = function(alpha) {
       var material = this.getMaterial();
-
       if (isAmplitude(alpha)) {
         material.alpha = alpha;
       }
     };
-
     proto.resetAlpha = function() {
       var material = this.getMaterial();
       material.alpha = this.alpha();
     };
-
     proto.getLetterCenter = function(ix) {
       return new BABYLON.Vector2(0, 0);
     };
-
     proto.dispose = function() {
       var mesh = this.getMesh(),
         sps = this.getSPS(),
         material = this.getMaterial();
-
       if (sps) {
         sps.dispose();
       }
-
       this.clearall();
     };
-
     MeshWriter.codeList = codeList;
+
     return MeshWriter;
   };
-
   window.TYPE = Wrapper;
-
   if (typeof BABYLON === 'object') {
     BABYLON.MeshWriter = Wrapper;
     supplementCurveFunctions();
   }
+  return Wrapper;
 
-  return Wrapper; //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
+  //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
   // MakeSPS turns the output of constructLetterPolygons into an SPS
   // with the whole string, with appropriate offsets
-
   function makeSPS(scene, meshesAndBoxes, material) {
     var meshes = meshesAndBoxes[0],
       lettersOrigins = meshesAndBoxes[2],
       sps,
       spsMesh;
-
     if (meshes.length) {
       sps = new BABYLON.SolidParticleSystem('sps' + 'test', scene, {});
       meshes.forEach(function(mesh, ix) {
-        sps.addShape(mesh, 1, {
-          positionFunction: makePositionParticle(lettersOrigins[ix])
-        });
+        sps.addShape(mesh, 1, { positionFunction: makePositionParticle(lettersOrigins[ix]) });
         mesh.dispose();
       });
       spsMesh = sps.buildMesh();
       spsMesh.material = material;
       sps.setParticles();
     }
-
     return [sps, spsMesh];
 
     function makePositionParticle(letterOrigins) {
@@ -6204,13 +6166,14 @@ module.exports = (function() {
         particle.position.z = letterOrigins[2];
       };
     }
-  } //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
+  }
+
+  //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
   // Takes specifications and returns an array with three elements, each of which
   // is an array (length of all arrays to match the number of incoming characters)
   //   ~ the meshes (not offset by position)
   //   ~ the boxes (to help with positions features)
   //   ~ the letter origins (providing offset for each letter)
-
   function constructLetterPolygons(
     letters,
     fontSpec,
@@ -6245,26 +6208,21 @@ module.exports = (function() {
     for (i = 0; i < letters.length; i++) {
       letter = letters[i];
       letterSpec = makeLetterSpec(fontSpec, letter);
-
       if (isObject(letterSpec)) {
         lists = buildLetterMeshes(letter, i, letterSpec, fontSpec.reverseShapes, fontSpec.reverseHoles);
         shapesList = lists[0];
         holesList = lists[1];
         letterMeshes = [];
-
         for (j = 0; j < shapesList.length; j++) {
           shape = shapesList[j];
           holes = holesList[j];
-
           if (isArray(holes) && holes.length) {
             letterMesh = punchHolesInShape(shape, holes, letter, i);
           } else {
             letterMesh = shape;
           }
-
           letterMeshes.push(letterMesh);
         }
-
         if (letterMeshes.length) {
           lettersMeshes[ix] = merge(letterMeshes);
           lettersOrigins[ix] = letterOrigins;
@@ -6273,11 +6231,12 @@ module.exports = (function() {
         }
       }
     }
-
     meshesAndBoxes = [lettersMeshes, lettersBoxes, lettersOrigins];
     meshesAndBoxes.xWidth = round(letterOffsetX);
     meshesAndBoxes.count = ix;
-    return meshesAndBoxes; // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+    return meshesAndBoxes;
+
+    // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
     // A letter may have one or more shapes and zero or more holes
     // The shapeCmds is an array of shapes
     // The holeCmds is an array of array of holes (since one shape 'B' may have multiple holes)
@@ -6318,15 +6277,13 @@ module.exports = (function() {
         combo,
         //  ~  ~  ~  ~  ~  ~  ~
         // To accomodate letter-by-letter scaling and shifts, we have several adjust functions
-        adjX = makeAdjust(letterScale, xFactor, offX, 0, false, true),
-        // no shift
+        adjX = makeAdjust(letterScale, xFactor, offX, 0, false, true), // no shift
         adjZ = makeAdjust(letterScale, zFactor, offZ, 0, false, false),
-        adjXfix = makeAdjust(letterScale, xFactor, offX, xShift, false, true),
-        // shifted / fixed
+        adjXfix = makeAdjust(letterScale, xFactor, offX, xShift, false, true), // shifted / fixed
         adjZfix = makeAdjust(letterScale, zFactor, offZ, zShift, false, false),
-        adjXrel = makeAdjust(letterScale, xFactor, offX, xShift, true, true),
-        // shifted / relative
+        adjXrel = makeAdjust(letterScale, xFactor, offX, xShift, true, true), // shifted / relative
         adjZrel = makeAdjust(letterScale, zFactor, offZ, zShift, true, false);
+
       letterBox = [adjX(spec.xMin), adjX(spec.xMax), adjZ(spec.yMin), adjZ(spec.yMax)];
       letterOrigins = [round(letterOffsetX), -1 * adjX(0), -1 * adjZ(0)];
       letterOffsetX = letterOffsetX + spec.width * letterScale;
@@ -6342,7 +6299,6 @@ module.exports = (function() {
       function meshesFromCmdsListArray(cmdsListArray) {
         return cmdsListArray.map(makeMeshFromCmdsList(reverseHole));
       }
-
       function makeMeshFromCmdsList(reverse) {
         return function meshFromCmdsList(cmdsList) {
           var cmd = getCmd(cmdsList, 0),
@@ -6354,23 +6310,18 @@ module.exports = (function() {
 
           for (j = 1; j < cmdsList.length; j++) {
             cmd = getCmd(cmdsList, j);
-
             if (cmd.length === 2) {
               path.addLineTo(adjXfix(cmd[0]), adjZfix(cmd[1]));
             }
-
             if (cmd.length === 3) {
               path.addLineTo(adjXrel(cmd[1]), adjZrel(cmd[2]));
             }
-
             if (cmd.length === 4) {
               path.addQuadraticCurveTo(adjXfix(cmd[0]), adjZfix(cmd[1]), adjXfix(cmd[2]), adjZfix(cmd[3]));
             }
-
             if (cmd.length === 5) {
               path.addQuadraticCurveTo(adjXrel(cmd[1]), adjZrel(cmd[2]), adjXrel(cmd[3]), adjZrel(cmd[4]));
             }
-
             if (cmd.length === 6) {
               path.addCubicCurveTo(
                 adjXfix(cmd[0]),
@@ -6381,7 +6332,6 @@ module.exports = (function() {
                 adjZfix(cmd[5])
               );
             }
-
             if (cmd.length === 7) {
               path.addCubicCurveTo(
                 adjXrel(cmd[1]),
@@ -6393,13 +6343,12 @@ module.exports = (function() {
               );
             }
           }
+          array = path.getPoints().map(point2Vector);
 
-          array = path.getPoints().map(point2Vector); // Sometimes redundant coordinates will cause artifacts - delete them!
-
+          // Sometimes redundant coordinates will cause artifacts - delete them!
           if (array[0].x === array[array.length - 1].x && array[0].y === array[array.length - 1].y) {
             array = array.slice(1);
           }
-
           if (reverse) {
             array.reverse();
           }
@@ -6409,7 +6358,6 @@ module.exports = (function() {
           return mesh;
         };
       }
-
       function getCmd(list, ix) {
         var cmd, len;
         lastX = thisX;
@@ -6430,7 +6378,6 @@ module.exports = (function() {
         maxZadj = thisZ + zShift < maxZadj ? maxZadj : thisZ + zShift;
         return cmd;
       }
-
       function makeAdjust(letterScale, factor, off, shift, relative, xAxis) {
         if (relative) {
           if (xAxis) {
@@ -6448,15 +6395,14 @@ module.exports = (function() {
           };
         }
       }
-    } // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+    }
 
+    // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
     function punchHolesInShape(shape, holes, letter, i) {
       var csgShape = BABYLON.CSG.FromMesh(shape);
-
       for (var k = 0; k < holes.length; k++) {
         csgShape = csgShape.subtract(BABYLON.CSG.FromMesh(holes[k]));
       }
-
       holes.forEach(function(h) {
         h.dispose();
       });
@@ -6486,12 +6432,10 @@ module.exports = (function() {
       var nb_of_points = curveSampleSize;
       var curve = BABYLON.Curve3.CreateQuadraticBezier(origin, control, destination, nb_of_points);
       var curvePoints = curve.getPoints();
-
       for (var i = 1; i < curvePoints.length; i++) {
         this.addLineTo(curvePoints[i].x, curvePoints[i].y);
       }
     };
-
     BABYLON.Path2.prototype.addCubicCurveTo = function(redX, redY, greenX, greenY, blueX, blueY) {
       var points = this.getPoints();
       var lastPoint = points[points.length - 1];
@@ -6502,12 +6446,13 @@ module.exports = (function() {
       var nb_of_points = Math.floor(0.3 + curveSampleSize * 1.5);
       var curve = BABYLON.Curve3.CreateCubicBezier(origin, control1, control2, destination, nb_of_points);
       var curvePoints = curve.getPoints();
-
       for (var i = 1; i < curvePoints.length; i++) {
         this.addLineTo(curvePoints[i].x, curvePoints[i].y);
       }
     };
-  } // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
+  }
+
+  // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
   //    FONT COMPRESSING AND DECOMPRESSING    FONT COMPRESSING AND DECOMPRESSING
   //
   // One can reduce file size by 50% with a content-specific compression of font strings
@@ -6516,10 +6461,8 @@ module.exports = (function() {
   // The compressed versions are placed in "sC" and "hC"
   // The *first* time a letter is used, if it was compressed, it is decompressed
   //
-
   function makeLetterSpec(fontSpec, letter) {
     var letterSpec = fontSpec[letter];
-
     if (isObject(letterSpec)) {
       if (!isArray(letterSpec.shapeCmds) && isArray(letterSpec.sC)) {
         letterSpec.shapeCmds = letterSpec.sC.map(function(cmds) {
@@ -6527,7 +6470,6 @@ module.exports = (function() {
         });
         letterSpec.sC = null;
       }
-
       if (!isArray(letterSpec.holeCmds) && isArray(letterSpec.hC)) {
         letterSpec.holeCmds = letterSpec.hC.map(function(cmdslists) {
           if (isArray(cmdslists)) {
@@ -6541,7 +6483,6 @@ module.exports = (function() {
         letterSpec.hC = null;
       }
     }
-
     return letterSpec;
 
     function decodeList(str) {
@@ -6551,18 +6492,15 @@ module.exports = (function() {
         if (cmds.length === 12) {
           list.push(decode6(cmds));
         }
-
         if (cmds.length === 8) {
           list.push(decode4(cmds));
         }
-
         if (cmds.length === 4) {
           list.push(decode2(cmds));
         }
       });
       return list;
     }
-
     function decode6(s) {
       return [
         decode1(s.substring(0, 2)),
@@ -6573,7 +6511,6 @@ module.exports = (function() {
         decode1(s.substring(10, 12))
       ];
     }
-
     function decode4(s) {
       return [
         decode1(s.substring(0, 2)),
@@ -6582,53 +6519,43 @@ module.exports = (function() {
         decode1(s.substring(6, 8))
       ];
     }
-
     function decode2(s) {
       return [decode1(s.substring(0, 2)), decode1(s.substring(2, 4))];
     }
-
     function decode1(s) {
       return (frB128(s) - 4000) / 2;
     }
   }
-
   function codeList(list) {
     var str = '',
       xtra = '';
-
     if (isArray(list)) {
       list.forEach(function(cmds) {
         if (cmds.length === 6) {
           str += xtra + code6(cmds);
           xtra = ' ';
         }
-
         if (cmds.length === 4) {
           str += xtra + code4(cmds);
           xtra = ' ';
         }
-
         if (cmds.length === 2) {
           str += xtra + code2(cmds);
           xtra = ' ';
         }
       });
     }
-
     return str;
 
     function code6(a) {
       return code1(a[0]) + code1(a[1]) + code1(a[2]) + code1(a[3]) + code1(a[4]) + code1(a[5]);
     }
-
     function code4(a) {
       return code1(a[0]) + code1(a[1]) + code1(a[2]) + code1(a[3]);
     }
-
     function code2(a) {
       return code1(a[0]) + code1(a[1]);
     }
-
     function code1(n) {
       return toB128(n + n + 4000);
     }
@@ -6638,32 +6565,25 @@ module.exports = (function() {
     var result = 0,
       i = -1,
       l = s.length - 1;
-
     while (i++ < l) {
       result = result * 128 + b128back[s.charCodeAt(i)];
     }
-
     return result;
   }
-
   function toB128(i) {
     var s = b128digits[i % 128];
     i = Γ(i / 128);
-
     while (i > 0) {
       s = b128digits[i % 128] + s;
       i = Γ(i / 128);
     }
-
     return s;
   }
-
   function prepArray() {
     var pntr = -1,
       n;
     b128back = new Uint8Array(256);
     b128digits = new Array(128);
-
     while (160 > pntr++) {
       if (pntr < 128) {
         n = fr128to256(pntr);
@@ -6677,7 +6597,6 @@ module.exports = (function() {
         }
       }
     }
-
     function fr128to256(n) {
       if (n < 92) {
         return n < 58 ? (n < 6 ? n + 33 : n + 34) : n + 35;
@@ -6685,15 +6604,16 @@ module.exports = (function() {
         return n + 69;
       }
     }
-  } //    FONT COMPRESSING AND DECOMPRESSING    FONT COMPRESSING AND DECOMPRESSING
+  }
+  //    FONT COMPRESSING AND DECOMPRESSING    FONT COMPRESSING AND DECOMPRESSING
   // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
+
   // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
   // Screening and defaulting functions for incoming parameters
 
   function makePreferences(args) {
     var prefs = {},
       p;
-
     if (isObject((p = args[1]))) {
       if (p['default-font']) {
         prefs.defaultFont = p['default-font'];
@@ -6702,7 +6622,6 @@ module.exports = (function() {
           prefs.defaultFont = p.defaultFont;
         }
       }
-
       if (p['mesh-origin']) {
         prefs.meshOrigin = p['mesh-origin'];
       } else {
@@ -6710,102 +6629,85 @@ module.exports = (function() {
           prefs.meshOrigin = p.meshOrigin;
         }
       }
-
       if (p.scale) {
         prefs.scale = p.scale;
       }
-
       if (isBoolean(p.debug)) {
         prefs.debug = p.debug;
       }
-
       return prefs;
     } else {
-      return {
-        defaultFont: args[2],
-        scale: args[1],
-        debug: false
-      };
+      return { defaultFont: args[2], scale: args[1], debug: false };
     }
-  } //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
+  }
+
+  //  ~  -  =  ~  -  =  ~  -  =  ~  -  =  ~  -  =
   // These functions apply a test to possible incoming parameters
   // It the test passes, the parameters are used
   // Otherwise the default is used
-
   function setOption(opts, field, tst, defalt) {
     return tst(opts[field]) ? opts[field] : defalt;
   }
-
   function setColor(clrs, field, tst, defalt) {
     return tst(clrs[field]) ? clrs[field] : defalt;
   }
-
   function setPositn(pos, field, tst, defalt) {
     return tst(pos[field]) ? pos[field] : defalt;
-  } // The next two tests just return a boolean
+  }
 
+  // The next two tests just return a boolean
   function supportedFont(ff) {
     return isObject(FONTS[ff]);
   }
-
   function supportedAnchor(a) {
     return a === 'left' || a === 'right' || a === 'center';
-  } // Screening and defaulting functions for incoming parameters
+  }
+  // Screening and defaulting functions for incoming parameters
   // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
+
   // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
   // Conversion functions
-
   function rgb2Bcolor3(rgb) {
     rgb = rgb.replace('#', '');
     return new BABYLON.Color3(convert(rgb.substring(0, 2)), convert(rgb.substring(2, 4)), convert(rgb.substring(4, 6)));
-
     function convert(x) {
       return Γ(1000 * Math.max(0, Math.min((isNumber(parseInt(x, 16)) ? parseInt(x, 16) : 0) / 255, 1))) / 1000;
     }
   }
-
   function point2Vector(point) {
     return new BABYLON.Vector2(round(point.x), round(point.y));
   }
-
   function merge(arrayOfMeshes) {
     return arrayOfMeshes.length === 1 ? arrayOfMeshes[0] : BABYLON.Mesh.MergeMeshes(arrayOfMeshes, true);
-  } // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
-  // Boolean test functions
+  }
 
+  // *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-* *-*=*  *=*-*
+  // Boolean test functions
   function isPositiveNumber(mn) {
     return typeof mn === 'number' && !isNaN(mn) ? 0 < mn : false;
   }
-
   function isNumber(mn) {
     return typeof mn === 'number';
   }
-
   function isBoolean(mn) {
     return typeof mn === 'boolean';
   }
-
   function isAmplitude(ma) {
     return typeof ma === 'number' && !isNaN(ma) ? 0 <= ma && ma <= 1 : false;
   }
-
   function isObject(mo) {
     return (mo != null && typeof mo === 'object') || typeof mo === 'function';
   }
-
   function isArray(ma) {
     return ma != null && typeof ma === 'object' && ma.constructor === Array;
   }
-
   function isString(ms) {
     return typeof ms === 'string' ? ms.length > 0 : false;
   }
-
   function weeid() {
     return Math.floor(Math.random() * 1000000);
   }
-
   function round(n) {
     return Γ(0.3 + n * 1000000) / 1000000;
   }
-})();
+});

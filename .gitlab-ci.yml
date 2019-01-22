@@ -34,14 +34,40 @@ frontend-web-application-build:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --shamefully-flatten
-    - ls .pnpm-store
+    - pnpm install --prefix sources/frontend
+    - build.web.application
     - echo "Build Finished"
   artifacts:
     paths:
       - sources/frontend/dist
 
-frontend-web-application:
+check-formatting:
+  stage: test
+  environment:
+    name: staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: push
+    paths:
+      - .pnpm-store/
+  script:
+    - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+    - echo "Format Check Finished"
+
+check-linting:
+  stage: test
+  environment:
+    name: staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: push
+    paths:
+      - .pnpm-store/
+  script:
+    - npm --prefix sources/frontend run lint.check
+    - echo "Linting Check Finished"
+
+frontend-web-application-unit-tests:
   stage: test
   environment:
     name: staging
@@ -51,66 +77,31 @@ frontend-web-application:
     paths:
       - .pnpm-store/
   script:
-    - ls .pnpm-store
-    - ls sources/frontend/dist
-
-    # - ls
-    # - npm config set store pnpm-store
-    # - npm set verify-store-integrity false
-    # - pnpm install --prefix sources/frontend --shamefully-flatten
-    # - npm --prefix sources/frontend run build.web.application
-    # - echo "Build Finished"
+    - pnpm install --prefix sources/frontend --shamefully-flatten
+    - npm --prefix sources/application run test.jest.coverage
+    - echo "Web Application Unit Tests Finished"
   artifacts:
     paths:
       - sources/frontend/dist
+      - sources/frontend/reports
 
-# check-formatting:
-#   stage: test
-#   script:
-#     - npm --prefix sources/frontend run format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
-#     - echo "Format Check Finished"
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-
-# check-linting:
-#   stage: test
-#   script:
-#     - npm --prefix sources/frontend run lint.check
-#     - echo "Linting Check Finished"
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-
-# frontend-web-application-unit-tests:
-#   stage: test
-#   environment:
-#     name: staging
-#   script:
-#     - ls
-#     - npm config set store pnpm-store
-#     - pnpm install --prefix sources/frontend --shamefully-flatten
-#     - npm --prefix sources/application run test.jest.coverage
-#     - echo "Web Application Unit Tests Finished"
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#   artifacts:
-#     paths:
-#       - sources/frontend/reports
-
-# frontend-web-application-e2e-tests:
-#   stage: test
-#   environment:
-#     name: staging
-#   script:
-#     - ls
-#     - npm config set store pnpm-store
-#     - pnpm install --prefix sources/frontend --shamefully-flatten
-#     - npm --prefix sources/frontend run e2e.web.application.report
-#     - echo "Web Application E2E Tests Finished"
-#   cache:
-#     key: ${CI_COMMIT_REF_SLUG}
-#   artifacts:
-#     paths:
-#       - sources/frontend/reports
+frontend-web-application-e2e-tests:
+  stage: test
+  environment:
+    name: staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/frontend --shamefully-flatten
+    - npm --prefix sources/frontend run e2e.web.application.report
+    - echo "Web Application E2E Tests Finished"
+  artifacts:
+    paths:
+      - sources/frontend/dist
+      - sources/frontend/reports
 
 # buildsize:
 #   stage: test
@@ -122,13 +113,7 @@ frontend-web-application:
 #   script:
 #     - echo 1
 
-# deploy1:
-#   stage: deploy
-#   script:
-#     # - pnpm install --prefix sources/frontend/functions
-#     - echo "Do your deploy here"
-
-build-master:
+publish-hiptest:
   before_script:
     - echo Skip
   image: docker:stable
