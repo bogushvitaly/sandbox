@@ -1,6 +1,6 @@
 const path = require('path');
 
-const REPORTS_PATH = path.join(process.cwd(), 'reports', 'web-application');
+const REPORTS_PATH = path.join(process.cwd(), 'reports', 'apps', 'web-application');
 
 exports.config = {
   output: path.join(REPORTS_PATH, 'codecept'),

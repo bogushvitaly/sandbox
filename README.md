@@ -6,7 +6,7 @@
 
 - [x] Skaffold tool for developing Multi-language Applications and Services
 - [x] A performant Continuous Delivery Pipeline: Local GitLab CI Runner with Minio Storage caching using Minikube, [pnpm Package Manager](https://github.com/pnpm/benchmarks-of-javascript-package-managers)
-- [x] NX Workspace with Xplat architecture [Xplat architecture](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U), Angular PWA
+- [x] NX Monorepo Workspace with Xplat architecture [Xplat architecture](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U), Angular PWA
 - [x] Server-side rendering with Nest.js, Firebase Cloud Function deployment, Universal Development Kit
 - [x] Prerender SPA Plugin, Custom webpack builders for Angular
 - [x] Acceptance Test Driven Development with Codecept, Jest

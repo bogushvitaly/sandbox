@@ -1,16 +1,18 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-const { join } = require('path');
+const {
+  join
+} = require('path');
 const getBaseKarmaConfig = require('../../karma.conf');
 
-module.exports = function(config) {
+module.exports = function (config) {
   const baseConfig = getBaseKarmaConfig();
   config.set({
     ...baseConfig,
     coverageIstanbulReporter: {
       ...baseConfig.coverageIstanbulReporter,
-      dir: join(__dirname, '../../reports/web-application')
+      dir: join(__dirname, '../../reports/apps/web-application')
     }
   });
 };
