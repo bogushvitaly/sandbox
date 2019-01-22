@@ -39,7 +39,7 @@
     "e2e": "ng e2e",
     "e2e.codecept.init": "cd apps/REPLACE_WITH_APPLICATION_NAME && codeceptjs init && codeceptjs gherkin:init && codeceptjs def .",
     "e2e.web.application": "start-server-and-test start.web.application http-get://localhost:4200 e2e.web.application.report",
-    "e2e.web.application.report": "npm run e2e.web.application.run -- --reporter mochawesome && npm run e2e.web.application.run -- --reporter mocha --reporter mocha-junit-reporter --reporter-options mochaFile=./reports/apps/web-application/mocha.xml && allure generate reports/apps/web-application/codecept --clean --report-dir reports/apps/web-application/allure",
+    "e2e.web.application.report": "npm run e2e.web.application.run -- --reporter mochawesome && npm run e2e.web.application.run -- --reporter mocha --reporter mocha-junit-reporter --reporter-options mochaFile=./reports/apps/web-application/mocha/mocha.xml && allure generate reports/apps/web-application/codecept --clean --report-dir reports/apps/web-application/allure",
     "e2e.web.application.run": "codeceptjs run --config apps/web-application-e2e/codecept.conf.js",
     "e2e.web.application.shell": "cd apps/web-application-e2e && codeceptjs shell",
     "e2e.web.application.steps": "codeceptjs gherkin:snippets --config apps/web-application-e2e/codecept.conf.js",

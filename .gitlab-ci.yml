@@ -78,6 +78,7 @@ frontend-web-application-build-production:
   script:
     - pnpm install --prefix sources/frontend --offline
     - npm run --prefix sources/frontend build.web.application
+    - mkdir sources/frontend/production
     - cp -r sources/frontend/dist/apps/* sources/frontend/production
     - echo "Production Build Finished"
   artifacts:
@@ -111,7 +112,7 @@ frontend-check-linting:
     - frontend-web-application-build-staging
   cache:
     key: ${CI_COMMIT_REF_SLUG}
-    policy: push
+    policy: pull
     paths:
       - .pnpm-store/
   script:
@@ -160,6 +161,11 @@ frontend-storybook:
   stage: test
   dependencies:
     - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
   script:
     - pnpm install --prefix sources/frontend --offline
     - npm run --prefix sources/frontend storybook.build
@@ -172,6 +178,11 @@ frontend-dependencies-graph:
   stage: test
   dependencies:
     - frontend-web-application-build-staging
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .pnpm-store/
   script:
     - pnpm install --prefix sources/frontend --offline
     - npm run --prefix sources/frontend affected.dep-graph
@@ -261,6 +272,7 @@ frontend-application-web-deploy-production:
   script:
     - pnpm install --prefix sources/frontend --offline
     - pnpm install --prefix sources/frontend/functions --offline
+    - mkdir sources/frontend/dist/apps
     - mv sources/frontend/production/* sources/frontend/dist/apps
     - npm run --prefix sources/application deploy.web.application
     - echo "Production Deployment Finished"
@@ -291,6 +303,7 @@ pages:
   artifacts:
     paths:
       - public
+      - sources/frontend/reports
     expire_in: 30 days
 
 publish-hiptest:
