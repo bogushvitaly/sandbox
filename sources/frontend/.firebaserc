@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "sandbox-bcdc7",
-    "staging": "sandbox-bcdc7",
-    "production": "sandbox-bcdc7"
+    "default": "sandbox-50983",
+    "staging": "sandbox-50983",
+    "production": "sandbox-50983"
   }
 }
