@@ -316,7 +316,7 @@ pages:
       - sources/frontend/reports
     expire_in: 30 days
 
-publish-hiptest:
+hiptest:
   stage: reports
   image: docker:stable
   before_script:
