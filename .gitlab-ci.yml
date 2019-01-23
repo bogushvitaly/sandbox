@@ -26,12 +26,12 @@ before_script:
   - npm config set store .pnpm-store
   - npm set verify-store-integrity false
   - npm set rebuild-bundle false
-  - npm config set unsafe-perm true
 
 frontend-dependencies-install:
   stage: prepare
   before_script:
-    - echo Skip Before Scripts
+    - npm config set store .pnpm-store
+    - npm config set unsafe-perm true
   cache:
     key: cache
     paths:
