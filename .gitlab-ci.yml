@@ -128,7 +128,7 @@ frontend-unit-tests:
       - .pnpm-store/
   script:
     - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/application test.jest.coverage
+    - npm run --prefix sources/frontend test.jest.coverage
     - echo "Web Application Unit Tests Finished"
   artifacts:
     paths:
@@ -179,7 +179,7 @@ frontend-dependencies-graph:
       - .pnpm-store/
   script:
     - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend affected.dep-graph
+    - npm run --prefix sources/frontend dep-graph
     - echo "Frontend Dependencies Graph Generation Finished"
   artifacts:
     paths:
@@ -220,13 +220,25 @@ frontend-web-application-e2e-tests:
       - sources/frontend/reports
 
 frontend-application-web-lighthouse:
-  stage: analyze
+  stage: audit
   dependencies:
     - frontend-application-web-deploy-staging
   script:
     - mkdir -p sources/frontend/reports/lighthouse
     - lighthouse-ci $WEB_APPLIATOIN_STAGING_URL --silent --report sources/frontend/reports/lighthouse
     - echo "Web Application Lighthouse Analysis Finished"
+  artifacts:
+    paths:
+      - sources/frontend/reports
+
+frontend-application-web-artillery:
+  stage: audit
+  dependencies:
+    - frontend-application-web-deploy-staging
+  script:
+    - mkdir -p sources/frontend/reports/lighthouse
+    - artillery quick --count 10 -n 20 https://artillery.io/
+    - echo "Web Application Artillery Load Tests Finished"
   artifacts:
     paths:
       - sources/frontend/reports
@@ -246,7 +258,7 @@ frontend-application-web-deploy-staging:
   script:
     - pnpm install --prefix sources/frontend --offline
     - pnpm install --prefix sources/frontend/functions --offline
-    - npm run --prefix sources/application run deploy.web.application
+    - npm run --prefix sources/frontend run deploy.web.application
     - echo "Staging Deployment Finished"
   artifacts:
     paths:
@@ -270,7 +282,7 @@ frontend-application-web-deploy-production:
     - pnpm install --prefix sources/frontend/functions --offline
     - mkdir sources/frontend/dist/apps
     - mv sources/frontend/production/* sources/frontend/dist/apps
-    - npm run --prefix sources/application deploy.web.application
+    - npm run --prefix sources/frontend deploy.web.application
     - echo "Production Deployment Finished"
   artifacts:
     paths:

@@ -47,7 +47,7 @@ function applyServerWebpackPatch() {
       )
     };
     return estraverse.replace(AST, {
-      enter: function(node) {
+      enter: function (node) {
         if ((node.type === 'ArrayExpression', _.includes(128, node.range))) {
           return replaced;
         }
