@@ -27,7 +27,7 @@ dependencies:
   '@ionic-native/core': 5.0.0-beta.15
   '@ionic-native/splash-screen': 5.0.0-beta.14
   '@ionic-native/status-bar': 5.0.0-beta.14
-  '@ionic/angular': 4.0.0-rc.3
+  '@ionic/angular': 4.0.0
   '@ionic/angular-toolkit': 1.2.2
   '@nestjs/common': 5.6.2
   '@nestjs/core': 5.6.2
@@ -145,7 +145,7 @@ dependencies:
   ngx-json-ld: 0.3.1
   ngx-keyboard-events: 0.1.9
   ngx-logger: 3.3.9
-  ngx-page-scroll: 5.0.1
+  ngx-page-scroll: 6.0.0-beta.0
   ngx-swiper-wrapper: 7.2.1
   ngx-translate-multi-http-loader: 2.1.2
   node-gyp: 3.8.0
@@ -235,7 +235,7 @@ devDependencies:
   babel-loader: 8.0.5
   babel-plugin-require-context-hook: 1.0.0
   babel-plugin-transform-amd-to-commonjs: 1.4.0
-  codeceptjs: 2.0.3
+  codeceptjs: 2.0.4
   codelyzer: 4.5.0
   cp-cli: 1.1.2
   cp-dep: 3.0.1
@@ -286,7 +286,7 @@ devDependencies:
   postcss-loader: 3.0.0
   prerender-spa-plugin: 3.4.0
   prettier: 1.16.1
-  prisma: 1.25.0
+  prisma: 1.25.1
   protractor: 5.4.2
   puppeteer: 1.11.0
   read-pkg: 4.0.1
@@ -2103,9 +2103,9 @@ packages:
       '@angular-devkit/schematics': '>=0.7.2 <8.0.0'
     resolution:
       integrity: sha512-mJTV9SQWSKDzbKm0fpbfuXehAxqayeeApm94OLuZto27Kf2eARRdH4CsUEcv+6YjYAyzfnx2k5ej/mHrh2wYFg==
-  /@ionic/angular/4.0.0-rc.3:
+  /@ionic/angular/4.0.0:
     dependencies:
-      '@ionic/core': 4.0.0-rc.3
+      '@ionic/core': 4.0.0
       tslib: 1.9.3
     dev: false
     peerDependencies:
@@ -2122,13 +2122,13 @@ packages:
       rxjs: '>=6.2.0'
       zone.js: ^0.8.26
     resolution:
-      integrity: sha512-OvLSGkkEvhBrsUh4IlVsMWagdyT0wgOCp+BlP9CkavpKBEHRoVFjBKMgZlsUYejzjGNOcbVFdTNPN0rWmzqKQA==
-  /@ionic/core/4.0.0-rc.3:
+      integrity: sha512-kxvlZN5daRql/VRcbB7YWMcmE4jKDgwlPRykzNvmYWFDr9vg1AbXirLHAPtR7BaKWJEN4dJwlibjBEJQw8kVYQ==
+  /@ionic/core/4.0.0:
     dependencies:
       ionicons: 4.5.5
     dev: false
     resolution:
-      integrity: sha512-3tqLiMmDk1jSgvCNLDjLN1aakOthTzNjWphadWksA6HKajgPt4SxLGHXTnLS29p8ziF3XVAwE2kxFX2kQL4EGw==
+      integrity: sha512-/hW4882TyjcJTiNBYpoLGRYxkQhRidSuVjCL2RvfMS8a7FDQoS2dkje5KBGG+O2TCjtyXE5de1A6HvUgvDqjGA==
   /@kbrandwijk/swagger-to-graphql/2.4.3/graphql@14.1.1:
     dependencies:
       babel-runtime: 6.26.0
@@ -7221,7 +7221,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
-  /codeceptjs/2.0.3:
+  /codeceptjs/2.0.4:
     dependencies:
       allure-js-commons: 1.3.2
       archiver: 3.0.0
@@ -7249,7 +7249,7 @@ packages:
       npm: '>=5.6.0'
     hasBin: true
     resolution:
-      integrity: sha512-CevxT+71mkKP9IphHI5tZWafo8/8DLfRkPD0dfAleenb0V6DUdttzMeeaqJA3VS6CNqxrwUZcBmNP7cqDDsqkg==
+      integrity: sha512-lWl5j2F8czKVMUvr8RRoAiHDpCMO1qzVjiwyieUy9kSlg0oxL+jdgf1zwuiaykwkJcJI0bJlVtrONvzAFXD2GQ==
   /codelyzer/4.5.0:
     dependencies:
       app-root-path: 2.1.0
@@ -17539,15 +17539,16 @@ packages:
       rxjs: ^6.0.0
     resolution:
       integrity: sha512-CO0kHFce96Gk3fVuJS+ry0gX2HYvQMx8w7ReI8XGlXhNHRKuWE7yFqB3nIB7rRQOv52PvwGFmQiIQidNPOBx+A==
-  /ngx-page-scroll/5.0.1:
+  /ngx-page-scroll/6.0.0-beta.0:
+    dependencies:
+      tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': '>=6.0.0 <8.0.0'
-      '@angular/core': '>=6.0.0 <8.0.0'
-      '@angular/platform-browser': '>=6.0.0 <8.0.0'
-      '@angular/router': '>=6.0.0 <8.0.0'
+      '@angular/common': ^7.1.0
+      '@angular/core': ^7.1.0
+      ngx-page-scroll-core: 6.0.0-beta.0
     resolution:
-      integrity: sha512-bn8qzjijAQqXKzwiUHn7ommLDKplR7KNEJdhqpFZK9jczf/n5SVkWMzbhE9nPg7JjWzvgoBSzx3/IVnWaOKVIg==
+      integrity: sha512-n7nPOXzUVMKZxNrDA3sQWwqxrD2vYOC/KPUpNvtTU9y8OL+ksehouWss2BfbnzeXjakzwpJDzTmfarNpKe+TBw==
   /ngx-smart-modal/7.1.1:
     dev: true
     peerDependencies:
@@ -19885,7 +19886,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-VR1iadSfok+3MweY9HS2V5ExzwtS3TVvJyJUtdPc8K8dblg2m6H3YOKnlMdZlzp31AaGnM95GKhIFITo6j02OQ==
-  /prisma-cli-core/1.25.0:
+  /prisma-cli-core/1.25.1:
     dependencies:
       adm-zip: 0.4.13
       archiver: 2.1.1
@@ -19911,11 +19912,11 @@ packages:
       node-forge: 0.7.6
       npm-run: 4.1.2
       opn: 5.4.0
-      prisma-client-lib: /prisma-client-lib/1.25.0/graphql@14.1.1
-      prisma-datamodel: 1.25.0
-      prisma-db-introspection: 1.25.0
-      prisma-generate-schema: 1.25.0
-      prisma-yml: 1.25.0
+      prisma-client-lib: /prisma-client-lib/1.25.1/graphql@14.1.1
+      prisma-datamodel: 1.25.1
+      prisma-db-introspection: 1.25.1
+      prisma-generate-schema: 1.25.1
+      prisma-yml: 1.25.1
       scuid: 1.1.0
       sillyname: 0.1.0
       source-map-support: 0.4.18
@@ -19924,8 +19925,8 @@ packages:
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-UnzkHXknCGPpHxTciH4oV6J5pQuMDgdlpYLAXa6FfpYOUjUPpI5a0hbgGgGFFvaCnctBaxUnD786Fuj0KCjicQ==
-  /prisma-cli-engine/1.25.0:
+      integrity: sha512-KndJjJbAXJQRsYEB9HElAuwA6yRnurBDO2R4gn7zVr2DNiyUINBe9Pa9qI4TpWAvMVSGEfcuKCxlk3VZqwnEbQ==
+  /prisma-cli-engine/1.25.1:
     dependencies:
       '@heroku/linewrap': 1.0.0
       ansi-escapes: 3.1.0
@@ -19961,7 +19962,7 @@ packages:
       mkdirp: 0.5.1
       opn: 5.4.0
       prisma-json-schema: 0.1.3
-      prisma-yml: 1.25.0
+      prisma-yml: 1.25.1
       raven: 2.6.4
       rwlockfile: 1.4.12
       scuid: 1.1.0
@@ -19974,8 +19975,8 @@ packages:
       update-notifier: 2.5.0
     dev: true
     resolution:
-      integrity: sha512-2hONmE4+l6hDQX789zREpobkfLKgQmJ/zK3QXvRmu+bk7RjXJKMPh/mG4WNsQZC5f0bThVT+Xji5qR3ZF3Wqpw==
-  /prisma-client-lib/1.25.0/graphql@14.1.1:
+      integrity: sha512-t4KprCk4+3imzZrmhdO1z/Jb3vZS731Iot3FmDQEhbmRg1K2iY2I4OGlW7GjCzZXGkwaV3OythlarMWb59Mayw==
+  /prisma-client-lib/1.25.1/graphql@14.1.1:
     dependencies:
       '@types/node': 10.12.18
       '@types/prettier': 1.15.2
@@ -19987,27 +19988,27 @@ packages:
       jsonwebtoken: 8.4.0
       lodash.flatten: 4.4.0
       prettier: 1.16.1
-      prisma-datamodel: 1.25.0
-      prisma-generate-schema: 1.25.0
+      prisma-datamodel: 1.25.1
+      prisma-generate-schema: 1.25.1
       subscriptions-transport-ws: /subscriptions-transport-ws/0.9.15/graphql@14.1.1
       uppercamelcase: 3.0.0
       ws: 6.1.2
       zen-observable: 0.8.13
     dev: true
-    id: registry.npmjs.org/prisma-client-lib/1.25.0
+    id: registry.npmjs.org/prisma-client-lib/1.25.1
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
     resolution:
-      integrity: sha512-/LI1zDu2sZ900/5i7JCj4X2R0cOzWaXCyywrFh2/ZHXZ2cQ2nDPXqS8MRxzMEwLGrMjcra9zK4oaurU7NReKzg==
-  /prisma-datamodel/1.25.0:
+      integrity: sha512-Q8O8BihMn8Wxf62VulssxT1LueI4C6IV2m7O4+CFMYHm+nz23BJb0nrapiBQr8dWiNp8VvBQEojxEQkbtA4S5A==
+  /prisma-datamodel/1.25.1:
     dependencies:
       graphql: 14.1.1
       pluralize: 7.0.0
       popsicle: 10.0.1
     dev: true
     resolution:
-      integrity: sha512-i7hEjPuHsGFaQNf0QxF15sHBLVLtdWktoEX0rLvzeBZyOWNVq29b85ZphDehFQ61ltY6rRHvCDuSFZhYcFTBGw==
-  /prisma-db-introspection/1.25.0:
+      integrity: sha512-LcUer9LPcjObeycHvEl0R8THiwF4ug9PD4XnyPrHzMlrVysec2xIWIru8nxxuox5WiLmNYX7WK1gDnqQDabAWg==
+  /prisma-db-introspection/1.25.1:
     dependencies:
       '@types/mongodb': 3.1.19
       graphql-request: 1.8.2
@@ -20015,22 +20016,22 @@ packages:
       mongodb: 3.1.12
       pg: /pg/7.8.0/pg@7.8.0
       pluralize: 7.0.0
-      prisma-datamodel: 1.25.0
-      prisma-yml: 1.25.0
+      prisma-datamodel: 1.25.1
+      prisma-yml: 1.25.1
       scuid: 1.1.0
       uppercamelcase: 3.0.0
     dev: true
     resolution:
-      integrity: sha512-d8GRwj0n8jDbamjmdQRwVuzotF/1DniudJRfqBT5ugi585/7i8X4u9eldN95RjSOney61KR64bwmAq6iKKkTiA==
-  /prisma-generate-schema/1.25.0:
+      integrity: sha512-XYc7+P95Ep3ZKwuAEwLgRiKrpN7XcCZDxu5/U26XIG/Nn3INl6kNh8ZyY5R3EfnWeuDKrsCOqkyDTq64C2fkQw==
+  /prisma-generate-schema/1.25.1:
     dependencies:
       graphql: 14.1.1
       pluralize: 7.0.0
       popsicle: 10.0.1
-      prisma-datamodel: 1.25.0
+      prisma-datamodel: 1.25.1
     dev: true
     resolution:
-      integrity: sha512-L1/2FaqrFjMi0btuZ6znB0y737GRQVt0YR/Kwfa7SeKKrdk6sGkig0nwdxHAwCGkoiT1mE8w0PczO2x5yWF7qA==
+      integrity: sha512-0iKm17V/D263MSvYVXeMGowVvkPJ0dtM/Vx8w7WPeQbd6GqWsr3b1CDlHTHYE9f0qP5gGhMtmnhJgaNmEkuSQg==
   /prisma-json-schema/0.1.3:
     dev: true
     resolution:
@@ -20058,7 +20059,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wI/lOQrD78de2+ZNzJlbEYcYiUANtpdyT0VzAS+YbF5+1/O+shOnpwYsBtjrVL5Er0RwMkwH7j+oZQM61ENBMQ==
-  /prisma-yml/1.25.0:
+  /prisma-yml/1.25.1:
     dependencies:
       ajv: 5.5.2
       bluebird: 3.5.3
@@ -20080,12 +20081,12 @@ packages:
       yaml-ast-parser: 0.0.40
     dev: true
     resolution:
-      integrity: sha512-dyJVQXGdfXiYjZbeB2cpYEaJdqdWyl6/meRsfqr7+0V4WHRr9Iga0YDuk9VSswT0lbQQ5GKnEDPr2DJmWxW4zA==
-  /prisma/1.25.0:
+      integrity: sha512-kgxYpLOBbgufrExknGPwI2BRvSfLpPZeIsIDmjEVvtuL5TeOZuRrvJkUrRxtZGKbzrB/6/8DBr2h906BdCo9Eg==
+  /prisma/1.25.1:
     dependencies:
       fs-extra: 7.0.1
-      prisma-cli-core: 1.25.0
-      prisma-cli-engine: 1.25.0
+      prisma-cli-core: 1.25.1
+      prisma-cli-engine: 1.25.1
       semver: 5.6.0
       source-map-support: 0.4.18
     dev: true
@@ -20093,7 +20094,7 @@ packages:
       node: '>=6.13.0'
     hasBin: true
     resolution:
-      integrity: sha512-Bk/96MCTGVmupgwnfuisGOjWskt5WRcZ0oTDAXqWfRhZeHh4Suc7l4GiWSNeFb969U+xq7oNpzEqc/YzMiFw4A==
+      integrity: sha512-FyFuThujyUDYA2NvlEo2daDrXbjpKCLC3u/TPnejPCkjF2i/G9oqKByi5sQBes+bE+ubOkaBsDnGb+/1be6nOQ==
   /prismjs/1.15.0:
     dev: true
     optionalDependencies:
@@ -27142,7 +27143,7 @@ specifiers:
   '@ionic-native/core': 5.0.0-beta.15
   '@ionic-native/splash-screen': 5.0.0-beta.14
   '@ionic-native/status-bar': 5.0.0-beta.14
-  '@ionic/angular': 4.0.0-rc.3
+  '@ionic/angular': 4.0.0
   '@ionic/angular-toolkit': 1.2.2
   '@nestjs/common': 5.6.2
   '@nestjs/core': 5.6.2
@@ -27254,7 +27255,7 @@ specifiers:
   bunny: 1.0.1
   cache-manager: 2.9.0
   cannon: 0.6.2
-  codeceptjs: 2.0.3
+  codeceptjs: 2.0.4
   codelyzer: 4.5.0
   compression: 1.7.3
   connect: 3.6.6
@@ -27341,7 +27342,7 @@ specifiers:
   ngx-json-ld: 0.3.1
   ngx-keyboard-events: 0.1.9
   ngx-logger: 3.3.9
-  ngx-page-scroll: 5.0.1
+  ngx-page-scroll: 6.0.0-beta.0
   ngx-smart-modal: 7.1.1
   ngx-swiper-wrapper: 7.2.1
   ngx-translate-extract: 1.0.0
@@ -27362,7 +27363,7 @@ specifiers:
   preboot: 7.0.0
   prerender-spa-plugin: 3.4.0
   prettier: 1.16.1
-  prisma: 1.25.0
+  prisma: 1.25.1
   protractor: 5.4.2
   puppeteer: 1.11.0
   rdflib: 0.19.1

@@ -3,13 +3,13 @@
 export const VERSION = {
     "name": "frontend",
     "version": "0.0.0",
-    "dirty": false,
-    "raw": "f67c4d6",
-    "hash": "f67c4d6",
+    "dirty": true,
+    "raw": "ab66cad-dirty",
+    "hash": "ab66cad",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "f67c4d6",
+    "suffix": "ab66cad-dirty",
     "semverString": null
 };
 /* tslint:enable */

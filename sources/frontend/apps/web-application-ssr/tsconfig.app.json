@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc/apps/web-application-ssr",
-    "types": ["node"]
+    "types": ["node", "express"]
   },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]

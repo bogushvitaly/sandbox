@@ -26,7 +26,6 @@ before_script:
   - npm config set store .pnpm-store
   - npm config set verify-store-integrity false
   - npm config set rebuild-bundle false
-  # - npm config set ignore-scripts true
 
 frontend-dependencies-install:
   stage: prepare

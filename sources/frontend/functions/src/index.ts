@@ -1,5 +1,5 @@
 import * as functions from 'firebase-functions';
 
-import { requestListener } from '../dist/apps/web-application-ssr/main';
+import { server } from '../dist/apps/web-application-ssr/main';
 
-export const http = functions.https.onRequest(requestListener);
+export const http = functions.https.onRequest(server);

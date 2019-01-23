@@ -1,25 +1,15 @@
 FROM node:alpine as build-env
-
+RUN apk add --no-cache curl
+RUN curl -L https://unpkg.com/@pnpm/self-installer | node
 WORKDIR /app
-
-COPY ./package.json ./package-lock.json /app/
-
-RUN npm install
-
 COPY . /app
-
-RUN npm run web-application:build
+RUN pnpm install
+RUN npm run build.web.application
 
 FROM node:alpine
-
 WORKDIR /app
-
 COPY --from=build-env /app/package.json /app
-
 RUN npm ci --production
-
 COPY --from=build-env /app/dist /app/dist
-
 EXPOSE 4000
-
 CMD ["npm", "run", "start.web.application.ssr"]
