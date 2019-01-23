@@ -2,7 +2,7 @@ import { writeFileSync } from 'fs-extra';
 import { gitDescribeSync } from 'git-describe';
 import { join, relative } from 'path';
 
-const { version, name, description, repository, homepage } = require('../package.json');
+const { version, name, description, repository, homepage } = require('../../package.json');
 
 // On now we don't have access to .git :/
 const git = process.env.NOW ? { raw: 'now.sh build' } : gitDescribeSync({ dirtyMark: false, dirtySemver: false });
