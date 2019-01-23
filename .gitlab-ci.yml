@@ -25,10 +25,13 @@ cache:
 before_script:
   - npm config set store .pnpm-store
   - npm set verify-store-integrity false
+  - npm set rebuild-bundle false
   - npm config set unsafe-perm true
 
 frontend-dependencies-install:
   stage: prepare
+  before_script:
+    - echo Skip Before Scripts
   cache:
     key: cache
     paths:
@@ -257,7 +260,7 @@ frontend-application-web-deploy-staging:
   script:
     - pnpm install --prefix sources/frontend --offline
     - pnpm install --prefix sources/frontend/functions --offline
-    - npm run --prefix sources/frontend run deploy.web.application
+    - npm run --prefix sources/frontend deploy.web.application
     - echo "Staging Deployment Finished"
   artifacts:
     paths:
@@ -293,7 +296,7 @@ frontend-application-web-deploy-production:
 pages:
   stage: reports
   before_script:
-    - echo Skip
+    - echo Skip Before Scripts
   dependencies:
     - frontend-unit-tests
     - frontend-compodoc
@@ -317,7 +320,7 @@ publish-hiptest:
   stage: reports
   image: docker:stable
   before_script:
-    - echo Skip npm Commands Execution
+    - echo Skip Before Scripts
   cache: {}
   script:
     - docker run -it --rm -u $UID -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/frontend/hiptest-publisher.conf --push="sources/frontend/reports/apps/web-application/mocha/*.xml"

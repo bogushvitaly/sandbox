@@ -11,6 +11,9 @@
 - [x] Prerender SPA Plugin, Custom webpack builders for Angular
 - [x] Acceptance Test Driven Development with Codecept, Jest
 - [x] Design System Development using Storybook
+
+## In progress
+
 - [ ] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth
 - [ ] Communication Styles: GraphQL with Apollo, REST, gRPC
 - [ ] Cloud Backends: Firebase Platform, AWS AppSync, Prisma database API
