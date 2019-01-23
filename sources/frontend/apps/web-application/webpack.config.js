@@ -15,7 +15,11 @@ const DOTENV_CONFIG_FILE = path.join(process.cwd(), '..', '..', '..', '..', 'con
 
 const ROUTES = [];
 
-const IS_LOCAL = !process.env.GITLAB_CI && fs.existsSync(DOTENV_CONFIG_FILE);
+const IS_CI = !process.env.GITLAB_CI && fs.existsSync(DOTENV_CONFIG_FILE);
+
+function NothingPlugin() {
+  this.apply = function () {};
+}
 
 module.exports = {
   node: {
@@ -34,7 +38,7 @@ module.exports = {
     // os: 'empty',
   },
   plugins: [
-    IS_LOCAL && new DotenvPlugin({
+    IS_CI ? new NothingPlugin() : new DotenvPlugin({
       path: DOTENV_CONFIG_FILE
     }),
     new FriendlyErrorsWebpackPlugin(),

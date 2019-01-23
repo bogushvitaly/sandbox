@@ -31,7 +31,6 @@ frontend-dependencies-install:
   stage: prepare
   cache:
     key: cache
-    policy: push
     paths:
       - .pnpm-store/
   script:
