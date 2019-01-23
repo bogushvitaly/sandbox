@@ -92,7 +92,7 @@ frontend-web-application-build-production:
 frontend-check-formatting:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -102,14 +102,11 @@ frontend-check-formatting:
     - pnpm install --prefix sources/frontend --offline
     - npm run --prefix sources/frontend format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo "Frontend Check Formatting Finished"
-  artifacts:
-    paths:
-      - sources/frontend/dist
 
 frontend-check-linting:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -119,14 +116,11 @@ frontend-check-linting:
     - pnpm install --prefix sources/frontend --offline
     - npm run --prefix sources/frontend lint.check
     - echo "Frontend Check Linting Finished"
-  artifacts:
-    paths:
-      - sources/frontend/dist
 
 frontend-unit-tests:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -143,7 +137,7 @@ frontend-unit-tests:
 frontend-compodoc:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -160,7 +154,7 @@ frontend-compodoc:
 frontend-storybook:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -177,7 +171,7 @@ frontend-storybook:
 frontend-dependencies-graph:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -194,7 +188,7 @@ frontend-dependencies-graph:
 frontend-web-application-bundle-analysis:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -211,7 +205,7 @@ frontend-web-application-bundle-analysis:
 frontend-web-application-e2e-tests:
   stage: test
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-dependencies-install
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
@@ -228,7 +222,7 @@ frontend-web-application-e2e-tests:
 frontend-application-web-lighthouse:
   stage: analyze
   dependencies:
-    - frontend-web-application-build-staging
+    - frontend-application-web-deploy-staging
   script:
     - mkdir -p sources/frontend/reports/lighthouse
     - lighthouse-ci $WEB_APPLIATOIN_STAGING_URL --silent --report sources/frontend/reports/lighthouse
@@ -240,6 +234,7 @@ frontend-application-web-lighthouse:
 frontend-application-web-deploy-staging:
   stage: staging
   dependencies:
+    - frontend-dependencies-install
     - frontend-web-application-build-staging
   environment:
     name: staging
@@ -261,6 +256,7 @@ frontend-application-web-deploy-staging:
 frontend-application-web-deploy-production:
   stage: production
   dependencies:
+    - frontend-dependencies-install
     - frontend-web-application-build-production
   environment:
     name: production
@@ -317,4 +313,4 @@ publish-hiptest:
     - echo "Hiptest Report Pablishing Finished"
   artifacts:
     paths:
-      - sources/frontend/dist
+      - sources/frontend/reports
