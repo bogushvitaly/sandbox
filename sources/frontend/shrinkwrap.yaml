@@ -2,24 +2,24 @@ dependencies:
   3d-force-graph: 1.43.9
   '@angular-material-extensions/password-strength': 3.4.0
   '@angular-mdc/web': 0.43.4
-  '@angular/animations': 7.2.1
+  '@angular/animations': 7.2.2
   '@angular/cdk': 7.2.2
-  '@angular/common': 7.2.1
-  '@angular/compiler': 7.2.1
-  '@angular/core': 7.2.1
-  '@angular/elements': 7.2.1
+  '@angular/common': 7.2.2
+  '@angular/compiler': 7.2.2
+  '@angular/core': 7.2.2
+  '@angular/elements': 7.2.2
   '@angular/fire': 5.1.1
   '@angular/flex-layout': 7.0.0-beta.23
-  '@angular/forms': 7.2.1
-  '@angular/http': 7.2.1
-  '@angular/language-service': 7.2.1
+  '@angular/forms': 7.2.2
+  '@angular/http': 7.2.2
+  '@angular/language-service': 7.2.2
   '@angular/material': 7.2.2
-  '@angular/platform-browser': 7.2.1
-  '@angular/platform-browser-dynamic': 7.2.1
-  '@angular/platform-server': 7.2.1
+  '@angular/platform-browser': 7.2.2
+  '@angular/platform-browser-dynamic': 7.2.2
+  '@angular/platform-server': 7.2.2
   '@angular/pwa': 0.12.2
-  '@angular/router': 7.2.1
-  '@angular/service-worker': 7.2.1
+  '@angular/router': 7.2.2
+  '@angular/service-worker': 7.2.2
   '@angularclass/hmr': 2.1.3
   '@frontend/scss': 'link:libs/scss'
   '@frontend/web': 'link:xplat/web'
@@ -27,7 +27,7 @@ dependencies:
   '@ionic-native/core': 5.0.0-beta.15
   '@ionic-native/splash-screen': 5.0.0-beta.14
   '@ionic-native/status-bar': 5.0.0-beta.14
-  '@ionic/angular': 4.0.0-rc.2
+  '@ionic/angular': 4.0.0-rc.3
   '@ionic/angular-toolkit': 1.2.2
   '@nestjs/common': 5.6.2
   '@nestjs/core': 5.6.2
@@ -182,14 +182,14 @@ dependencies:
   wildemitter: 1.2.0
   ws: 6.1.2
   xhr2: 0.1.4
-  zone.js: 0.8.28
+  zone.js: 0.8.29
 devDependencies:
   '@angular-builders/custom-webpack': 7.2.0
   '@angular-builders/dev-server': 7.2.1
   '@angular-devkit/build-angular': 0.12.2
   '@angular-devkit/build-ng-packagr': 0.12.2
   '@angular/cli': 7.2.2
-  '@angular/compiler-cli': 7.2.1
+  '@angular/compiler-cli': 7.2.2
   '@babel/cli': 7.2.3
   '@babel/core': 7.2.2
   '@babel/preset-env': 7.3.1
@@ -226,7 +226,7 @@ devDependencies:
   '@types/lodash': 4.14.120
   '@types/node': 10.12.18
   '@types/paho-mqtt': 1.0.4
-  '@types/three': 0.93.15
+  '@types/three': 0.93.16
   '@types/webpack-env': 1.13.6
   acorn: 6.0.5
   allure-commandline: 2.9.0
@@ -241,7 +241,7 @@ devDependencies:
   cp-dep: 3.0.1
   cross-env: 5.2.0
   dotenv-extended: 2.3.0
-  electron: 4.0.1
+  electron: 4.0.2
   electron-builder: 20.38.5
   electron-packager: 13.0.1
   electron-reload: 1.4.0
@@ -574,14 +574,14 @@ packages:
       '@angular/core': '>=7.0.0'
     resolution:
       integrity: sha512-5G8UMCOw3Le8nir0AkXPZjXavScvE/QxSxoOAvK+yZ4arqVAFWjGCZBh8zkldcCfTbL9WyrZquYyDAgb+OPQ8A==
-  /@angular/animations/7.2.1:
+  /@angular/animations/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.1
+      '@angular/core': 7.2.2
     resolution:
-      integrity: sha512-2AHc4HYz2cUVW3E0oYOTyUzBTnPJdtmVOx/Uo6+jnRqikvOGFOc5VXzFIYODe1Iiy+EYcSZ1lvQqwUbpZd6gwA==
+      integrity: sha512-St03YR3N4Rv0vLr0+3V0kmf/QNi9q0tOenAlHP+jG/YySPkkv8P3xRcGVU38ID4JQzRiShUD+k2r+oZGCQMNjw==
   /@angular/cdk/7.2.2:
     dependencies:
       tslib: 1.9.3
@@ -611,16 +611,16 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-fdj5Gtysde0mi902ZE67Zd1uhyryF+b50r+gmX3c+cFvM5hNXrdV7V82Ldjp7qle6ZF1fDSppSiPxGkt5lvemw==
-  /@angular/common/7.2.1:
+  /@angular/common/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.1
+      '@angular/core': 7.2.2
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-lYf3MeVMz69EriS5ANFY5PerJK0i4xHp/Jy67reb8ydZ+sfW320PUMuFtx3bZvk9PD7NdL3QZvXmla/ogrltTQ==
-  /@angular/compiler-cli/7.2.1:
+      integrity: sha512-43EcR3mbM+dKH4VE1EYS1HxSuEToxxv5XPktKqdzY95g8PBOxe11ifcXoYHgImd7YOWzcKoy0k6yQbX3o0cZ8g==
+  /@angular/compiler-cli/7.2.2:
     dependencies:
       canonical-path: 1.0.0
       chokidar: 1.7.0
@@ -638,17 +638,17 @@ packages:
       node: '>=8.0'
     hasBin: true
     peerDependencies:
-      '@angular/compiler': 7.2.1
+      '@angular/compiler': 7.2.2
       typescript: '>=3.1.1 <3.3'
     resolution:
-      integrity: sha512-ImmKTnBbAWIY7qrYSPFLJE83VYcDX7zK6Ig/vOl4e6dzvpZfJDYHMT8ELeWj7a2nkL9SjT8X3o9Mkbrb75Tepg==
-  /@angular/compiler/7.2.1:
+      integrity: sha512-ac62YlDescAaf0qPguyRkpzWCMNlwtsKObq80GKADP33Sxm0BxGt4+Wz6rolvUuWzCX8aZwJ0FA7ehKxdmdQoA==
+  /@angular/compiler/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     resolution:
-      integrity: sha512-wf9w882hNoRaTDRqkEvQxV7nGB3liTX/LWEMunmm/Yz0nWkvgErR9pIHv3Sm4Ox0hyG3GdMpcVBzQ8qPomGOag==
-  /@angular/core/7.2.1:
+      integrity: sha512-vjPreOVPca6HSuDmj7N1w5u8hwXdm98gEPo2wqQMVuJd6qvGEyLYE9FsHc0XCchyQEKSybAYl1dwsjZq2nNSvQ==
+  /@angular/core/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
@@ -656,17 +656,17 @@ packages:
       rxjs: ^6.0.0
       zone.js: ~0.8.26
     resolution:
-      integrity: sha512-FYNAf4chxBoIVGCW2+fwR2MB2Ur5v1aG9L6zCcMXlZLbR64bu5j2m4e70RhXk/VptKvYWJ45od3xE5KfcaeEig==
-  /@angular/elements/7.2.1:
+      integrity: sha512-kQ0HxUYAPvly8b3aibTGbiodFnBBgo3asXAQuPgFjYYEqcKR1zZII7PQdaEF9kb9sfm/IKLKj4nd9fZ0gcgqZg==
+  /@angular/elements/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.1
-      '@angular/platform-browser': 7.2.1
+      '@angular/core': 7.2.2
+      '@angular/platform-browser': 7.2.2
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-OYQCl6p+6WkJqg5posZv8AxeuFqo9IAgQFbX6ZdNr4m1YdMaVOFJZnR6Oz089nUYCT7/OZraDJzjo4B2W+4zmA==
+      integrity: sha512-Hr6xuoTamovn844235JD5XswK3v6AI4Qg29jB+qi9NF2JlO7kg2DcNgmMyhtjcc6YSSKMaKJ+1FFvi4VtW1g+g==
   /@angular/fire/5.1.1:
     dev: false
     peerDependencies:
@@ -690,31 +690,31 @@ packages:
       rxjs: ^6.0.0
     resolution:
       integrity: sha512-jH2i3i/M7SbK6scVlj2urVL5OhzwavbQ7KwvUjyc/UwccKnnzuOuWEGCINLja/aoaUO3I35LluCLv6a6VN0olA==
-  /@angular/forms/7.2.1:
+  /@angular/forms/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.1
-      '@angular/core': 7.2.1
-      '@angular/platform-browser': 7.2.1
+      '@angular/common': 7.2.2
+      '@angular/core': 7.2.2
+      '@angular/platform-browser': 7.2.2
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-MxinNUvl02UfpY9gJtbTU6Mdt9fjIJYOGskcpwm+5u9jiMeRvOnG94ySoNrygg3EWwScX+P0mM4KN6fJWau7gQ==
-  /@angular/http/7.2.1:
+      integrity: sha512-IsvVuUnzIA2ryRmh7l42AANPZFSyNcwqZNtxbmRq2wm3Lfed64U0rsRWWNqipjz7QTxZ2SRdAlP+XDgzg8hvMQ==
+  /@angular/http/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.1
-      '@angular/platform-browser': 7.2.1
+      '@angular/core': 7.2.2
+      '@angular/platform-browser': 7.2.2
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-3xfdN2bmCbzATwRGUEZQVkGn3IN6tMX/whLWGWgcEV3CENJqTUjfjn1+nSHASQLUnmOr5T7yTiWK5P7bDrHYzw==
-  /@angular/language-service/7.2.1:
+      integrity: sha512-+9dZgiVQStGUO3iJGxEWBkjDCARuVLIPk7QPl4Qntbz8Sd/kR7IBqXMM+74W7T5rlG6bunDxq6LuisvsjWCppw==
+  /@angular/language-service/7.2.2:
     dev: false
     resolution:
-      integrity: sha512-LmeoO7KXBcPRDvQpBv+ttG9oalCE0z7+AxbJBJNrrwzypP624B3xX2XWai9XUNkxu+shqE00lAU2lC7Fxs5v7A==
+      integrity: sha512-qkyY5nUT3J/vBvTTZCTFy3isijQseBFGd6gM08o4ycwbTuOOnnC0XUFuv7o8eeu0jd32MGbaK0gikF+OQOCGNQ==
   /@angular/material/7.2.2:
     dependencies:
       tslib: 1.9.3
@@ -726,27 +726,27 @@ packages:
       '@angular/core': '>=7.0.0'
     resolution:
       integrity: sha512-HTtDhK5XkDvP6GPg4WTTa0HbeeagTfVRooTfw0TA+IuTAMBhXt5h1yzuGpFyMap8/PUVZN1D04g2CLhBSzoDxg==
-  /@angular/platform-browser-dynamic/7.2.1:
+  /@angular/platform-browser-dynamic/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.1
-      '@angular/compiler': 7.2.1
-      '@angular/core': 7.2.1
-      '@angular/platform-browser': 7.2.1
+      '@angular/common': 7.2.2
+      '@angular/compiler': 7.2.2
+      '@angular/core': 7.2.2
+      '@angular/platform-browser': 7.2.2
     resolution:
-      integrity: sha512-hrSkI7aESEkqYnu628Z/LvYNlUNMqIqkXYAkT3urxFdCw7UwNeZKrDmd9sRwK3gK3sC1VeD9pXtqaKmGsnBjOA==
-  /@angular/platform-browser/7.2.1:
+      integrity: sha512-bw5PuzMzjKMecB4slG/btmvxgn4qFWhNmJVpf2pbtZW7NtZz3HlrqipYzMk9XrCUDGjtwy7O2Z71C3ujI748iw==
+  /@angular/platform-browser/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.1
-      '@angular/core': 7.2.1
+      '@angular/common': 7.2.2
+      '@angular/core': 7.2.2
     resolution:
-      integrity: sha512-/6uHdFLmRkrkeOo+TzScrLG2YydG8kBNyT6ZpSOBf+bmB5DHyIGd55gh/tQJteKrnyadxRhqWCLBTYAbVX9Pnw==
-  /@angular/platform-server/7.2.1:
+      integrity: sha512-eiaqHq26PVASx1kTngBDkFkXhaJzEjoGtc5I+wQUef8CUjq6ZViWz8tUgiiDPOWdqUKUacRZG4q6VR/6uwQj0A==
+  /@angular/platform-server/7.2.2:
     dependencies:
       domino: 2.1.1
       tslib: 1.9.3
@@ -755,15 +755,15 @@ packages:
     engines:
       node: '>=8.0'
     peerDependencies:
-      '@angular/animations': 7.2.1
-      '@angular/common': 7.2.1
-      '@angular/compiler': 7.2.1
-      '@angular/core': 7.2.1
-      '@angular/http': 7.2.1
-      '@angular/platform-browser': 7.2.1
-      '@angular/platform-browser-dynamic': 7.2.1
+      '@angular/animations': 7.2.2
+      '@angular/common': 7.2.2
+      '@angular/compiler': 7.2.2
+      '@angular/core': 7.2.2
+      '@angular/http': 7.2.2
+      '@angular/platform-browser': 7.2.2
+      '@angular/platform-browser-dynamic': 7.2.2
     resolution:
-      integrity: sha512-mJC6HefypE7UvFYKc1mlHVFhEMqT5OjEIftxB/bWt6qI6qRkwUFo9vKHvSgTn0RHfXZmadb/1TzHabJZRPYUNQ==
+      integrity: sha512-lV4CvU06sEaU9q+F11eT9tgC/gFfyK21LkUrLw2nP3mLPBEOx4zhW1R452grN5a/8OFlxZOoSlYWdTQI2QN5CA==
   /@angular/pwa/0.12.2:
     dependencies:
       '@angular-devkit/core': 7.2.2
@@ -777,27 +777,27 @@ packages:
       npm: '>= 5.5.1'
     resolution:
       integrity: sha512-uJ+i3zEhbp1SKhPGOtrHg9sagFW6cruOL8rk2zUk8G3v7O7Qixqi4nyTHrItMR1sCQYecKD8f0ViAKx3YiG0wQ==
-  /@angular/router/7.2.1:
+  /@angular/router/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.1
-      '@angular/core': 7.2.1
-      '@angular/platform-browser': 7.2.1
+      '@angular/common': 7.2.2
+      '@angular/core': 7.2.2
+      '@angular/platform-browser': 7.2.2
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-3qMZnhFr6xx3dMy14rKwIw9ISTOZlsp9jAkthXVsfA2/thffScXHPBrH4SipkySLmOAtPmF5m5jscy8mx/1mJQ==
-  /@angular/service-worker/7.2.1:
+      integrity: sha512-+cBC+JxbPdjk+Nyqq27PKkjfIdnc+H+xjMGrkO6dlAKhVMGxyNaYt5NUNugb8XJPsQ1XNXyzwTfZK6jcAGLw6w==
+  /@angular/service-worker/7.2.2:
     dependencies:
       tslib: 1.9.3
     dev: false
     hasBin: true
     peerDependencies:
-      '@angular/common': 7.2.1
-      '@angular/core': 7.2.1
+      '@angular/common': 7.2.2
+      '@angular/core': 7.2.2
     resolution:
-      integrity: sha512-xmCGGSJRplIG4wkZDiz2WaQ1f3lWfloH06ehl7u8td+8QbtDzbr+aMX9/kZYwl43VpS0Km0i/+p6Ux2g0DUoMw==
+      integrity: sha512-GnJW2E/q1lkA2SBFX0ce8Acsbwu23nd+Ni75vPktgSU6GOMX/F6U/Uyi68uPZ6aZICbWGVWKfoTeDJSNjT1eUg==
   /@angularclass/hmr/2.1.3:
     dev: false
     resolution:
@@ -819,7 +819,7 @@ packages:
       axios: 0.17.1
       graphql: 0.13.0
       uuid: 3.3.2
-      zen-observable: 0.8.11
+      zen-observable: 0.8.13
     dev: false
     resolution:
       integrity: sha512-jNFJcSOAQcN6FEsySGSjYQBoN4IkaGVhQ8NE+F1xVZd5QFGnwgS0d7iq2GhsZcEn0BsYRV4cQUpXTvnOQaP7eA==
@@ -856,7 +856,7 @@ packages:
       '@aws-amplify/core': 1.0.22
       '@types/zen-observable': 0.5.4
       uuid: 3.3.2
-      zen-observable: 0.8.11
+      zen-observable: 0.8.13
     dev: false
     resolution:
       integrity: sha512-6tyMMhvkdeN86MPD8kHJ5x0ucs20uSeKoo8qODelo8XbK0/qjNfLypf7e+Dt4gjPPJbsWpm/8i9UGOlFZhY4ow==
@@ -2100,32 +2100,32 @@ packages:
       '@angular-devkit/schematics': '>=0.7.2 <8.0.0'
     resolution:
       integrity: sha512-mJTV9SQWSKDzbKm0fpbfuXehAxqayeeApm94OLuZto27Kf2eARRdH4CsUEcv+6YjYAyzfnx2k5ej/mHrh2wYFg==
-  /@ionic/angular/4.0.0-rc.2:
+  /@ionic/angular/4.0.0-rc.3:
     dependencies:
-      '@ionic/core': 4.0.0-rc.2
+      '@ionic/core': 4.0.0-rc.3
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular-devkit/core': ^7.2.0
-      '@angular-devkit/schematics': ^7.2.0
-      '@angular/common': ^7.2.0
-      '@angular/compiler': ^7.2.0
-      '@angular/compiler-cli': ^7.2.0
-      '@angular/core': ^7.2.0
-      '@angular/forms': ^7.2.0
-      '@angular/platform-browser': ^7.2.0
-      '@angular/platform-browser-dynamic': ^7.2.0
-      '@angular/router': ^7.2.0
+      '@angular-devkit/core': ^7.2.1
+      '@angular-devkit/schematics': ^7.2.1
+      '@angular/common': ^7.2.1
+      '@angular/compiler': ^7.2.1
+      '@angular/compiler-cli': ^7.2.1
+      '@angular/core': ^7.2.1
+      '@angular/forms': ^7.2.1
+      '@angular/platform-browser': ^7.2.1
+      '@angular/platform-browser-dynamic': ^7.2.1
+      '@angular/router': ^7.2.1
       rxjs: '>=6.2.0'
       zone.js: ^0.8.26
     resolution:
-      integrity: sha512-r7eDeUS1ctVQhdEKmyE0wIUNvwfndgsqWiu7o4yXlQ8S8WQpiS+OUZIQBeI4mTfN4ajXjH1Ao8CJmyegYahqxw==
-  /@ionic/core/4.0.0-rc.2:
+      integrity: sha512-OvLSGkkEvhBrsUh4IlVsMWagdyT0wgOCp+BlP9CkavpKBEHRoVFjBKMgZlsUYejzjGNOcbVFdTNPN0rWmzqKQA==
+  /@ionic/core/4.0.0-rc.3:
     dependencies:
-      ionicons: 4.5.1
+      ionicons: 4.5.5
     dev: false
     resolution:
-      integrity: sha512-01zoQOhb7PzjJwQYwfmiiGYp6iPfDJFLds7KSiXZVafzihwWvL6Bsww5EWYLXcJ8nl0w2izoaGs74f+zBQW5Lw==
+      integrity: sha512-3tqLiMmDk1jSgvCNLDjLN1aakOthTzNjWphadWksA6HKajgPt4SxLGHXTnLS29p8ziF3XVAwE2kxFX2kQL4EGw==
   /@kbrandwijk/swagger-to-graphql/2.4.3/graphql@14.1.1:
     dependencies:
       babel-runtime: 6.26.0
@@ -3297,12 +3297,12 @@ packages:
       d3-array: 1.2.4
       d3-brush: 1.0.6
       d3-color: 1.2.3
-      d3-force: 1.1.2
+      d3-force: 1.2.0
       d3-format: 1.3.2
       d3-hierarchy: 1.1.8
       d3-interpolate: 1.3.2
       d3-scale: 1.0.7
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
       d3-shape: 1.2.2
       d3-time-format: 2.1.3
     dev: false
@@ -3477,22 +3477,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
-  /@types/events/1.2.0:
-    dev: true
-    resolution:
-      integrity: sha512-KEIlhXnIutzKwRbQkGWb/I4HFqBuUykAdHgDED6xqwXJfONCjF5VoE0cXEiurh3XauygxzeDzgtXUqvLkxFzzA==
-  /@types/express-serve-static-core/4.16.0:
+  /@types/express-serve-static-core/4.16.1:
     dependencies:
-      '@types/events': 1.2.0
       '@types/node': 10.12.18
       '@types/range-parser': 1.2.3
     dev: true
     resolution:
-      integrity: sha512-lTeoCu5NxJU4OD9moCgm0ESZzweAx0YqsAcab6OB0EB3+As1OaHtKnaGJvcngQxYsi9UNv0abn4/DRavrRxt4w==
+      integrity: sha512-QgbIMRU1EVRry5cIu1ORCQP4flSYqLM1lS5LYyGWfKnFT3E58f0gKto7BR13clBFVrVZ0G0rbLZ1hUpSkgQQOA==
   /@types/express/4.16.1:
     dependencies:
       '@types/body-parser': 1.17.0
-      '@types/express-serve-static-core': 4.16.0
+      '@types/express-serve-static-core': 4.16.1
       '@types/serve-static': 1.13.2
     dev: true
     resolution:
@@ -3626,7 +3621,7 @@ packages:
       integrity: sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ==
   /@types/serve-static/1.13.2:
     dependencies:
-      '@types/express-serve-static-core': 4.16.0
+      '@types/express-serve-static-core': 4.16.1
       '@types/mime': 2.0.0
     dev: true
     resolution:
@@ -3639,10 +3634,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
-  /@types/three/0.93.15:
+  /@types/three/0.93.16:
     dev: true
     resolution:
-      integrity: sha512-AE9kgUDqMrInTfMYzZ8NqgBMzUgHvv+JwUQxCmlWZOfs+TCJDn7CVcvcOyftiUO3MAH1bddwaK0ZvZ/9M1rO5A==
+      integrity: sha512-zHbRvB+c7Ozg6tTFCcBudREnYFxa+JrFfgbGCoz9JRp/3hSLy/l9H4fgqipAYSKa+34DjDBt1NNe9JiDXfTWCw==
   /@types/tough-cookie/2.3.5:
     dev: true
     resolution:
@@ -4432,7 +4427,7 @@ packages:
       apollo-utilities: 1.1.2
       symbol-observable: 1.2.0
       tslib: 1.9.3
-      zen-observable: 0.8.11
+      zen-observable: 0.8.13
     dev: false
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
@@ -4447,7 +4442,7 @@ packages:
       apollo-utilities: 1.0.25
       graphql: 0.11.7
       symbol-observable: 1.2.0
-      zen-observable: 0.8.11
+      zen-observable: 0.8.13
     dev: false
     id: registry.npmjs.org/apollo-client/2.4.6
     optionalDependencies:
@@ -5155,7 +5150,7 @@ packages:
   /autoprefixer/9.4.3:
     dependencies:
       browserslist: 4.4.1
-      caniuse-lite: 1.0.30000929
+      caniuse-lite: 1.0.30000930
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       postcss: 7.0.14
@@ -5169,7 +5164,7 @@ packages:
   /autoprefixer/9.4.6:
     dependencies:
       browserslist: 4.4.1
-      caniuse-lite: 1.0.30000929
+      caniuse-lite: 1.0.30000930
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       postcss: 7.0.14
@@ -6189,8 +6184,8 @@ packages:
       integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==
   /browserslist/4.1.1:
     dependencies:
-      caniuse-lite: 1.0.30000929
-      electron-to-chromium: 1.3.104
+      caniuse-lite: 1.0.30000930
+      electron-to-chromium: 1.3.106
       node-releases: 1.1.3
     dev: true
     hasBin: true
@@ -6198,8 +6193,8 @@ packages:
       integrity: sha512-VBorw+tgpOtZ1BYhrVSVTzTt/3+vSE3eFUh0N2GCFK1HffceOaf32YS/bs6WiFhjDAblAFrx85jMy3BG9fBK2Q==
   /browserslist/4.4.1:
     dependencies:
-      caniuse-lite: 1.0.30000929
-      electron-to-chromium: 1.3.104
+      caniuse-lite: 1.0.30000930
+      electron-to-chromium: 1.3.106
       node-releases: 1.1.3
     dev: true
     hasBin: true
@@ -6573,10 +6568,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
-  /caniuse-lite/1.0.30000929:
+  /caniuse-lite/1.0.30000930:
     dev: true
     resolution:
-      integrity: sha512-n2w1gPQSsYyorSVYqPMqbSaz1w7o9ZC8VhOEGI9T5MfGDzp7sbopQxG6GaQmYsaq13Xfx/mkxJUWC1Dz3oZfzw==
+      integrity: sha512-KD+pw9DderBLB8CGqBzYyFWpnrPVOEjsjargU/CvkNyg60od3cxSPTcTeMPhxJhDbkQPWvOz5BAyBzNl/St9vg==
   /cannon/0.6.2:
     dev: false
     resolution:
@@ -7528,7 +7523,7 @@ packages:
       env-paths: 1.0.0
       make-dir: 1.3.0
       pkg-up: 2.0.0
-      write-file-atomic: 2.3.0
+      write-file-atomic: 2.4.2
     dev: true
     engines:
       node: '>=6'
@@ -7577,7 +7572,7 @@ packages:
       graceful-fs: 4.1.15
       make-dir: 1.3.0
       unique-string: 1.0.0
-      write-file-atomic: 2.3.0
+      write-file-atomic: 2.4.2
       xdg-basedir: 3.0.0
     dev: true
     engines:
@@ -8238,7 +8233,7 @@ packages:
       d3-dispatch: 1.0.5
       d3-drag: 1.2.3
       d3-interpolate: 1.3.2
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
       d3-transition: 1.1.3
     dev: false
     resolution:
@@ -8248,7 +8243,7 @@ packages:
       d3-dispatch: 1.0.5
       d3-drag: 1.2.3
       d3-interpolate: 1.3.2
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
       d3-transition: 1.1.3
     dev: false
     resolution:
@@ -8287,14 +8282,14 @@ packages:
   /d3-drag/1.2.1:
     dependencies:
       d3-dispatch: 1.0.5
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
     dev: false
     resolution:
       integrity: sha512-Cg8/K2rTtzxzrb0fmnYOUeZHvwa4PHzwXOLZZPwtEs2SKLLKLXeYwZKBB+DlOxUvFmarOnmt//cU4+3US2lyyQ==
   /d3-drag/1.2.3:
     dependencies:
       d3-dispatch: 1.0.5
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
     dev: false
     resolution:
       integrity: sha512-8S3HWCAg+ilzjJsNtWW1Mutl74Nmzhb9yU6igspilaJzeZVFktmY6oO9xOh5TDk+BM2KrNFjttZNoJJmDnkjkg==
@@ -8343,7 +8338,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-2HVQz3/VCQs0QeRNZTYb7GxoUCeb6bOzMp/cGcLa87awY9ZsPvXOGeZm0iaGBjXic6I1ysKwMn+g+5jSAdzwcg==
-  /d3-force/1.1.2:
+  /d3-force/1.2.0:
     dependencies:
       d3-collection: 1.0.7
       d3-dispatch: 1.0.5
@@ -8351,7 +8346,7 @@ packages:
       d3-timer: 1.0.9
     dev: false
     resolution:
-      integrity: sha512-p1vcHAUF1qH7yR+e8ip7Bs61AHjLeKkIn8Z2gzwU2lwEf2wkSpWdjXG0axudTHsVFnYGlMkFaEsVy2l8tAg1Gw==
+      integrity: sha512-PFLcDnRVANHMudbQlIB87gcfQorEsDIAvRpZ2bNddfM/WxdsEkyrEaOIPoydhH1I1V4HPjNLGOMLXCA0AuGQ9w==
   /d3-format/1.2.2:
     dev: false
     resolution:
@@ -8450,10 +8445,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qgpUOg9tl5CirdqESUAu0t9MU/t3O9klYfGfyKsXEmhyxyzLpzpeh08gaxBUTQw1uXIOkr/30Ut2YRjSSxlmHA==
-  /d3-selection/1.3.2:
+  /d3-selection/1.4.0:
     dev: false
     resolution:
-      integrity: sha512-OoXdv1nZ7h2aKMVg3kaUFbLLK5jXUFAMLD/Tu5JA96mjf8f2a9ZUESGY+C36t8R1WFeWk/e55hy54Ml2I62CRQ==
+      integrity: sha512-EYVwBxQGEjLCKF2pJ4+yrErskDnz5v403qvAid96cNdCMr8rmCYfY5RGzWz24mdIbxmDf6/4EAH+K9xperD5jg==
   /d3-shape/1.2.0:
     dependencies:
       d3-path: 1.0.7
@@ -8500,7 +8495,7 @@ packages:
       d3-dispatch: 1.0.5
       d3-ease: 1.0.5
       d3-interpolate: 1.3.2
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
       d3-timer: 1.0.9
     dev: false
     resolution:
@@ -8511,7 +8506,7 @@ packages:
       d3-dispatch: 1.0.5
       d3-ease: 1.0.5
       d3-interpolate: 1.3.2
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
       d3-timer: 1.0.9
     dev: false
     resolution:
@@ -8525,7 +8520,7 @@ packages:
       d3-dispatch: 1.0.5
       d3-drag: 1.2.3
       d3-interpolate: 1.3.2
-      d3-selection: 1.3.2
+      d3-selection: 1.4.0
       d3-transition: 1.1.3
     dev: false
     resolution:
@@ -9476,10 +9471,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1WCFYHsYvZBqDsoaS0Relnz0rd81ZkBAI0Fgx7Nq2UWU77rSNs1qxm4S6uH7TCZ0bV3LQpJFk7id/is/ZgoOPA==
-  /electron-to-chromium/1.3.104:
+  /electron-to-chromium/1.3.106:
     dev: true
     resolution:
-      integrity: sha512-ReDDCq4UFLVroskdyt4JEwKq+3SatPeUjFlhakdkUoaQMRXOh+XIS4aolnb4D31P9Po9C3CXyZk3fAnNT5XK3Q==
+      integrity: sha512-eXX45p4q9CRxG0G8D3ZBZYSdN3DnrcZfrFvt6VUr1u7aKITEtRY/xwWzJ/UZcWXa7DMqPu/pYwuZ6Nm+bl0GmA==
   /electron-updater/4.0.6:
     dependencies:
       bluebird-lst: 1.0.6
@@ -9494,7 +9489,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-JPGLME6fxJcHG8hX7HWFl6Aew6iVm0DkcrENreKa5SUJCHG+uUaAhxDGDt+YGcNkyx1uJ6eBGMvFxDTLUv67pg==
-  /electron/4.0.1:
+  /electron/4.0.2:
     dependencies:
       '@types/node': 10.12.18
       electron-download: 4.1.1
@@ -9505,7 +9500,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-kBWDLn1Vq8Tm6+/HpQc8gkjX7wJyQI8v/lf2kAirfi0Q4cXh6vBjozFvV1U/9gGCbyKnIDM+m8/wpyJIjg4w7g==
+      integrity: sha512-H0pmSvOVuC+Mq/+cYNXbCDBmqq5d1xYUVdBOjqGJuwuwJeP7qDHF35JA3cq+ARzq/CbwlXq98zdW6i6+x3U24g==
   /elliptic/6.4.1:
     dependencies:
       bn.js: 4.11.8
@@ -13202,10 +13197,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-oKeAQurbNrwXVR54fv0UOa3VSTM=
-  /ionicons/4.5.1:
+  /ionicons/4.5.5:
     dev: false
     resolution:
-      integrity: sha512-zqfkjpPKsdzzXePdE03IRw6xt7B6N3fcN/7NepyniuEWhKZLy7YpdZLegEwBmKeciXi7rIcv1O/hHJTdokUwXQ==
+      integrity: sha512-dIGI73XG6Fg2Ps77ry5Ywe36Pq7wUGkDkl0pBhC4uhsiyoW+oXe+pplmarXEnKEcB5fmlkRrBOxYYzZaoRiUGw==
   /iota-array/1.0.0:
     dev: false
     resolution:
@@ -14440,7 +14435,7 @@ packages:
       micromatch: 2.3.11
       slash: 1.0.0
       strip-bom: 3.0.0
-      write-file-atomic: 2.3.0
+      write-file-atomic: 2.4.2
       yargs: 10.1.2
     dev: true
     hasBin: true
@@ -14467,7 +14462,7 @@ packages:
       realpath-native: 1.0.2
       slash: 1.0.0
       strip-bom: 3.0.0
-      write-file-atomic: 2.3.0
+      write-file-atomic: 2.4.2
       yargs: 11.1.0
     dev: true
     hasBin: true
@@ -19978,7 +19973,7 @@ packages:
       subscriptions-transport-ws: /subscriptions-transport-ws/0.9.15/graphql@14.1.1
       uppercamelcase: 3.0.0
       ws: 6.1.2
-      zen-observable: 0.8.11
+      zen-observable: 0.8.13
     dev: true
     id: registry.npmjs.org/prisma-client-lib/1.25.0
     peerDependencies:
@@ -26570,14 +26565,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-+Aek8LHZ6ROuekgRLmzDrxmRtF8=
-  /write-file-atomic/2.3.0:
+  /write-file-atomic/2.4.2:
     dependencies:
       graceful-fs: 4.1.15
       imurmurhash: 0.1.4
       signal-exit: 3.0.2
     dev: true
     resolution:
-      integrity: sha512-xuPeK4OdjWqtfi59ylvVL0Yn35SF3zgcAcv7rBPFHVaEapaDr4GdGgm3j7ckTwH9wHL7fGmgfAnb0+THrHb8tA==
+      integrity: sha512-s0b6vB3xIVRLWywa6X9TOMA7k9zio0TMOsl9ZnDkliA/cfJlpHXAscj0gbHVJiTdIuAYpIyqS5GW91fqm6gG5g==
   /write/1.0.3:
     dependencies:
       mkdirp: 0.5.1
@@ -27031,12 +27026,12 @@ packages:
       integrity: sha512-Hj1JIXsXZNCe9HLi3oWKHbYE8YuAFiutmwWX1JUbRgGUzuHAF3EL21mJPO+FEPckZwzG87jroXMrXLAfw03FnQ==
   /zen-observable-ts/0.8.13:
     dependencies:
-      zen-observable: 0.8.11
+      zen-observable: 0.8.13
     resolution:
       integrity: sha512-WDb8SM0tHCb6c0l1k60qXWlm1ok3zN9U4VkLdnBKQwIYwUoB9psH7LIFgR+JVCCMmBxUgOjskIid8/N02k/2Bg==
-  /zen-observable/0.8.11:
+  /zen-observable/0.8.13:
     resolution:
-      integrity: sha512-N3xXQVr4L61rZvGMpWe8XoCGX8vhU35dPyQ4fm5CY/KDlG0F75un14hjbckPXTDuKUY6V0dqR2giT6xN8Y4GEQ==
+      integrity: sha512-fa+6aDUVvavYsefZw0zaZ/v3ckEtMgCFi30sn91SEZea4y/6jQp05E3omjkX91zV6RVdn15fqnFZ6RKjRGbp2g==
   /zero-crossings/1.0.1:
     dependencies:
       cwise-compiler: 1.1.3
@@ -27064,10 +27059,10 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-c+eUhhkDpaK87G/py74wvWLtz2kzMPNCCkUApkun50ssE0oQliIQzWpTnwjB+MTKVIf2tGzIgHyqW/Y+W77ecQ==
-  /zone.js/0.8.28:
+  /zone.js/0.8.29:
     dev: false
     resolution:
-      integrity: sha512-MjwlvV0wr65IQiT0WSHedo/zUhAqtypMdTUjqroV81RohGj1XANwHuC37dwYxphTRbZBYidk0gNS0dQrU2Q3Pw==
+      integrity: sha512-mla2acNCMkWXBD+c+yeUrBUrzOxYMNFdQ6FGfigGGtEVBPJx07BQeJekjt9DmH1FtZek4E9rE1eRR9qQpxACOQ==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -27079,26 +27074,26 @@ specifiers:
   '@angular-devkit/build-ng-packagr': 0.12.2
   '@angular-material-extensions/password-strength': 3.4.0
   '@angular-mdc/web': 0.43.4
-  '@angular/animations': 7.2.1
+  '@angular/animations': 7.2.2
   '@angular/cdk': 7.2.2
   '@angular/cli': 7.2.2
-  '@angular/common': 7.2.1
-  '@angular/compiler': 7.2.1
-  '@angular/compiler-cli': 7.2.1
-  '@angular/core': 7.2.1
-  '@angular/elements': 7.2.1
+  '@angular/common': 7.2.2
+  '@angular/compiler': 7.2.2
+  '@angular/compiler-cli': 7.2.2
+  '@angular/core': 7.2.2
+  '@angular/elements': 7.2.2
   '@angular/fire': 5.1.1
   '@angular/flex-layout': 7.0.0-beta.23
-  '@angular/forms': 7.2.1
-  '@angular/http': 7.2.1
-  '@angular/language-service': 7.2.1
+  '@angular/forms': 7.2.2
+  '@angular/http': 7.2.2
+  '@angular/language-service': 7.2.2
   '@angular/material': 7.2.2
-  '@angular/platform-browser': 7.2.1
-  '@angular/platform-browser-dynamic': 7.2.1
-  '@angular/platform-server': 7.2.1
+  '@angular/platform-browser': 7.2.2
+  '@angular/platform-browser-dynamic': 7.2.2
+  '@angular/platform-server': 7.2.2
   '@angular/pwa': 0.12.2
-  '@angular/router': 7.2.1
-  '@angular/service-worker': 7.2.1
+  '@angular/router': 7.2.2
+  '@angular/service-worker': 7.2.2
   '@angularclass/hmr': 2.1.3
   '@babel/cli': 7.2.3
   '@babel/core': 7.2.2
@@ -27112,7 +27107,7 @@ specifiers:
   '@ionic-native/core': 5.0.0-beta.15
   '@ionic-native/splash-screen': 5.0.0-beta.14
   '@ionic-native/status-bar': 5.0.0-beta.14
-  '@ionic/angular': 4.0.0-rc.2
+  '@ionic/angular': 4.0.0-rc.3
   '@ionic/angular-toolkit': 1.2.2
   '@nestjs/common': 5.6.2
   '@nestjs/core': 5.6.2
@@ -27186,7 +27181,7 @@ specifiers:
   '@types/lodash': 4.14.120
   '@types/node': 10.12.18
   '@types/paho-mqtt': 1.0.4
-  '@types/three': 0.93.15
+  '@types/three': 0.93.16
   '@types/webpack-env': 1.13.6
   acorn: 6.0.5
   allure-commandline: 2.9.0
@@ -27241,7 +27236,7 @@ specifiers:
   dotenv-extended: 2.3.0
   earcut: 2.1.4
   ease-component: 1.0.0
-  electron: 4.0.1
+  electron: 4.0.2
   electron-builder: 20.38.5
   electron-packager: 13.0.1
   electron-reload: 1.4.0
@@ -27393,4 +27388,4 @@ specifiers:
   wildemitter: 1.2.0
   ws: 6.1.2
   xhr2: 0.1.4
-  zone.js: 0.8.28
+  zone.js: 0.8.29
