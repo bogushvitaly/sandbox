@@ -1,9 +1,9 @@
 {
   "name": "functions",
   "private": true,
-  "main": "lib/index.js",
+  "main": "dist/lib/index.js",
   "scripts": {
-    "build": "psc-package build && tslint -p tslint.json && webpack",
+    "build": "psc-package build && webpack",
     "deploy": "firebase deploy --only functions",
     "lint": "tslint --project tsconfig.json",
     "logs": "firebase functions:log",
@@ -27,23 +27,24 @@
     }
   },
   "dependencies": {
-    "firebase-admin": "6.5.0",
-    "firebase-functions": "2.1.0",
-    "jest": "23.6.0",
-    "purescript-psa": "0.7.3",
-    "purs-loader": "3.2.0",
-    "ts-jest": "23.10.5",
-    "ts-loader": "5.3.3",
-    "webpack-node-externals": "1.7.2"
+    "firebase-admin": "6.5.1",
+    "firebase-functions": "2.1.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
+    "jest": "23.6.0",
+    "jest-environment-jsdom": "23.4.0",
     "psc-package": "3.0.1",
     "pulp": "12.3.1",
     "purescript": "0.12.2",
+    "purescript-psa": "0.7.3",
+    "purs-loader": "3.3.0",
+    "ts-jest": "23.10.5",
+    "ts-loader": "5.3.3",
     "tslint": "5.12.1",
     "typescript": "3.2.4",
     "webpack": "4.29.0",
-    "webpack-cli": "3.2.1"
+    "webpack-cli": "3.2.1",
+    "webpack-node-externals": "1.7.2"
   }
 }

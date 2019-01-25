@@ -1,4 +1,4 @@
-import * as triggers from '../lib/index';
+import * as triggers from '../dist/lib/index';
 
 it("sends a response", () => {
   const req = {};

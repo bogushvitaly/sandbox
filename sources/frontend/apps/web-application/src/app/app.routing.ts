@@ -6,20 +6,27 @@ import { routeBase } from '@frontend/features';
 
 // app
 import { SharedModule } from './features/shared/shared.module';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   imports: [
     SharedModule,
     RouterModule.forRoot(
-      routeBase({
-        base: './features/shell/shell.loader.module#ShellLoaderModule',
-        items: './features/items/items.loader.module#ItemsLoaderModule',
-        version: './features/version/version.loader.module#VersionLoaderModule',
-        authorization: './features/authorization/authorization.loader.module#AuthorizationLoaderModule'
-      }),
+      routeBase(
+        {
+          base: './features/shell/shell.loader.module#ShellLoaderModule',
+          items: './features/items/items.loader.module#ItemsLoaderModule',
+          version: './features/version/version.loader.module#VersionLoaderModule',
+          authorization: './features/authorization/authorization.loader.module#AuthorizationLoaderModule'
+        },
+        [
+          { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomeModule' },
+          { path: '**', component: NotFoundComponent }
+        ]
+      ),
       {
-        preloadingStrategy: PreloadAllModules
-        // initialNavigation: true
+        preloadingStrategy: PreloadAllModules,
+        initialNavigation: true
       }
     )
   ]

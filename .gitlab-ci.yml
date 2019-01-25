@@ -56,7 +56,7 @@ frontend-web-application-build-staging:
       - .pnpm-store/
   script:
     - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend build.web.application
+    - npm run --prefix sources/frontend udk.web.application.build
     - echo "Stating Build Finished"
   artifacts:
     paths:
@@ -78,7 +78,7 @@ frontend-web-application-build-production:
       - .pnpm-store/
   script:
     - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend build.web.application
+    - npm run --prefix sources/frontend udk.web.application.build
     - mkdir sources/frontend/production
     - cp -r sources/frontend/dist/apps/* sources/frontend/production
     - echo "Production Build Finished"

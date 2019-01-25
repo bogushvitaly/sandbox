@@ -1,7 +1,7 @@
 {
   "firestore": {
-    "rules": "config/firebase/firestore.rules",
-    "indexes": "config/firebase/firestore.indexes.json"
+    "rules": "configs/firebase/firestore.rules",
+    "indexes": "configs/firebase/firestore.indexes.json"
   },
   "functions": {
     "predeploy": [
@@ -10,16 +10,18 @@
     ]
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist/apps/web-application/browser",
     "rewrites": [{
       "source": "**",
       "function": "http"
-    }]
+    }],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   },
   "storage": {
-    "rules": "config/firebase/storage.rules"
-  },
-  "database": {
-    "rules": "config/firebase/database.rules.json"
+    "rules": "configs/firebase/storage.rules"
   }
 }

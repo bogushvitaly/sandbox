@@ -1,3 +1,5 @@
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { Inject, ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 // libs
@@ -24,7 +26,7 @@ export const BASE_PROVIDERS: any[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, NxModule.forRoot()]
+  imports: [CommonModule, NxModule.forRoot(), NgxAuthFirebaseUIModule.forRoot(environment.firebaseConfig)]
 })
 export class CoreModule {
   // configuredProviders: *required to configure WindowService and others per platform

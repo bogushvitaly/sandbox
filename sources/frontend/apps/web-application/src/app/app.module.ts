@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app.routing';
 // app
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './features/shared/shared.module';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,7 @@ import { SharedModule } from './features/shared/shared.module';
       enabled: environment.production
     })
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, NotFoundComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

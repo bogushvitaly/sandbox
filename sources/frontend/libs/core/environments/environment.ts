@@ -2,12 +2,12 @@ export const environment = {
   production: false,
   api_url: 'http://localhost:4000/api',
   firebaseConfig: {
-    apiKey: 'undefined',
-    authDomain: 'undefined',
-    databaseURL: 'undefined',
-    projectId: 'undefined',
-    storageBucket: 'undefined',
-    messagingSenderId: 'undefined'
+    apiKey: 'AIzaSyCPgEpt_kt0KjzYJ3_moCgqYwZHNB-WEY8',
+    authDomain: 'sandbox-50983.firebaseapp.com',
+    databaseURL: 'https://sandbox-50983.firebaseio.com',
+    projectId: 'sandbox-50983',
+    storageBucket: 'sandbox-50983.appspot.com',
+    messagingSenderId: '1019120661490'
   },
   baseRoutePath: '',
   itemsRoutePath: 'items',

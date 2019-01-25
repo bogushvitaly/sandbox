@@ -30,8 +30,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["testing/tsconfig.libs.json", "testing/tsconfig.libs.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "testing/tsconfig.libs.json",
+              "testing/tsconfig.libs.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -53,8 +58,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["testing/tsconfig.xplat.json", "testing/tsconfig.xplat.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "testing/tsconfig.xplat.json",
+              "testing/tsconfig.xplat.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -79,11 +89,11 @@
                 "plugins": "append"
               }
             },
-            "outputPath": "dist/apps/web-application",
+            "outputPath": "dist/apps/web-application/browser",
             "index": "apps/web-application/src/index.html",
             "main": "apps/web-application/src/main.ts",
             "polyfills": "apps/web-application/src/polyfills.ts",
-            "tsConfig": "apps/web-application/tsconfig.app.json",
+            "tsConfig": "apps/web-application/tsconfig.browser.json",
             "assets": [{
                 "glob": "favicon.ico",
                 "input": "apps/web-application/src",
@@ -208,16 +218,21 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/web-application/tsconfig.app.json", "apps/web-application/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "apps/web-application/tsconfig.app.json",
+              "apps/web-application/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/apps/web-application-server",
+            "outputPath": "dist/apps/web-application/server",
             "main": "apps/web-application/src/main.server.ts",
-            "tsConfig": "apps/web-application/tsconfig.server.json"
+            "tsConfig": "apps/web-application/tsconfig.server.json",
           },
           "configurations": {
             "production": {
@@ -225,17 +240,13 @@
                 "replace": "apps/web-application/src/environments/environment.ts",
                 "with": "apps/web-application/src/environments/environment.prod.ts"
               }],
+              "optimization": false,
+              "outputHashing": "media",
               "sourceMap": false,
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
-            },
-            "udk": {
-              "fileReplacements": [{
-                "replace": "apps/web-application/src/main.server.ts",
-                "with": "apps/web-application/src/main.udk.ts"
-              }]
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "bundleDependencies": "all"
             }
           }
         },
@@ -243,7 +254,15 @@
           "builder": "udk:udk-builder",
           "options": {
             "browserTarget": "web-application:build",
-            "serverTarget": "web-application:server:udk"
+            "serverTarget": "web-application:server",
+            "partialServerConfig": "apps/web-application/webpack.server.config.js"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "web-application:build:production",
+              "serverTarget": "web-application:server:production",
+              "verbose": true
+            }
           }
         }
       }
@@ -257,67 +276,12 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/web-application-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
-    },
-    "web-application-ssr": {
-      "root": "apps/web-application-ssr",
-      "sourceRoot": "apps/web-application-ssr/src",
-      "projectType": "application",
-      "prefix": "web-application-ssr",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@nrwl/builders:node-build",
-          "options": {
-            "outputPath": "dist/apps/web-application-ssr",
-            "main": "apps/web-application-ssr/src/main.ts",
-            "tsConfig": "apps/web-application-ssr/tsconfig.app.json",
-            "assets": ["apps/web-application-ssr/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "fileReplacements": [{
-                "replace": "apps/web-application-ssr/src/environments/environment.ts",
-                "with": "apps/web-application-ssr/src/environments/environment.prod.ts"
-              }]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/builders:node-execute",
-          "options": {
-            "buildTarget": "web-application-ssr:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/web-application-ssr/tsconfig.app.json", "apps/web-application-ssr/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "apps/web-application-ssr/jest.config.js",
-            "tsConfig": "apps/web-application-ssr/tsconfig.spec.json",
-            "setupFile": "apps/web-application-ssr/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "nest-application": {
-      "root": "apps/nest-application",
-      "sourceRoot": "apps/nest-application/src",
-      "projectType": "application",
-      "prefix": "nest-application",
-      "schematics": {},
-      "architect": {}
     },
     "fan-menu": {
       "root": "libs/fan-menu",
@@ -335,8 +299,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/fan-menu/tsconfig.lib.json", "libs/fan-menu/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "libs/fan-menu/tsconfig.lib.json",
+              "libs/fan-menu/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -373,8 +342,13 @@
             "main": "apps/storybook/src/main.ts",
             "polyfills": "apps/storybook/src/polyfills.ts",
             "tsConfig": "apps/storybook/tsconfig.app.json",
-            "assets": ["apps/storybook/src/favicon.ico", "apps/storybook/src/assets"],
-            "styles": ["apps/storybook/src/styles.scss"],
+            "assets": [
+              "apps/storybook/src/favicon.ico",
+              "apps/storybook/src/assets"
+            ],
+            "styles": [
+              "apps/storybook/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -420,8 +394,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/storybook/tsconfig.app.json", "apps/storybook/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "apps/storybook/tsconfig.app.json",
+              "apps/storybook/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {

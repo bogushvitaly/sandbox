@@ -4,12 +4,12 @@ export const VERSION = {
     "name": "frontend",
     "version": "0.0.0",
     "dirty": true,
-    "raw": "ab66cad-dirty",
-    "hash": "ab66cad",
+    "raw": "f565569-dirty",
+    "hash": "f565569",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "ab66cad-dirty",
+    "suffix": "f565569-dirty",
     "semverString": null
 };
 /* tslint:enable */

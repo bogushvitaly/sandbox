@@ -4,8 +4,7 @@ import { join, relative } from 'path';
 
 const { version, name, description, repository, homepage } = require('../../package.json');
 
-// On now we don't have access to .git :/
-const git = process.env.NOW ? { raw: 'now.sh build' } : gitDescribeSync({ dirtyMark: false, dirtySemver: false });
+const git = gitDescribeSync({ dirtyMark: false, dirtySemver: false });
 
 const result = {
   name,
@@ -29,3 +28,5 @@ export const VERSION = ${JSON.stringify(result, null, 4)};
 );
 
 console.log(`Wrote version info ${result.raw || 'unknown'} to ${relative(process.cwd(), file)}`);
+
+export {};

@@ -23,9 +23,6 @@
     "nest-application": {
       "tags": []
     },
-    "web-application-ssr": {
-      "tags": []
-    },
     "fan-menu": {
       "tags": []
     },

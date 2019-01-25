@@ -12,4 +12,4 @@ COPY --from=build-env /app/package.json /app
 RUN npm ci --production
 COPY --from=build-env /app/dist /app/dist
 EXPOSE 4000
-CMD ["npm", "run", "start.web.application.ssr"]
+CMD ["npm", "run", "start.web.application.server"]
