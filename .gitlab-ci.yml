@@ -1,4 +1,4 @@
-image: bohushvitali/frontend-ci
+image: bohushvitali/applications-ci
 
 variables:
   DOCKER_DRIVER: overlay2
@@ -27,7 +27,7 @@ before_script:
   - npm config set verify-store-integrity false
   - npm config set rebuild-bundle false
 
-frontend-dependencies-install:
+applications-dependencies-install:
   stage: prepare
   before_script:
     - npm config set store .pnpm-store
@@ -36,222 +36,222 @@ frontend-dependencies-install:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend
-    - pnpm install --prefix sources/frontend/functions
+    - pnpm install --prefix sources/applications
+    - pnpm install --prefix sources/applications/functions
     - echo "Dependencies Install Finished"
   only:
     - master
   when: always
   allow_failure: false
 
-frontend-web-application-build-staging:
+web-application-build-staging:
   stage: build
   environment:
     name: staging
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend udk.web.application.build
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications udk.web.application.build
     - echo "Stating Build Finished"
   artifacts:
     paths:
-      - sources/frontend/dist
+      - sources/applications/dist
   only:
     - master
   when: always
   allow_failure: false
 
-frontend-web-application-build-production:
+web-application-build-production:
   stage: build
   environment:
     name: production
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend udk.web.application.build
-    - mkdir sources/frontend/production
-    - cp -r sources/frontend/dist/apps/* sources/frontend/production
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications udk.web.application.build
+    - mkdir sources/applications/production
+    - cp -r sources/applications/dist/apps/* sources/applications/production
     - echo "Production Build Finished"
   artifacts:
     paths:
-      - sources/frontend/dist
-      - sources/frontend/production
+      - sources/applications/dist
+      - sources/applications/production
   only:
     - master
   when: always
   allow_failure: false
 
-frontend-check-formatting:
+applications-check-formatting:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
-    - echo "Frontend Check Formatting Finished"
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+    - echo "applications Check Formatting Finished"
 
-frontend-check-linting:
+applications-check-linting:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend lint.check
-    - echo "Frontend Check Linting Finished"
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications lint.check
+    - echo "applications Check Linting Finished"
 
-frontend-unit-tests:
+applications-unit-tests:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend test.jest.coverage
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications test.jest.coverage
     - echo "Web Application Unit Tests Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-compodoc:
+applications-compodoc:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend docs.compodoc
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications docs.compodoc
     - echo "Web Application Compodoc Generation Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-storybook:
+applications-storybook:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend storybook.build
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications storybook.build
     - echo "Storybook Building Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-dependencies-graph:
+applications-dependencies-graph:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend dep-graph
-    - echo "Frontend Dependencies Graph Generation Finished"
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications dep-graph
+    - echo "applications Dependencies Graph Generation Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-web-application-bundle-analysis:
+web-application-bundle-analysis:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend analyze.web.application.bundle
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications analyze.web.application.bundle
     - echo "Web Application Bundle Analysis Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-web-application-e2e-tests:
+web-application-e2e-tests:
   stage: test
   dependencies:
-    - frontend-dependencies-install
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - npm run --prefix sources/frontend e2e.web.application
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications e2e.web.application
     - echo "Web Application E2E Tests Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-application-web-lighthouse:
+web-application-lighthouse:
   stage: audit
   dependencies:
-    - frontend-application-web-deploy-staging
+    - web-application-deploy-staging
   script:
-    - mkdir -p sources/frontend/reports/lighthouse
-    - lighthouse-ci $WEB_APPLIATOIN_STAGING_URL --silent --report sources/frontend/reports/lighthouse
+    - mkdir -p sources/applications/reports/lighthouse
+    - lighthouse-ci $WEB_APPLIATOIN_STAGING_URL --silent --report sources/applications/reports/lighthouse
     - echo "Web Application Lighthouse Analysis Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-application-web-artillery:
+services-example-web-artillery:
   stage: audit
   dependencies:
-    - frontend-application-web-deploy-staging
+    - web-application-deploy-staging
   script:
-    - mkdir -p sources/frontend/reports/lighthouse
+    - mkdir -p sources/applications/reports/lighthouse
     - artillery quick --count 10 -n 20 https://artillery.io/
     - echo "Web Application Artillery Load Tests Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports
 
-frontend-application-web-deploy-staging:
+web-application-deploy-staging:
   stage: staging
   dependencies:
-    - frontend-dependencies-install
-    - frontend-web-application-build-staging
+    - applications-dependencies-install
+    - web-application-build-staging
   environment:
     name: staging
   cache:
@@ -260,20 +260,20 @@ frontend-application-web-deploy-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - pnpm install --prefix sources/frontend/functions --offline
-    - npm run --prefix sources/frontend deploy.web.application
+    - pnpm install --prefix sources/applications --offline
+    - pnpm install --prefix sources/applications/functions --offline
+    - npm run --prefix sources/applications deploy.web.application
     - echo "Staging Deployment Finished"
   artifacts:
     paths:
-      - sources/frontend/dist
+      - sources/applications/dist
   when: always
 
-frontend-application-web-deploy-production:
+web-application-deploy-production:
   stage: production
   dependencies:
-    - frontend-dependencies-install
-    - frontend-web-application-build-production
+    - applications-dependencies-install
+    - web-application-build-production
   environment:
     name: production
   cache:
@@ -282,15 +282,15 @@ frontend-application-web-deploy-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/frontend --offline
-    - pnpm install --prefix sources/frontend/functions --offline
-    - mkdir sources/frontend/dist/apps
-    - mv sources/frontend/production/* sources/frontend/dist/apps
-    - npm run --prefix sources/frontend deploy.web.application
+    - pnpm install --prefix sources/applications --offline
+    - pnpm install --prefix sources/applications/functions --offline
+    - mkdir sources/applications/dist/apps
+    - mv sources/applications/production/* sources/applications/dist/apps
+    - npm run --prefix sources/applications deploy.web.application
     - echo "Production Deployment Finished"
   artifacts:
     paths:
-      - sources/frontend/production
+      - sources/applications/production
   only:
     - master
   when: manual
@@ -300,22 +300,22 @@ pages:
   before_script:
     - echo Skip Before Scripts
   dependencies:
-    - frontend-unit-tests
-    - frontend-compodoc
-    - frontend-storybook
-    - frontend-dependencies-graph
-    - frontend-web-application-bundle-analysis
-    - frontend-web-application-e2e-tests
-    - frontend-application-web-lighthouse
+    - applications-unit-tests
+    - applications-compodoc
+    - applications-storybook
+    - applications-dependencies-graph
+    - web-application-bundle-analysis
+    - web-application-e2e-tests
+    - web-application-lighthouse
   script:
     - mkdir public
-    - cp -r sources/frontend/tools/report-wrapper/* public
-    - cp -r sources/frontend/reports/* public
+    - cp -r sources/applications/tools/report-wrapper/* public
+    - cp -r sources/applications/reports/* public
     - echo "Pages Publishing Finished"
   artifacts:
     paths:
       - public
-      - sources/frontend/reports
+      - sources/applications/reports
     expire_in: 30 days
 
 hiptest:
@@ -325,8 +325,8 @@ hiptest:
     - echo Skip Before Scripts
   cache: {}
   script:
-    - docker run -it --rm -u $UID -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/frontend/hiptest-publisher.conf --push="sources/frontend/reports/apps/web-application/mocha/*.xml"
+    - docker run -it --rm -u $UID -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf --push="sources/applications/reports/apps/web-application/mocha/*.xml"
     - echo "Hiptest Report Pablishing Finished"
   artifacts:
     paths:
-      - sources/frontend/reports
+      - sources/applications/reports

@@ -1,0 +1,76 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "paths": {
+      "@application/web-application/environment/*": [
+        "apps/web-application/src/environments/*"
+      ],
+      "@application/version": [
+        "libs/features/version/data/index.ts"
+      ],
+      "@application/web": [
+        "xplat/web/index.ts"
+      ],
+      "@application/web/*": [
+        "xplat/web/*"
+      ],
+      "@application/electron": [
+        "xplat/electron/index.ts"
+      ],
+      "@application/electron/*": [
+        "xplat/electron/*"
+      ],
+      "@application/ionic": [
+        "xplat/ionic/index.ts"
+      ],
+      "@application/ionic/*": [
+        "xplat/ionic/*"
+      ],
+      "@application/nativescript": [
+        "xplat/nativescript/index.ts"
+      ],
+      "@application/nativescript/*": [
+        "xplat/nativescript/*"
+      ],
+      "@application/nest": [
+        "xplat/nest/index.ts"
+      ],
+      "@application/nest/*": [
+        "xplat/nest/*"
+      ],
+      "@application/*": [
+        "libs/*"
+      ],
+      "@application/fan-menu": [
+        "libs/fan-menu/src/index.ts"
+      ],
+      "example": [
+        "libs/apps/nest-application/src/example/src"
+      ],
+      "example/*": [
+        "libs/apps/nest-application/src/example/src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "reports",
+    "tmp",
+    "references.d.ts"
+  ]
+}

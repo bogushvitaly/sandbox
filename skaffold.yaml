@@ -10,8 +10,8 @@ build:
       context: ./sources/services/example-node/
     - image: gcr.io/sandbox-228621/example-python
       context: ./sources/services/example-python/
-    - image: gcr.io/sandbox-228621/frontend
-      context: ./sources/frontend/
+    - image: gcr.io/sandbox-228621/applications
+      context: ./sources/applications/
 deploy:
   kubectl:
     manifests:
@@ -19,4 +19,4 @@ deploy:
       - ./sources/services/example-java/k8s/*
       - ./sources/services/example-node/k8s/*
       - ./sources/services/example-python/k8s/*
-      - ./sources/frontend/k8s/*
+      - ./sources/applications/k8s/*
