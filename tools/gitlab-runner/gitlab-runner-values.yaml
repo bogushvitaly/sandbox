@@ -159,7 +159,7 @@ runners:
     # cachePath: "gitlab_runner"
     cacheShared: true
     ## S3 settings
-    s3ServerAddress: s3.gitlab-managed-apps.svc.cluster.local:9000
+    s3ServerAddress: s3.gitlab-managed-apps-sandbox:9000
     s3BucketName: cache
     # s3BucketLocation:
     s3CacheInsecure: true
