@@ -1,4 +1,4 @@
-image: bohushvitali/applications-ci
+image: bohushvitali/frontend-ci
 
 variables:
   DOCKER_DRIVER: overlay2
