@@ -42,6 +42,7 @@ frontend-dependencies-install:
   only:
     - master
   when: always
+  allow_failure: false
 
 frontend-web-application-build-staging:
   stage: build
@@ -64,6 +65,7 @@ frontend-web-application-build-staging:
   only:
     - master
   when: always
+  allow_failure: false
 
 frontend-web-application-build-production:
   stage: build
@@ -89,6 +91,7 @@ frontend-web-application-build-production:
   only:
     - master
   when: always
+  allow_failure: false
 
 frontend-check-formatting:
   stage: test
