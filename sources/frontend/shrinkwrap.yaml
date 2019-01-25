@@ -2720,7 +2720,7 @@ packages:
     dependencies:
       chalk: 2.4.2
       consola: 1.4.5
-      esm: 3.1.1
+      esm: 3.1.2
       node-fetch: 2.3.0
     dev: false
     engines:
@@ -3571,17 +3571,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-PDSD5gbAQTeEOOlRRk8A5OYHBtY=
-  /@types/jasmine/3.3.7:
-    dev: true
-    resolution:
-      integrity: sha512-TuXyEBYWWrjBZAC4h3YY5NcrgC9HaLO5FogvkY5FOfAyjrk3wWABoH/3p7ooFfA8BHjc2BeQCDvvQBLb+9q1rA==
   /@types/jasmine/3.3.8:
     dev: true
     resolution:
       integrity: sha512-BaOFpaddRVV8qykJoWHrHtamml880oh0+DIZWbtJgx0pu+KhDF1gER5hSfCIfzyMrbjMuYFnLUfyo1l0JUVU3Q==
   /@types/jasminewd2/2.0.6:
     dependencies:
-      '@types/jasmine': 3.3.7
+      '@types/jasmine': 3.3.8
     dev: true
     resolution:
       integrity: sha512-2ZOKrxb8bKRmP/po5ObYnRDgFE4i+lQiEB27bAMmtMWLgJSqlIDqlLx6S0IRorpOmOPRQ6O80NujTmQAtBkeNw==
@@ -5217,7 +5213,7 @@ packages:
   /autoprefixer/9.4.3:
     dependencies:
       browserslist: 4.4.1
-      caniuse-lite: 1.0.30000930
+      caniuse-lite: 1.0.30000932
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       postcss: 7.0.14
@@ -5231,7 +5227,7 @@ packages:
   /autoprefixer/9.4.6:
     dependencies:
       browserslist: 4.4.1
-      caniuse-lite: 1.0.30000930
+      caniuse-lite: 1.0.30000932
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       postcss: 7.0.14
@@ -6255,8 +6251,8 @@ packages:
       integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==
   /browserslist/4.1.1:
     dependencies:
-      caniuse-lite: 1.0.30000930
-      electron-to-chromium: 1.3.106
+      caniuse-lite: 1.0.30000932
+      electron-to-chromium: 1.3.108
       node-releases: 1.1.3
     dev: true
     hasBin: true
@@ -6264,8 +6260,8 @@ packages:
       integrity: sha512-VBorw+tgpOtZ1BYhrVSVTzTt/3+vSE3eFUh0N2GCFK1HffceOaf32YS/bs6WiFhjDAblAFrx85jMy3BG9fBK2Q==
   /browserslist/4.4.1:
     dependencies:
-      caniuse-lite: 1.0.30000930
-      electron-to-chromium: 1.3.106
+      caniuse-lite: 1.0.30000932
+      electron-to-chromium: 1.3.108
       node-releases: 1.1.3
     dev: true
     hasBin: true
@@ -6653,10 +6649,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
-  /caniuse-lite/1.0.30000930:
+  /caniuse-lite/1.0.30000932:
     dev: true
     resolution:
-      integrity: sha512-KD+pw9DderBLB8CGqBzYyFWpnrPVOEjsjargU/CvkNyg60od3cxSPTcTeMPhxJhDbkQPWvOz5BAyBzNl/St9vg==
+      integrity: sha512-4bghJFItvzz8m0T3lLZbacmEY9X1Z2AtIzTr7s7byqZIOumASfr4ynDx7rtm0J85nDmx8vsgR6vnaSoeU8Oh0A==
   /cannon/0.6.2:
     dev: false
     resolution:
@@ -8336,7 +8332,7 @@ packages:
       d3-drag: 1.2.3
       d3-interpolate: 1.3.2
       d3-selection: 1.4.0
-      d3-transition: 1.1.3
+      d3-transition: 1.2.0
     dev: false
     resolution:
       integrity: sha1-AMLyOAGfJPbAoZSibUGhUw/+e8Q=
@@ -8346,7 +8342,7 @@ packages:
       d3-drag: 1.2.3
       d3-interpolate: 1.3.2
       d3-selection: 1.4.0
-      d3-transition: 1.1.3
+      d3-transition: 1.2.0
     dev: false
     resolution:
       integrity: sha512-lGSiF5SoSqO5/mYGD5FAeGKKS62JdA1EV7HPrU2b5rTX4qEJJtpjaGLJngjnkewQy7UnGstnFd3168wpf5z76w==
@@ -8602,7 +8598,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-xeg8oggyQ+y5eb4J13iDgKIjUcEfIOZs2BqV/eEmXm2twx80wTzJ4tB4vaZ5BKfz7XsI/DFmQL5me6O27/5ykQ==
-  /d3-transition/1.1.3:
+  /d3-transition/1.2.0:
     dependencies:
       d3-color: 1.2.3
       d3-dispatch: 1.0.5
@@ -8612,7 +8608,7 @@ packages:
       d3-timer: 1.0.9
     dev: false
     resolution:
-      integrity: sha512-tEvo3qOXL6pZ1EzcXxFcPNxC/Ygivu5NoBY6mbzidATAeML86da+JfVIUzon3dNM6UX6zjDx+xbYDmMVtTSjuA==
+      integrity: sha512-VJ7cmX/FPIPJYuaL2r1o1EMHLttvoIuZhhuAlRoOxDzogV8iQS6jYulDm3xEU3TqL80IZIhI551/ebmCMrkvhw==
   /d3-voronoi/1.1.2:
     dev: false
     resolution:
@@ -8623,7 +8619,7 @@ packages:
       d3-drag: 1.2.3
       d3-interpolate: 1.3.2
       d3-selection: 1.4.0
-      d3-transition: 1.1.3
+      d3-transition: 1.2.0
     dev: false
     resolution:
       integrity: sha512-sZHQ55DGq5BZBFGnRshUT8tm2sfhPHFnOlmPbbwTkAoPeVdRTkB4Xsf9GCY0TSHrTD8PeJPZGmP/TpGicwJDJQ==
@@ -9587,10 +9583,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1WCFYHsYvZBqDsoaS0Relnz0rd81ZkBAI0Fgx7Nq2UWU77rSNs1qxm4S6uH7TCZ0bV3LQpJFk7id/is/ZgoOPA==
-  /electron-to-chromium/1.3.106:
+  /electron-to-chromium/1.3.108:
     dev: true
     resolution:
-      integrity: sha512-eXX45p4q9CRxG0G8D3ZBZYSdN3DnrcZfrFvt6VUr1u7aKITEtRY/xwWzJ/UZcWXa7DMqPu/pYwuZ6Nm+bl0GmA==
+      integrity: sha512-/QI4hMpAh48a1Sea6PALGv+kuVne9A2EWGd8HrWHMdYhIzGtbhVVHh6heL5fAzGaDnZuPyrlWJRl8WPm4RyiQQ==
   /electron-updater/4.0.6:
     dependencies:
       bluebird-lst: 1.0.6
@@ -9959,12 +9955,12 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-1G6UTDi7Jc1ELFwnR58HV4fK9OQK4S6N985f166xqXxpjU6plxFISJa2Ba9KCQuFa8RCnj/lSFJbHo7UFDBnUA==
-  /esm/3.1.1:
+  /esm/3.1.2:
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-Md2pR4IbR37UqubbgbA4+wiBorOEFB05Oo+g4WJW7W2ajiOhUfjZt77NzzCoQdrCb40GdKcflitm+XHDF053OQ==
+      integrity: sha512-orLuMaPdxYelL1qsM16XUbby4DQX1j5WSsFBg5vHuDJ2gUMMzpcbX82Lu305TjHYacXSuxYz3SuzWjdNFxIDJw==
   /esprima/2.7.3:
     engines:
       node: '>=0.10.0'
