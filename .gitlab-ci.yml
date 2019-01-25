@@ -93,101 +93,101 @@ web-application-build-production:
   when: always
   allow_failure: false
 
-applications-check-formatting:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
-    - echo "applications Check Formatting Finished"
+# applications-check-formatting:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --prefix sources/applications --offline
+#     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+#     - echo "applications Check Formatting Finished"
 
-applications-check-linting:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications lint.check
-    - echo "applications Check Linting Finished"
+# applications-check-linting:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --prefix sources/applications --offline
+#     - npm run --prefix sources/applications lint.check
+#     - echo "applications Check Linting Finished"
 
-applications-unit-tests:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications test.jest.coverage
-    - echo "Web Application Unit Tests Finished"
-  artifacts:
-    paths:
-      - sources/applications/reports
+# applications-unit-tests:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --prefix sources/applications --offline
+#     - npm run --prefix sources/applications test.jest.coverage
+#     - echo "Web Application Unit Tests Finished"
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-applications-compodoc:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications docs.compodoc
-    - echo "Web Application Compodoc Generation Finished"
-  artifacts:
-    paths:
-      - sources/applications/reports
+# applications-compodoc:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --prefix sources/applications --offline
+#     - npm run --prefix sources/applications docs.compodoc
+#     - echo "Web Application Compodoc Generation Finished"
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-applications-storybook:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications storybook.build
-    - echo "Storybook Building Finished"
-  artifacts:
-    paths:
-      - sources/applications/reports
+# applications-storybook:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --prefix sources/applications --offline
+#     - npm run --prefix sources/applications storybook.build
+#     - echo "Storybook Building Finished"
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-applications-dependencies-graph:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications dep-graph
-    - echo "applications Dependencies Graph Generation Finished"
-  artifacts:
-    paths:
-      - sources/applications/reports
+# applications-dependencies-graph:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --prefix sources/applications --offline
+#     - npm run --prefix sources/applications dep-graph
+#     - echo "applications Dependencies Graph Generation Finished"
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
 web-application-bundle-analysis:
   stage: test
@@ -206,22 +206,22 @@ web-application-bundle-analysis:
     paths:
       - sources/applications/reports
 
-web-application-e2e-tests:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications e2e.web.application
-    - echo "Web Application E2E Tests Finished"
-  artifacts:
-    paths:
-      - sources/applications/reports
+# web-application-e2e-tests:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --prefix sources/applications --offline
+#     - npm run --prefix sources/applications e2e.web.application
+#     - echo "Web Application E2E Tests Finished"
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
 web-application-lighthouse:
   stage: audit
