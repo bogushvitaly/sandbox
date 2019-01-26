@@ -38,7 +38,7 @@ applications-dependencies-install:
   script:
     - pnpm install --prefix sources/applications --side-effects-cache
     - pnpm install --prefix sources/applications/functions --side-effects-cache
-    - echo "Dependencies Install Finished"
+    - echo Installing dependencies finished
   only:
     - master
   when: always
@@ -58,7 +58,7 @@ web-application-build-staging:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications udk.web.application.build
-    - echo "Stating Build Finished"
+    - echo Stage build completed
   artifacts:
     paths:
       - sources/applications/dist
@@ -83,7 +83,7 @@ web-application-build-production:
     - npm run --prefix sources/applications udk.web.application.build
     - mkdir sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
-    - echo "Production Build Finished"
+    - echo Production build completed
   artifacts:
     paths:
       - sources/applications/production
@@ -104,7 +104,7 @@ applications-check-formatting:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
-    - echo "applications Check Formatting Finished"
+    - echo Applications code formatting check finished
 
 applications-check-linting:
   stage: test
@@ -118,7 +118,7 @@ applications-check-linting:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications lint.check
-    - echo "applications Check Linting Finished"
+    - echo Applications code linting check finished
 
 applications-unit-tests:
   stage: test
@@ -132,7 +132,7 @@ applications-unit-tests:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications test.jest.coverage
-    - echo "Web Application Unit Tests Finished"
+    - echo Web Application unit tests finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -149,7 +149,7 @@ applications-compodoc:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications docs.compodoc
-    - echo "Web Application Compodoc Generation Finished"
+    - echo Web Application unit tests Compodoc generation finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -166,7 +166,7 @@ applications-storybook:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications storybook.build
-    - echo "Storybook Building Finished"
+    - echo Applications storybook building finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -183,7 +183,7 @@ applications-dependencies-graph:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications dep-graph
-    - echo "applications Dependencies Graph Generation Finished"
+    - echo Applications dependencies graph generation finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -200,7 +200,7 @@ web-application-bundle-analysis:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications analyze.web.application.bundle
-    - echo "Web Application Bundle Analysis Finished"
+    - echo Web Application bundle analysis finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -217,7 +217,7 @@ web-application-e2e-tests:
   script:
     - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications e2e.web.application
-    - echo "Web Application E2E Tests Finished"
+    - echo Web Application e2e tests finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -229,7 +229,7 @@ web-application-lighthouse:
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
-    - echo "Web Application Lighthouse Analysis Finished"
+    - echo Web Application lighthouse analysis finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -241,7 +241,7 @@ services-example-web-artillery:
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - artillery quick --count 10 -n 20 https://artillery.io/
-    - echo "Web Application Artillery Load Tests Finished"
+    - echo Example service Artillery load tests finished
   artifacts:
     paths:
       - sources/applications/reports
@@ -262,7 +262,7 @@ web-application-deploy-staging:
     - pnpm install --prefix sources/applications --offline
     - pnpm install --prefix sources/applications/functions --offline
     - npm run --prefix sources/applications deploy.web.application
-    - echo "Staging Deployment Finished"
+    - echo Staging deployment finished
   artifacts:
     paths:
       - sources/applications/dist
@@ -286,7 +286,7 @@ web-application-deploy-production:
     - mkdir sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
     - npm run --prefix sources/applications deploy.web.application
-    - echo "Production Deployment Finished"
+    - echo Production deployment finished
   artifacts:
     paths:
       - sources/applications/production
@@ -310,7 +310,7 @@ pages:
     - mkdir public
     - cp -r sources/applications/tools/report-wrapper/* public
     - cp -r sources/applications/reports/* public
-    - echo "Pages Publishing Finished"
+    - echo Pages publishing finished
   artifacts:
     paths:
       - public
@@ -325,7 +325,7 @@ hiptest:
   cache: {}
   script:
     - docker run -it --rm -u $UID -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf --push="sources/applications/reports/apps/web-application/mocha/*.xml"
-    - echo "Hiptest Report Pablishing Finished"
+    - echo Hiptest report pablishing finished
   artifacts:
     paths:
       - sources/applications/reports
