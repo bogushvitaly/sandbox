@@ -5,10 +5,10 @@ variables:
   DOCKER_HOST: tcp://localhost:2375
   WEB_APPLICATION_STAGING_URL: https://sandbox-50983.firebaseapp.com/
 
+stages:
+  - audit
+
 web-application-lighthouse:
-  stage: audit
-  dependencies:
-    - web-application-deploy-staging
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - lighthouse-ci -s $WEB_APPLICATION_STAGING_URL
