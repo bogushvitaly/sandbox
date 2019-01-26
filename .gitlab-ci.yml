@@ -21,11 +21,16 @@ cache:
   key: $CI_PROJECT_NAMESPACE
   paths:
     - .pnpm-store/
+    - sources/applications/node_modules/
+    - sources/applications/functions/node_modules/
 
 before_script:
   - npm config set store .pnpm-store
   - npm config set verify-store-integrity false
   - npm config set rebuild-bundle false
+
+.dependencies:
+  script: rake test
 
 applications-dependencies-install:
   stage: prepare
@@ -35,6 +40,8 @@ applications-dependencies-install:
     key: $CI_PROJECT_NAMESPACE
     paths:
       - .pnpm-store/
+      - sources/applications/node_modules/
+      - sources/applications/functions/node_modules/
   script:
     - pnpm install --prefix sources/applications --side-effects-cache
     - pnpm install --prefix sources/applications/functions --side-effects-cache
@@ -54,9 +61,9 @@ web-application-build-staging:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications udk.web.application.build
     - echo "Stating Build Finished"
   artifacts:
@@ -77,9 +84,9 @@ web-application-build-production:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications udk.web.application.build
     - mkdir sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
@@ -101,9 +108,9 @@ applications-check-formatting:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo "applications Check Formatting Finished"
 
@@ -115,9 +122,9 @@ applications-check-linting:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications lint.check
     - echo "applications Check Linting Finished"
 
@@ -129,9 +136,9 @@ applications-unit-tests:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications test.jest.coverage
     - echo "Web Application Unit Tests Finished"
   artifacts:
@@ -146,9 +153,9 @@ applications-compodoc:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications docs.compodoc
     - echo "Web Application Compodoc Generation Finished"
   artifacts:
@@ -163,9 +170,9 @@ applications-storybook:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications storybook.build
     - echo "Storybook Building Finished"
   artifacts:
@@ -180,9 +187,9 @@ applications-dependencies-graph:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications dep-graph
     - echo "applications Dependencies Graph Generation Finished"
   artifacts:
@@ -192,14 +199,14 @@ applications-dependencies-graph:
 web-application-bundle-analysis:
   stage: test
   dependencies:
-    - applications-dependencies-install
+    - applications-dependencies-install/
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications analyze.web.application.bundle
     - echo "Web Application Bundle Analysis Finished"
   artifacts:
@@ -214,9 +221,9 @@ web-application-e2e-tests:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications e2e.web.application
     - echo "Web Application E2E Tests Finished"
   artifacts:
@@ -258,10 +265,10 @@ web-application-deploy-staging:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
-    - pnpm install --prefix sources/applications/functions --offline --side-effects-cache-readonly
+    # - pnpm install --prefix sources/applicatio/ns --offline --side-effects-cache
+    # - pnpm install --prefix sources/applications/functions --offline --side-effects-cache
     - npm run --prefix sources/applications deploy.web.application
     - echo "Staging Deployment Finished"
   artifacts:
@@ -280,10 +287,11 @@ web-application-deploy-production:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - .pnpm-store/
+      - sources/applications/node_modules/
+      - sources/applications/functions/node_modules/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache-readonly
-    - pnpm install --prefix sources/applications/functions --offline --side-effects-cache-readonly
+    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications/functions --offline --side-effects-cache
     - mkdir sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
     - npm run --prefix sources/applications deploy.web.application
