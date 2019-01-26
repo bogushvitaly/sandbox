@@ -56,7 +56,7 @@ web-application-build-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications udk.web.application.build
     - echo "Stating Build Finished"
   artifacts:
@@ -79,7 +79,7 @@ web-application-build-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications udk.web.application.build
     - mkdir sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
@@ -102,7 +102,7 @@ applications-check-formatting:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo "applications Check Formatting Finished"
 
@@ -116,7 +116,7 @@ applications-check-linting:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications lint.check
     - echo "applications Check Linting Finished"
 
@@ -130,7 +130,7 @@ applications-unit-tests:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications test.jest.coverage
     - echo "Web Application Unit Tests Finished"
   artifacts:
@@ -147,7 +147,7 @@ applications-compodoc:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications docs.compodoc
     - echo "Web Application Compodoc Generation Finished"
   artifacts:
@@ -164,7 +164,7 @@ applications-storybook:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications storybook.build
     - echo "Storybook Building Finished"
   artifacts:
@@ -181,7 +181,7 @@ applications-dependencies-graph:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications dep-graph
     - echo "applications Dependencies Graph Generation Finished"
   artifacts:
@@ -198,7 +198,7 @@ web-application-bundle-analysis:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications analyze.web.application.bundle
     - echo "Web Application Bundle Analysis Finished"
   artifacts:
@@ -215,7 +215,7 @@ web-application-e2e-tests:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
     - npm run --prefix sources/applications e2e.web.application
     - echo "Web Application E2E Tests Finished"
   artifacts:
@@ -259,8 +259,8 @@ web-application-deploy-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
-    - pnpm install --prefix sources/applications/functions --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
+    - pnpm install --prefix sources/applications/functions --offline
     - npm run --prefix sources/applications deploy.web.application
     - echo "Staging Deployment Finished"
   artifacts:
@@ -281,8 +281,8 @@ web-application-deploy-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications --offline --side-effects-cache
-    - pnpm install --prefix sources/applications/functions --offline --side-effects-cache
+    - pnpm install --prefix sources/applications --offline
+    - pnpm install --prefix sources/applications/functions --offline
     - mkdir sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
     - npm run --prefix sources/applications deploy.web.application
