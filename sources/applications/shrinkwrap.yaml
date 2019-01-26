@@ -278,7 +278,7 @@ devDependencies:
   material-design-icons-iconfont: 4.0.4
   mocha-junit-reporter: 1.18.0
   mochawesome: 3.1.1
-  ng-packagr: 4.6.0
+  ng-packagr: 4.7.0
   ngx-smart-modal: 7.1.1
   ngx-translate-extract: 1.0.0
   ngx-translate-testing: 2.0.0
@@ -314,7 +314,7 @@ devDependencies:
   tns-platform-declarations: 5.1.2
   ts-jest: 23.10.5
   ts-loader: 5.3.3
-  ts-node: 8.0.1
+  ts-node: 8.0.2
   tsconfig-paths-jest: 0.0.1
   tsickle: 0.34.0
   tslib: 1.9.3
@@ -2745,7 +2745,7 @@ packages:
     dependencies:
       chalk: 2.4.2
       consola: 1.4.5
-      esm: 3.1.2
+      esm: 3.1.3
       node-fetch: 2.3.0
     dev: false
     engines:
@@ -9930,12 +9930,12 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-1G6UTDi7Jc1ELFwnR58HV4fK9OQK4S6N985f166xqXxpjU6plxFISJa2Ba9KCQuFa8RCnj/lSFJbHo7UFDBnUA==
-  /esm/3.1.2:
+  /esm/3.1.3:
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-orLuMaPdxYelL1qsM16XUbby4DQX1j5WSsFBg5vHuDJ2gUMMzpcbX82Lu305TjHYacXSuxYz3SuzWjdNFxIDJw==
+      integrity: sha512-W5DKpMvvvtdn4Wzwl9scBUlsdiy4sXALG5oKIrCgnalg6db6vAztKVHWfOW4R8TlFvXlZDjipXSTrqhJDHpdRg==
   /esprima/2.7.3:
     engines:
       node: '>=0.10.0'
@@ -11752,7 +11752,7 @@ packages:
       axios: 0.18.0
       gcp-metadata: 0.6.3
       gtoken: 2.3.2
-      jws: 3.1.5
+      jws: 3.2.0
       lodash.isstring: 4.0.1
       lru-cache: 4.1.5
       retry-axios: /retry-axios/0.3.2/axios@0.18.0
@@ -11768,7 +11768,7 @@ packages:
       gcp-metadata: 0.7.0
       gtoken: 2.3.2
       https-proxy-agent: 2.2.1
-      jws: 3.1.5
+      jws: 3.2.0
       lru-cache: 5.1.1
       semver: 5.6.0
     dev: false
@@ -11785,7 +11785,7 @@ packages:
       gcp-metadata: 0.9.3
       gtoken: 2.3.2
       https-proxy-agent: 2.2.1
-      jws: 3.1.5
+      jws: 3.2.0
       lru-cache: 5.1.1
       semver: 5.6.0
     dev: false
@@ -12224,7 +12224,7 @@ packages:
     dependencies:
       gaxios: 1.2.6
       google-p12-pem: 1.0.3
-      jws: 3.1.5
+      jws: 3.2.0
       mime: 2.4.0
       pify: 4.0.1
     dev: false
@@ -12957,6 +12957,12 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-WLsTMEhsQuXpCiG173+f3aymI43SXa+fB1rSfbzyP4GkPP+ZFVuO0/3sFUGNBtifisPeDcl/uD/Y2NxZ7xFq4g==
+  /ignore/5.0.5:
+    dev: true
+    engines:
+      node: '>= 4'
+    resolution:
+      integrity: sha512-kOC8IUb8HSDMVcYrDVezCxpJkzSQWTAzf3olpKM6o9rM5zpojx23O0Fl8Wr4+qJ6ZbPEHqf1fdwev/DS7v7pmA==
   /image-size/0.5.5:
     dev: true
     engines:
@@ -13865,25 +13871,26 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-8W5oeAGWXhtTJjAyVfvavOLVyZCTNCKsyF6GON/INKlBdO7uJ/bv3qnPj5M6ERKzmMCJS1kntnjjGuJ86fn3rQ==
-  /istanbul-api/2.0.8:
+  /istanbul-api/2.1.0:
     dependencies:
       async: 2.6.1
       compare-versions: 3.4.0
       fileset: 2.0.3
-      istanbul-lib-coverage: 2.0.2
-      istanbul-lib-hook: 2.0.2
-      istanbul-lib-instrument: 3.0.1
-      istanbul-lib-report: 2.0.3
-      istanbul-lib-source-maps: 3.0.1
-      istanbul-reports: 2.0.3
+      istanbul-lib-coverage: 2.0.3
+      istanbul-lib-hook: 2.0.3
+      istanbul-lib-instrument: 3.1.0
+      istanbul-lib-report: 2.0.4
+      istanbul-lib-source-maps: 3.0.2
+      istanbul-reports: 2.1.0
       js-yaml: 3.12.1
       make-dir: 1.3.0
+      minimatch: 3.0.4
       once: 1.4.0
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-ITCccemErW+BhZotmyQ/ktlYTAp9r7oWfz1oxxMpgKQVTUw0NAYRbKLbOSNaInipecIKul7U7O5BfCQBBRZa3w==
+      integrity: sha512-+Ygg4t1StoiNlBGc6x0f8q/Bv26FbZqP/+jegzfNpU7Q8o+4ZRoJxJPhBkgE/UonpAjtxnE4zCZIyJX+MwLRMQ==
   /istanbul-instrumenter-loader/3.0.1/webpack@4.28.4:
     dependencies:
       convert-source-map: 1.6.0
@@ -13909,12 +13916,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-nPvSZsVlbG9aLhZYaC3Oi1gT/tpyo3Yt5fNyf6NmcKIayz4VV/txxJFFKAK/gU4dcNn8ehsanBbVHVl0+amOLA==
-  /istanbul-lib-coverage/2.0.2:
+  /istanbul-lib-coverage/2.0.3:
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-4CsY730KHy12ya/YNKubrMlb7EZZVsEPhXntyRY/Cbs7HN5HdznLbI4UbvIGHgocxHx3VkGe7l6IN1lipetuGg==
+      integrity: sha512-dKWuzRGCs4G+67VfW9pBFFz2Jpi4vSp/k7zBcJ888ofV5Mi1g5CUML5GvMvV6u9Cjybftu+E8Cgp+k0dI1E5lw==
   /istanbul-lib-hook/1.2.2:
     dependencies:
       append-transform: 0.4.0
@@ -13929,14 +13936,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-ufiZoiJ8CxY577JJWEeFuxXZoMqiKpq/RqZtOAYuQLvlkbJWscq9n3gc4xrCGH9n4pW0qnTxOz1oyMmVtk8E1w==
-  /istanbul-lib-hook/2.0.2:
+  /istanbul-lib-hook/2.0.3:
     dependencies:
       append-transform: 1.0.0
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-m0MwviQ0Av6qBNDkvKdLBxxuK6ffXo8761gE2bfT+/b+dhg8LUyQhp1nFh795LO12DpiSocuCPIRwILCsN1//Q==
+      integrity: sha512-CLmEqwEhuCYtGcpNVJjLV1DQyVnIqavMLFHV/DP+np/g3qvdxu3gsPqYoJMXm15sN84xOlckFB3VNvRbf5yEgA==
   /istanbul-lib-instrument/1.10.2:
     dependencies:
       babel-generator: 6.26.1
@@ -13963,20 +13970,20 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-eQY9vN9elYjdgN9Iv6NS/00bptm02EBBk70lRMaVjeA6QYocQgenVrSgC28TJurdnZa80AGO3ASdFN+w/njGiQ==
-  /istanbul-lib-instrument/3.0.1:
+  /istanbul-lib-instrument/3.1.0:
     dependencies:
       '@babel/generator': 7.3.0
       '@babel/parser': 7.3.1
       '@babel/template': 7.2.2
       '@babel/traverse': 7.2.3
       '@babel/types': 7.3.0
-      istanbul-lib-coverage: 2.0.2
+      istanbul-lib-coverage: 2.0.3
       semver: 5.6.0
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-/LTPhh1YKXjJlb5uggsiZjJHuViIljcIsB1zqmZegIw2yQ4l8LRksRGebJrZUFVEE28ZtKzmmT50W5tpAucfJg==
+      integrity: sha512-ooVllVGT38HIk8MxDj/OIHXSYvH+1tq/Vb38s8ixt9GoJadXska4WkGY+0wkmtYCZNYtaARniH/DixUGGLZ0uA==
   /istanbul-lib-report/1.1.5:
     dependencies:
       istanbul-lib-coverage: 1.2.1
@@ -13996,16 +14003,16 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-rJ8uR3peeIrwAxoDEbK4dJ7cqqtxBisZKCuwkMtMv0xYzaAnsAi3AHrHPAAtNXzG/bcCgZZ3OJVqm1DTi9ap2Q==
-  /istanbul-lib-report/2.0.3:
+  /istanbul-lib-report/2.0.4:
     dependencies:
-      istanbul-lib-coverage: 2.0.2
+      istanbul-lib-coverage: 2.0.3
       make-dir: 1.3.0
-      supports-color: 5.5.0
+      supports-color: 6.1.0
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-25gX27Mbd3MjM41hwGl5lWcQEqaPaMP79YDFS20xuTUujItNmHgTBS3WRZvzyzLE0IAKaL+JpLrryou2WlZNMw==
+      integrity: sha512-sOiLZLAWpA0+3b5w5/dq0cjm2rrNdAfHWaGhmn7XEFW6X++IV9Ohn+pnELAl9K3rfpaeBfbmH9JU5sejacdLeA==
   /istanbul-lib-source-maps/1.2.6:
     dependencies:
       debug: 3.2.6
@@ -14028,10 +14035,10 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-30l40ySg+gvBLcxTrLzR4Z2XTRj3HgRCA/p2rnbs/3OiTaoj054gAbuP5DcLOtwqmy4XW8qXBHzrmP2/bQ9i3A==
-  /istanbul-lib-source-maps/3.0.1:
+  /istanbul-lib-source-maps/3.0.2:
     dependencies:
-      debug: 3.2.6
-      istanbul-lib-coverage: 2.0.2
+      debug: 4.1.1
+      istanbul-lib-coverage: 2.0.3
       make-dir: 1.3.0
       rimraf: 2.6.3
       source-map: 0.6.1
@@ -14039,7 +14046,7 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-DBsZMpCwCPewRCmyd0FETHtzarQK/kKejQkDPBqKPwLYQmhs2p6a7yytfVDqib7PgXGSJZNTc1b6B3jl9G8FqA==
+      integrity: sha512-JX4v0CiKTGp9fZPmoxpu9YEkPbEqCqBbO3403VabKjH+NRXo72HafD5UgnjTEqHL2SAjaZK1XDuDOkn6I5QVfQ==
   /istanbul-reports/1.5.1:
     dependencies:
       handlebars: 4.0.12
@@ -14054,14 +14061,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-CT0QgMBJqs6NJLF678ZHcquUAZIoBIUNzdJrRJfpkI9OnzG6MkUfHxbJC3ln981dMswC7/B1mfX3LNkhgJxsuw==
-  /istanbul-reports/2.0.3:
+  /istanbul-reports/2.1.0:
     dependencies:
       handlebars: 4.0.12
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-qpQ5ZWBkOatTxmTelS+HV5ybPSq7EeXmwXrPbGv7ebP+9DJOtveUcv6hCncZE4IxSAEkdmLEh3xo31SCttbApQ==
+      integrity: sha512-azQdSX+dtTtkQEfqq20ICxWi6eOHXyHIgMFw1VOOVi8iIPWeCWRgCyFh/CsBKIhcgskMI8ExXmU7rjXTRCIJ+A==
   /istanbul/0.4.5:
     dependencies:
       abbrev: 1.0.9
@@ -14198,10 +14205,10 @@ packages:
       graceful-fs: 4.1.15
       import-local: 2.0.0
       is-ci: 2.0.0
-      istanbul-api: 2.0.8
-      istanbul-lib-coverage: 2.0.2
-      istanbul-lib-instrument: 3.0.1
-      istanbul-lib-source-maps: 3.0.1
+      istanbul-api: 2.1.0
+      istanbul-lib-coverage: 2.0.3
+      istanbul-lib-instrument: 3.1.0
+      istanbul-lib-source-maps: 3.0.2
       jest-changed-files: 24.0.0
       jest-config: 24.0.0
       jest-environment-jsdom: 24.0.0
@@ -15095,7 +15102,7 @@ packages:
       integrity: sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
   /jsonwebtoken/8.1.0:
     dependencies:
-      jws: 3.1.5
+      jws: 3.2.0
       lodash.includes: 4.3.0
       lodash.isboolean: 3.0.3
       lodash.isinteger: 4.0.4
@@ -15113,7 +15120,7 @@ packages:
       integrity: sha1-xjl80uX9WD1lwAeoPce7eOaYK4M=
   /jsonwebtoken/8.4.0:
     dependencies:
-      jws: 3.1.5
+      jws: 3.2.0
       lodash.includes: 4.3.0
       lodash.isboolean: 3.0.3
       lodash.isinteger: 4.0.4
@@ -15154,19 +15161,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-5W8NUaFRFRqTOL7ZDDrx5qWHJyBXy6velVudIzQUSoqAAYqzSh2Z7/m0Rf1QbmQJccegD0r+YZxBjzqoBiEeJQ==
-  /jwa/1.1.6:
+  /jwa/1.2.0:
     dependencies:
       buffer-equal-constant-time: 1.0.1
       ecdsa-sig-formatter: 1.0.10
       safe-buffer: 5.1.2
     resolution:
-      integrity: sha512-tBO/cf++BUsJkYql/kBbJroKOgHWEigTKBAjjBEmrMGYd1QMBC74Hr4Wo2zCZw6ZrVhlJPvoMrkcOnlWR/DJfw==
-  /jws/3.1.5:
+      integrity: sha512-Grku9ZST5NNQ3hqNUodSkDfEBqAmGA1R8yiyPHOnLzEKI0GaCQC/XhFmsheXYuXzFQJdILbh+lYBiliqG5R/Vg==
+  /jws/3.2.0:
     dependencies:
-      jwa: 1.1.6
+      jwa: 1.2.0
       safe-buffer: 5.1.2
     resolution:
-      integrity: sha512-GsCSexFADNQUr8T5HPJvayTjvPIfoyJPtLQBwn5a4WZQchcrPMPMAWcC1AzJVRDKyD6ZPROPAxgv6rfHViO4uQ==
+      integrity: sha512-OmaE/N+SlUTMyja5XeM7aaGP3nNCUlypCCEtlDXf3887yq3tm1zk5O7l/dSz7TQ5p+imRxERZ8Fmk4Z6xcWIIw==
   /kapsule/1.9.2:
     dependencies:
       debounce: 1.2.0
@@ -17449,7 +17456,7 @@ packages:
       '@angular/platform-browser': '>=5.x <=7.x'
     resolution:
       integrity: sha512-smGF8TcsoFMdfISou6SLZOyYfG/Isg3q9AAJDM+IeHYmXfhSc+CEUCCPphNqvml0J+Vk/kcH81cMW2HCLhY76g==
-  /ng-packagr/4.6.0:
+  /ng-packagr/4.7.0:
     dependencies:
       '@ngtools/json-schema': 1.1.0
       autoprefixer: 9.4.6
@@ -17484,12 +17491,12 @@ packages:
     peerDependencies:
       '@angular/compiler': ^6.0.0 || ^7.0.0 || ^7.2.0-beta.0
       '@angular/compiler-cli': ^6.0.0 || ^7.0.0 || ^7.2.0-beta.0
-      tsickle: '>=0.27.3'
+      tsickle: '>=0.34.0'
       tslib: ^1.9.0
       typescript: '>= 2.7 <3.3'
     requiresBuild: true
     resolution:
-      integrity: sha512-jwWLm0iI9rOqtDYvxrSn/tLEFZLB1D3A8Cve1BFDqbNzIB44Zyg3rglKoF2e3RnDyD1gmqYEWTK+rw2d1P5EXw==
+      integrity: sha512-FNCe4WpHwBk107pCX0KOnsv+cUaM2bCGAD/oYUl0FIwQXkI+iYjDik9KlqJ/bWDUsiCUxiAH2v5AsTaEF7G4bw==
   /ngraph.events/0.0.3:
     dev: false
     resolution:
@@ -23818,7 +23825,7 @@ packages:
       globby: 9.0.0
       globjoin: 0.1.4
       html-tags: 2.0.0
-      ignore: 5.0.4
+      ignore: 5.0.5
       import-lazy: 3.1.0
       imurmurhash: 0.1.4
       known-css-properties: 0.11.0
@@ -24908,14 +24915,13 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-KwF1SplmOJepnoZ4eRIloH/zXL195F51skt7reEsS6jvDqzgc/YSbz9b8E07GxIUwLXdcD4ssrJu6v8CwaTafA==
-  /ts-node/8.0.1:
+  /ts-node/8.0.2:
     dependencies:
       arg: 4.1.0
-      arrify: 1.0.1
       diff: 3.5.0
       make-error: 1.3.5
       source-map-support: 0.5.10
-      yn: 2.0.0
+      yn: 3.0.0
     dev: true
     engines:
       node: '>=4.2.0'
@@ -24923,7 +24929,7 @@ packages:
     peerDependencies:
       typescript: '>=2.0'
     resolution:
-      integrity: sha512-zER3Js6Iotp31ghen6nKjgX75UOipwTWX9T5fAVmHaaYAizWhOes4uAsLmDC8H51UG5tHL8gNjoa/wLFjo7wtA==
+      integrity: sha512-MosTrinKmaAcWgO8tqMjMJB22h+sp3Rd1i4fdoWY4mhBDekOwIAKI/bzmRi7IcbCmjquccYg2gcF6NBkLgr0Tw==
   /ts-simple-ast/12.4.0:
     dependencies:
       '@dsherret/to-absolute-glob': 2.0.2
@@ -26863,12 +26869,12 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-faQrqNMzcPCHGVC2aaOINk13K+aaBDUPjGWl0teOXywElLjyVAB6Oe2jj62jHYtwsU49jXhScYbvPENK+6zAvQ==
-  /yn/2.0.0:
+  /yn/3.0.0:
     dev: true
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha1-5a2ryKz0CPY4X8dklWhMiOavaJo=
+      integrity: sha512-+Wo/p5VRfxUgBUGy2j/6KX2mj9AYJWOHuhMjMcbBFc3y54o9/4buK1ksBvuiK01C3kby8DH9lSmJdSxw+4G/2Q==
   /z-schema/3.25.0:
     dependencies:
       core-js: 2.6.3
@@ -27160,7 +27166,7 @@ specifiers:
   nativescript-theme-core: 1.0.4
   ng-animate: 0.3.4
   ng-mocks: 7.4.0
-  ng-packagr: 4.6.0
+  ng-packagr: 4.7.0
   ngrx-store-freeze: 0.2.4
   ngx-auth-firebaseui: 2.2.1
   ngx-auto-unsubscribe: 2.4.1
@@ -27230,7 +27236,7 @@ specifiers:
   tns-platform-declarations: 5.1.2
   ts-jest: 23.10.5
   ts-loader: 5.3.3
-  ts-node: 8.0.1
+  ts-node: 8.0.2
   tsconfig-paths-jest: 0.0.1
   tsickle: 0.34.0
   tslib: 1.9.3

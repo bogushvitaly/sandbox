@@ -229,7 +229,7 @@ web-application-lighthouse:
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
-    - echo Web Application lighthouse analysis finished
+    - echo Web Application Lighthouse analysis finished
   artifacts:
     paths:
       - sources/applications/reports
