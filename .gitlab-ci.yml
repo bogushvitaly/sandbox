@@ -12,7 +12,7 @@ web-application-lighthouse:
   stage: audit
   script:
     - mkdir -p sources/applications/reports/lighthouse
-    - lighthouse $WEB_APPLICATION_STAGING_URL --quiet --chrome-flags="--headless"
+    - lighthouse https://sandbox-50983.firebaseapp.com/ --quiet --chrome-flags="--headless"
     - echo Web Application lighthouse analysis finished
   artifacts:
     paths:
