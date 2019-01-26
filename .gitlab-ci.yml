@@ -3,7 +3,7 @@ image: bohushvitali/frontend-ci
 variables:
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://localhost:2375
-  WEB_APPLIATOIN_STAGING_URL: https://sandbox-bcdc7.firebaseapp.com/
+  WEB_APPLICATION_STAGING_URL: https://sandbox-50983.firebaseapp.com/
 
 services:
   - docker:dind
@@ -229,7 +229,7 @@ web-application-lighthouse:
     - web-application-deploy-staging
   script:
     - mkdir -p sources/applications/reports/lighthouse
-    - lighthouse-ci $WEB_APPLIATOIN_STAGING_URL --silent --report sources/applications/reports/lighthouse
+    - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
     - echo "Web Application Lighthouse Analysis Finished"
   artifacts:
     paths:
