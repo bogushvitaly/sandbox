@@ -226,6 +226,7 @@ web-application-lighthouse:
   stage: audit
   dependencies:
     - web-application-deploy-staging
+  cache: {}
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - CHROME_PATH=/usr/bin/chromium-browser
@@ -239,6 +240,7 @@ services-example-web-artillery:
   stage: audit
   dependencies:
     - web-application-deploy-staging
+  cache: {}
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - artillery quick --count 10 -n 20 https://artillery.io/
@@ -299,6 +301,7 @@ pages:
   stage: reports
   before_script:
     - echo Skip Before Scripts
+  cache: {}
   dependencies:
     - applications-unit-tests
     - applications-compodoc
@@ -325,7 +328,7 @@ hiptest:
     - echo Skip Before Scripts
   cache: {}
   script:
-    - docker run -it --rm -u $UID -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf --push="sources/applications/reports/apps/web-application/mocha/*.xml"
+    - docker run --rm -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf
     - echo Hiptest report pablishing finished
   artifacts:
     paths:
