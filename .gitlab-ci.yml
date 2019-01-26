@@ -12,7 +12,7 @@ web-application-lighthouse:
   stage: audit
   script:
     - mkdir -p sources/applications/reports/lighthouse
-    - lighthouse-ci -s $WEB_APPLICATION_STAGING_URL
+    - lighthouse $WEB_APPLICATION_STAGING_URL --quiet --chrome-flags="--headless"
     - echo Web Application lighthouse analysis finished
   artifacts:
     paths:
