@@ -9,6 +9,7 @@ stages:
   - audit
 
 web-application-lighthouse:
+  stage: audit
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - lighthouse-ci -s $WEB_APPLICATION_STAGING_URL
