@@ -18,11 +18,11 @@
       const urlMap = {
         bundle: 'apps/web-application/bundle/index.html',
         coverage: 'coverage/lcov-report/index.html',
-        mochawesome: 'apps/web-application/mochawesome/mochawesome.html',
+        mochawesome: 'apps/web-application/mochawesome/report.html',
         allure: 'apps/web-application/allure/index.html',
         codecept: 'apps/web-application/codecept/records.html',
         lighthouse: 'lighthouse/report.html',
-        graph: 'dep-graph/index.html',
+        graph: 'deps-graph/index.html',
         compodoc: 'compodoc/index.html',
         storybook: 'storybook/index.html'
       };
@@ -167,7 +167,7 @@
     .menu-button.expanded {
       right: 0;
       bottom: 30px;
-      width: 24vw;
+      width: 40vw;
       height: 80px;
       opacity: 0.5;
       border-radius: 0;
@@ -175,7 +175,7 @@
     }
 
     .menu-button.expanded:hover {
-      width: 31vw;
+      width: 50vw;
       opacity: 1;
     }
 
@@ -223,10 +223,10 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>Web Application</h1>
+      <h1>Application Dashboard</h1>
 
-      <p>View <a href="https://sandbox-50983.firebaseapp.com/"
-           target="_blank">Staging</a></p>
+      <p><a href="https://sandbox-50983.firebaseapp.com/"
+           target="_blank">Open Staging</a></p>
     </header>
     <iframe name="innerContent"
             src="about:blank"></iframe>

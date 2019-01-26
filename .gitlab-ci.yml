@@ -286,7 +286,7 @@ web-application-deploy-production:
   script:
     - pnpm install --prefix sources/applications --offline
     - pnpm install --prefix sources/applications/functions --offline
-    - mkdir sources/applications/dist/apps
+    - mkdir -p sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
     - npm run --prefix sources/applications deploy.web.application
     - echo Production deployment finished

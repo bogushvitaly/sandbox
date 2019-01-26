@@ -20,10 +20,29 @@ exports.config = {
   },
   mocha: {
     reporterOptions: {
-      reportDir: path.join(REPORTS_PATH, 'mochawesome'),
-      inlineAssets: true,
-      reportPageTitle: 'E2E Test Reports',
-      reportTitle: 'E2E Test Reports'
+      'codeceptjs-cli-reporter': {
+        stdout: '-',
+        options: {
+          verbose: false,
+          steps: true
+        }
+      },
+      'mocha-junit-reporter': {
+        stdout: '-',
+        options: {
+          mochaFile: path.join(REPORTS_PATH, 'mocha', 'report.xml')
+        }
+      },
+      mochawesome: {
+        stdout: '-',
+        options: {
+          reportDir: path.join(REPORTS_PATH, 'mochawesome'),
+          inlineAssets: true,
+          reportPageTitle: 'E2E Test Reports',
+          reportTitle: 'E2E Test Reports',
+          reportFilename: 'report'
+        }
+      }
     }
   },
   bootstrap: null,
@@ -42,9 +61,18 @@ exports.config = {
     },
     allure: {
       enabled: true
+    },
+    autoDelay: {
+      enabled: true
+    },
+    stepByStepReport: {
+      enabled: true,
+      animateSlides: false,
+      deleteSuccessful: false,
+      output: path.join(REPORTS_PATH, 'codecept'),
     }
   },
   tests: './*_test.js',
   timeout: 10000,
-  name: 'web-application-e2e'
+  name: 'web-application'
 };
