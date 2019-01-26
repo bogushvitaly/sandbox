@@ -199,12 +199,12 @@ applications-dependencies-graph:
 web-application-bundle-analysis:
   stage: test
   dependencies:
-    - applications-dependencies-install/
+    - applications-dependencies-install
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
     paths:
-      - sources/applications/node_modules
+      - sources/applications/node_modules/
   script:
     # - pnpm install --prefix sources/applications --offline --side-effects-cache
     - npm run --prefix sources/applications analyze.web.application.bundle
