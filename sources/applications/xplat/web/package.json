@@ -2,5 +2,8 @@
   "name": "@application/web",
   "version": "1.0.0",
   "main": "index",
-  "typings": "index.d.ts"
+  "typings": "index.d.ts",
+  "devDependencies": {
+    "jest-createspyobj": "^1.2.2"
+  }
 }

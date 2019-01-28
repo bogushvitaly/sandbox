@@ -1,9 +1,12 @@
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { TransferHttpModule, TransferHttpService } from '@gorniv/ngx-transfer-http';
 // libs
 import { TransferHttpCacheModule } from '@nguniversal/common';
 
@@ -20,6 +23,8 @@ import { NotFoundComponent } from './not-found.component';
     CoreModule,
     SharedModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    LoggerModule.forRoot({ level: NgxLoggerLevel.DEBUG }),
+    TransferHttpModule,
     TransferHttpCacheModule,
     HttpClientModule,
     AppRoutingModule,
@@ -30,6 +35,7 @@ import { NotFoundComponent } from './not-found.component';
     })
   ],
   declarations: [AppComponent, NotFoundComponent],
+  providers: [TransferHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

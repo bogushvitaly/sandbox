@@ -1,4 +1,3 @@
-// These are important and needed before anything else
 import 'reflect-metadata';
 import 'zone.js/dist/zone-node';
 
@@ -25,7 +24,6 @@ applyDomino(global, join(BROWSER_DIST_PATH, 'index.html'));
 export const getNgRenderMiddlewareOptions: () => NgSetupOptions = () => ({
   bootstrap: exports.AppServerModuleNgFactory,
   providers: [
-    // Import module map for lazy loading
     {
       provide: MODULE_MAP,
       useFactory: () => exports.LAZY_MODULE_MAP,
@@ -34,7 +32,6 @@ export const getNgRenderMiddlewareOptions: () => NgSetupOptions = () => ({
   ]
 });
 
-// Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
 export let requestListener = createApi(BROWSER_DIST_PATH, getNgRenderMiddlewareOptions());

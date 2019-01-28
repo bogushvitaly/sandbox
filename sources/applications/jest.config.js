@@ -8,6 +8,7 @@ module.exports = {
   collectCoverage: true,
   coverageReporters: ['html'],
   coveragePathIgnorePatterns: ['typings.d.ts'],
+  preset: 'jest-preset-angular',
   globals: {
     window: true
   }

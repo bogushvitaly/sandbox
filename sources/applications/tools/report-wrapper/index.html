@@ -20,7 +20,6 @@
         coverage: 'coverage/lcov-report/index.html',
         mochawesome: 'apps/web-application/mochawesome/report.html',
         allure: 'apps/web-application/allure/index.html',
-        codecept: 'apps/web-application/codecept/records.html',
         lighthouse: 'lighthouse/report.html',
         graph: 'deps-graph/index.html',
         compodoc: 'compodoc/index.html',
@@ -167,7 +166,7 @@
     .menu-button.expanded {
       right: 0;
       bottom: 30px;
-      width: 40vw;
+      width: 30vw;
       height: 80px;
       opacity: 0.5;
       border-radius: 0;
@@ -175,7 +174,7 @@
     }
 
     .menu-button.expanded:hover {
-      width: 50vw;
+      width: 45vw;
       opacity: 1;
     }
 
@@ -236,34 +235,32 @@
     <div class="content">
 
       <span class="tab"
-            data-name="lighthouse"><i class="mdi mdi-cellphone-link "></i>
+            data-name="lighthouse"><i class="mdi mdi-clock-fast"></i>
       </span>
 
       <span class="tab active"
-            data-name="mochawesome"><i class="mdi mdi-checkbox-marked-circle-outline"></i>
+            data-name="mochawesome"><i class="mdi mdi-check-all"></i>
       </span>
 
       <span class="tab"
-            data-name="allure"><i class="mdi mdi-chart-line"></i> </span>
-
-      <span class="tab"
-            data-name="codecept"><i class="mdi mdi-image-filter-none"></i>
-      </span>
+            data-name="allure"><i class="mdi mdi-chart-arc"></i> </span>
 
       <span class="tab"
             data-name="coverage"><i class="mdi mdi-clipboard-check"></i> </span>
 
       <span class="tab"
-            data-name="bundle"><i class="mdi mdi-clipboard-check"></i> </span>
+            data-name="bundle"><i class="mdi mdi-cube"></i> </span>
 
       <span class="tab"
-            data-name="graph"><i class="mdi mdi-blur-linear"></i> </span>
+            data-name="graph"><i class="mdi mdi-math-compass"></i> </span>
 
       <span class="tab"
-            data-name="compodoc"><i class="mdi mdi-blur-linear"></i> </span>
+            data-name="compodoc"><i class="mdi mdi-file-document-box"></i>
+      </span>
 
       <span class="tab"
-            data-name="storybook"><i class="mdi mdi-blur-linear"></i> </span>
+            data-name="storybook"><i class="mdi mdi-palette-advanced"></i>
+      </span>
 
       <span class="tab close"><i class="mdi mdi-close"></i></span>
     </div>

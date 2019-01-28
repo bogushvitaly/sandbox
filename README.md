@@ -9,7 +9,7 @@
 - [x] NX Monorepo Workspace with Xplat architecture [Xplat architecture](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U), Angular PWA
 - [x] Server-side rendering with Nest.js, Firebase Cloud Function deployment, Universal Development Kit
 - [x] Prerender SPA Plugin, Custom webpack builders for Angular
-- [x] Acceptance Test Driven Development with Codecept, Jest
+- [x] Acceptance Test Driven Development with Codecept and Jest
 - [x] Design System Development using Storybook
 
 ## In progress
@@ -19,6 +19,7 @@
 - [ ] Cloud Backends: Firebase Platform, AWS AppSync, Prisma database API
 - [ ] Functional Programming Style: RxJS, Lodash FP, Lodash Decorators
 - [ ] Components Libraries: Angular Material, Covalent UI Platform, Material Web Components, MDBootstrap
+- [ ] Web Components libraries integration: Stencil.js
 - [ ] Graphics Libraries: REGL, Babylon.js, Three.js
 - [ ] API Integrations: Google APIs, Trello API, Coinbase API
 - [ ] Machine Learning Capabilities: TensorFlow.js Brain.js

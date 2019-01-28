@@ -6,3 +6,22 @@
 @import "variables";
 
 // create/import other scss files or define as needed...
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+
+  -webkit-font-smoothing: antialiased;
+}

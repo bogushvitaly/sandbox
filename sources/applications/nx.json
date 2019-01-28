@@ -1,5 +1,5 @@
 {
-  "npmScope": "frontend",
+  "npmScope": "application",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -20,10 +20,10 @@
     "web-application-e2e": {
       "tags": []
     },
-    "fan-menu": {
+    "storybook": {
       "tags": []
     },
-    "storybook": {
+    "ui-fan-menu": {
       "tags": []
     }
   }

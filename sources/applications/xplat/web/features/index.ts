@@ -10,5 +10,3 @@ export * from './demo-angular-material';
 export * from './authorization';
 export * from './demo-ngrx-facades';
 export * from './demo-ngxs-emitter';
-
-

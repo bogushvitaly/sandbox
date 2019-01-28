@@ -7,7 +7,6 @@ import { MessagesComponent } from './messages/messages.component';
 
 export const DEMOHEROES_COMPONENTS = [
   DemoHeroesComponent,
-
   HeroDetailComponent,
   HeroSearchComponent,
   HeroesComponent,

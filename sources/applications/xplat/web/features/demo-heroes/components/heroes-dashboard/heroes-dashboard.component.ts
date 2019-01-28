@@ -1,14 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { Hero } from '../../models/hero.interfaces';
+import { HeroService } from '../../services';
 
 import { HeroesDashboardBaseComponent } from '@application/features';
 
 @Component({
   selector: 'app-heroes-dashboard',
-  templateUrl: 'heroes-dashboard.component.html'
+  templateUrl: 'heroes-dashboard.component.html',
+  styleUrls: ['./heroes-dashboard.component.scss']
 })
-export class HeroesDashboardComponent extends HeroesDashboardBaseComponent {
+export class HeroesDashboardComponent extends HeroesDashboardBaseComponent implements OnInit {
+  heroes: Hero[] = [];
 
-  constructor() {
+  constructor(private heroService: HeroService) {
     super();
+  }
+  ngOnInit() {
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroes => (this.heroes = heroes.slice(0, 4)));
   }
 }

@@ -1,7 +1,8 @@
 import { isPlatformServer } from '@angular/common';
 import { APP_ID, Inject, OnInit, Optional, PLATFORM_ID } from '@angular/core';
-import { BaseComponent } from '@application/core';
 import { RESPONSE } from '@nguniversal/express-engine/tokens';
+
+import { BaseComponent } from '@application/core';
 
 interface PartialResponse {
   status(code: number): this;

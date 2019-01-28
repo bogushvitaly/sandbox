@@ -1,3 +1,5 @@
+import { LoggerTestingModule } from 'ngx-logger';
+
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { async, TestBed } from '@angular/core/testing';
@@ -15,11 +17,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 describe('AppComponent', () => {
   let translate: TranslateService;
   let http: HttpTestingController;
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientTestingModule,
+        LoggerTestingModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,

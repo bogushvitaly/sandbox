@@ -6,10 +6,12 @@ exports.config = {
   output: path.join(REPORTS_PATH, 'codecept'),
   helpers: {
     Puppeteer: {
-      url: 'http://localhost:4200',
+      url: process.env.APPLICATION_URL,
       chrome: {
         executablePath: process.env.CHROME_BIN
-      }
+      },
+      waitForAction: 500,
+      waitForTimeout: 5000
     },
     Mochawesome: {
       uniqueScreenshotNames: true
@@ -50,29 +52,27 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/steps.js']
+    steps: ['./step_definitions/step_definitions.js']
   },
   plugins: {
     screenshotOnFail: {
       enabled: true
     },
-    stepByStepReport: {
-      enabled: true
-    },
     allure: {
-      enabled: true
+      enabled: false
     },
     autoDelay: {
       enabled: true
     },
     stepByStepReport: {
-      enabled: true,
+      enabled: false,
       animateSlides: false,
       deleteSuccessful: false,
+      fullPageScreenshots: true,
       output: path.join(REPORTS_PATH, 'codecept'),
     }
   },
   tests: './*_test.js',
-  timeout: 10000,
+  timeout: 1000,
   name: 'web-application'
 };

@@ -20,11 +20,11 @@
       "prefix": "app",
       "architect": {
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@nrwl/builders:jest",
           "options": {
-            "main": "testing/test.libs.ts",
-            "tsConfig": "testing/tsconfig.libs.spec.json",
-            "karmaConfig": "testing/karma.libs.conf.js"
+            "jestConfig": "libs/jest.config.js",
+            "tsConfig": "libs/tsconfig.spec.json",
+            "setupFile": "libs/test-setup.ts"
           }
         },
         "lint": {
@@ -48,11 +48,11 @@
       "prefix": "app",
       "architect": {
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@nrwl/builders:jest",
           "options": {
-            "main": "testing/test.xplat.ts",
-            "tsConfig": "testing/tsconfig.xplat.spec.json",
-            "karmaConfig": "testing/karma.xplat.conf.js"
+            "jestConfig": "xplat/jest.config.js",
+            "tsConfig": "xplat/tsconfig.spec.json",
+            "setupFile": "xplat/test-setup.ts"
           }
         },
         "lint": {
@@ -283,46 +283,6 @@
         }
       }
     },
-    "fan-menu": {
-      "root": "libs/fan-menu",
-      "sourceRoot": "libs/fan-menu/src",
-      "projectType": "library",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/fan-menu/tsconfig.lib.json",
-            "project": "libs/fan-menu/ng-package.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/fan-menu/tsconfig.lib.json",
-              "libs/fan-menu/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "libs/fan-menu/jest.config.js",
-            "tsConfig": "libs/fan-menu/tsconfig.spec.json",
-            "setupFile": "libs/fan-menu/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "storybook": {
       "root": "apps/storybook/",
       "sourceRoot": "apps/storybook/src",
@@ -410,6 +370,46 @@
             "tsConfig": "apps/storybook/tsconfig.spec.json",
             "setupFile": "apps/storybook/src/test-setup.ts"
           }
+        }
+      }
+    },
+    "ui-fan-menu": {
+      "root": "libs/ui-fan-menu",
+      "sourceRoot": "libs/ui-fan-menu/src",
+      "projectType": "library",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ui-fan-menu/tsconfig.lib.json",
+            "project": "libs/ui-fan-menu/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-fan-menu/tsconfig.lib.json",
+              "libs/ui-fan-menu/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ui-fan-menu/jest.config.js",
+            "tsConfig": "libs/ui-fan-menu/tsconfig.spec.json",
+            "setupFile": "libs/ui-fan-menu/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
         }
       }
     }

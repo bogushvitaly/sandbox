@@ -3,11 +3,14 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { createNewHosts } from '@angularclass/hmr';
 
 import { AppModule } from './app/app.module';
+import { googleAnalytics } from './bootstrapScripts';
 import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
 }
+
+googleAnalytics();
 
 function bootstrap(boot: () => Promise<NgModuleRef<any>>) {
   if (module.hot) {

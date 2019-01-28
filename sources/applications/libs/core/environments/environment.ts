@@ -9,6 +9,8 @@ export const environment = {
     storageBucket: 'sandbox-50983.appspot.com',
     messagingSenderId: '1019120661490'
   },
+  gaTrackingCode: 'UA-125486611-1',
+  googleAnalytics: true,
   baseRoutePath: '',
   itemsRoutePath: 'items',
   versionRoutePath: 'version',

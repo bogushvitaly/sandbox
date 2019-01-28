@@ -1,7 +1,15 @@
-// angular
-import { Injectable, ViewContainerRef } from '@angular/core';
-
 // app
+import { isPlatformBrowser } from '@angular/common';
+// angular
+import {
+  Inject,
+  Injectable,
+  InjectionToken,
+  Injector,
+  PLATFORM_ID,
+  ViewContainerRef
+} from '@angular/core';
+
 import { isNativeScript, isObject } from '@application/utils';
 
 @Injectable()
@@ -86,3 +94,21 @@ export class WindowService {
     return this._platformWindow.clearInterval(intervalId);
   }
 }
+
+@Injectable()
+export class WindowRef {
+  private _window;
+  constructor(@Inject(PLATFORM_ID) platformId, private injector: Injector) {
+    if (!isPlatformBrowser(platformId)) {
+      this._window = { navigator: { userAgent: 'fakeAgent' } };
+    } else {
+      this._window = window;
+    }
+  }
+
+  get nativeWindow(): any {
+    return this._window;
+  }
+}
+
+export const USERAGENTTOKEN = new InjectionToken('requestToken');

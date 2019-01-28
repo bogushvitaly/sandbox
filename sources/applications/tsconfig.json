@@ -64,6 +64,9 @@
       ],
       "example/*": [
         "libs/apps/nest-application/src/example/src/*"
+      ],
+      "@application/ui-fan-menu": [
+        "libs/ui-fan-menu/src/index.ts"
       ]
     }
   },

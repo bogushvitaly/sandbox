@@ -1,0 +1,15 @@
+devDependencies:
+  jest-createspyobj: 1.2.2
+packages:
+  /jest-createspyobj/1.2.2:
+    dev: true
+    engines:
+      node: '>=6'
+      npm: '>=3'
+    resolution:
+      integrity: sha512-qxR/EqGX3OUpeoXV1FqeNcyQfNlKOct4yoKhPtXp4pTOjdmzZEXz/devgw2mua4aL4JY3VNXrtzysTxucmdSJg==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  jest-createspyobj: ^1.2.2

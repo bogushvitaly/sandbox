@@ -4,7 +4,21 @@ const path = require('path');
 const shell = require('shelljs');
 const replace = require('replace-in-file');
 
-const EXTERNAL_DEPENDENCIES = ['firebase', 'firebase-admin', 'firebase-functions', 'aws', 'express', 'ws'];
+const EXTERNAL_DEPENDENCIES = [
+  '@angular',
+  '@nguniversal',
+  '@nest',
+  'firebase',
+  'ngx-auth-firebaseui',
+  'aws',
+  'express',
+  'ws',
+  'xhr2',
+  'rxjs',
+  'zone.js',
+  'reflect-metadata',
+  'lodash'
+];
 const FORCE_EXCLUDE = ['grpc'];
 
 const PACKAGES_FILE = path.join(process.cwd(), 'package.json');
