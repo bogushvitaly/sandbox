@@ -3,7 +3,6 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { UIModule } from '../ui/ui.module';
@@ -24,7 +23,6 @@ import { DemoHeroesModule as SharedDemoHeroesModule } from '@application/feature
   imports: [
     SharedDemoHeroesModule,
     UIModule,
-    HttpModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

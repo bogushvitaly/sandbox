@@ -69,7 +69,7 @@ exports.config = {
       animateSlides: false,
       deleteSuccessful: false,
       fullPageScreenshots: true,
-      output: path.join(REPORTS_PATH, 'codecept'),
+      output: path.join(REPORTS_PATH, 'codecept')
     }
   },
   tests: './*_test.js',

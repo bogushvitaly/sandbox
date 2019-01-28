@@ -31,8 +31,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "testing/tsconfig.libs.json",
-              "testing/tsconfig.libs.spec.json"
+              "libs/tsconfig.json",
+              "libs/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -59,8 +59,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "testing/tsconfig.xplat.json",
-              "testing/tsconfig.xplat.spec.json"
+              "xplat/tsconfig.json",
+              "xplat/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

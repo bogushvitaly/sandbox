@@ -11,7 +11,7 @@ import { UIModule } from '@application/web';
 describe('HeroService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [UIModule, HttpClientTestingModule, HttpModule]
+      imports: [UIModule, HttpClientTestingModule, HttpClientModule]
     })
   );
 

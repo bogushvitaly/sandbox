@@ -17,5 +17,5 @@ module.exports = {
 
   heroDetailPageWithId(id) {
     return `${this.url}/${id}`;
-  },
+  }
 };

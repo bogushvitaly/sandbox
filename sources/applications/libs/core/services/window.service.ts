@@ -1,14 +1,7 @@
 // app
 import { isPlatformBrowser } from '@angular/common';
 // angular
-import {
-  Inject,
-  Injectable,
-  InjectionToken,
-  Injector,
-  PLATFORM_ID,
-  ViewContainerRef
-} from '@angular/core';
+import { Inject, Injectable, InjectionToken, Injector, PLATFORM_ID, ViewContainerRef } from '@angular/core';
 
 import { isNativeScript, isObject } from '@application/utils';
 

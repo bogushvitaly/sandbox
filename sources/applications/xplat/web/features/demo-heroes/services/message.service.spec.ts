@@ -9,7 +9,7 @@ import { MessageService } from './message.service';
 import { UIModule } from '@application/web';
 
 describe('MessageService', () => {
-  beforeEach(() => TestBed.configureTestingModule({ imports: [UIModule, HttpClientTestingModule, HttpModule] }));
+  beforeEach(() => TestBed.configureTestingModule({ imports: [UIModule, HttpClientTestingModule, HttpClientModule] }));
 
   it('should be created', () => {
     const service: MessageService = TestBed.get(MessageService);

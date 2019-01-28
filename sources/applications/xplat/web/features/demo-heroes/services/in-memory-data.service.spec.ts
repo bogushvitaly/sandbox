@@ -9,7 +9,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { UIModule } from '@application/web';
 
 describe('InMemoryDataService', () => {
-  beforeEach(() => TestBed.configureTestingModule({ imports: [UIModule, HttpClientTestingModule, HttpModule] }));
+  beforeEach(() => TestBed.configureTestingModule({ imports: [UIModule, HttpClientTestingModule, HttpClientModule] }));
 
   it('should be created', () => {
     const service: InMemoryDataService = TestBed.get(InMemoryDataService);

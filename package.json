@@ -15,17 +15,9 @@
   "author": "",
   "scripts": {
     "upgrade": "pnpx sort-package-json && pnpx npm-check-updates -u",
-    "release": "release-it"
+    "release": "standard-version"
   },
   "devDependencies": {
-    "@commitlint/cli": "7.3.2",
-    "@commitlint/config-angular": "7.3.1",
-    "@commitlint/config-conventional": "7.3.1",
-    "@commitlint/prompt": "7.3.1",
-    "@commitlint/prompt-cli": "7.3.1",
-    "commitlint-config-conventional-system": "1.1.0",
-    "conventional-changelog": "3.0.5",
-    "conventional-changelog-cli": "2.0.11",
-    "release-it": "10.0.1"
+    "standard-version": "4.4.0"
   }
 }

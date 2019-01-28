@@ -1,3 +1,1 @@
-
-        export * from './lib/ui-fan-menu.module';
-        
+export * from './lib/ui-fan-menu.module';
