@@ -230,6 +230,7 @@ web-application-lighthouse:
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - CHROME_PATH=/usr/bin/chromium-browser
+    - curl -k $WEB_APPLICATION_STAGING_URL
     - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
     - echo Web Application Lighthouse analysis finished
   artifacts:
@@ -300,7 +301,7 @@ web-application-deploy-production:
 pages:
   stage: reports
   before_script:
-    - echo Skip Before Scripts
+    - echo Skip Before scripts
   cache: {}
   dependencies:
     - applications-unit-tests
@@ -325,7 +326,7 @@ hiptest:
   stage: reports
   image: docker:stable
   before_script:
-    - echo Skip Before Scripts
+    - echo Skip Before scripts
   cache: {}
   script:
     - docker run --rm -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf

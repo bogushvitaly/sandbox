@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: example-go-web
+  labels:
+    app: example-go-web
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: example-go-web
+  selector:
+    app: example-go-web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-go-web
+  labels:
+    app: example-go-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example-go-web
+  template:
+    metadata:
+      labels:
+        app: example-go-web
+    spec:
+      containers:
+        - name: example-go-web
+          image: gcr.io/sandbox-228621/example-go-web
+          ports:
+            - containerPort: 8080

@@ -1,10 +1,35 @@
 apiVersion: v1
-kind: Pod
+kind: Service
 metadata:
-  name: node
+  name: example-node
+  labels:
+    app: example-node
 spec:
-  containers:
-    - name: node
-      image: gcr.io/sandbox-228621/sandbox-backend
-      ports:
-        - containerPort: 3000
+  clusterIP: None
+  ports:
+    - port: 3000
+      name: example-node
+  selector:
+    app: example-node
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-node
+  labels:
+    app: example-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example-node
+  template:
+    metadata:
+      labels:
+        app: example-node
+    spec:
+      containers:
+        - name: example-node
+          image: gcr.io/sandbox-228621/example-node
+          ports:
+            - containerPort: 3000
