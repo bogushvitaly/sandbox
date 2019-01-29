@@ -1,5 +1,3 @@
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,9 +12,8 @@ import {
   HeroesDashboardComponent
 } from './components';
 import { DEMOHEROES_PIPES } from './pipes';
-import { DEMOHEROES_PROVIDERS, InMemoryDataService } from './services';
+import { DEMOHEROES_PROVIDERS } from './services';
 
-import { environment } from '@application/core';
 import { DemoHeroesModule as SharedDemoHeroesModule } from '@application/features';
 
 @NgModule({
@@ -26,11 +23,6 @@ import { DemoHeroesModule as SharedDemoHeroesModule } from '@application/feature
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    environment.production
-      ? []
-      : HttpClientInMemoryWebApiModule.forFeature(InMemoryDataService, {
-          dataEncapsulation: false
-        }),
     RouterModule.forChild([
       {
         path: '',

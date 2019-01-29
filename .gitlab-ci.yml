@@ -264,7 +264,7 @@ web-application-deploy-staging:
   script:
     - pnpm install --prefix sources/applications --offline
     - pnpm install --prefix sources/applications/functions --offline
-    - npm run --prefix sources/applications deploy.web.application
+    - npm run --prefix sources/applications deploy.serverless
     - echo Staging deployment finished
   artifacts:
     paths:
@@ -288,7 +288,7 @@ web-application-deploy-production:
     - pnpm install --prefix sources/applications/functions --offline
     - mkdir -p sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
-    - npm run --prefix sources/applications deploy.web.application
+    - npm run --prefix sources/applications deploy.serverless
     - echo Production deployment finished
   artifacts:
     paths:

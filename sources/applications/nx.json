@@ -25,6 +25,9 @@
     },
     "ui-fan-menu": {
       "tags": []
+    },
+    "web-application-api": {
+      "tags": []
     }
   }
 }

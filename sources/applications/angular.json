@@ -255,6 +255,7 @@
           "options": {
             "browserTarget": "web-application:build",
             "serverTarget": "web-application:server",
+            "partialBrowserConfig": "apps/web-application/webpack.browser.config.js",
             "partialServerConfig": "apps/web-application/webpack.server.config.js"
           },
           "configurations": {
@@ -262,6 +263,20 @@
               "browserTarget": "web-application:build:production",
               "serverTarget": "web-application:server:production",
               "verbose": true
+            }
+          }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "web-application:build",
+            "serverTarget": "web-application:server",
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "web-application:build:production",
+              "serverTarget": "web-application:server:production"
             }
           }
         }
@@ -410,6 +425,62 @@
       "schematics": {
         "@nrwl/schematics:component": {
           "styleext": "scss"
+        }
+      }
+    },
+    "web-application-api": {
+      "root": "apps/web-application-api",
+      "sourceRoot": "apps/web-application-api/src",
+      "projectType": "application",
+      "prefix": "web-application-api",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/builders:node-build",
+          "options": {
+            "outputPath": "dist/apps/web-application-api",
+            "main": "apps/web-application-api/src/main.ts",
+            "tsConfig": "apps/web-application-api/tsconfig.app.json",
+            "assets": [
+              "apps/web-application-api/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [{
+                "replace": "apps/web-application-api/src/environments/environment.ts",
+                "with": "apps/web-application-api/src/environments/environment.prod.ts"
+              }]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/builders:node-execute",
+          "options": {
+            "buildTarget": "web-application-api:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/web-application-api/tsconfig.app.json",
+              "apps/web-application-api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/web-application-api/jest.config.js",
+            "tsConfig": "apps/web-application-api/tsconfig.spec.json"
+          }
         }
       }
     }
