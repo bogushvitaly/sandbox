@@ -7,6 +7,7 @@ const replace = require('replace-in-file');
 const EXTERNAL_DEPENDENCIES = [
   '@angular',
   '@nguniversal',
+  'angular-in-memory-web-api',
   '@nest',
   'firebase',
   'ngx-auth-firebaseui',

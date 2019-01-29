@@ -1,17 +1,28 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer
-               class="sidenav"
+  <mat-sidenav class="sidenav"
+               #drawer
                fixedInViewport="true"
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item
-         href="#">Link 1</a> <a mat-list-item
-         href="#">Link 2</a>
-      <a mat-list-item
-         href="#">Link 3</a>
+      <a href="/items"
+         mat-list-item>Items Example</a>
+      <a href="/demo-angular-material/address"
+         mat-list-item>Address Component</a>
+      <a href="/demo-angular-material/dashboard"
+         mat-list-item>Dashboard Component</a>
+      <a href="/demo-angular-material/drag-drop"
+         mat-list-item>Drag Drop Component</a>
+      <a href="/demo-angular-material/table"
+         mat-list-item>Table Component</a>
+      <a href="/demo-angular-material/tree"
+         mat-list-item>Tree Component</a>
+      <a href="/authorization"
+         mat-list-item>Authorization Example</a>
+      <a href="/heroes"
+         mat-list-item>Heroes Example</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -26,6 +37,5 @@
       <span>web-application</span>
     </mat-toolbar>
     <router-outlet></router-outlet>
-    <ngx-auth-firebaseui></ngx-auth-firebaseui>
   </mat-sidenav-content>
 </mat-sidenav-container>

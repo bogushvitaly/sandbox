@@ -30,6 +30,10 @@ dependencies:
   '@nestjs/swagger': 2.5.1
   '@nestjs/typeorm': 5.2.2
   '@nestjs/websockets': 5.6.2
+  '@nguniversal/common': 7.1.0
+  '@nguniversal/express-engine': 7.1.0
+  '@nguniversal/module-map-ngfactory-loader': 7.1.0
+  angular-in-memory-web-api: 0.8.0
   aws-amplify: 1.1.19
   aws-amplify-angular: 2.1.6
   aws-appsync: 1.7.1
@@ -715,7 +719,7 @@ packages:
       graphql-tools: 4.0.4
       lodash: 4.17.11
       merge-graphql-schemas: 1.5.8
-      ts-simple-ast: 21.0.0
+      ts-simple-ast: 21.0.2
       uuid: 3.3.2
     dev: false
     peerDependencies:
@@ -801,6 +805,30 @@ packages:
       rxjs: ^6.0.0
     resolution:
       integrity: sha512-i2eXYMRH7WMddFqXxk3vBSJK9iQvtoVbp7DyLL/M3MTbJrHxreBOEfLdcksLv8yEzGYgWD8rIQ2n5O/Fe+6XmQ==
+  /@nguniversal/common/7.1.0:
+    dev: false
+    peerDependencies:
+      '@angular/common': ^7.1.4
+      '@angular/core': ^7.1.4
+    resolution:
+      integrity: sha512-uEIJPzPk3u0MeOh2UhyDMsFlNemm1hHhvLaT5AJBBenoWcGkPRFuMilkZw7O12qStdthEZedfZYkOft2Fftpzg==
+  /@nguniversal/express-engine/7.1.0:
+    dev: false
+    peerDependencies:
+      '@angular/common': ^7.1.4
+      '@angular/core': ^7.1.4
+      '@angular/platform-server': ^7.1.4
+      express: ^4.15.2
+    resolution:
+      integrity: sha512-otOA3WTjb+XnEDiyhwkvP0hE1gC7PiJrDoDFs5Q77SQ0ZAjuGzAIIgpQrPE8B+v0zmVj2oucDNCSZlmYWb1P/Q==
+  /@nguniversal/module-map-ngfactory-loader/7.1.0:
+    dev: false
+    peerDependencies:
+      '@angular/common': ^7.1.4
+      '@angular/core': ^7.1.4
+      '@angular/platform-server': ^7.1.4
+    resolution:
+      integrity: sha512-GYfb24OLJKBY58CgUsIsGgci5ceZAt4+GrVKh7RZRIHtZ/bjdGsvpIbfE9udqsnSowxIxHA5KzYHbC1x6AAB0A==
   /@nodelib/fs.stat/1.1.3:
     dev: false
     engines:
@@ -811,7 +839,7 @@ packages:
     dependencies:
       chalk: 2.4.2
       consola: 1.4.5
-      esm: 3.1.3
+      esm: 3.1.4
       node-fetch: 2.3.0
     dev: false
     engines:
@@ -1088,6 +1116,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-aYzVLIDqpTmXwBFceKMBotdhisURCx4tYrw+1UghWAItDejFm/+vqfvB8zmTBBWHO8pbuQHeKklJuWsaCKwHlg==
+  /angular-in-memory-web-api/0.8.0:
+    dev: false
+    peerDependencies:
+      '@angular/common': '>=6.0.0 <8.0.0'
+      '@angular/core': '>=6.0.0 <8.0.0'
+      rxjs: ^6.0.0
+    resolution:
+      integrity: sha512-2n0YtCLFxZo4JePHvH6q8b7JmBmhZq44Ic8VaBPRSXE4vAmlKXHU+kI2quNa612EAETDRkZcvLOU8K8CkhIZgQ==
   /ansi-regex/2.1.1:
     engines:
       node: '>=0.10.0'
@@ -2258,12 +2294,12 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
-  /esm/3.1.3:
+  /esm/3.1.4:
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-W5DKpMvvvtdn4Wzwl9scBUlsdiy4sXALG5oKIrCgnalg6db6vAztKVHWfOW4R8TlFvXlZDjipXSTrqhJDHpdRg==
+      integrity: sha512-GScwIz0110RTNzBmAQEdqaAYkD9zVhj2Jo+jeizjIcdyTw+C6S0Zv/dlPYgfF41hRTu2f1vQYliubzIkusx2gA==
   /esprima/4.0.1:
     dev: true
     engines:
@@ -2734,7 +2770,7 @@ packages:
       axios: 0.18.0
       gcp-metadata: 0.6.3
       gtoken: 2.3.2
-      jws: 3.2.0
+      jws: 3.2.1
       lodash.isstring: 4.0.1
       lru-cache: 4.1.5
       retry-axios: /retry-axios/0.3.2/axios@0.18.0
@@ -2750,7 +2786,7 @@ packages:
       gcp-metadata: 0.7.0
       gtoken: 2.3.2
       https-proxy-agent: 2.2.1
-      jws: 3.2.0
+      jws: 3.2.1
       lru-cache: 5.1.1
       semver: 5.6.0
     dev: false
@@ -2871,7 +2907,7 @@ packages:
     dependencies:
       gaxios: 1.2.6
       google-p12-pem: 1.0.3
-      jws: 3.2.0
+      jws: 3.2.1
       mime: 2.4.0
       pify: 4.0.1
     dev: false
@@ -3395,7 +3431,7 @@ packages:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
   /jsonwebtoken/8.1.0:
     dependencies:
-      jws: 3.2.0
+      jws: 3.2.1
       lodash.includes: 4.3.0
       lodash.isboolean: 3.0.3
       lodash.isinteger: 4.0.4
@@ -3413,7 +3449,7 @@ packages:
       integrity: sha1-xjl80uX9WD1lwAeoPce7eOaYK4M=
   /jsonwebtoken/8.4.0:
     dependencies:
-      jws: 3.2.0
+      jws: 3.2.1
       lodash.includes: 4.3.0
       lodash.isboolean: 3.0.3
       lodash.isinteger: 4.0.4
@@ -3448,13 +3484,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Grku9ZST5NNQ3hqNUodSkDfEBqAmGA1R8yiyPHOnLzEKI0GaCQC/XhFmsheXYuXzFQJdILbh+lYBiliqG5R/Vg==
-  /jws/3.2.0:
+  /jws/3.2.1:
     dependencies:
       jwa: 1.2.0
       safe-buffer: 5.1.2
     dev: false
     resolution:
-      integrity: sha512-OmaE/N+SlUTMyja5XeM7aaGP3nNCUlypCCEtlDXf3887yq3tm1zk5O7l/dSz7TQ5p+imRxERZ8Fmk4Z6xcWIIw==
+      integrity: sha512-bGA2omSrFUkd72dhh05bIAN832znP4wOU3lfuXtRBuGTbsmNmDXMQg28f0Vsxaxgk4myF5YkKQpz6qeRpMgX9g==
   /kind-of/3.2.2:
     dependencies:
       is-buffer: 1.1.6
@@ -4842,7 +4878,7 @@ packages:
     optional: true
     resolution:
       integrity: sha512-Q5srk/4vDM54WJsJio3XNn6K2sCG+CQ8G5Wz6bZhRZoAe/+TxjWB/GlFAnYEbkYVlON9FMk/fE3h2RLpPXo4lQ==
-  /ts-simple-ast/21.0.0:
+  /ts-simple-ast/21.0.2:
     dependencies:
       '@dsherret/to-absolute-glob': 2.0.2
       code-block-writer: 7.2.2
@@ -4855,7 +4891,7 @@ packages:
       typescript: 3.2.4
     dev: false
     resolution:
-      integrity: sha512-pEDK5I1KC/fqtxdoeJYYmgFzfkdfZNoO/hFUBWLWRxXwQm4HpDYk/0VHd5ZbLf5wOXRMcUxJreEL7RPNv2oX7A==
+      integrity: sha512-ytj+4Zi4uyD1MytOJ+E0uG3QuU33chzEq5GMXYXKEruDO91svAn8Bl6du7pkJi1vUJwWC/8O+8j+3ZbX/n07dw==
   /tslib/1.9.0:
     dev: false
     resolution:
@@ -5245,6 +5281,10 @@ specifiers:
   '@nestjs/swagger': 2.5.1
   '@nestjs/typeorm': 5.2.2
   '@nestjs/websockets': 5.6.2
+  '@nguniversal/common': 7.1.0
+  '@nguniversal/express-engine': 7.1.0
+  '@nguniversal/module-map-ngfactory-loader': 7.1.0
+  angular-in-memory-web-api: 0.8.0
   aws-amplify: 1.1.19
   aws-amplify-angular: 2.1.6
   aws-appsync: 1.7.1

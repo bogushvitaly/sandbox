@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { DemoAngularMaterialModule as SharedDemoAngularMaterialModule } from '@application/features';
 
 import { UIModule } from '../ui/ui.module';
 import {
@@ -12,6 +11,8 @@ import {
   TableComponent,
   TreeComponent
 } from './components';
+
+import { DemoAngularMaterialModule as SharedDemoAngularMaterialModule } from '@application/features';
 
 @NgModule({
   imports: [
