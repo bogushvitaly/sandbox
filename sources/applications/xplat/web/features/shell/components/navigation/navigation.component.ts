@@ -3,6 +3,7 @@ import { map } from 'rxjs/operators';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
+
 import { NavigationBaseComponent } from '@application/features';
 
 @Component({

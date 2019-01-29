@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { ShellBaseComponent } from '@application/features';
 
 @Component({

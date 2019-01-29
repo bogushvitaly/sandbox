@@ -9,7 +9,7 @@ export interface IRouteBase {
   // items: string;
   // version: string;
   heroes: string;
-  // authorization: string;
+  authorization: string;
 }
 
 export function routeBase(lazyLoad: IRouteBase, additional: Routes = [], redirectTo: string = homePath): Routes {
@@ -30,10 +30,10 @@ export function routeBase(lazyLoad: IRouteBase, additional: Routes = [], redirec
       path: environment.heroesRoutePath,
       loadChildren: lazyLoad.heroes
     },
-    // {
-    //   path: environment.authorizationRoutePath,
-    //   loadChildren: lazyLoad.authorization
-    // },
+    {
+      path: environment.authorizationRoutePath,
+      loadChildren: lazyLoad.authorization
+    },
     { path: '**', pathMatch: 'full', redirectTo },
     ...additional
   ];
