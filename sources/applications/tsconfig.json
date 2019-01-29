@@ -20,8 +20,11 @@
       "@application/web-application/environment/*": [
         "apps/web-application/src/environments/*"
       ],
-      "@application/version": [
+      "@application/version-data": [
         "libs/features/version/data/index.ts"
+      ],
+      "@application/demo-heroes-models": [
+        "libs/features/demo-heroes/models/index.ts"
       ],
       "@application/web": [
         "xplat/web/index.ts"

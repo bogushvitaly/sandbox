@@ -36,11 +36,9 @@ enableProdMode();
 
 export let requestListener = createApi(BROWSER_DIST_PATH, getNgRenderMiddlewareOptions());
 
-let server: any;
-
 // Start up the Node server
 if (!IS_SERVERLESS) {
-  server = createServer((req: any, res: any) => {
+  const server = createServer((req: any, res: any) => {
     requestListener(req, res);
   });
 
@@ -63,5 +61,3 @@ if (!IS_SERVERLESS) {
     module.hot.accept('./app/welcome/welcome.module.ngfactory', hmr);
   }
 }
-
-export default server;

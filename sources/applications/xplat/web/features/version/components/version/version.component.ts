@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { VersionBaseComponent, VersionService } from '@application/features';
-import { stack, VERSION } from '@application/version';
+import { stack, VERSION } from '@application/version-data';
 
 @Component({
   selector: 'app-version',

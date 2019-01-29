@@ -2,10 +2,9 @@ import { Location } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Hero } from '../../models/hero.interfaces';
 import { HeroService } from '../../services';
 
-import { HeroDetailBaseComponent } from '@application/features';
+import { Hero, HeroDetailBaseComponent } from '@application/features';
 
 @Component({
   selector: 'app-hero-detail',

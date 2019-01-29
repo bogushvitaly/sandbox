@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
-import { Hero } from '../../models/hero.interfaces';
 import { HeroService } from '../../services';
 
-import { HeroesBaseComponent } from '@application/features';
+import { Hero, HeroesBaseComponent } from '@application/features';
 
 @Component({
   selector: 'app-heroes',

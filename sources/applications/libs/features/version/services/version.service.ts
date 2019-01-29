@@ -8,6 +8,6 @@ export class VersionService {
   constructor(private http: HttpClient) {}
 
   public getStatus() {
-    return this.http.get(environment.api_url + '/status');
+    return this.http.get(environment.apiUrl + '/status');
   }
 }

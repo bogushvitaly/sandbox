@@ -11,7 +11,11 @@ interface PartialResponse {
 export abstract class NotFoundBaseComponent extends BaseComponent implements OnInit {
   public text = 'Page Not Found';
 
-  constructor(private platformId: Object, private appId: string, private response: PartialResponse) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(APP_ID) private appId: string,
+    @Optional() @Inject(RESPONSE) private response: PartialResponse
+  ) {
     super();
   }
 
