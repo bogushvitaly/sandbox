@@ -1,8 +1,12 @@
-[![Hiptest Status](https://app.hiptest.com/badges/folder/722126)](https://app.hiptest.com/projects/105770/test-plan/folders/722126) [![pipeline status](https://gitlab.com/bohushvitali/sandbox/badges/master/pipeline.svg)](https://gitlab.com/bohushvitali/sandbox/commits/master)
+<!-- ![Logo of the project](./images/logo.sample.png) -->
 
-# Application Development Workspace
+# Application Development Workspace &middot; [![Hiptest Status](https://app.hiptest.com/badges/folder/722126)](https://app.hiptest.com/projects/105770/test-plan/folders/722126) [![pipeline status](https://gitlab.com/bohushvitali/sandbox/badges/master/pipeline.svg)](https://gitlab.com/bohushvitali/sandbox/commits/master)
 
-## The Project's goal is to demonstrate various features and integration:
+> Work in progress
+
+The Project's purpose is to demonstrate technology integrations to ensure best practices compliance
+
+## Done
 
 - [x] Skaffold tool for developing Multi-language Applications and Services
 - [x] A performant Continuous Delivery Pipeline: Local GitLab CI Runner with Minio Storage caching using Minikube, [pnpm Package Manager](https://github.com/pnpm/benchmarks-of-javascript-package-managers)
@@ -12,11 +16,16 @@
 - [x] Acceptance Test Driven Development with Codecept and Jest
 - [x] Design System Development using Storybook
 
+## Subprojects
+
+- [x] ATDD application development - Tour of Heroes Angular Example
+
 ## In progress
 
-- [ ] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth
-- [ ] Communication Styles: GraphQL with Apollo, REST, gRPC
+- [ ] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth, Winston logging
+- [ ] Offline Storages: RxDB
 - [ ] Cloud Backends: Firebase Platform, AWS AppSync, Prisma database API
+- [ ] Communication Styles: GraphQL with Apollo, REST, gRPC
 - [ ] Functional Programming Style: RxJS, Lodash FP, Lodash Decorators
 - [ ] Components Libraries: Angular Material, Covalent UI Platform, Material Web Components, MDBootstrap
 - [ ] Web Components libraries integration: Stencil.js
@@ -25,12 +34,8 @@
 - [ ] Machine Learning Capabilities: TensorFlow.js Brain.js
 - [ ] Blockchain Networks and Decentralized Platform Integrations: Blockchain API, Ethereum API, SingularityNET API, Solid Platform API, IPFS, IPLD
 
-## Links
+## Checklist
 
-- GitLab CI Dashboard
-- Hiptest Living Documentation
-- Custom Reports Aggregator
-
-## Subprojects
-
-- [x] Tour of Heroes ATDD application development example
+- [ ] [Project Guidelines](https://github.com/elsewhencode/project-guidelines)
+- [ ] [The Twelve-Factor App](https://github.com/heroku/12factor)
+- [ ] [Cloud Native Computing Organizational Readiness Review](https://github.com/jdumars/cncorr)
