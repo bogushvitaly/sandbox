@@ -50,7 +50,7 @@ replaceInFile({
     `projectId: '${process.env.PROJECT_ID}'`,
     `storageBucket: '${process.env.STORAGE_BUCKET}'`,
     `messagingSenderId: '${process.env.MESSAGING_SENDER_ID}'`,
-    `apiUrl: '${process.env.APPLICATION_API_PATH}'`
+    `apiUrl: '${process.env.APPLICATION_API_URL}'`
   ]
 })
   .then(changes => {

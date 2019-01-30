@@ -1,2 +1,2 @@
-export * from './base';
-export { AppCoreModule } from './core.module';
+export * from './base'; 
+export * from './core.module';

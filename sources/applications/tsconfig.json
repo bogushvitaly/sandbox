@@ -23,7 +23,7 @@
         "apps/web-application/src/environments/*"
       ],
       "@application/version-data": [
-        "libs/features/version/data/index.ts"
+        "libs/features/demo-version/data/index.ts"
       ],
       "@application/demo-heroes-models": [
         "libs/features/demo-heroes/models/index.ts"

@@ -1,0 +1,20 @@
+:host {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  padding: 1em;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+}
+
+.toolbar-wrapper {
+  display: flex;
+  align-items: center;
+
+  ::ng-deep mat-icon {
+    margin-right: 0.3em;
+  }
+}

@@ -11,7 +11,7 @@ import { NxModule } from '@nrwl/nx';
 
 // app
 import { environment } from './environments/environment';
-import { CORE_PROVIDERS, PlatformLanguageToken } from './services';
+import { CORE_PROVIDERS, LoadingStrategyService, PlatformLanguageToken } from './services';
 import { LogService } from './services/log.service';
 
 // libs
@@ -39,7 +39,8 @@ export const BASE_PROVIDERS: any[] = [
     AngularFireAuthModule,
     AngularFireStorageModule,
     NgxAuthFirebaseUIModule.forRoot(environment.firebaseConfig)
-  ]
+  ],
+  providers: [LoadingStrategyService]
 })
 export class CoreModule {
   // configuredProviders: *required to configure WindowService and others per platform

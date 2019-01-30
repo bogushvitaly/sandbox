@@ -1,20 +1,38 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { DemoCovalentUiModule as SharedDemoCovalentUiModule } from '@application/features';
 
 import { UIModule } from '../ui/ui.module';
-import { DEMOCOVALENTUI_COMPONENTS, DemoCovalentUiComponent } from './components';
+import {
+  DemoCovalentContactsComponent,
+  DemoCovalentDashboardComponent,
+  DemoCovalentEmailComponent,
+  DemoCovalentLangingPageComponent,
+  DemoCovalentSlackChatComponent,
+  DemoCovalentStarterTemplateComponent,
+  DEMOCOVALENTUI_COMPONENTS,
+  DemoCovalentUiComponent
+} from './components';
+
+import {
+  DemoCovalentUiModule as SharedDemoCovalentUiModule,
+  routeDemoCovalentUi
+} from '@application/features';
 
 @NgModule({
   imports: [
     SharedDemoCovalentUiModule,
     UIModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: DemoCovalentUiComponent
-      }
-    ])
+    RouterModule.forChild(
+      routeDemoCovalentUi(
+        DemoCovalentUiComponent,
+        DemoCovalentContactsComponent,
+        DemoCovalentDashboardComponent,
+        DemoCovalentEmailComponent,
+        DemoCovalentLangingPageComponent,
+        DemoCovalentSlackChatComponent,
+        DemoCovalentStarterTemplateComponent
+      )
+    )
   ],
   declarations: [...DEMOCOVALENTUI_COMPONENTS],
   exports: [...DEMOCOVALENTUI_COMPONENTS]

@@ -16,7 +16,7 @@
   <ul class="heroes">
     <li *ngFor="let hero of heroes">
       <a id="{{hero.name | removespaces}}Button"
-         routerLink="/heroes/detail/{{hero.id}}">
+         routerLink="/demo-heroes/detail/{{hero.id}}">
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </a>
       <button id="{{hero.name | removespaces}}DeleteButton"

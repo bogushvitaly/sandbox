@@ -58,6 +58,5 @@ if (!IS_SERVERLESS) {
 
     module.hot.accept('./api', hmr);
     module.hot.accept('./app/app.server.module.ngfactory', hmr);
-    module.hot.accept('./app/welcome/welcome.module.ngfactory', hmr);
   }
 }

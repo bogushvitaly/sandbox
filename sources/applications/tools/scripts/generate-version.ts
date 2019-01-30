@@ -15,7 +15,7 @@ const result = {
   ...git
 };
 
-const file = join(process.cwd(), 'libs', 'features', 'version', 'data', 'version.ts');
+const file = join(process.cwd(), 'libs', 'features', 'demo-version', 'data', 'version.ts');
 
 writeFileSync(
   file,

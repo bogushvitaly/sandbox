@@ -1,1 +1,7 @@
 export * from './demo-covalent-ui.base-component';
+export * from './demo-covalent-dashboard.base-component';
+export * from './demo-covalent-starter-template.base-component';
+export * from './demo-covalent-slack-chat.base-component';
+export * from './demo-covalent-langing-page.base-component';
+export * from './demo-covalent-contacts.base-component';
+export * from './demo-covalent-email.base-component';

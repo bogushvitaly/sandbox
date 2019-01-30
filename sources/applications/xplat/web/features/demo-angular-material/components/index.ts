@@ -1,22 +1,24 @@
-import { AddressComponent } from './address/address.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { DemoAngularMaterialComponent } from './demo-angular-material/demo-angular-material.component';
-import { DragDropComponent } from './drag-drop/drag-drop.component';
-import { TableComponent } from './table/table.component';
-import { TreeComponent } from './tree/tree.component';
+import { DemoMaterialAddressComponent } from './demo-material-address/demo-material-address.component';
+import { DemoMaterialDashboardComponent } from './demo-material-dashboard/demo-material-dashboard.component';
+import { DemoMaterialDragAndDropComponent } from './demo-material-drag-and-drop/demo-material-drag-and-drop.component';
+import { DemoMaterialNavigationComponent } from './demo-material-navigation/demo-material-navigation.component';
+import { DemoMaterialTableComponent } from './demo-material-table/demo-material-table.component';
+import { DemoMaterialTreeComponent } from './demo-material-tree/demo-material-tree.component';
 
 export const DEMOANGULARMATERIAL_COMPONENTS = [
   DemoAngularMaterialComponent,
-  AddressComponent,
-  DashboardComponent,
-  DragDropComponent,
-  TableComponent,
-  TreeComponent
+  DemoMaterialAddressComponent,
+  DemoMaterialDashboardComponent,
+  DemoMaterialDragAndDropComponent,
+  DemoMaterialNavigationComponent,
+  DemoMaterialTableComponent,
+  DemoMaterialTreeComponent
 ];
-
+export * from './demo-material-navigation/demo-material-navigation.component';
+export * from './demo-material-drag-and-drop/demo-material-drag-and-drop.component';
+export * from './demo-material-tree/demo-material-tree.component';
+export * from './demo-material-table/demo-material-table.component';
+export * from './demo-material-address/demo-material-address.component';
+export * from './demo-material-dashboard/demo-material-dashboard.component';
 export * from './demo-angular-material/demo-angular-material.component';
-export * from './address/address.component';
-export * from './dashboard/dashboard.component';
-export * from './drag-drop/drag-drop.component';
-export * from './table/table.component';
-export * from './tree/tree.component';

@@ -5,11 +5,8 @@ import { ServerModule, ServerTransferStateModule } from '@angular/platform-serve
 import { RouterModule, Routes } from '@angular/router';
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
-import { AppShellComponent } from './app-shell/app-shell.component';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
-
-const routes: Routes = [{ path: 'shell', component: AppShellComponent }];
 
 @NgModule({
   imports: [
@@ -17,11 +14,10 @@ const routes: Routes = [{ path: 'shell', component: AppShellComponent }];
     ServerModule,
     NoopAnimationsModule,
     FlexLayoutServerModule,
-    RouterModule.forRoot(routes),
     ModuleMapLoaderModule,
     ServerTransferStateModule
   ],
   bootstrap: [AppComponent],
-  declarations: [AppShellComponent]
+  declarations: []
 })
 export class AppServerModule {}

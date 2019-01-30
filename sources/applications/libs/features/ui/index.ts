@@ -1,2 +1,3 @@
 export * from './base';
-export { UISharedModule } from './ui.module';
+export * from './pipes';
+export * from './ui.module';

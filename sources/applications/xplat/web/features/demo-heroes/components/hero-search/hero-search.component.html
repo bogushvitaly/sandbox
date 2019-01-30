@@ -9,7 +9,7 @@
       class="search-result">
     <li *ngFor="let hero of heroes$ | async">
       <a id="{{hero.name | removespaces}}SearchButton"
-         routerLink="/heroes/detail/{{hero.id}}">
+         routerLink="/demo-heroes/detail/{{hero.id}}">
         {{hero.name}}
       </a>
     </li>

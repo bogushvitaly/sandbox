@@ -1,4 +1,4 @@
-export * from './base';
 export * from './environments/environment';
+export * from './base';
 export * from './services';
-export { CoreModule } from './core.module';
+export * from './core.module';

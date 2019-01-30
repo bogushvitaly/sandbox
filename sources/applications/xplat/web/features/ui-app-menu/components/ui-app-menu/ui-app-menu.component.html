@@ -1,0 +1,9 @@
+<mat-list>
+  <mat-list-item *ngFor="let file of menuItems">
+    <button mat-icon-button
+            (click)="navigate(file)">
+      <mat-icon mat-list-icon>visibility</mat-icon>
+      {{ file.name }}
+    </button>
+  </mat-list-item>
+</mat-list>

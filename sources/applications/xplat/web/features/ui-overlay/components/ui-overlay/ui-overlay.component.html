@@ -1,0 +1,17 @@
+<app-ui-overlay-toolbar>
+  <mat-icon>description</mat-icon>
+  {{ image.name }}
+</app-ui-overlay-toolbar>
+<div class="wrapper"
+     [@slideContent]="animationState"
+     (@slideContent.start)="onAnimationStart($event)"
+     (@slideContent.done)="onAnimationDone($event)">
+  <div class="spinner-wrapper"
+       *ngIf="loading">
+    <mat-spinner mode="indeterminate"></mat-spinner>
+  </div>
+
+  <img [@fade]="loading ? 'fadeOut' : 'fadeIn'"
+       (load)="onLoad($event)"
+       [src]="image.url" />
+</div>

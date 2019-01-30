@@ -1,16 +1,12 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CoreModule, PlatformLanguageToken, WindowPlatformService } from '@application/core';
-import { ITEM_PROVIDERS } from '@application/features';
-import { throwIfAlreadyLoaded } from '@application/utils';
-// libs
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-// bring in custom web services here...
+import { CoreModule, PlatformLanguageToken, WindowPlatformService } from '@application/core';
+import { throwIfAlreadyLoaded } from '@application/utils';
 
-// factories
 export function winFactory() {
   return window;
 }
@@ -47,7 +43,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  providers: [...ITEM_PROVIDERS]
+  providers: []
 })
 export class AppCoreModule {
   constructor(

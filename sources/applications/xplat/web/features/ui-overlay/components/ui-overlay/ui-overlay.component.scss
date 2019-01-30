@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+  padding: 1em;
+}
+
+.spinner-wrapper {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 80%;
+  height: auto;
+}

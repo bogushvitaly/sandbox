@@ -7,7 +7,7 @@ import { AppModule } from './app/app.module';
 export const IS_SERVERLESS = !!process.env.FUNCTION_NAME;
 
 export const HOST = process.env.HOST || '0.0.0.0';
-export const PORT = process.env.PORT || 3000;
+export const PORT = process.env.PORT || 5000;
 
 export const server: express.Express = express();
 
