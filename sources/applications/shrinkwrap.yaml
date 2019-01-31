@@ -239,8 +239,6 @@ devDependencies:
   babel-plugin-require-context-hook: 1.0.0
   babel-plugin-transform-amd-to-commonjs: 1.4.0
   babel-polyfill: 6.26.0
-  canvas: 2.3.1
-  canvas-prebuilt: 2.0.0-alpha.14
   codeceptjs: 2.0.4
   codelyzer: 4.5.0
   compression-webpack-plugin: 2.0.0
@@ -6858,25 +6856,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-STzb2AjNYt6d729P0YFZLamn5fQ=
-  /canvas-prebuilt/2.0.0-alpha.14:
-    dependencies:
-      detect-libc: 1.0.3
-      nan: 2.12.1
-      node-pre-gyp: 0.10.3
-    dev: true
-    requiresBuild: true
-    resolution:
-      integrity: sha512-b4QydUnFNxpgctSbHnJWsCDaqtq2AMYa9/B7q4+cGnBrEtMIcLcXpKltT/iSB39AHOTDIprYeHuvyy3h2k1ltg==
-  /canvas/2.3.1:
-    dependencies:
-      nan: 2.12.1
-      node-pre-gyp: 0.11.0
-    dev: true
-    engines:
-      node: '>=6'
-    requiresBuild: true
-    resolution:
-      integrity: sha512-jSxwf4V9AGD6t6yBC600xFZKjrfKTR0T0RUNlX/AODs/ifrfJHIQjFEK8iF2euNy6z7K3GNv82DJgTjYZZktqA==
   /capture-exit/1.2.0:
     dependencies:
       rsvp: 3.6.2
@@ -18210,22 +18189,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-AhENzCSGZnZJgBARsUjnQ7DnZbzyP+HxlVXuD0xqAnvL8q+OqtSX7lGg9e8nHzwXkMMXNdVeqq4E2M3EUAqX6Q==
-  /node-pre-gyp/0.10.3:
-    dependencies:
-      detect-libc: 1.0.3
-      mkdirp: 0.5.1
-      needle: 2.2.4
-      nopt: 4.0.1
-      npm-packlist: 1.2.0
-      npmlog: 4.1.2
-      rc: 1.2.8
-      rimraf: 2.6.3
-      semver: 5.6.0
-      tar: 4.4.8
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-d1xFs+C/IPS8Id0qPTZ4bUT8wWryfR/OzzAFxweG+uLN85oPzyo2Iw6bVlLQ/JOdgNonXLCoRyqDzDWq4iw72A==
   /node-pre-gyp/0.11.0:
     dependencies:
       detect-libc: 1.0.3
@@ -27582,8 +27545,6 @@ specifiers:
   bunny: 1.0.1
   cache-manager: 2.9.0
   cannon: 0.6.2
-  canvas: 2.3.1
-  canvas-prebuilt: 2.0.0-alpha.14
   chart.js: 2.7.3
   codeceptjs: 2.0.4
   codelyzer: 4.5.0
