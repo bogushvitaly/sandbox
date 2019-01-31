@@ -1,11 +1,11 @@
-/*
- * This module imports and re-exports all Angular Material modules for convenience,
- * so only 1 module import is needed in your feature modules.
- * See https://material.angular.io/guide/getting-started#step-3-import-the-component-modules.
- *
- * To optimize your production builds, you should only import the components used in your app.
- */
+import { A11yModule } from '@angular/cdk/a11y';
+import { BidiModule } from '@angular/cdk/bidi';
+import { ObserversModule } from '@angular/cdk/observers';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { PlatformModule } from '@angular/cdk/platform';
+import { PortalModule } from '@angular/cdk/portal';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 import { CdkTableModule } from '@angular/cdk/table';
 import { NgModule } from '@angular/core';
 import {
@@ -52,8 +52,15 @@ import {
 @NgModule({
   exports: [
     // CDK
-    CdkTableModule,
+    A11yModule,
+    BidiModule,
+    ObserversModule,
     OverlayModule,
+    PlatformModule,
+    PortalModule,
+    ScrollDispatchModule,
+    CdkStepperModule,
+    CdkTableModule,
     // Material
     MatAutocompleteModule,
     MatButtonModule,

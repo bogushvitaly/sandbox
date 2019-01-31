@@ -57,7 +57,7 @@ web-application-build-staging:
       - .pnpm-store/
   script:
     - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications udk.web.application.build
+    - npm run --prefix sources/applications build.web.application.udk
     - echo Stage build completed
   artifacts:
     paths:
@@ -78,7 +78,7 @@ web-application-build-production:
       - .pnpm-store/
   script:
     - pnpm install --prefix sources/applications --offline
-    - npm run --prefix sources/applications udk.web.application.build
+    - npm run --prefix sources/applications build.web.application.udk
     - mkdir sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
     - echo Production build completed

@@ -12,8 +12,8 @@ Feature: Heroes
     Then I see "Tenth Hero" in the heroes list
 
   Scenario: Successful deleting hero from the heroes list
-    When I click the "First Hero" delete button
-    Then I do not see the "First Hero" in the heroes list
+    When I click the "Fifth Hero" delete button
+    Then I do not see the "Fifth Hero" in the heroes list
 
   Scenario: Successful transition on the hero detail page from the heroes page
     When I click the "First Hero" button

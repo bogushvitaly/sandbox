@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import * as tf from '@tensorflow/tfjs';
 
 import { features, labels } from '../data/data';
@@ -9,7 +10,7 @@ import { DemoTensorflowDrawableDirective } from '@application/web/features/demo-
 export abstract class DemoTensorflowBaseComponent extends BaseComponent implements OnInit {
   public text = 'DemoTensorflow';
 
-  constructor() {
+  constructor(protected platformId: Object) {
     super();
   }
 
@@ -22,8 +23,10 @@ export abstract class DemoTensorflowBaseComponent extends BaseComponent implemen
   @ViewChild(DemoTensorflowDrawableDirective) canvas;
 
   ngOnInit() {
-    this.trainNewModel();
-    this.loadModel();
+    if (isPlatformBrowser(this.platformId)) {
+      this.trainNewModel();
+      this.loadModel();
+    }
   }
 
   async trainNewModel() {

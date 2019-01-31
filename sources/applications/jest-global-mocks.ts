@@ -18,3 +18,5 @@ Object.defineProperty(window, 'getComputedStyle', {
 });
 
 Object.defineProperty(window, '__env', { value: { env: { backendUrl: 'mocked URl' } } });
+
+HTMLCanvasElement.prototype.getContext = jest.fn();

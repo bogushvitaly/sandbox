@@ -1,3 +1,7 @@
+:host {
+  position: relative;
+}
+
 /* HeroesComponent's private CSS styles */
 .heroes {
   width: 15em;
@@ -26,6 +30,7 @@
   position: relative;
   display: block;
   width: 250px;
+  height: 26px;
   text-decoration: none;
   color: #888;
 }
@@ -36,15 +41,15 @@
 
 .heroes .badge {
   font-size: small;
-  line-height: 1em;
+  line-height: 1.4em;
   position: relative;
   top: -4px;
   left: -1px;
   display: inline-block;
   min-width: 16px;
-  height: 1.8em;
+  height: 1.6em;
   margin-right: .8em;
-  padding: .8em .7em 0 .7em;
+  padding: .0em .7em 0 .7em;
   text-align: right;
   color: white;
   border-radius: 4px 0 0 4px;

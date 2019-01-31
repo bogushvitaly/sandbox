@@ -7,7 +7,8 @@ const replace = require('replace-in-file');
 const EXTERNAL_DEPENDENCIES = [
   '@angular',
   '@nguniversal',
-  'angular-in-memory-web-api',
+  '@rdfjs',
+  '@tensorflow',
   '@nest',
   'firebase',
   'ngx-auth-firebaseui',
@@ -25,12 +26,8 @@ const FORCE_EXCLUDE = ['grpc'];
 const PACKAGES_FILE = path.join(process.cwd(), 'package.json');
 const ANGULAR_CONFIG_FILE = path.join(process.cwd(), 'angular.json');
 const PACKAGES_FILE_CONTENT = fs.readFileSync(PACKAGES_FILE, 'utf8');
-const WEB_APPLICATION_SERVER_WEBPACK_CONFIG = path.join(
-  process.cwd(),
-  'apps',
-  'web-application',
-  'webpack.server.config.js'
-);
+const WEB_APPLICATION_PATH = path.join(process.cwd(), 'apps', 'web-application');
+const WEB_APPLICATION_SERVER_WEBPACK_CONFIG = path.join(WEB_APPLICATION_PATH, 'webpack.server.config.js');
 
 const splitPackagesInclude = (list: any) =>
   _.differenceWith((string: any, fragment: any) => _.startsWith(fragment, string), list, EXTERNAL_DEPENDENCIES);
@@ -46,8 +43,12 @@ const extendedExternalDependencies = _.concat(externalDependencies, FORCE_EXCLUD
 console.log(`Internal server dependencies: ${JSON.stringify(internalDependencies)}\n`);
 console.log(`External server dependencies: ${JSON.stringify(extendedExternalDependencies)}`);
 
+// Install Firebase Functions Dependencies
 shell.cd(`${process.cwd()}/functions`);
 shell.exec(`pnpm install --offline ${_.join(' ', extendedExternalDependencies)}`);
+
+// Patch Server Webpack
+shell.cp(path.join(__dirname, 'webpack.server.config.js'), WEB_APPLICATION_PATH);
 
 const options = {
   files: WEB_APPLICATION_SERVER_WEBPACK_CONFIG,

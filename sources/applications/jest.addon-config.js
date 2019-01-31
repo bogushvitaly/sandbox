@@ -29,6 +29,7 @@ module.exports = {
   ],
   coveragePathIgnorePatterns: ['/node_modules/'],
   preset: 'jest-preset-angular',
+  setupFiles: ["jest-canvas-mock"],
   setupTestFrameworkScriptFile: './jest-test-setup.ts',
   snapshotSerializers: [
     '<rootDir>/node_modules/jest-preset-angular/AngularSnapshotSerializer.js',

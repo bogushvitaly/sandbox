@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 
 import { DemoTensorflowBaseComponent } from '@application/features';
 
@@ -8,7 +8,7 @@ import { DemoTensorflowBaseComponent } from '@application/features';
   styleUrls: ['demo-tensorflow.component.scss']
 })
 export class DemoTensorflowComponent extends DemoTensorflowBaseComponent {
-  constructor() {
-    super();
+  constructor(@Inject(PLATFORM_ID) platformId: Object) {
+    super(platformId);
   }
 }

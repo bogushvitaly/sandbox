@@ -10,7 +10,7 @@ export class HeroesService {
   private nextId: number;
 
   constructor() {
-    this.heroCache = HEROES;
+    this.heroCache = HEROES.map(a => ({ ...a }));
     this.nextId =
       this.heroCache.reduce((id, hero) => {
         return Math.max(id, hero.id);
@@ -57,5 +57,9 @@ export class HeroesService {
     }
 
     this.heroCache.splice(heroIndex, 1);
+  }
+
+  restoreCache() {
+    this.heroCache = HEROES.map(a => ({ ...a }));
   }
 }

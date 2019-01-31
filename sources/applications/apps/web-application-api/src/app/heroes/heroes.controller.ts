@@ -38,4 +38,9 @@ export class HeroesController {
   async deleteHero(@Param('id') id: string) {
     this.heroesService.deleteHero(Number(id));
   }
+
+  @Post('restore')
+  async restoreCache() {
+    this.heroesService.restoreCache();
+  }
 }

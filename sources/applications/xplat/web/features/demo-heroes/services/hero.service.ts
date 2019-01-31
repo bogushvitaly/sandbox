@@ -27,7 +27,6 @@ export class HeroService {
     private readonly messageService: MessageService,
     @Optional() @Inject(APP_BASE_HREF) private readonly origin: string
   ) {
-    // this.heroesUrl = `${origin || ''}${this.heroesUrl}`;
     this.heroesUrl = environment.apiUrl + '/heroes';
   }
 

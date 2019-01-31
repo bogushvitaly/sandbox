@@ -36,6 +36,8 @@ export * from './system-state';
 export * from './demo-css-grid';
 export * from './demo-flex-layout';
 export * from './ui-swiper';
+export * from './system-metadata';
+
 
 
 

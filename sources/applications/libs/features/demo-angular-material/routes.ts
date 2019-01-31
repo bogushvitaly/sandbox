@@ -14,6 +14,10 @@ export function routeDemoAngularMaterial(
       component: index,
       children: [
         {
+          path: '',
+          redirectTo: 'address'
+        },
+        {
           path: 'address',
           component: address
         },

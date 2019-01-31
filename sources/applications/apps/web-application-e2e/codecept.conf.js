@@ -10,11 +10,14 @@ exports.config = {
       chrome: {
         executablePath: process.env.CHROME_BIN
       },
-      waitForAction: 500,
-      waitForTimeout: 5000
+      waitForAction: 1000,
+      waitForTimeout: 10000
     },
     Mochawesome: {
       uniqueScreenshotNames: true
+    },
+    HooksHelper: {
+      require: './hooks_helper.js'
     }
   },
   include: {

@@ -2,7 +2,7 @@
    "extends": ["tslint:recommended", "tslint-config-prettier"],
    "rulesDirectory": [
      "node_modules/codelyzer",
-     "node_modules/.registry.npmjs.org/@nrwl/schematics/7.5.0/node_modules/@nrwl/schematics/src/tslint"
+     "node_modules/.registry.npmjs.org/@nrwl/schematics/7.5.1/node_modules/@nrwl/schematics/src/tslint"
    ],
    "rules": {
 

@@ -1,7 +1,7 @@
 const I = actor();
 
 module.exports = {
-  url: `${process.env.APPLICATION_URL}/heroes/dashboard`,
+  url: `${process.env.APPLICATION_URL}/demo-heroes/dashboard`,
   rootElement: {
     id: 'dashboardPage'
   },
