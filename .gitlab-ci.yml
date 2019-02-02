@@ -33,11 +33,12 @@ applications-dependencies-install:
     - npm config set store .pnpm-store
   cache:
     key: $CI_PROJECT_NAMESPACE
+    policy: pull-push
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications
-    - pnpm install --side-effects-cache --prefix sources/applications/functions
+    - pnpm install --prefix sources/applications
+    - pnpm install --prefix sources/applications/functions
     - echo Installing dependencies finished
   only:
     - master
@@ -56,7 +57,7 @@ web-application-build-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.udk
     - echo Stage build completed
   artifacts:
@@ -77,7 +78,7 @@ web-application-build-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.udk
     - mkdir sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
@@ -100,7 +101,7 @@ web-application-api-build-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.api
     - echo Web Application API Server Production build completed
   artifacts:
@@ -121,7 +122,7 @@ static-content-server-build-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications build.static.content.server
     - echo Static Server Production build completed
   artifacts:
@@ -140,7 +141,7 @@ applications-check-formatting:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo Applications code formatting check finished
 
@@ -154,7 +155,7 @@ applications-check-linting:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications lint.check
     - echo Applications code linting check finished
 
@@ -168,7 +169,7 @@ applications-unit-tests:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications test.jest.coverage
     - echo Web Application unit tests finished
   artifacts:
@@ -185,7 +186,7 @@ applications-compodoc:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications docs.compodoc
     - echo Web Application unit tests Compodoc generation finished
   artifacts:
@@ -202,7 +203,7 @@ applications-storybook:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications storybook.build
     - echo Applications storybook building finished
   artifacts:
@@ -219,7 +220,7 @@ applications-dependencies-graph:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications dep-graph
     - echo Applications dependencies graph generation finished
   artifacts:
@@ -236,7 +237,7 @@ web-application-bundle-analysis:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications analyze.web.application.bundle
     - echo Web Application bundle analysis finished
   artifacts:
@@ -253,7 +254,7 @@ web-application-e2e-tests:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications e2e.web.application
     - echo Web Application e2e tests finished
   artifacts:
@@ -301,8 +302,8 @@ web-application-deploy-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
-    - pnpm install --side-effects-cache --prefix sources/applications/functions --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
     - npm run --prefix sources/applications deploy.firebase
     - echo Staging deployment finished
   artifacts:
@@ -324,8 +325,8 @@ web-application-deploy-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --side-effects-cache --prefix sources/applications --offline
-    - pnpm install --side-effects-cache --prefix sources/applications/functions --offline
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
     - mkdir -p sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
     - npm run --prefix sources/applications deploy.firebase

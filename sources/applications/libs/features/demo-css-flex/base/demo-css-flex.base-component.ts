@@ -1,9 +1,8 @@
 import { BaseComponent } from '@application/core';
 
 export abstract class DemoCssFlexBaseComponent extends BaseComponent {
-  
-  public text: string = 'DemoCssFlex';
-  
+  public text = 'DemoCssFlex';
+
   constructor() {
     super();
   }

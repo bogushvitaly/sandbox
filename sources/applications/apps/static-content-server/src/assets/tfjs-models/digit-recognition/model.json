@@ -18,7 +18,8 @@
     "keras_version": "2.0.4",
     "model_config": {
       "class_name": "Sequential",
-      "config": [{
+      "config": [
+        {
           "class_name": "Conv2D",
           "config": {
             "kernel_initializer": {
@@ -180,9 +181,11 @@
     },
     "backend": "tensorflow"
   },
-  "weightsManifest": [{
+  "weightsManifest": [
+    {
       "paths": ["group1-shard1of1"],
-      "weights": [{
+      "weights": [
+        {
           "dtype": "float32",
           "shape": [3, 3, 1, 32],
           "name": "conv2d_1/kernel"
@@ -196,7 +199,8 @@
     },
     {
       "paths": ["group2-shard1of1"],
-      "weights": [{
+      "weights": [
+        {
           "dtype": "float32",
           "shape": [3, 3, 32, 64],
           "name": "conv2d_2/kernel"
@@ -210,7 +214,8 @@
     },
     {
       "paths": ["group3-shard1of2", "group3-shard2of2"],
-      "weights": [{
+      "weights": [
+        {
           "dtype": "float32",
           "shape": [9216, 128],
           "name": "dense_1/kernel"
@@ -224,7 +229,8 @@
     },
     {
       "paths": ["group4-shard1of1"],
-      "weights": [{
+      "weights": [
+        {
           "dtype": "float32",
           "shape": [128, 10],
           "name": "dense_2/kernel"

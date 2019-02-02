@@ -1,6 +1,6 @@
 dependencies:
   3d-force-graph: 1.45.0
-  '@angular-material-extensions/password-strength': 3.4.0
+  '@angular-material-extensions/password-strength': 3.4.1
   '@angular-mdc/web': 0.43.7
   '@angular/animations': 7.2.3
   '@angular/cdk': 7.3.0
@@ -257,7 +257,7 @@ devDependencies:
   cross-env: 5.2.0
   dotenv: 6.2.0
   dotenv-extended: 2.3.0
-  electron: 4.0.3
+  electron: 4.0.4
   electron-builder: 20.38.5
   electron-packager: 13.0.1
   electron-reload: 1.4.0
@@ -306,7 +306,7 @@ devDependencies:
   postcss-loader: 3.0.0
   prerender-spa-plugin: 3.4.0
   prettier: 1.16.3
-  prisma: 1.25.6
+  prisma: 1.25.7
   protractor: 5.4.2
   puppeteer: 1.12.1
   read-pkg: 4.0.1
@@ -385,16 +385,16 @@ packages:
       '@angular-devkit/build-angular': '>=0.12.1'
     resolution:
       integrity: sha512-hQZD/aB/jMq4Yf3+lkkGpU8OFAQwZ+S+422P+m2NkZ40+UXLsJpVzDRFMcL0GGObjwTxhxrmw6wFUk+2V5TwIg==
-  /@angular-devkit/architect/0.12.3:
+  /@angular-devkit/architect/0.12.4:
     dependencies:
-      '@angular-devkit/core': 7.2.3
+      '@angular-devkit/core': 7.2.4
       rxjs: 6.3.3
     dev: true
     engines:
       node: '>= 8.9.0'
       npm: '>= 5.5.1'
     resolution:
-      integrity: sha512-nRZkuQkUMW0HS/YbVjsEA5zPMgsL4Icd0nFV2gM9vAK5X+Vzn9gZyCL1ogkOsJNlEP6Rc/Pc6Q1PPO2p5NxPsQ==
+      integrity: sha512-19f3jbGyP+GzTSBgrHR4SWGK81SUgtTxhkAcyhmsIEDuXrMJM8kPu0HB9WivJ5p08+jzwz6xdF9mpNYSeD9uqw==
   /@angular-devkit/architect/0.13.0:
     dependencies:
       '@angular-devkit/core': 7.3.0
@@ -487,10 +487,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-fhWuzbMVV/UNYE7rHSKutrWTCZle34N5cdtFz6qhK1k/wn7Vmtg9cFOwzx0SPdIlOEn576NB4DS/4UG3B5WCUQ==
-  /@angular-devkit/build-webpack/0.12.3/2f8944ff44c336a6acea96fbc0c35228:
+  /@angular-devkit/build-webpack/0.12.4/2f8944ff44c336a6acea96fbc0c35228:
     dependencies:
-      '@angular-devkit/architect': 0.12.3
-      '@angular-devkit/core': 7.2.3
+      '@angular-devkit/architect': 0.12.4
+      '@angular-devkit/core': 7.2.4
       rxjs: 6.3.3
       webpack: /webpack/4.27.1/webpack@4.27.1
       webpack-dev-server: /webpack-dev-server/3.1.14/webpack@4.27.1
@@ -498,12 +498,12 @@ packages:
     engines:
       node: '>= 8.9.0'
       npm: '>= 5.5.1'
-    id: registry.npmjs.org/@angular-devkit/build-webpack/0.12.3
+    id: registry.npmjs.org/@angular-devkit/build-webpack/0.12.4
     peerDependencies:
       webpack: ^4.6.0
       webpack-dev-server: ^3.1.4
     resolution:
-      integrity: sha512-yzsluzemzmhVxiSdgP03D770lSpAvlJF+k/E5rSb0tS9yENWTgodxMJSP8gRcveZzVW0lVvRUGKucDWyt3vnPQ==
+      integrity: sha512-1+t2MUB+dq+1LbfTnvzZwj2QTWiugyMywXqYjsyt0rrh7VcriD1lQ+P5yN8kgFz/R7Ut4LgvS05yDX1JHi20qw==
   /@angular-devkit/build-webpack/0.13.0/84c4d71260d0338a9b5e94098d243796:
     dependencies:
       '@angular-devkit/architect': 0.13.0
@@ -547,18 +547,19 @@ packages:
       npm: '>= 5.5.1'
     resolution:
       integrity: sha512-LyjHGuLnLWrgX7SYDkKmc3eW4H5uuaoC+CXYjRfgx3qundrLfvTCRgNGC6FPjhQNnVXH9qar+j9P1aMmKFb4Lw==
-  /@angular-devkit/core/7.2.3:
+  /@angular-devkit/core/7.2.4:
     dependencies:
       ajv: 6.6.2
       chokidar: 2.0.4
       fast-json-stable-stringify: 2.0.0
       rxjs: 6.3.3
       source-map: 0.7.3
+    dev: true
     engines:
       node: '>= 8.9.0'
       npm: '>= 5.5.1'
     resolution:
-      integrity: sha512-NnN8O+97nJAxqD2zVTDlU8dSzrGCZmqYMDqDoRJJChYxAgmGwP4lhb+Jyi5D34tPxgKRTnjTOwC+G7D+WrXSDQ==
+      integrity: sha512-XHF59tIHg2qEM1Wd415xhykBLjjfOK6yMB7CjNk1bToUMX2QDT87izJF4y1Vwa0lIw9G0jdgP/4/M/OqXcbYmA==
   /@angular-devkit/core/7.3.0:
     dependencies:
       ajv: 6.7.0
@@ -591,15 +592,6 @@ packages:
       npm: '>= 5.5.1'
     resolution:
       integrity: sha512-NFhHLYWf9gpGQm0s19lq+nAw3CZ0udBpoBLzCm8Crlmu6+7aAXgw7Fv5P4ukWJ/e1m7NDGVids+B6kBGXaY6Ig==
-  /@angular-devkit/schematics/7.2.3:
-    dependencies:
-      '@angular-devkit/core': 7.2.3
-      rxjs: 6.3.3
-    engines:
-      node: '>= 8.9.0'
-      npm: '>= 5.5.1'
-    resolution:
-      integrity: sha512-zhnI1zxEcjx4OZ0yIzAAOujS8fzXE6nxjyC1viqliQbbjbikA6WIL7UT0jQXZKDsRBl8VXOyutBOaeOXuqktTQ==
   /@angular-devkit/schematics/7.3.0:
     dependencies:
       '@angular-devkit/core': 7.3.0
@@ -609,17 +601,17 @@ packages:
       npm: '>= 5.5.1'
     resolution:
       integrity: sha512-glOduymftH0LmJhITWgWUJK8QCDUltgTZ943/OyArIvLXTLL/8zCb+G6xL+3k33EQjwJicgQ3WIjonJmeTK/Ww==
-  /@angular-material-extensions/password-strength/3.4.0:
+  /@angular-material-extensions/password-strength/3.4.1:
     dev: false
     peerDependencies:
-      '@angular/animations': ^7.1.2
-      '@angular/cdk': ^7.1.1
-      '@angular/common': ^7.1.2
-      '@angular/core': ^7.1.2
-      '@angular/forms': ^7.1.2
-      '@angular/material': ^7.1.1
+      '@angular/animations': ^7.2.0
+      '@angular/cdk': ^7.2.1
+      '@angular/common': ^7.2.0
+      '@angular/core': ^7.2.0
+      '@angular/forms': ^7.2.0
+      '@angular/material': ^7.2.1
     resolution:
-      integrity: sha512-SpG8cjyY9CCsxZwVG4rjMeeB0rvUzMq7XjlzTJykDYtif+GwlEg1QDp0du2PmHOmVZHZXn0j9//8hp96k+C0GA==
+      integrity: sha512-TfUiSM5aCO7DkUuEqB6aiFWbqAlZcOdb2n8GhUT4M0kMg8MFQcLjBuLCLgjSvP4CdnsHZzGTJjcFq4/TbD8LTQ==
   /@angular-mdc/theme/0.43.7:
     dev: false
     resolution:
@@ -2023,21 +2015,6 @@ packages:
       '@firebase/app-types': 0.x
     resolution:
       integrity: sha512-RsceKkGQyiTJq/9odss6v+6KgJVLr5H8hgVO/u+d1Is20cQXJFpDjrgcoGairVb4S/jav2LV1/bHXj3HVLObvw==
-  /@firebase/firestore/1.0.1/@firebase!app@0.3.8:
-    dependencies:
-      '@firebase/app': 0.3.8
-      '@firebase/firestore-types': 1.0.1
-      '@firebase/logger': 0.1.5
-      '@firebase/webchannel-wrapper': 0.2.12
-      grpc: 1.17.0
-      tslib: 1.9.0
-    dev: true
-    id: registry.npmjs.org/@firebase/firestore/1.0.1
-    peerDependencies:
-      '@firebase/app': 0.x
-      '@firebase/app-types': 0.x
-    resolution:
-      integrity: sha512-q+AzLkorfo8xVL+V4FuyayLgvMyXkvqR8ZyVVuXI8Z+IpIERpYFu3sAz1tf9LMrVYr5nqGxLSPNXA5GSd7U5tw==
   /@firebase/firestore/1.0.2/@firebase!app@0.3.8:
     dependencies:
       '@firebase/app': 0.3.8
@@ -2046,7 +2023,6 @@ packages:
       '@firebase/webchannel-wrapper': 0.2.12
       grpc: 1.18.0
       tslib: 1.9.0
-    dev: false
     id: registry.npmjs.org/@firebase/firestore/1.0.2
     peerDependencies:
       '@firebase/app': 0.x
@@ -2358,9 +2334,9 @@ packages:
       integrity: sha512-mJfj+VXTOgf9Og0S7QDlT9I8UVI+Wj4kpZUHdQizovA/R0m1HG2hLKtEMy00iDVbOBjRsXGcD6JXCOeyVjg7LA==
   /@ionic/angular-toolkit/1.3.0:
     dependencies:
-      '@schematics/angular': 7.2.3
+      '@schematics/angular': 7.3.0
       tslib: 1.9.3
-      typescript: 3.2.4
+      typescript: 3.3.1
     dev: false
     peerDependencies:
       '@angular-devkit/architect': '>=0.7.2'
@@ -2492,7 +2468,7 @@ packages:
       graphql-tools: 4.0.4
       lodash: 4.17.11
       merge-graphql-schemas: 1.5.8
-      ts-simple-ast: 21.0.2
+      ts-simple-ast: 21.0.3
       uuid: 3.3.2
     dev: false
     peerDependencies:
@@ -2847,9 +2823,9 @@ packages:
       integrity: sha512-6yWteZz7oYRbTKrM+WWRbbCZAxW87Sd17WydUSHNVxZM1Yn5w2qVH16CCKO2nG2javA85Fk4Qw3VCbN8e33TTA==
   /@ngxs/schematics/0.0.1-alpha.5:
     dependencies:
-      '@angular-devkit/core': 7.2.3
-      '@angular-devkit/schematics': 7.2.3
-      typescript: 3.2.4
+      '@angular-devkit/core': 7.3.0
+      '@angular-devkit/schematics': 7.3.0
+      typescript: 3.3.1
     dev: true
     resolution:
       integrity: sha512-Tso98DroqoIUrXArrrBO/RRMO545ccMg709VFJg8WLHzH3b6zl67ysjeIDD+FBE0TouQLfpCoobR6q62k2GUBQ==
@@ -2889,8 +2865,8 @@ packages:
       integrity: sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
   /@nrwl/builders/7.5.1:
     dependencies:
-      '@angular-devkit/architect': 0.12.3
-      '@angular-devkit/build-webpack': /@angular-devkit/build-webpack/0.12.3/2f8944ff44c336a6acea96fbc0c35228
+      '@angular-devkit/architect': 0.12.4
+      '@angular-devkit/build-webpack': /@angular-devkit/build-webpack/0.12.4/2f8944ff44c336a6acea96fbc0c35228
       copy-webpack-plugin: 4.6.0
       fork-ts-checker-webpack-plugin: /fork-ts-checker-webpack-plugin/0.4.9/webpack@4.27.1
       license-webpack-plugin: 1.5.0
@@ -2962,7 +2938,7 @@ packages:
   /@prerenderer/renderer-puppeteer/0.2.0:
     dependencies:
       promise-limit: 2.7.0
-      puppeteer: 1.11.0
+      puppeteer: 1.12.1
     dev: true
     engines:
       node: '>=4.0.0'
@@ -3085,17 +3061,6 @@ packages:
       npm: '>= 5.5.1'
     resolution:
       integrity: sha512-xDSMAtOdKNa5uqsEfbwBVHVCjpNSmIIcadi0Rki+5Nmobf5nnQWPly1/xj5aHzT6SKuV4BIMvsBG9UgI9Ss/Iw==
-  /@schematics/angular/7.2.3:
-    dependencies:
-      '@angular-devkit/core': 7.2.3
-      '@angular-devkit/schematics': 7.2.3
-      typescript: 3.2.2
-    dev: false
-    engines:
-      node: '>= 8.9.0'
-      npm: '>= 5.5.1'
-    resolution:
-      integrity: sha512-hKp+qaM8YU55+JukteXOVY2N5IQBDIIIXkyPcikbC2GBXUeNOMiPqw9au9sjHrgtFp+SVGoaFzzz9+MOCc1gig==
   /@schematics/angular/7.3.0:
     dependencies:
       '@angular-devkit/core': 7.3.0
@@ -3298,7 +3263,7 @@ packages:
       core-js: 2.6.3
       estraverse: 4.2.0
       loader-utils: 1.2.3
-      prettier: 1.16.1
+      prettier: 1.16.3
       prop-types: 15.6.2
       react-syntax-highlighter: 8.1.0
       regenerator-runtime: 0.12.1
@@ -3431,7 +3396,7 @@ packages:
       fs-extra: 7.0.1
       global: 4.3.2
       html-webpack-plugin: /html-webpack-plugin/4.0.0-beta.5/webpack@4.29.0
-      inquirer: 6.2.1
+      inquirer: 6.2.2
       interpret: 1.2.0
       ip: 1.1.5
       is-plain-object: 2.0.4
@@ -3831,7 +3796,7 @@ packages:
   /@types/body-parser/1.17.0:
     dependencies:
       '@types/connect': 3.4.32
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
     resolution:
       integrity: sha512-a2+YeUjPkztKJu5aIF2yArYFQQp8d51wZ7DavSHjFuY1mqVgidGyzEQ41JIVNy82fXj8yPgy2vJmfIywgESW6w==
   /@types/bson/1.0.11:
@@ -3863,7 +3828,7 @@ packages:
       integrity: sha1-OU2+C7X+5Gs42JZzXoto7yOQ0A0=
   /@types/connect/3.4.32:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
     resolution:
       integrity: sha512-4r8qa0quOvh7lGD0pre62CAb1oni1OO6ecJLGCezTmhQ8Fz50Arx9RUszryR8KlgK6avuSXvviL6yWyViQABOg==
   /@types/cookie-parser/1.4.1:
@@ -3887,7 +3852,7 @@ packages:
       integrity: sha512-ipZjBVsm2tF/n8qFGOuGBkUij9X9ZswVi9G3bx/6dz7POpVa6gVHcj1wsX/LVEn9MMF41fxK/PnZPPoTD1UFPw==
   /@types/dotenv/4.0.3:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
     dev: true
     resolution:
       integrity: sha512-mmhpINC/HcLGQK5ikFJlLXINVvcxhlrV+ZOUJSN7/ottYl+8X4oSXzS9lBtDkmWAl96EGyGyLrNvk9zqdSH8Fw==
@@ -3908,7 +3873,7 @@ packages:
       integrity: sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
   /@types/express-serve-static-core/4.16.1:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
       '@types/range-parser': 1.2.3
     resolution:
       integrity: sha512-QgbIMRU1EVRry5cIu1ORCQP4flSYqLM1lS5LYyGWfKnFT3E58f0gKto7BR13clBFVrVZ0G0rbLZ1hUpSkgQQOA==
@@ -4005,13 +3970,10 @@ packages:
       integrity: sha512-OB0WDTEzIi2sXIySkGEEFvYnH9et3hXXJnn74lKO0xZgGFdCNxQqVRbwcYHc9Q07h9yqFLJFEA5zvdAd7nf8Vg==
   /@types/node-fetch/2.1.4:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
     dev: false
     resolution:
       integrity: sha512-tR1ekaXUGpmzOcDXWU9BW73YfA2/VW1DF1FH+wlJ82BbCSnWTbdX+JkqWQXWKIGsFPnPsYadbXfNgz28g+ccWg==
-  /@types/node/10.12.19:
-    resolution:
-      integrity: sha512-2NVovndCjJQj6fUUn9jCgpP4WSqr+u1SoUZMZyJkhGeBFsm6dE46l31S7lPUYt9uQ28XI+ibrJA1f5XyH5HNtA==
   /@types/node/10.12.21:
     resolution:
       integrity: sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
@@ -4046,7 +4008,7 @@ packages:
       integrity: sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
   /@types/rdf-js/2.0.1:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
     dev: false
     resolution:
       integrity: sha512-x3Qct8TPilUos4znM1gANmtTvjOFdDRItmpEM2Nu9QgAx258FN9k22OvOu2TmPzOlx8a1FLdEW3o33UXHQt5ow==
@@ -4103,14 +4065,14 @@ packages:
       integrity: sha512-iHI60IbyfQilNubmxsq4zqSjdynlmc2Q/QvH9kjzg9+CCYVVzq1O6tc7VBzSygIwnmOt07w80IG6HDQvjv3Liw==
   /@types/vfile-message/1.0.1:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
       '@types/unist': 2.0.2
     dev: true
     resolution:
       integrity: sha512-mlGER3Aqmq7bqR1tTTIVHq8KSAFFRyGbrxuM8C/H82g6k7r2fS+IMEkIu3D7JHzG10NvPdR8DNx0jr0pwpp4dA==
   /@types/vfile/3.0.2:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
       '@types/unist': 2.0.2
       '@types/vfile-message': 1.0.1
     dev: true
@@ -4364,9 +4326,9 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zVWV8Z8lislJoOKKqdNMOB+s6+XV5WERty8MnKBeFgwA+19XJjJHs2RP5dzM57FftIs+jQnRToLiWazKr6sSWg==
-  /acorn-dynamic-import/4.0.0/acorn@6.0.5:
+  /acorn-dynamic-import/4.0.0/acorn@6.0.6:
     dependencies:
-      acorn: 6.0.5
+      acorn: 6.0.6
     dev: true
     id: registry.npmjs.org/acorn-dynamic-import/4.0.0
     peerDependencies:
@@ -4381,7 +4343,7 @@ packages:
       integrity: sha1-/YJw9x+7SZawBPqIDuXUZXOnMb8=
   /acorn-globals/4.3.0:
     dependencies:
-      acorn: 6.0.5
+      acorn: 6.0.6
       acorn-walk: 6.1.1
     dev: true
     resolution:
@@ -4416,13 +4378,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
-  /acorn/6.0.5:
-    dev: true
-    engines:
-      node: '>=0.4.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-i33Zgp3XWtmZBMNvCr4azvOFeWVw1Rk6p3hfi3LUDvIFraOMywb1kAtrbi+med14m4Xfpqm3zRZMT+c0FNE7kg==
   /acorn/6.0.6:
     dev: true
     engines:
@@ -4541,6 +4496,7 @@ packages:
       fast-json-stable-stringify: 2.0.0
       json-schema-traverse: 0.4.1
       uri-js: 4.2.2
+    dev: true
     resolution:
       integrity: sha512-FBHEW6Jf5TB9MGBgUUA9XHkTbjXYfAUjY43ACMfmdMRHniyoMHjHjzD50OK8LGDWQwp4rWEsIq5kEqq7rvIM1g==
   /ajv/6.7.0:
@@ -4903,7 +4859,7 @@ packages:
     dependencies:
       '@types/zen-observable': 0.8.0
       apollo-cache: 1.1.25
-      apollo-link: 1.2.6
+      apollo-link: 1.2.7
       apollo-link-dedup: 1.0.13
       apollo-utilities: 1.1.2
       symbol-observable: 1.2.0
@@ -4918,7 +4874,7 @@ packages:
     dependencies:
       '@types/zen-observable': 0.8.0
       apollo-cache: 1.1.20
-      apollo-link: /apollo-link/1.2.6/graphql@0.11.7
+      apollo-link: /apollo-link/1.2.7/graphql@0.11.7
       apollo-link-dedup: 1.0.13
       apollo-utilities: 1.0.25
       graphql: 0.11.7
@@ -5042,20 +4998,20 @@ packages:
       integrity: sha512-f95fPGoQoj+XcR7JWgR35mUYrD7RWT4kHbtSLs3aHeRFOKUHEWW2nHUNTOtQbbIdLulRuxPQCTvSddT7fFwhrA==
   /apollo-link-context/1.0.9/graphql@0.11.7:
     dependencies:
-      apollo-link: /apollo-link/1.2.6/graphql@0.11.7
+      apollo-link: /apollo-link/1.2.7/graphql@0.11.7
     dev: false
     id: registry.npmjs.org/apollo-link-context/1.0.9
     resolution:
       integrity: sha512-gcC1WH7mTyNtS0bF4fPijepXqnERwZjm1JCkuOT6ADBTpDTXIqK+Ec+/QkVawDO26EV9OX5ujWe4kI1qC6T6tA==
   /apollo-link-dedup/1.0.13:
     dependencies:
-      apollo-link: 1.2.6
+      apollo-link: 1.2.7
     dev: false
     resolution:
       integrity: sha512-i4NuqT3DSFczFcC7NMUzmnYjKX7NggLY+rqYVf+kE9JjqKOQhT6wqhaWsVIABfIUGE/N0DTgYJBCMu/18aXmYA==
   /apollo-link-http/1.3.1/graphql@0.11.7:
     dependencies:
-      apollo-link: /apollo-link/1.2.6/graphql@0.11.7
+      apollo-link: /apollo-link/1.2.7/graphql@0.11.7
       graphql: 0.11.7
     dev: false
     id: registry.npmjs.org/apollo-link-http/1.3.1
@@ -5066,7 +5022,7 @@ packages:
   /apollo-link-retry/2.2.5/graphql@0.11.7:
     dependencies:
       '@types/zen-observable': 0.8.0
-      apollo-link: /apollo-link/1.2.6/graphql@0.11.7
+      apollo-link: /apollo-link/1.2.7/graphql@0.11.7
     dev: false
     id: registry.npmjs.org/apollo-link-retry/2.2.5
     resolution:
@@ -5076,33 +5032,31 @@ packages:
       '@types/graphql': 0.12.6
       apollo-utilities: 1.1.2
       graphql: 0.11.7
-      zen-observable-ts: 0.8.13
+      zen-observable-ts: 0.8.14
     dev: false
     id: registry.npmjs.org/apollo-link/1.2.2
     peerDependencies:
       graphql: ^0.11.3 || ^0.12.3 || ^0.13.0
     resolution:
       integrity: sha512-Uk/BC09dm61DZRDSu52nGq0nFhq7mcBPTjy5EEH1eunJndtCaNXQhQz/BjkI2NdrfGI+B+i5he6YSoRBhYizdw==
-  /apollo-link/1.2.6:
+  /apollo-link/1.2.7:
     dependencies:
-      apollo-utilities: 1.1.2
-      zen-observable-ts: 0.8.13
+      zen-observable-ts: 0.8.14
     dev: false
     peerDependencies:
       graphql: ^0.11.3 || ^0.12.3 || ^0.13.0 || ^14.0.0
     resolution:
-      integrity: sha512-sUNlA20nqIF3gG3F8eyMD+mO80fmf3dPZX+GUOs3MI9oZR8ug09H3F0UsWJMcpEg6h55Yy5wZ+BMmAjrbenF/Q==
-  /apollo-link/1.2.6/graphql@0.11.7:
+      integrity: sha512-GXHBF5KTb9xndOnHPo6Z4uxjjs8Ce7R+kkm5MXFPMeDEa7QzBOGgAe9/zudWDPjSD0OtYJ20wyY+5R0MYq+lCQ==
+  /apollo-link/1.2.7/graphql@0.11.7:
     dependencies:
-      apollo-utilities: 1.1.2
       graphql: 0.11.7
-      zen-observable-ts: 0.8.13
+      zen-observable-ts: 0.8.14
     dev: false
-    id: registry.npmjs.org/apollo-link/1.2.6
+    id: registry.npmjs.org/apollo-link/1.2.7
     peerDependencies:
       graphql: ^0.11.3 || ^0.12.3 || ^0.13.0 || ^14.0.0
     resolution:
-      integrity: sha512-sUNlA20nqIF3gG3F8eyMD+mO80fmf3dPZX+GUOs3MI9oZR8ug09H3F0UsWJMcpEg6h55Yy5wZ+BMmAjrbenF/Q==
+      integrity: sha512-GXHBF5KTb9xndOnHPo6Z4uxjjs8Ce7R+kkm5MXFPMeDEa7QzBOGgAe9/zudWDPjSD0OtYJ20wyY+5R0MYq+lCQ==
   /apollo-link/1.2.7/graphql@14.1.1:
     dependencies:
       graphql: 14.1.1
@@ -5150,7 +5104,7 @@ packages:
       js-yaml: 3.12.1
       lazy-val: 1.0.3
       minimatch: 3.0.4
-      normalize-package-data: 2.4.0
+      normalize-package-data: 2.4.2
       plist: 3.0.1
       read-config-file: 3.2.1
       sanitize-filename: 1.6.1
@@ -5614,7 +5568,7 @@ packages:
   /autoprefixer/9.4.7:
     dependencies:
       browserslist: 4.4.1
-      caniuse-lite: 1.0.30000932
+      caniuse-lite: 1.0.30000933
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       postcss: 7.0.14
@@ -6588,7 +6542,7 @@ packages:
       integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==
   /browserslist/3.2.0:
     dependencies:
-      caniuse-lite: 1.0.30000932
+      caniuse-lite: 1.0.30000933
       electron-to-chromium: 1.3.108
     dev: true
     hasBin: true
@@ -6596,7 +6550,7 @@ packages:
       integrity: sha512-fXFmXYMUbD9E/I81MEknzD5TJmA1dQFy+2gYHHnO08CEWGTzWNlDyawBo9pfUIncaG840+RIuScjCT4IpQxTWA==
   /browserslist/4.1.1:
     dependencies:
-      caniuse-lite: 1.0.30000932
+      caniuse-lite: 1.0.30000933
       electron-to-chromium: 1.3.108
       node-releases: 1.1.5
     dev: true
@@ -6605,7 +6559,7 @@ packages:
       integrity: sha512-VBorw+tgpOtZ1BYhrVSVTzTt/3+vSE3eFUh0N2GCFK1HffceOaf32YS/bs6WiFhjDAblAFrx85jMy3BG9fBK2Q==
   /browserslist/4.4.1:
     dependencies:
-      caniuse-lite: 1.0.30000932
+      caniuse-lite: 1.0.30000933
       electron-to-chromium: 1.3.108
       node-releases: 1.1.5
     dev: true
@@ -6986,10 +6940,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
-  /caniuse-lite/1.0.30000932:
-    dev: true
-    resolution:
-      integrity: sha512-4bghJFItvzz8m0T3lLZbacmEY9X1Z2AtIzTr7s7byqZIOumASfr4ynDx7rtm0J85nDmx8vsgR6vnaSoeU8Oh0A==
   /caniuse-lite/1.0.30000933:
     dev: true
     resolution:
@@ -7665,7 +7615,7 @@ packages:
       fn-args: 3.0.0
       gherkin: 5.1.0
       glob: 6.0.4
-      inquirer: 6.2.1
+      inquirer: 6.2.2
       js-beautify: 1.8.9
       mkdirp: 0.5.1
       mocha: 4.1.0
@@ -9179,7 +9129,7 @@ packages:
     dependencies:
       database-js-common: github.com/mlaanderson/database-js-common/e4e114208175abbe286f8e27f321e6e8521b6817
       database-js-sqlparser: 1.0.0
-      firebase: 5.8.1
+      firebase: 5.8.2
     dev: true
     resolution:
       integrity: sha512-Z6el4ZgNNOZVzRQY8vt5Fs5BT6+UrxaCXKqgqK+9lQZ5wAx26RlOn4EAxwHj9epFz47EqkniQChFg0IC0g+J0w==
@@ -10001,7 +9951,7 @@ packages:
       integrity: sha1-wUbS4ISt37p0pRKTxuAZmkn3V/E=
   /editorconfig/0.15.2:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
       '@types/semver': 5.5.0
       commander: 2.19.0
       lru-cache: 4.1.5
@@ -10150,9 +10100,9 @@ packages:
     dev: true
     resolution:
       integrity: sha512-JPGLME6fxJcHG8hX7HWFl6Aew6iVm0DkcrENreKa5SUJCHG+uUaAhxDGDt+YGcNkyx1uJ6eBGMvFxDTLUv67pg==
-  /electron/4.0.3:
+  /electron/4.0.4:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
       electron-download: 4.1.1
       extract-zip: 1.6.7
     dev: true
@@ -10161,7 +10111,7 @@ packages:
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-wOBYnlv3Xgbwh9DAHBktP3sQcbCBuXMQi1NzPH3EMnbdYNqj+FnTzVLq0RYp0uSzdjR3fhAZ/E6wFSMLaAc5iw==
+      integrity: sha512-zG5VtLrmPfmw1fXY/3BEtRZk7OZ7djQhweZ6rW+R5NeF6s8RTz/AwTGtLoBo4z8wmJ5QTy0Y941FZw4pe5YlpA==
   /elliptic/6.4.1:
     dependencies:
       bn.js: 4.11.8
@@ -11479,19 +11429,6 @@ packages:
     optional: true
     resolution:
       integrity: sha512-vi+DbUPRrsUaLxuMLgCuyISTBNQ/TqrEwWzUpMqyABPwE6YhGplNnCDPs+/kRDXxdqWUdwrUEXo1ansBSimoNw==
-  /firebase/5.8.1:
-    dependencies:
-      '@firebase/app': 0.3.8
-      '@firebase/auth': /@firebase/auth/0.9.2/@firebase!app@0.3.8
-      '@firebase/database': /@firebase/database/0.3.11/@firebase!app@0.3.8
-      '@firebase/firestore': /@firebase/firestore/1.0.1/@firebase!app@0.3.8
-      '@firebase/functions': /@firebase/functions/0.3.6/@firebase!app@0.3.8
-      '@firebase/messaging': /@firebase/messaging/0.3.10/@firebase!app@0.3.8
-      '@firebase/polyfill': 0.3.5
-      '@firebase/storage': /@firebase/storage/0.2.7/@firebase!app@0.3.8
-    dev: true
-    resolution:
-      integrity: sha512-CbpYqQB5Ez44C14TIc2903VRHd4RrRdw/9O2b7aWMvyA78pTT6NiMvKbBnu8dsPtztcSz2e3CeP3L0qBVGKmpw==
   /firebase/5.8.2:
     dependencies:
       '@firebase/app': 0.3.8
@@ -11502,7 +11439,6 @@ packages:
       '@firebase/messaging': /@firebase/messaging/0.3.10/@firebase!app@0.3.8
       '@firebase/polyfill': 0.3.5
       '@firebase/storage': /@firebase/storage/0.2.7/@firebase!app@0.3.8
-    dev: false
     resolution:
       integrity: sha512-8sdN33WIO8+Ic8wqJ9luhAPsb6M+m4v30wm/nP265GJ25MK2u8SpDNNxqKSu87SVEuUUWe9Hp7zbistIhWppGg==
   /flat-cache/2.0.1:
@@ -12766,7 +12702,7 @@ packages:
       integrity: sha512-jApXqWBzNXQ8jYa/HLkZJaVw9jgwNqZkywa2zfFn16Iv1Zb7ELNHkJaXHR7Quvd5SIGsy6Ny7SUKATgnu05uEg==
   /graphql-tools/4.0.4:
     dependencies:
-      apollo-link: 1.2.6
+      apollo-link: 1.2.7
       apollo-utilities: 1.1.2
       deprecated-decorator: 0.1.6
       iterall: 1.2.2
@@ -12833,20 +12769,6 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-xmhA11h2XhqpSVzDAmoQAYdNQ+swILXpKOiRpAEQ2kX55ioxVADc6v7SkS4zQBxm4klhQHgGqpGKvoL6LGx4VQ==
-  /grpc/1.17.0:
-    bundledDependencies:
-      - node-pre-gyp
-    dependencies:
-      lodash.camelcase: 4.3.0
-      lodash.clone: 4.5.0
-      nan: 2.12.1
-      protobufjs: 5.0.3
-    dev: true
-    engines:
-      node: '>=4'
-    requiresBuild: true
-    resolution:
-      integrity: sha512-5zb5ilwHlsiWfE2Abq/IN5SkHQ2zi4QF/u9Gewcw5DO3y+hGTtzZUiMK52MX3YZHAIRjqxDcO3fx0jLhPjT8Zw==
   /grpc/1.18.0:
     bundledDependencies:
       - node-pre-gyp
@@ -12855,7 +12777,6 @@ packages:
       lodash.clone: 4.5.0
       nan: 2.12.1
       protobufjs: 5.0.3
-    dev: false
     engines:
       node: '>=4'
     requiresBuild: true
@@ -13810,7 +13731,7 @@ packages:
       lodash: 4.17.11
       mute-stream: 0.0.7
       run-async: 2.3.0
-      rxjs: 6.3.3
+      rxjs: 6.4.0
       string-width: 2.1.1
       strip-ansi: 4.0.0
       through: 2.3.8
@@ -13830,7 +13751,7 @@ packages:
       lodash: 4.17.11
       mute-stream: 0.0.7
       run-async: 2.3.0
-      rxjs: 6.3.3
+      rxjs: 6.4.0
       string-width: 2.1.1
       strip-ansi: 5.0.0
       through: 2.3.8
@@ -17144,7 +17065,7 @@ packages:
       loud-rejection: 1.6.0
       map-obj: 1.0.1
       minimist: 1.2.0
-      normalize-package-data: 2.4.0
+      normalize-package-data: 2.4.2
       object-assign: 4.1.1
       read-pkg-up: 1.0.1
       redent: 1.0.0
@@ -17160,7 +17081,7 @@ packages:
       decamelize-keys: 1.1.0
       loud-rejection: 1.6.0
       minimist-options: 3.0.2
-      normalize-package-data: 2.4.0
+      normalize-package-data: 2.4.2
       read-pkg-up: 3.0.0
       redent: 2.0.0
       trim-newlines: 2.0.0
@@ -17934,7 +17855,7 @@ packages:
       rollup-plugin-json: 3.1.0
       rollup-plugin-node-resolve: 4.0.0
       rollup-plugin-sourcemaps: /rollup-plugin-sourcemaps/0.4.2/rollup@0.67.4
-      rxjs: 6.3.3
+      rxjs: 6.4.0
       stylus: 0.54.5
       uglify-js: 3.4.9
       update-notifier: 2.5.0
@@ -18063,7 +17984,7 @@ packages:
       integrity: sha512-90awpbbMa/x2H81eWWYniyli3LJ1PZU/FaztL10d9Rp/4kw2+97pqyLjdxSPxcOv9St//m9kfuWZ7gyoVDjgcg==
   /ngx-auth-firebaseui/2.2.1:
     dependencies:
-      '@angular-material-extensions/password-strength': 3.4.0
+      '@angular-material-extensions/password-strength': 3.4.1
     dev: false
     peerDependencies:
       '@angular/animations': ^7.1.3
@@ -18528,15 +18449,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-0NRoWv1UFRk8jHUFYC0NF81kR00=
-  /normalize-package-data/2.4.0:
-    dependencies:
-      hosted-git-info: 2.7.1
-      is-builtin-module: 1.0.0
-      semver: 5.6.0
-      validate-npm-package-license: 3.0.4
-    dev: true
-    resolution:
-      integrity: sha512-9jjUFbTPfEy3R/ad/2oNbKtW9Hgovl5O1FvFWKkKblNXoN/Oou6+9+KKohPK13Yc3/TyunyWhJp6gvRNR/PPAw==
   /normalize-package-data/2.4.2:
     dependencies:
       hosted-git-info: 2.7.1
@@ -19612,7 +19524,7 @@ packages:
       integrity: sha512-VEhdEDhBkoSILPmsZ96SoIIUow3hZbtgQsqXw7r8DxxnqsCIO0fwkT9mWgBcf9SPjVUh92liuEprHrrYzXBPWQ==
   /parse5/3.0.3:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
     resolution:
       integrity: sha512-rgO9Zg5LLLkfJF9E6CCmXlSE4UVceloys8JrFqCcHloC3usd/kJCyPDwH2SOlzix2j3xaP9sUX3e8+kvkuleAA==
   /parse5/4.0.0:
@@ -20329,13 +20241,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
-  /prettier/1.16.1:
-    dev: true
-    engines:
-      node: '>=4'
-    hasBin: true
-    resolution:
-      integrity: sha512-XXUITwIkGb3CPJ2hforHah/zTINRyie5006Jd2HKy2qz7snEJXl0KLfsJZW/wst9g6R2rFvqba3VpNYdu1hDcA==
   /prettier/1.16.3:
     dev: true
     engines:
@@ -20399,7 +20304,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-VR1iadSfok+3MweY9HS2V5ExzwtS3TVvJyJUtdPc8K8dblg2m6H3YOKnlMdZlzp31AaGnM95GKhIFITo6j02OQ==
-  /prisma-cli-core/1.25.6:
+  /prisma-cli-core/1.25.7:
     dependencies:
       adm-zip: 0.4.13
       archiver: 2.1.1
@@ -20425,11 +20330,11 @@ packages:
       node-forge: 0.7.6
       npm-run: 4.1.2
       opn: 5.4.0
-      prisma-client-lib: /prisma-client-lib/1.25.6/graphql@14.1.1
-      prisma-datamodel: 1.25.6
-      prisma-db-introspection: 1.25.6
-      prisma-generate-schema: 1.25.6
-      prisma-yml: 1.25.6
+      prisma-client-lib: /prisma-client-lib/1.25.7/graphql@14.1.1
+      prisma-datamodel: 1.25.7
+      prisma-db-introspection: 1.25.7
+      prisma-generate-schema: 1.25.7
+      prisma-yml: 1.25.7
       scuid: 1.1.0
       sillyname: 0.1.0
       source-map-support: 0.4.18
@@ -20438,8 +20343,8 @@ packages:
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-S+CIwmm6MP4/DH1rHwapVoL5RZVymGH0rlhWi861Fh1au9/OCIBWgnyEmwjtnda+zhSzq9cT/hcwH3HdOEzEiQ==
-  /prisma-cli-engine/1.25.6:
+      integrity: sha512-uuAwv9C+TWdEr668XpT01+lBLK3xKYW5BIE5liCNEsxwuaOFrbm4QvrnRUeebB2C2VtjNfZVLBpVt+u/NHq2gQ==
+  /prisma-cli-engine/1.25.7:
     dependencies:
       '@heroku/linewrap': 1.0.0
       ansi-escapes: 3.2.0
@@ -20475,7 +20380,7 @@ packages:
       mkdirp: 0.5.1
       opn: 5.4.0
       prisma-json-schema: 0.1.3
-      prisma-yml: 1.25.6
+      prisma-yml: 1.25.7
       raven: 2.6.4
       rwlockfile: 1.4.12
       scuid: 1.1.0
@@ -20488,8 +20393,8 @@ packages:
       update-notifier: 2.5.0
     dev: true
     resolution:
-      integrity: sha512-ZijyAlueKVbqL0ZUgUOmXEPjtKN4A7EtsammNWwQOPw/e44cllvi2dIBZHQjnRhVWXlwyqiUAJcM/XFR3vua2g==
-  /prisma-client-lib/1.25.6/graphql@14.1.1:
+      integrity: sha512-BX6kBknOonUR3mzWXrp7UAW/h/M8ZaWjNDTBn1WfQJCNnSeZPzYF3cuXkdd8EIU+Xh1J6gmS3NIcZYoKHhUz7g==
+  /prisma-client-lib/1.25.7/graphql@14.1.1:
     dependencies:
       '@types/node': 10.12.21
       '@types/prettier': 1.15.2
@@ -20501,27 +20406,27 @@ packages:
       jsonwebtoken: 8.4.0
       lodash.flatten: 4.4.0
       prettier: 1.16.3
-      prisma-datamodel: 1.25.6
-      prisma-generate-schema: 1.25.6
+      prisma-datamodel: 1.25.7
+      prisma-generate-schema: 1.25.7
       subscriptions-transport-ws: /subscriptions-transport-ws/0.9.15/graphql@14.1.1
       uppercamelcase: 3.0.0
       ws: 6.1.3
       zen-observable: 0.8.13
     dev: true
-    id: registry.npmjs.org/prisma-client-lib/1.25.6
+    id: registry.npmjs.org/prisma-client-lib/1.25.7
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
     resolution:
-      integrity: sha512-fDRQ1vuJCM6Wx2eNAT+khqZwNALMDLYhIO8VTcEzuyGvhyyYlbYSp10BbDp0kmKmRRLote0Kh1RKLYwE4tjGng==
-  /prisma-datamodel/1.25.6:
+      integrity: sha512-VEb8zjhthex59u+VWCSYkHXSx/jKKKulnI8zfmaRm8d3rhOzJghlwE0cid7jwIbihl1Pes7i6YblAWS3QupWJg==
+  /prisma-datamodel/1.25.7:
     dependencies:
       graphql: 14.1.1
       pluralize: 7.0.0
       popsicle: 10.0.1
     dev: true
     resolution:
-      integrity: sha512-TUM3Q8Kw9lvHpdQeITmcuIA59ukdZa0r/xJcNX7Iwwg6SPr5EXDRwmMiqBMytWv38dcMf9qsy1LtnfAiky7XVw==
-  /prisma-db-introspection/1.25.6:
+      integrity: sha512-/X4qqpe6cnpd1fv/rSrsYrD4dFFDaSa22TGmgF5H/4eKfaioPhAM2+8tmdtvaIPDcUQlT9RcO1MEBS4w5+ASIw==
+  /prisma-db-introspection/1.25.7:
     dependencies:
       '@types/mongodb': 3.1.19
       graphql-request: 1.8.2
@@ -20529,22 +20434,22 @@ packages:
       mongodb: 3.1.13
       pg: /pg/7.8.0/pg@7.8.0
       pluralize: 7.0.0
-      prisma-datamodel: 1.25.6
-      prisma-yml: 1.25.6
+      prisma-datamodel: 1.25.7
+      prisma-yml: 1.25.7
       scuid: 1.1.0
       uppercamelcase: 3.0.0
     dev: true
     resolution:
-      integrity: sha512-jXsX+jQl+CUv4lDwEULsb9SaJBSkBCyLTetswCykuoS2Q2ytIuf14A5ufd5vqvBYH3rS/8gcua9vqlf2hd/JZg==
-  /prisma-generate-schema/1.25.6:
+      integrity: sha512-8Z8VaKiN/tvg7YjlHbsJrWWlzlmvu5eGxC4BLnnKFt+ykHoYnUZXiReS+Kn8EDg9hYv/PATX4dFb4Fdpzg60Hg==
+  /prisma-generate-schema/1.25.7:
     dependencies:
       graphql: 14.1.1
       pluralize: 7.0.0
       popsicle: 10.0.1
-      prisma-datamodel: 1.25.6
+      prisma-datamodel: 1.25.7
     dev: true
     resolution:
-      integrity: sha512-uskz53kC16p4oSUMiZYlDu/BmFlCF9ScY4x422lBOhCclJV58aXGVuX6PUoZ2H1S9casNe5P3h0rg9t7XLyVZg==
+      integrity: sha512-vpw1b4THnOjNRiILd4XXuL58eODMiV51CfEBwb7xvLrfYpQXFP+2TEBQgF9hdjbjfabWnJAN8zO11UKi1Wu7RQ==
   /prisma-json-schema/0.1.3:
     dev: true
     resolution:
@@ -20572,7 +20477,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wI/lOQrD78de2+ZNzJlbEYcYiUANtpdyT0VzAS+YbF5+1/O+shOnpwYsBtjrVL5Er0RwMkwH7j+oZQM61ENBMQ==
-  /prisma-yml/1.25.6:
+  /prisma-yml/1.25.7:
     dependencies:
       ajv: 5.5.2
       bluebird: 3.5.3
@@ -20594,12 +20499,12 @@ packages:
       yaml-ast-parser: 0.0.40
     dev: true
     resolution:
-      integrity: sha512-I1041mb3t6HZNEVz2jTTrVmjSFLpFt8OpbAOtON24i5BDtC7qvaLSEUrD8nRKd98whZZd9Cv5PDUAageI+QF6w==
-  /prisma/1.25.6:
+      integrity: sha512-YGl+UKmdTTSFV2xSTOJdu39Uq8VhdIpJt7et/LL4fbCSXWiqKHxBeX9jjQeCfuyKCdRga+fDE84EPeL7NDnX7Q==
+  /prisma/1.25.7:
     dependencies:
       fs-extra: 7.0.1
-      prisma-cli-core: 1.25.6
-      prisma-cli-engine: 1.25.6
+      prisma-cli-core: 1.25.7
+      prisma-cli-engine: 1.25.7
       semver: 5.6.0
       source-map-support: 0.4.18
     dev: true
@@ -20607,7 +20512,7 @@ packages:
       node: '>=6.13.0'
     hasBin: true
     resolution:
-      integrity: sha512-H6hBwAizboY2DOKkZwk+aycSX37tMkMeywW/LQ5qzcD+i3VnZa4ViDTdy40iO5KmV/Oy43gX/ngHfepfqV17Hg==
+      integrity: sha512-vrQlHrvpLQuDq909GHV1zTcccIM+QYOF8keqXXt2VTz4Pidx5CbvYaz6bRFPRv2e6Z8Yma6D3A7Zxx2scBc4+w==
   /prismjs/1.15.0:
     dev: true
     optionalDependencies:
@@ -20745,7 +20650,7 @@ packages:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/long': 4.0.0
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
       long: 4.0.0
     dev: false
     hasBin: true
@@ -20972,22 +20877,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
-  /puppeteer/1.11.0:
-    dependencies:
-      debug: 4.1.1
-      extract-zip: 1.6.7
-      https-proxy-agent: 2.2.1
-      mime: 2.4.0
-      progress: 2.0.3
-      proxy-from-env: 1.0.0
-      rimraf: 2.6.3
-      ws: 6.1.3
-    dev: true
-    engines:
-      node: '>=6.4.0'
-    requiresBuild: true
-    resolution:
-      integrity: sha512-iG4iMOHixc2EpzqRV+pv7o3GgmU2dNYEMkvKwSaQO/vMZURakwSOn/EYJ6OIRFYOque1qorzIBvrytPIQB3YzQ==
   /puppeteer/1.12.1:
     dependencies:
       debug: 4.1.1
@@ -21605,7 +21494,7 @@ packages:
   /read-pkg/1.1.0:
     dependencies:
       load-json-file: 1.1.0
-      normalize-package-data: 2.4.0
+      normalize-package-data: 2.4.2
       path-type: 1.1.0
     dev: true
     engines:
@@ -21615,7 +21504,7 @@ packages:
   /read-pkg/2.0.0:
     dependencies:
       load-json-file: 2.0.0
-      normalize-package-data: 2.4.0
+      normalize-package-data: 2.4.2
       path-type: 2.0.0
     dev: true
     engines:
@@ -21625,7 +21514,7 @@ packages:
   /read-pkg/3.0.0:
     dependencies:
       load-json-file: 4.0.0
-      normalize-package-data: 2.4.0
+      normalize-package-data: 2.4.2
       path-type: 3.0.0
     dev: true
     engines:
@@ -21634,7 +21523,7 @@ packages:
       integrity: sha1-nLxoaXj+5l0WwA4rGcI3/Pbjg4k=
   /read-pkg/4.0.1:
     dependencies:
-      normalize-package-data: 2.4.0
+      normalize-package-data: 2.4.2
       parse-json: 4.0.0
       pify: 3.0.0
     dev: true
@@ -22466,7 +22355,7 @@ packages:
   /rollup/0.67.4:
     dependencies:
       '@types/estree': 0.0.39
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
     dev: true
     hasBin: true
     resolution:
@@ -23754,7 +23643,7 @@ packages:
       integrity: sha512-b9Yd0TrzceMVYSbuamM1sFsGM1oVfyFTM22gOoyLhymNvBVApuYpkdFOgYkKJpN/KhTpcCYcTGHg7X+FJ33Vvw==
   /speedline-core/1.4.2:
     dependencies:
-      '@types/node': 10.12.19
+      '@types/node': 10.12.21
       image-ssim: 0.2.0
       jpeg-js: 0.1.2
     dev: true
@@ -25484,7 +25373,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7GJFZlyTZY7uMAEhX62ZLxdwOpGDJzc/nwpi1nRPZ7N2ICcqqrMjDtRnki15IUBv2ZjIGu6KBqk/pUqJFODFsg==
-  /ts-simple-ast/21.0.2:
+  /ts-simple-ast/21.0.3:
     dependencies:
       '@dsherret/to-absolute-glob': 2.0.2
       code-block-writer: 7.2.2
@@ -25497,7 +25386,7 @@ packages:
       typescript: 3.1.4
     dev: false
     resolution:
-      integrity: sha512-ytj+4Zi4uyD1MytOJ+E0uG3QuU33chzEq5GMXYXKEruDO91svAn8Bl6du7pkJi1vUJwWC/8O+8j+3ZbX/n07dw==
+      integrity: sha512-NT1PwTzohOpodUD9N+4Uu8KerRkRZazaz5sZEXaQz8hgL/TJ3vWgVJPj/XOOVsJWDmtY350hmKr9GabzO2U1fQ==
   /tsconfig-paths-jest/0.0.1:
     dev: true
     resolution:
@@ -25727,11 +25616,18 @@ packages:
     resolution:
       integrity: sha512-VCj5UiSyHBjwfYacmDuc/NOk4QQixbE+Wn7MFJuS0nRuPQbof132Pw4u53dm264O8LPc2MVsc7RJNml5szurkg==
   /typescript/3.2.4:
+    dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
       integrity: sha512-0RNDbSdEokBeEAkgNbxJ+BLwSManFy9TeXz8uW+48j/xhEXv1ePME60olyzw2XzUqUBNAYFeJadIqAgNqIACwg==
+  /typescript/3.3.1:
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-cTmIDFW7O0IHbn1DPYjkiebHxwtCMU+eTy30ZtJNBPF9j2O1ITu5XH2YnBeVRKWHqF+3JQwWJv0Q0aUgX8W7IA==
   /typical/2.6.1:
     dev: true
     resolution:
@@ -26746,8 +26642,8 @@ packages:
       '@webassemblyjs/helper-module-context': 1.7.11
       '@webassemblyjs/wasm-edit': 1.7.11
       '@webassemblyjs/wasm-parser': 1.7.11
-      acorn: 6.0.5
-      acorn-dynamic-import: /acorn-dynamic-import/4.0.0/acorn@6.0.5
+      acorn: 6.0.6
+      acorn-dynamic-import: /acorn-dynamic-import/4.0.0/acorn@6.0.6
       ajv: 6.7.0
       ajv-keywords: /ajv-keywords/3.3.0/ajv@6.7.0
       chrome-trace-event: 1.0.0
@@ -27447,16 +27343,9 @@ packages:
       commander: 2.19.0
     resolution:
       integrity: sha512-7tDlwhrBG+oYFdXNOjILSurpfQyuVgkRe3hB2q8TEssamDHB7BbLWYkYO98nTn0FibfdFroFKDjndbgufAgS/Q==
-  /zen-observable-ts/0.8.13:
-    dependencies:
-      zen-observable: 0.8.13
-    dev: false
-    resolution:
-      integrity: sha512-WDb8SM0tHCb6c0l1k60qXWlm1ok3zN9U4VkLdnBKQwIYwUoB9psH7LIFgR+JVCCMmBxUgOjskIid8/N02k/2Bg==
   /zen-observable-ts/0.8.14:
     dependencies:
       zen-observable: 0.8.13
-    dev: true
     resolution:
       integrity: sha512-yAkb3KkXFa0Dx5A7CvQC0Gj8ycixrLmbr2UZjHgS4FlV5bFwP5artbJTJepETO/DKKfLJ2JVAZrrmNJ4APjdmA==
   /zen-observable/0.8.13:
@@ -27502,14 +27391,12 @@ packages:
     name: sqlite3
     requiresBuild: true
     resolution:
-      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/mapbox/node-sqlite3/tar.gz/7eda5eee0c98d8deb2a89f3d6348f8f57ec0f9e1'
     version: 4.0.6
   github.com/mlaanderson/database-js-common/e4e114208175abbe286f8e27f321e6e8521b6817:
     dev: true
     name: database-js-common
     resolution:
-      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/mlaanderson/database-js-common/tar.gz/e4e114208175abbe286f8e27f321e6e8521b6817'
     version: 1.0.1
 registry: 'https://registry.npmjs.org/'
@@ -27521,7 +27408,7 @@ specifiers:
   '@angular-builders/dev-server': 7.2.1
   '@angular-devkit/build-angular': 0.13.0
   '@angular-devkit/build-ng-packagr': 0.13.0
-  '@angular-material-extensions/password-strength': 3.4.0
+  '@angular-material-extensions/password-strength': 3.4.1
   '@angular-mdc/web': 0.43.7
   '@angular/animations': 7.2.3
   '@angular/cdk': 7.3.0
@@ -27695,7 +27582,7 @@ specifiers:
   dotenv-extended: 2.3.0
   earcut: 2.1.4
   ease-component: 1.0.0
-  electron: 4.0.3
+  electron: 4.0.4
   electron-builder: 20.38.5
   electron-packager: 13.0.1
   electron-reload: 1.4.0
@@ -27797,7 +27684,7 @@ specifiers:
   preboot: 7.0.0
   prerender-spa-plugin: 3.4.0
   prettier: 1.16.3
-  prisma: 1.25.6
+  prisma: 1.25.7
   protractor: 5.4.2
   puppeteer: 1.12.1
   rdflib: 0.19.1

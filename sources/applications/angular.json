@@ -71,14 +71,8 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "apps/web-application/webpack.config.js",
-              "mergeStrategies": {
-                "plugins": "append"
-              }
-            },
             "outputPath": "dist/apps/web-application/browser",
             "index": "apps/web-application/src/index.html",
             "main": "apps/web-application/src/main.ts",

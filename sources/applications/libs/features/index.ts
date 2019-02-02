@@ -1,6 +1,6 @@
 export * from './demo-angular-material';
 export * from './demo-computer-science';
-export * from './demo-covalent-ui'; 
+export * from './demo-covalent-ui';
 export * from './demo-heroes';
 export * from './demo-items';
 export * from './demo-mdc';

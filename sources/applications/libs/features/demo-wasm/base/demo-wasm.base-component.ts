@@ -1,9 +1,8 @@
 import { BaseComponent } from '@application/core';
 
 export abstract class DemoWasmBaseComponent extends BaseComponent {
-  
-  public text: string = 'DemoWasm';
-  
+  public text = 'DemoWasm';
+
   constructor() {
     super();
   }
