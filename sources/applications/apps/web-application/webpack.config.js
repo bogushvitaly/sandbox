@@ -12,7 +12,7 @@ const STATIC_DIR_PATH = path.join(process.cwd(), 'dist', 'apps', 'web-applicatio
 const ROUTES = [];
 
 function NothingPlugin() {
-  this.apply = function() {};
+  this.apply = function () {};
 }
 
 module.exports = {
@@ -21,42 +21,35 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     crypto: true,
+    path: true,
     stream: true
-    // process: 'mock',
-    // tty: 'mock'
-    // global: true,
-    // tty: false,
-    // module: false,
-    // clearImmediate: false,
-    // setImmediate: false,
-    // os: 'empty',
   },
   plugins: [
-    process.env.DEVELOPMENT_MODE
-      ? new NothingPlugin()
-      : new PrerenderSPAPlugin({
-          staticDir: STATIC_DIR_PATH,
-          routes: ROUTES,
-          minify: {
-            collapseBooleanAttributes: true,
-            collapseWhitespace: true,
-            decodeEntities: true,
-            keepClosingSlash: true,
-            sortAttributes: true
-          },
-          renderer: new Renderer({
-            injectProperty: '__PRERENDER_INJECTED',
-            inject: {
-              foo: 'bar'
-            },
-            maxConcurrentRoutes: 4,
-            renderAfterDocumentEvent: 'custom-render-trigger',
-            renderAfterElementExists: 'my-app-element',
-            renderAfterTime: 5000,
-            headless: true,
-            executablePath: process.env.CHROME_BIN
-          })
-        })
+    process.env.DEVELOPMENT_MODE ?
+    new NothingPlugin() :
+    new PrerenderSPAPlugin({
+      staticDir: STATIC_DIR_PATH,
+      routes: ROUTES,
+      minify: {
+        collapseBooleanAttributes: true,
+        collapseWhitespace: true,
+        decodeEntities: true,
+        keepClosingSlash: true,
+        sortAttributes: true
+      },
+      renderer: new Renderer({
+        injectProperty: '__PRERENDER_INJECTED',
+        inject: {
+          foo: 'bar'
+        },
+        maxConcurrentRoutes: 4,
+        renderAfterDocumentEvent: 'custom-render-trigger',
+        renderAfterElementExists: 'my-app-element',
+        renderAfterTime: 5000,
+        headless: true,
+        executablePath: process.env.CHROME_BIN
+      })
+    })
     // new ContentInjectionPlugin()
   ]
 };

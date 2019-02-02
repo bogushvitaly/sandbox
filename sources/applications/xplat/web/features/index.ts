@@ -37,6 +37,12 @@ export * from './demo-css-grid';
 export * from './demo-flex-layout';
 export * from './ui-swiper';
 export * from './system-metadata';
+export * from './demo-wasm';
+export * from './demo-babylon';
+export * from './demo-css-flex';
+
+
+
 
 
 

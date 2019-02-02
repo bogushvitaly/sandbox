@@ -7,12 +7,17 @@ import { SharedModule } from './features/shared/shared.module';
 
 import { LoadingStrategyService } from '@application/core';
 import { routeBase } from '@application/features';
-import { UiAppMenuComponent, UiAppMenuModule, UiAppShellComponent, UiAppShellModule } from '@application/web';
+import {
+  UiAppMenuComponent,
+  UiAppMenuModule,
+  UiAppShellComponent,
+  UiAppShellModule
+} from '@application/web';
 
-const config: ExtraOptions = {
+const rootRouteConfig: ExtraOptions = {
   useHash: false,
   initialNavigation: true,
-  enableTracing: true,
+  enableTracing: false,
   preloadingStrategy: LoadingStrategyService
 };
 
@@ -30,7 +35,7 @@ const config: ExtraOptions = {
         demoVersion: './features/demoVersion.loader.module#DemoVersionLoaderModule',
         uiAuthFirebase: './features/uiAuthFirebase.loader.module#UiAuthFirebaseLoaderModule'
       }),
-      config
+      rootRouteConfig
     )
   ]
 })

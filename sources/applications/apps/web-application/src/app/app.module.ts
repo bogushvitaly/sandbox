@@ -1,5 +1,6 @@
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
+import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -37,7 +38,7 @@ import { SharedModule } from './features/shared/shared.module';
     RouterModule
   ],
   declarations: [AppComponent],
-  providers: [TransferHttpService],
+  providers: [TransferHttpService, { provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

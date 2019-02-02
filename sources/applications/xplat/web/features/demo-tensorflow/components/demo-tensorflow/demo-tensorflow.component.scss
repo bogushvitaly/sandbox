@@ -1,11 +1,12 @@
 .wrapper {
   display: inline-flex;
   justify-content: flex-end;
+  transition: border-color .2s ease-in;
   border: 10px solid lighten(#ef6c00, 15%);
-  transition: border-color 0.2s ease-in;
+
   &:hover {
+    transition: border-color .2s ease-in;
     border: 10px solid #ef6c00;
-    transition: border-color 0.2s ease-in;
   }
 }
 

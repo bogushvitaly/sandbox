@@ -28,6 +28,9 @@
     },
     "web-application-api": {
       "tags": []
+    },
+    "static-content-server": {
+      "tags": []
     }
   }
 }

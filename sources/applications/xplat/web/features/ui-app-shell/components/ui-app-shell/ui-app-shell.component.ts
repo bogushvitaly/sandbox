@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { UiOverlayService } from '../../../ui-overlay/services/ui-overlay.service';
-import { UiOverlayRef } from '../../../ui-overlay/ui-overlay-ref';
-import { STATIC_FILE_DATE } from '../../data/data';
+import { UiOverlayRef } from '../../../ui-overlay/ui-overlay-ref'; 
 
 import { UiAppShellBaseComponent } from '@application/features';
 import { fadeAnimation } from '@application/utils';

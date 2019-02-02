@@ -1,5 +1,14 @@
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  ViewChild
+} from '@angular/core';
 import * as tf from '@tensorflow/tfjs';
 
 import { features, labels } from '../data/data';
@@ -7,7 +16,7 @@ import { features, labels } from '../data/data';
 import { BaseComponent } from '@application/core';
 import { DemoTensorflowDrawableDirective } from '@application/web/features/demo-tensorflow/directives/demo-tensorflow-drawable.directive';
 
-export abstract class DemoTensorflowBaseComponent extends BaseComponent implements OnInit {
+export abstract class DemoTensorflowBaseComponent extends BaseComponent implements AfterViewInit {
   public text = 'DemoTensorflow';
 
   constructor(protected platformId: Object) {
@@ -22,11 +31,9 @@ export abstract class DemoTensorflowBaseComponent extends BaseComponent implemen
 
   @ViewChild(DemoTensorflowDrawableDirective) canvas;
 
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.trainNewModel();
-      this.loadModel();
-    }
+  ngAfterViewInit() {
+    this.loadModel();
+    this.trainNewModel();
   }
 
   async trainNewModel() {
@@ -53,10 +60,39 @@ export abstract class DemoTensorflowBaseComponent extends BaseComponent implemen
   }
 
   async loadModel() {
-    this.model = await tf.loadModel('/assets/ml-models/model.json');
+    // (global as any).fetch = require('node-fetch');
+
+    const MODEL_PATH = 'http://localhost:4002/assets/tfjs-models/digit-recognition/model.json';
+    // const MODEL_PATH = 'file:///assets/tfjs-models/model.json';
+
+    this.model = await tf.loadModel(MODEL_PATH);
+
+    // if (isPlatformBrowser(this.platformId)) {
+    // this.model = await tf.loadModel('/assets/tfjs-models/model.json');
+    // }
+    // if (isPlatformServer(this.platformId)) {
+    // require('@tensorflow/tfjs-node');
+    // this.model = await tf.loadModel('http://localhost:4000/assets/tfjs-models/model.json');
+    // this.model = await tf.loadModel('file://assets/tfjs-models/model.json');
+    // }
   }
 
   async predict(imageData: ImageData) {
+    // if (isPlatformBrowser(this.platformId)) {
+    // this.model = await tf.loadModel('/assets/tfjs-models/model.json');
+    // }
+    if (isPlatformServer(this.platformId)) {
+      // this.model = await tf.loadModel('./dist/apps/web-application/browser/assets/tfjs-models/model.json');
+      // let fs = require('fs');
+      // fs.readdir(__dirname, function(err, items) {
+      //   console.log(222222222);
+      //   console.log(items);
+      // });
+      // (global as any).fetch = require('node-fetch');
+      // const MODEL_PATH = 'file:///assets/tfjs-models/model.json';
+      // this.model = await tf.loadModel(MODEL_PATH);
+    }
+
     const pred = await tf.tidy(() => {
       // Convert the canvas pixels to
       let img = tf.fromPixels(imageData, 1);

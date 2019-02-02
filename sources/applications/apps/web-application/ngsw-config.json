@@ -1,11 +1,41 @@
 {
   "index": "/index.html",
-  "assetGroups": [
+  "appData": {
+    "test": true
+  },
+  "assetGroups": [{
+      "name": "appshell",
+      "resources": {
+        "files": [
+          "/assets/**/*",
+          "!/ngsw-worker.js"
+        ],
+        "versionedFiles": [
+          "/**/*.html",
+          "/**/*.js",
+          "/**/*.css"
+        ]
+      }
+    },
     {
       "name": "app",
       "installMode": "prefetch",
       "resources": {
-        "files": ["/favicon.ico", "/index.html", "/*.css", "/*.js"]
+        "files": ["/favicon.ico", "/index.html"],
+        "versionedFiles": [
+          "/*.bundle.css",
+          "/*.bundle.js",
+          "/*.chunk.js"
+        ]
+      }
+    },
+    {
+      "name": "fonts",
+      "resources": {
+        "urls": [
+          "https://fonts.googleapis.com/**/*",
+          "https://fonts.gstatic.com/**/*",
+        ]
       }
     },
     {
@@ -13,8 +43,35 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
-        "files": ["/assets/**", "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"]
+        "files": [
+          "/assets/**/*",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
       }
+    },
+    {
+      "name": "static-content",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "files": ["/assets/**/*"],
+      "urls": [
+        "http://localhost:4002/**/*",
+        "https://storage.googleapis.com/**/*",
+        "https://raw.githubusercontent.com**/*"
+      ],
+      "patterns": []
     }
-  ]
+  ],
+  "dataGroups": [{
+    "name": "api",
+    "urls": [
+      "http://localhost:4001/**/*"
+    ],
+    "cacheConfig": {
+      "strategy": "freshness",
+      "maxSize": 15,
+      "maxAge": "1h",
+      "timeout": "5s"
+    }
+  }]
 }

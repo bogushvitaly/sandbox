@@ -19,6 +19,11 @@ export const HOST = process.env.HOST || '0.0.0.0';
 export const PORT = process.env.PORT || 4000;
 
 export const BROWSER_DIST_PATH = join(__dirname, '..', 'browser');
+
+(global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+(global as any).WebSocket = require('ws');
+(global as any).fetch = require('node-fetch');
+
 applyDomino(global, join(BROWSER_DIST_PATH, 'index.html'));
 
 export const getNgRenderMiddlewareOptions: () => NgSetupOptions = () => ({

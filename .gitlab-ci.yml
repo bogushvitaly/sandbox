@@ -81,10 +81,52 @@ web-application-build-production:
     - npm run --prefix sources/applications build.web.application.udk
     - mkdir sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
-    - echo Production build completed
+    - echo Web Application Production build completed
   artifacts:
     paths:
       - sources/applications/production
+  when: always
+  allow_failure: false
+
+web-application-api-build-production:
+  stage: build
+  environment:
+    name: production
+  dependencies:
+    - applications-dependencies-install
+  cache:
+    key: $CI_PROJECT_NAMESPACE
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications build.web.application.api
+    - echo Web Application API Server Production build completed
+  artifacts:
+    paths:
+      - sources/applications/dist
+  when: always
+  allow_failure: false
+
+static-content-server-build-production:
+  stage: build
+  environment:
+    name: production
+  dependencies:
+    - applications-dependencies-install
+  cache:
+    key: $CI_PROJECT_NAMESPACE
+    policy: pull
+    paths:
+      - .pnpm-store/
+  script:
+    - pnpm install --prefix sources/applications --offline
+    - npm run --prefix sources/applications build.static.content.server
+    - echo Static Server Production build completed
+  artifacts:
+    paths:
+      - sources/applications/dist
   when: always
   allow_failure: false
 
@@ -250,6 +292,7 @@ web-application-deploy-staging:
   dependencies:
     - applications-dependencies-install
     - web-application-build-staging
+    - web-application-api-build-production
   environment:
     name: staging
   cache:
@@ -272,6 +315,7 @@ web-application-deploy-production:
   dependencies:
     - applications-dependencies-install
     - web-application-build-production
+    - web-application-api-build-production
   environment:
     name: production
   cache:

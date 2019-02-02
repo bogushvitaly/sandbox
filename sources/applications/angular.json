@@ -30,13 +30,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "libs/tsconfig.json",
-              "libs/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["libs/tsconfig.json", "libs/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -58,13 +53,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "xplat/tsconfig.json",
-              "xplat/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["xplat/tsconfig.json", "xplat/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -94,7 +84,8 @@
             "main": "apps/web-application/src/main.ts",
             "polyfills": "apps/web-application/src/polyfills.ts",
             "tsConfig": "apps/web-application/tsconfig.browser.json",
-            "assets": [{
+            "assets": [
+              {
                 "glob": "favicon.ico",
                 "input": "apps/web-application/src",
                 "output": "/"
@@ -130,16 +121,20 @@
               "xplat/web/scss/_index.scss",
               "apps/web-application/src/styles.scss"
             ],
-            "scripts": [{
-              "input": "node_modules/document-register-element/build/document-register-element.js"
-            }]
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "apps/web-application/src/environments/environment.ts",
-                "with": "apps/web-application/src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "apps/web-application/src/environments/environment.ts",
+                  "with": "apps/web-application/src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -149,18 +144,22 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              }],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ],
               "serviceWorker": true
             },
             "staging": {
-              "fileReplacements": [{
-                "replace": "apps/web-application/src/environments/environment.ts",
-                "with": "apps/web-application/src/environments/environment.staging.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "apps/web-application/src/environments/environment.ts",
+                  "with": "apps/web-application/src/environments/environment.staging.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -170,11 +169,13 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              }],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ],
               "serviceWorker": true
             }
           }
@@ -218,13 +219,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/web-application/tsconfig.app.json",
-              "apps/web-application/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["apps/web-application/tsconfig.app.json", "apps/web-application/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "server": {
@@ -236,10 +232,12 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "apps/web-application/src/environments/environment.ts",
-                "with": "apps/web-application/src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "apps/web-application/src/environments/environment.ts",
+                  "with": "apps/web-application/src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": false,
               "outputHashing": "media",
               "sourceMap": false,
@@ -291,9 +289,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/web-application-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -317,21 +313,18 @@
             "main": "apps/storybook/src/main.ts",
             "polyfills": "apps/storybook/src/polyfills.ts",
             "tsConfig": "apps/storybook/tsconfig.app.json",
-            "assets": [
-              "apps/storybook/src/favicon.ico",
-              "apps/storybook/src/assets"
-            ],
-            "styles": [
-              "apps/storybook/src/styles.scss"
-            ],
+            "assets": ["apps/storybook/src/favicon.ico", "apps/storybook/src/assets"],
+            "styles": ["apps/storybook/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "apps/storybook/src/environments/environment.ts",
-                "with": "apps/storybook/src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "apps/storybook/src/environments/environment.ts",
+                  "with": "apps/storybook/src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -341,11 +334,13 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
@@ -369,13 +364,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/storybook/tsconfig.app.json",
-              "apps/storybook/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["apps/storybook/tsconfig.app.json", "apps/storybook/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -404,13 +394,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "libs/ui-fan-menu/tsconfig.lib.json",
-              "libs/ui-fan-menu/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["libs/ui-fan-menu/tsconfig.lib.json", "libs/ui-fan-menu/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -441,19 +426,19 @@
             "outputPath": "dist/apps/web-application-api",
             "main": "apps/web-application-api/src/main.ts",
             "tsConfig": "apps/web-application-api/tsconfig.app.json",
-            "assets": [
-              "apps/web-application-api/src/assets"
-            ]
+            "assets": ["apps/web-application-api/src/assets"]
           },
           "configurations": {
             "production": {
               "optimization": true,
               "extractLicenses": true,
               "inspect": false,
-              "fileReplacements": [{
-                "replace": "apps/web-application-api/src/environments/environment.ts",
-                "with": "apps/web-application-api/src/environments/environment.prod.ts"
-              }]
+              "fileReplacements": [
+                {
+                  "replace": "apps/web-application-api/src/environments/environment.ts",
+                  "with": "apps/web-application-api/src/environments/environment.prod.ts"
+                }
+              ]
             }
           }
         },
@@ -466,13 +451,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/web-application-api/tsconfig.app.json",
-              "apps/web-application-api/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["apps/web-application-api/tsconfig.app.json", "apps/web-application-api/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -480,6 +460,50 @@
           "options": {
             "jestConfig": "apps/web-application-api/jest.config.js",
             "tsConfig": "apps/web-application-api/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "static-content-server": {
+      "root": "apps/static-content-server",
+      "sourceRoot": "apps/static-content-server/src",
+      "projectType": "application",
+      "prefix": "static-content-server",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/builders:node-build",
+          "options": {
+            "outputPath": "dist/apps/static-content-server",
+            "main": "apps/static-content-server/src/main.ts",
+            "tsConfig": "apps/static-content-server/tsconfig.app.json",
+            "assets": ["apps/static-content-server/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/static-content-server/src/environments/environment.ts",
+                  "with": "apps/static-content-server/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/builders:node-execute",
+          "options": {
+            "buildTarget": "static-content-server:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/static-content-server/tsconfig.app.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
