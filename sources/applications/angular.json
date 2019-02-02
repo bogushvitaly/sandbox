@@ -84,8 +84,7 @@
             "main": "apps/web-application/src/main.ts",
             "polyfills": "apps/web-application/src/polyfills.ts",
             "tsConfig": "apps/web-application/tsconfig.browser.json",
-            "assets": [
-              {
+            "assets": [{
                 "glob": "favicon.ico",
                 "input": "apps/web-application/src",
                 "output": "/"
@@ -121,20 +120,16 @@
               "xplat/web/scss/_index.scss",
               "apps/web-application/src/styles.scss"
             ],
-            "scripts": [
-              {
-                "input": "node_modules/document-register-element/build/document-register-element.js"
-              }
-            ]
+            "scripts": [{
+              "input": "node_modules/document-register-element/build/document-register-element.js"
+            }]
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/web-application/src/environments/environment.ts",
-                  "with": "apps/web-application/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "apps/web-application/src/environments/environment.ts",
+                "with": "apps/web-application/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -144,22 +139,18 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ],
+              "budgets": [{
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              }],
               "serviceWorker": true
             },
             "staging": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/web-application/src/environments/environment.ts",
-                  "with": "apps/web-application/src/environments/environment.staging.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "apps/web-application/src/environments/environment.ts",
+                "with": "apps/web-application/src/environments/environment.staging.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -169,13 +160,11 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ],
+              "budgets": [{
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              }],
               "serviceWorker": true
             }
           }
@@ -232,12 +221,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/web-application/src/environments/environment.ts",
-                  "with": "apps/web-application/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "apps/web-application/src/environments/environment.ts",
+                "with": "apps/web-application/src/environments/environment.prod.ts"
+              }],
               "optimization": false,
               "outputHashing": "media",
               "sourceMap": false,
@@ -260,7 +247,7 @@
             "production": {
               "browserTarget": "web-application:build:production",
               "serverTarget": "web-application:server:production",
-              "verbose": true
+              "verbose": false
             }
           }
         },
@@ -319,12 +306,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/storybook/src/environments/environment.ts",
-                  "with": "apps/storybook/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "apps/storybook/src/environments/environment.ts",
+                "with": "apps/storybook/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -334,13 +319,11 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
+              "budgets": [{
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              }]
             }
           }
         },
@@ -433,12 +416,10 @@
               "optimization": true,
               "extractLicenses": true,
               "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/web-application-api/src/environments/environment.ts",
-                  "with": "apps/web-application-api/src/environments/environment.prod.ts"
-                }
-              ]
+              "fileReplacements": [{
+                "replace": "apps/web-application-api/src/environments/environment.ts",
+                "with": "apps/web-application-api/src/environments/environment.prod.ts"
+              }]
             }
           }
         },
@@ -484,12 +465,10 @@
               "optimization": true,
               "extractLicenses": true,
               "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/static-content-server/src/environments/environment.ts",
-                  "with": "apps/static-content-server/src/environments/environment.prod.ts"
-                }
-              ]
+              "fileReplacements": [{
+                "replace": "apps/static-content-server/src/environments/environment.ts",
+                "with": "apps/static-content-server/src/environments/environment.prod.ts"
+              }]
             }
           }
         },
