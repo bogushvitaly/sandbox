@@ -49,7 +49,7 @@
     "format.check": "nx format:check",
     "format.write": "sort-package-json && nx format:write",
     "help": "nx help",
-    "postinstall": "node tools/web/postinstall && npm run patch.babylon && npm run patch.jest && ts-node tools/scripts/generate-version",
+    "postinstall": "pnpm rebuild node-sass && node tools/web/postinstall && npm run patch.babylon && npm run patch.jest && ts-node tools/scripts/generate-version",
     "lint.check": "npm-run-all -p --print-label lint.ng lint.html lint.scss",
     "lint.html": "htmlhint ./{apps,libs}/**/*.html",
     "lint.ng": "ng lint",
