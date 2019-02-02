@@ -1,7 +1,6 @@
 export * from './demo-angular-material';
 export * from './demo-computer-science';
-export * from './demo-covalent-ui';
-export * from './demo-design-patterns';
+export * from './demo-covalent-ui'; 
 export * from './demo-heroes';
 export * from './demo-items';
 export * from './demo-mdc';
@@ -42,6 +41,3 @@ export * from './system-metadata';
 export * from './demo-wasm';
 export * from './demo-babylon';
 export * from './demo-css-flex';
-
-
-

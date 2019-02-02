@@ -1,40 +1,24 @@
 {
   "index": "/index.html",
   "appData": {
-    "test": true
+    "version": "1.1.0",
+    "changelog": "Added better resource caching"
   },
   "assetGroups": [{
-      "name": "appshell",
+      "name": "shell",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**/*",
-          "!/ngsw-worker.js"
-        ],
-        "versionedFiles": [
-          "/**/*.html",
-          "/**/*.js",
-          "/**/*.css"
-        ]
-      }
-    },
-    {
-      "name": "app",
-      "installMode": "prefetch",
-      "resources": {
-        "files": ["/favicon.ico", "/index.html"],
-        "versionedFiles": [
-          "/*.bundle.css",
-          "/*.bundle.js",
-          "/*.chunk.js"
-        ]
-      }
-    },
-    {
-      "name": "fonts",
-      "resources": {
-        "urls": [
-          "https://fonts.googleapis.com/**/*",
-          "https://fonts.gstatic.com/**/*"
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/vendor.*.js",
+          "/main.*.js",
+          "/polyfills.*.js",
+          "/runtime.*.js",
+          "/*.js",
+          "!/*-sw.js"
         ]
       }
     },
@@ -44,34 +28,41 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**/*",
-          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+          "/assets/**"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/**",
+          "https://fonts.gstatic.com/**",
+          "https://storage.googleapis.com/**",
+          "https://raw.githubusercontent.com**",
+          "http://localhost:4002/**"
         ]
       }
-    },
-    {
-      "name": "static-content",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "files": ["/assets/**/*"],
-      "urls": [
-        "http://localhost:4002/**/*",
-        "https://storage.googleapis.com/**/*",
-        "https://raw.githubusercontent.com**/*"
-      ],
-      "patterns": []
     }
   ],
   "dataGroups": [{
-    "name": "api",
-    "urls": [
-      "http://localhost:4001/**/*"
-    ],
-    "cacheConfig": {
-      "strategy": "freshness",
-      "maxSize": 15,
-      "maxAge": "1h",
-      "timeout": "5s"
+      "name": "from-static",
+      "version": 1,
+      "urls": [],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 10,
+        "maxAge": "1d",
+        "timeout": "5s"
+      }
+    },
+    {
+      "name": "from-api",
+      "version": 2,
+      "urls": [
+        "http://localhost:4001/**"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 15,
+        "maxAge": "1h",
+        "timeout": "3s"
+      }
     }
-  }]
+  ]
 }
