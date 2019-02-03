@@ -7,6 +7,6 @@
   "angularCompilerOptions": {
     "enableIvy": false
   },
-  "exclude": ["test.ts", "**/*.spec.ts"],
+  "exclude": ["test.ts", "**/*.spec.ts", "src/stories/**/*.ts"],
   "include": ["**/*.ts"]
 }
