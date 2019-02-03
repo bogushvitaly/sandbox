@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const replaceInFile = require('replace-in-file');
-const WEB_APPLIATION_ENVIRONMENT_FILE = path.join(process.cwd(), 'libs', 'core', 'environments', 'environment.ts');
-
+const shell = require('shelljs');
+const replace = require('replace-in-file');
+const WEB_APPLIATION_ENVIRONMENT_PATH = path.join(process.cwd(), 'libs', 'core', 'environments');
+const WEB_APPLIATION_ENVIRONMENT_FILE = path.join(WEB_APPLIATION_ENVIRONMENT_PATH, 'environment.ts');
 const DOTENV_CONFIG_FILE = path.join(
   process.cwd(),
   '..',
@@ -32,7 +33,9 @@ require('dotenv-extended').load({
   overrideProcessEnv: false
 });
 
-replaceInFile({
+shell.cp(path.join(__dirname, 'environment.ts'), WEB_APPLIATION_ENVIRONMENT_PATH);
+
+const options = {
   files: WEB_APPLIATION_ENVIRONMENT_FILE,
   from: [
     /apiKey: '(.*)?'/,
@@ -42,7 +45,8 @@ replaceInFile({
     /storageBucket: '(.*)?'/,
     /messagingSenderId: '(.*)?'/,
     /apiUrl: '(.*)?'/,
-    /staticContentServerUrl: '(.*)?'/
+    /staticContentServerUrl: '(.*)?'/,
+    /gaTrackingCode: '(.*)?'/
   ],
   to: [
     `apiKey: '${process.env.API_KEY}'`,
@@ -52,9 +56,12 @@ replaceInFile({
     `storageBucket: '${process.env.STORAGE_BUCKET}'`,
     `messagingSenderId: '${process.env.MESSAGING_SENDER_ID}'`,
     `apiUrl: '${process.env.APPLICATION_API_URL}'`,
-    `staticContentServerUrl: '${process.env.STATIC_CONTENT_SERVER_URL}'`
+    `staticContentServerUrl: '${process.env.STATIC_CONTENT_SERVER_URL}'`,
+    `gaTrackingCode: '${process.env.GA_TRACKING_CODE}'`
   ]
-})
+};
+
+replace(options)
   .then(changes => {
     console.log('Modified files:', changes.join(', '));
   })
