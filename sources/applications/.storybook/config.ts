@@ -1,10 +1,10 @@
 import { addParameters, configure } from '@storybook/angular';
 
-// addParameters({
-//   options: {
-//     hierarchyRootSeparator: /\|/
-//   }
-// });
+addParameters({
+  options: {
+    hierarchyRootSeparator: /\|/
+  }
+});
 
 function loadStories() {
   // put welcome screen at the top of the list so it's the first one displayed
