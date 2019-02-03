@@ -256,7 +256,6 @@ devDependencies:
   cp-dep: 3.0.1
   cross-env: 5.2.0
   css-loader: 2.1.0
-  dotenv: 6.2.0
   dotenv-extended: 2.3.0
   estraverse: 4.2.0
   friendly-errors-webpack-plugin: 1.7.0
@@ -9972,7 +9971,7 @@ packages:
       integrity: sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
   /emotion-theming/10.0.6/@emotion!core@10.0.6:
     dependencies:
-      '@emotion/core': 10.0.6
+      '@emotion/core': /@emotion/core/10.0.6/react@16.7.0
       '@emotion/weak-memoize': 0.2.2
       hoist-non-react-statics: 2.5.5
       object-assign: 4.1.1
@@ -27257,7 +27256,6 @@ specifiers:
   csurf: 1.9.0
   cuint: 0.2.2
   document-register-element: 1.13.1
-  dotenv: 6.2.0
   dotenv-extended: 2.3.0
   earcut: 2.1.4
   ease-component: 1.0.0

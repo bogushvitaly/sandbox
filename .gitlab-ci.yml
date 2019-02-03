@@ -332,7 +332,7 @@ pages:
     - applications-storybook
     - applications-dependencies-graph
     - web-application-bundle-analysis
-    - web-application-e2e-tests
+    - web-application-end-to-end-tests
     - web-application-lighthouse
   script:
     - mkdir -p public
