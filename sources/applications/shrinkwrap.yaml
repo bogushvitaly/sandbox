@@ -158,6 +158,7 @@ dependencies:
   ngx-logger: 3.3.11
   ngx-page-scroll: 6.0.0-beta.0
   ngx-swiper-wrapper: 7.2.1
+  ngx-toastr: 9.1.1
   ngx-translate-multi-http-loader: 3.0.0
   normalize.css: 8.0.1
   npm-add-dependencies: 0.1.4
@@ -18067,6 +18068,17 @@ packages:
       '@angular/core': '>=5.0.0'
     resolution:
       integrity: sha512-u2uv1P3EuErfDG+317Mn3QfC7jOGIihmNRYtJacHP8quqZJ/xCyxid4IVpq3535uPB+xgzZARqmXMsKqVs/5HQ==
+  /ngx-toastr/9.1.1:
+    dependencies:
+      tslib: 1.9.3
+    dev: false
+    peerDependencies:
+      '@angular/common': ^6.0.0 || ^7.0.0
+      '@angular/core': ^6.0.0 || ^7.0.0
+      '@angular/platform-browser': ^6.0.0 || ^7.0.0
+      rxjs: ^6.1.0
+    resolution:
+      integrity: sha512-v43BmIXPmwMRx9Uv0ru2UaPQLA14gTsqWgXrO1DKC8RXnBGGoQEE48cVCaDX1GhaGM5GSzVO2s0o+nb688zsFw==
   /ngx-translate-extract/1.0.0:
     dependencies:
       chalk: 1.1.3
@@ -27666,6 +27678,7 @@ specifiers:
   ngx-page-scroll: 6.0.0-beta.0
   ngx-smart-modal: 7.1.1
   ngx-swiper-wrapper: 7.2.1
+  ngx-toastr: 9.1.1
   ngx-translate-extract: 1.0.0
   ngx-translate-multi-http-loader: 3.0.0
   ngx-translate-testing: 2.0.0

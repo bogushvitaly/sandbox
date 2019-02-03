@@ -13,7 +13,6 @@ const STATIC_DIR_PATH = path.join(process.cwd(), 'dist', 'apps', 'web-applicatio
 const ROUTES = [];
 
 module.exports = function mutateBrowserConfig(config) {
-
   config.node = {
     fs: 'empty',
     net: 'empty',
@@ -21,10 +20,11 @@ module.exports = function mutateBrowserConfig(config) {
     crypto: true,
     path: true,
     stream: true
-  }
+  };
 
   if (config.mode === 'production') {
-    config.plugins.push(new PrerenderSPAPlugin({
+    config.plugins.push(
+      new PrerenderSPAPlugin({
         staticDir: STATIC_DIR_PATH,
         routes: ROUTES,
         minify: {
@@ -47,6 +47,7 @@ module.exports = function mutateBrowserConfig(config) {
           executablePath: process.env.CHROME_BIN
         })
       }),
-      new CompressionPlugin());
+      new CompressionPlugin()
+    );
   }
 };

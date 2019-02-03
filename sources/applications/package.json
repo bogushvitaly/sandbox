@@ -263,6 +263,7 @@
     "ngx-logger": "3.3.11",
     "ngx-page-scroll": "6.0.0-beta.0",
     "ngx-swiper-wrapper": "7.2.1",
+    "ngx-toastr": "9.1.1",
     "ngx-translate-multi-http-loader": "3.0.0",
     "normalize.css": "8.0.1",
     "npm-add-dependencies": "0.1.4",

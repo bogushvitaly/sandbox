@@ -80,7 +80,7 @@ web-application-build-production:
   script:
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.udk
-    - mkdir sources/applications/production
+    - mkdir -p sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
     - echo Web Application Production build completed
   artifacts:
@@ -103,10 +103,13 @@ web-application-api-build-production:
   script:
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.api
+    - mkdir -p sources/applications/production
+    - cp -r sources/applications/dist/apps/* sources/applications/production
     - echo Web Application API Server Production build completed
   artifacts:
     paths:
       - sources/applications/dist
+      - sources/applications/production
   when: always
   allow_failure: false
 
@@ -124,10 +127,13 @@ static-content-server-build-production:
   script:
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications build.static.content.server
+    - mkdir -p sources/applications/production
+    - cp -r sources/applications/dist/apps/* sources/applications/production
     - echo Static Server Production build completed
   artifacts:
     paths:
       - sources/applications/dist
+      - sources/applications/production
   when: always
   allow_failure: false
 
@@ -267,7 +273,7 @@ web-application-lighthouse:
     - web-application-deploy-staging
   cache: {}
   script:
-    - mkdir -p sources/applications/reports/lighthouse
+    - mkdir -p -p sources/applications/reports/lighthouse
     - CHROME_PATH=/usr/bin/chromium-browser
     - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
     - echo Web Application Lighthouse analysis finished
@@ -281,7 +287,7 @@ services-example-web-artillery:
     - web-application-deploy-staging
   cache: {}
   script:
-    - mkdir -p sources/applications/reports/lighthouse
+    - mkdir -p -p sources/applications/reports/lighthouse
     - artillery quick --count 10 -n 20 https://artillery.io/
     - echo Example service Artillery load tests finished
   artifacts:
@@ -294,6 +300,7 @@ web-application-deploy-staging:
     - applications-dependencies-install
     - web-application-build-staging
     - web-application-api-build-production
+    - static-content-server-build-production
   environment:
     name: staging
   cache:
@@ -317,6 +324,7 @@ web-application-deploy-production:
     - applications-dependencies-install
     - web-application-build-production
     - web-application-api-build-production
+    - static-content-server-build-production
   environment:
     name: production
   cache:
@@ -327,7 +335,7 @@ web-application-deploy-production:
   script:
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
-    - mkdir -p sources/applications/dist/apps
+    - mkdir -p -p sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
     - npm run --prefix sources/applications deploy.firebase
     - echo Production deployment finished
@@ -352,7 +360,7 @@ pages:
     - web-application-e2e-tests
     - web-application-lighthouse
   script:
-    - mkdir public
+    - mkdir -p public
     - cp -r sources/applications/tools/report-wrapper/* public
     - cp -r sources/applications/reports/* public
     - echo Pages publishing finished
