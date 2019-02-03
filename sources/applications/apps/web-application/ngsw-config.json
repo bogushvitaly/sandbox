@@ -1,7 +1,6 @@
 {
   "index": "/index.html",
-  "assetGroups": [
-    {
+  "assetGroups": [{
       "name": "app",
       "installMode": "prefetch",
       "resources": {
@@ -13,7 +12,12 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
-        "files": ["/assets/**"]
+        "files": ["/assets/**"],
+        "urls": [
+          "https://fonts.googleapis.com/**",
+          "https://fonts.gstatic.com/**",
+          "https://storage.googleapis.com/**"
+        ]
       }
     }
   ]

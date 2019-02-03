@@ -5,8 +5,6 @@ import { tap } from 'rxjs/operators';
 import { HttpErrorResponse, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { DbContextService } from '../services/db-context.service';
-
 @Injectable()
 export class ErrResponseInterceptor implements HttpInterceptor {
   constructor(public toasts: ToastrService) {}

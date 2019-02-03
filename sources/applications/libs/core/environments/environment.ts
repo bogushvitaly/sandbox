@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:4001',
-  staticContentServerUrl: 'http://localhost:4002',
+  staticContentServerUrl: 'https://storage.googleapis.com/sandbox-50983.appspot.com',
   firebaseConfig: {
     apiKey: 'AIzaSyCPgEpt_kt0KjzYJ3_moCgqYwZHNB-WEY8',
     authDomain: 'sandbox-50983.firebaseapp.com',
