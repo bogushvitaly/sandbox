@@ -20,9 +20,6 @@
     "web-application-e2e": {
       "tags": []
     },
-    "storybook": {
-      "tags": []
-    },
     "ui-fan-menu": {
       "tags": []
     },

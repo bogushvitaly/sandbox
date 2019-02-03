@@ -8,7 +8,7 @@ const {
 module.exports = {
   globals: {
     'ts-jest': {
-      tsConfigFile: 'apps/storybook/tsconfig.spec.json'
+      tsConfigFile: 'apps/web-application/tsconfig.spec.json'
     },
     __TRANSFORM_HTML__: true
   },

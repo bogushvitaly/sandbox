@@ -13,7 +13,7 @@ module.exports = {
             }
           }
         ],
-        include: [path.resolve(__dirname, '../apps/storybook/src')],
+        include: [path.resolve(__dirname, '../apps/web-application/src')],
         enforce: 'pre'
       }
     ]

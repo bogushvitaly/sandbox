@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "",
+  "newProjectRoot": "projects",
   "schematics": {
     "@schematics/angular:component": {
       "styleext": "scss",
@@ -136,7 +136,7 @@
               "buildOptimizer": true,
               "budgets": [{
                 "type": "initial",
-                "maximumWarning": "2mb",
+                "maximumWarning": "3mb",
                 "maximumError": "5mb"
               }],
               "serviceWorker": true
@@ -182,22 +182,11 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@nrwl/builders:jest",
           "options": {
-            "main": "apps/web-application/src/test.ts",
-            "polyfills": "apps/web-application/src/polyfills.ts",
+            "jestConfig": "apps/web-application/jest.config.js",
             "tsConfig": "apps/web-application/tsconfig.spec.json",
-            "karmaConfig": "apps/web-application/karma.conf.js",
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "apps/web-application/src/styles.scss"
-            ],
-            "scripts": [],
-            "assets": [
-              "apps/web-application/src/favicon.ico",
-              "apps/web-application/src/assets",
-              "apps/web-application/src/manifest.json"
-            ]
+            "setupFile": "apps/web-application/src/test-setup.ts"
           }
         },
         "lint": {
@@ -276,86 +265,6 @@
         }
       }
     },
-    "storybook": {
-      "root": "apps/storybook/",
-      "sourceRoot": "apps/storybook/src",
-      "projectType": "application",
-      "prefix": "app",
-      "schematics": {
-        "@nrwl/schematics:component": {
-          "styleext": "scss"
-        }
-      },
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/storybook",
-            "index": "apps/storybook/src/index.html",
-            "main": "apps/storybook/src/main.ts",
-            "polyfills": "apps/storybook/src/polyfills.ts",
-            "tsConfig": "apps/storybook/tsconfig.app.json",
-            "assets": ["apps/storybook/src/favicon.ico", "apps/storybook/src/assets"],
-            "styles": ["apps/storybook/src/styles.scss"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [{
-                "replace": "apps/storybook/src/environments/environment.ts",
-                "with": "apps/storybook/src/environments/environment.prod.ts"
-              }],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [{
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              }]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "storybook:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "storybook:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "storybook:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/storybook/tsconfig.app.json", "apps/storybook/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "apps/storybook/jest.config.js",
-            "tsConfig": "apps/storybook/tsconfig.spec.json",
-            "setupFile": "apps/storybook/src/test-setup.ts"
-          }
-        }
-      }
-    },
     "ui-fan-menu": {
       "root": "libs/ui-fan-menu",
       "sourceRoot": "libs/ui-fan-menu/src",
@@ -391,94 +300,26 @@
         }
       }
     },
-    "web-application-api": {
-      "root": "apps/web-application-api",
-      "sourceRoot": "apps/web-application-api/src",
+    "angular-cli": {
+      "root": "apps/web-application/",
+      "sourceRoot": "apps/web-application/src",
       "projectType": "application",
-      "prefix": "web-application-api",
+      "prefix": "app",
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@nrwl/builders:node-build",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/web-application-api",
-            "main": "apps/web-application-api/src/main.ts",
-            "tsConfig": "apps/web-application-api/tsconfig.app.json",
-            "assets": ["apps/web-application-api/src/assets"]
+            "outputPath": "dist/apps/web-application/browser",
+            "index": "apps/web-application/src/index.html",
+            "main": "apps/web-application/src/main.ts",
+            "polyfills": "apps/web-application/src/polyfills.ts",
+            "tsConfig": "apps/web-application/tsconfig.browser.json",
+            "assets": [],
+            "styles": [],
+            "scripts": []
           },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [{
-                "replace": "apps/web-application-api/src/environments/environment.ts",
-                "with": "apps/web-application-api/src/environments/environment.prod.ts"
-              }]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/builders:node-execute",
-          "options": {
-            "buildTarget": "web-application-api:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/web-application-api/tsconfig.app.json", "apps/web-application-api/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "apps/web-application-api/jest.config.js",
-            "tsConfig": "apps/web-application-api/tsconfig.spec.json"
-          }
-        }
-      }
-    },
-    "static-content-server": {
-      "root": "apps/static-content-server",
-      "sourceRoot": "apps/static-content-server/src",
-      "projectType": "application",
-      "prefix": "static-content-server",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@nrwl/builders:node-build",
-          "options": {
-            "outputPath": "dist/apps/static-content-server",
-            "main": "apps/static-content-server/src/main.ts",
-            "tsConfig": "apps/static-content-server/tsconfig.app.json",
-            "assets": ["apps/static-content-server/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [{
-                "replace": "apps/static-content-server/src/environments/environment.ts",
-                "with": "apps/static-content-server/src/environments/environment.prod.ts"
-              }]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/builders:node-execute",
-          "options": {
-            "buildTarget": "static-content-server:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/static-content-server/tsconfig.app.json"],
-            "exclude": ["**/node_modules/**"]
-          }
+          "configurations": {}
         }
       }
     }

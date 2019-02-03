@@ -1,12 +1,12 @@
 // IMPORTANT: THIS FILE IS AUTO GENERATED! DO NOT MANUALLY EDIT OR CHECKIN!
 /* tslint:disable */
 export const VERSION = {
-  name: 'application',
+  name: 'applications',
   version: '0.0.0',
   dirty: true,
-  raw: 'v1.0.0-24-g64c8f60-dirty',
-  hash: 'g64c8f60',
-  distance: 24,
+  raw: 'v1.0.0-29-gcae6efe-dirty',
+  hash: 'gcae6efe',
+  distance: 29,
   tag: 'v1.0.0',
   semver: {
     options: {
@@ -22,7 +22,7 @@ export const VERSION = {
     build: [],
     version: '1.0.0'
   },
-  suffix: '24-g64c8f60-dirty',
-  semverString: '1.0.0+24.g64c8f60'
+  suffix: '29-gcae6efe-dirty',
+  semverString: '1.0.0+29.gcae6efe'
 };
 /* tslint:enable */

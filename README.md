@@ -38,5 +38,6 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 ## Checklist
 
 - [ ] [Project Guidelines](https://github.com/elsewhencode/project-guidelines)
+- [ ] [Clean Code Cheat Sheet ](https://www.planetgeek.ch/wp-content/uploads/2014/11/Clean-Code-V2.4.pdf)
 - [ ] [The Twelve-Factor App](https://github.com/heroku/12factor)
 - [ ] [Cloud Native Computing Organizational Readiness Review](https://github.com/jdumars/cncorr)

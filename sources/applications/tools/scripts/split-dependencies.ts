@@ -45,6 +45,7 @@ console.log(`External server dependencies: ${JSON.stringify(extendedExternalDepe
 
 // Install Firebase Functions Dependencies
 shell.cd(`${process.cwd()}/functions`);
+
 shell.exec(`pnpm install --offline ${_.join(' ', extendedExternalDependencies)}`);
 
 // Patch Server Webpack

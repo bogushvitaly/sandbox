@@ -7,6 +7,15 @@
     ],
     "resolveJsonModule": true,
   },
-  "exclude": ["node_modules"],
-  "include": ["../apps/storybook/src/stories/**/*", "./*"]
+  "exclude": [
+    "../apps/**/*.spec.ts",
+    "../libs/**/*.spec.ts",
+    "../xplat/**/*.spec.ts"
+  ],
+  "include": [
+    "./*.ts",
+    "../apps/**/*",
+    "../libs/**/*",
+    "../xplat/**/*"
+  ]
 }
