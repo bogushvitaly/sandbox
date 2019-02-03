@@ -15,16 +15,15 @@ const DOTENV_CONFIG_FILE = path.join(
   `.env.${process.env.CI_ENVIRONMENT_NAME}`
 );
 
-if (!process.env.GITLAB_CI && !fs.existsSync(DOTENV_CONFIG_FILE)) {
-  console.error('Local Environment .env file is required');
-  process.exit(1);
-}
+const DOTENV_DEFAULT_CONFIG_FILE = path.join(process.cwd(), `.env.defaults`);
+
+console.log(DOTENV_DEFAULT_CONFIG_FILE);
 
 require('dotenv-extended').load({
   encoding: 'utf8',
   silent: true,
   path: DOTENV_CONFIG_FILE,
-  defaults: '.env.defaults',
+  defaults: DOTENV_DEFAULT_CONFIG_FILE,
   schema: '.env.schema',
   errorOnMissing: false,
   errorOnExtra: false,

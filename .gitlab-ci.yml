@@ -226,7 +226,7 @@ web-application-bundle-analysis:
     paths:
       - sources/applications/reports
 
-web-application-e2e-tests:
+web-application-end-to-end-tests:
   stage: test
   dependencies:
     - applications-dependencies-install
@@ -238,7 +238,8 @@ web-application-e2e-tests:
   script:
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications e2e.web.application
-    - echo Web Application e2e tests finished
+    - npm run --prefix sources/applications e2e.web.application.allure
+    - echo Web Application end-to-end tests finished
   artifacts:
     paths:
       - sources/applications/reports

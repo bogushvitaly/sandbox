@@ -3,10 +3,10 @@ import initStoryshots, {
   multiSnapshotWithOptions
 } from '@storybook/addon-storyshots';
 
-jest.mock('./addon-jest.testresults.json', () => ({}), {
+jest.mock('./reports/addon-jest.testresults.json', () => ({}), {
   virtual: true
 });
-jest.mock('apps/storybook/src/environment', () => ({}), {
+jest.mock('apps/web-application/src/environment', () => ({}), {
   virtual: true
 });
 

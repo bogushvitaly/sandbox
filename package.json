@@ -14,10 +14,14 @@
   "license": "ISC",
   "author": "",
   "scripts": {
-    "upgrade": "pnpx sort-package-json && pnpx npm-check-updates -u",
-    "release": "standard-version"
+    "precommit": "npm run --prefix sources/applications precommit",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master",
+    "release.minor": "npm run release -- --release-as minor",
+    "upgrade": "pnpx sort-package-json && pnpx npm-check-updates -u"
   },
   "devDependencies": {
+    "husky": "1.3.1",
     "standard-version": "4.4.0"
   }
 }
