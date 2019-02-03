@@ -276,7 +276,6 @@ web-application-deploy-staging:
     - applications-dependencies-install
     - web-application-build-staging
     - web-application-api-build-production
-    - static-content-server-build-production
   environment:
     name: staging
   cache:
@@ -300,7 +299,6 @@ web-application-deploy-production:
     - applications-dependencies-install
     - web-application-build-production
     - web-application-api-build-production
-    - static-content-server-build-production
   environment:
     name: production
   cache:
