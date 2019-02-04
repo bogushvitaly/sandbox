@@ -244,7 +244,7 @@ web-application-end-to-end-tests:
     paths:
       - sources/applications/reports
 
-web-application-lighthouse:
+web-application-performance-audit:
   stage: audit
   dependencies:
     - web-application-deploy-staging
@@ -252,19 +252,19 @@ web-application-lighthouse:
   script:
     - mkdir -p sources/applications/reports/lighthouse
     - CHROME_PATH=/usr/bin/chromium-browser
+    - pwmetrics $WEB_APPLICATION_STAGING_URL --runs=3
     - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
     - echo Web Application Lighthouse analysis finished
   artifacts:
     paths:
       - sources/applications/reports
 
-services-example-web-artillery:
+services-api-performance-audit:
   stage: audit
   dependencies:
     - web-application-deploy-staging
   cache: {}
   script:
-    - mkdir -p sources/applications/reports/lighthouse
     - artillery quick --count 10 -n 20 https://artillery.io/
     - echo Example service Artillery load tests finished
   artifacts:
@@ -332,7 +332,7 @@ pages:
     - applications-dependencies-graph
     - web-application-bundle-analysis
     - web-application-end-to-end-tests
-    - web-application-lighthouse
+    - web-application-performance-audit
   script:
     - mkdir -p public
     - cp -r sources/applications/tools/report-wrapper/* public

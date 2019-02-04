@@ -2,6 +2,6 @@
   "projects": {
     "default": "sandbox-50983",
     "staging": "sandbox-50983",
-    "prodiction": "sandbox-50983"
+    "production": "sandbox-50983"
   }
 }
