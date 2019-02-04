@@ -84,7 +84,7 @@
     "start.web.application.udk": "ts-node tools/scripts/patch-environment && cross-env ng-udkc --project web-application",
     "start.web.application.unit": "pnpx npm-run-all -p --print-label start.web.application.api start.web.application.hmr test.libs.watch test.xplat.watch",
     "storybook": "start-storybook -p 9008 -s apps/web-application/src/assets",
-    "storybook.build": "build-storybook -s apps/web-application/src/assets -o reports/storybook",
+    "storybook.build": "npm run test.jest.generate-output && build-storybook -s apps/web-application/src/assets -o reports/storybook",
     "storybook.open": "ws --directory reports/storybook --open",
     "test": "run-s test.libs.coverage test.xplat.coverage",
     "test.jest.coverage": "ts-node tools/scripts/patch-environment && jest --silent --config=jest.addon-config.js --coverage --coverageDirectory=reports/coverage",
