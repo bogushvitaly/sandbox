@@ -88,7 +88,7 @@
     "storybook.open": "ws --directory reports/storybook --open",
     "test": "run-s test.libs.coverage test.xplat.coverage",
     "test.jest.coverage": "ts-node tools/scripts/patch-environment && jest --silent --config=jest.addon-config.js --coverage --coverageDirectory=reports/coverage",
-    "test.jest.generate-output": "ts-node tools/scripts/patch-environment && jest --silent --json --config=jest.addon-config.js --outputFile=reports/addon-jest.testresults.json",
+    "test.jest.generate-output": "shx mkdir -p reports && ts-node tools/scripts/patch-environment && jest --silent --json --config=jest.addon-config.js --outputFile=reports/addon-jest.testresults.json",
     "test.jest.watch": "jest --silent --json --config=jest.addon-config.js --watchAll",
     "test.libs.coverage": "ng test libs --no-watch --code-coverage",
     "test.libs.watch": "ng test libs --watch",
