@@ -4,9 +4,9 @@ export const VERSION = {
     "name": "applications",
     "version": "0.0.0",
     "dirty": true,
-    "raw": "v1.0.0-34-g840ce06-dirty",
-    "hash": "g840ce06",
-    "distance": 34,
+    "raw": "v1.0.0-36-g5dd65d9-dirty",
+    "hash": "g5dd65d9",
+    "distance": 36,
     "tag": "v1.0.0",
     "semver": {
         "options": {
@@ -22,7 +22,7 @@ export const VERSION = {
         "build": [],
         "version": "1.0.0"
     },
-    "suffix": "34-g840ce06-dirty",
-    "semverString": "1.0.0+34.g840ce06"
+    "suffix": "36-g5dd65d9-dirty",
+    "semverString": "1.0.0+36.g5dd65d9"
 };
 /* tslint:enable */
