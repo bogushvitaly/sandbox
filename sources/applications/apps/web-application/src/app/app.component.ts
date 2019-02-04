@@ -40,8 +40,6 @@ export class AppComponent extends AppBaseComponent implements OnInit {
     private router: Router
   ) {
     super();
-    this.logger.debug('Your log message goes here');
-    this.logger.debug('Multiple', 'Argument', 'support');
 
     if (environment.production) {
       this.swUpdate = this.injector.get(SwUpdate) as SwUpdate;
@@ -50,8 +48,10 @@ export class AppComponent extends AppBaseComponent implements OnInit {
 
   public ngOnInit(): void {
     if (isPlatformServer(this.platformId)) {
+      this.logger.debug(`Application loaded ${+new Date().toISOString()}`);
     }
     if (isPlatformBrowser(this.platformId)) {
+      this.logger.debug(`Application loaded ${+new Date().toISOString()}`);
       const navEndEvent$ = this.router.events.pipe(filter(e => e instanceof NavigationEnd));
       navEndEvent$.subscribe((e: NavigationEnd) => {
         gtag('config', 'MY_ID', { page_path: e.urlAfterRedirects });
@@ -60,14 +60,14 @@ export class AppComponent extends AppBaseComponent implements OnInit {
 
     if (environment.production && this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(evt => {
-        console.log('service worker updated');
+        this.logger.debug(`Service worker updated`);
       });
 
       this.swUpdate
         .checkForUpdate()
         .then(() => {})
-        .catch(err => {
-          console.error('error when checking for update', err);
+        .catch(error => {
+          this.logger.error('Error when checking for update: ', error);
         });
     }
   }

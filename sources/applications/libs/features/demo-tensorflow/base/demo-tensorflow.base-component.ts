@@ -16,7 +16,7 @@ import { features, labels } from '../data/data';
 import { BaseComponent, environment } from '@application/core';
 import { DemoTensorflowDrawableDirective } from '@application/web/features/demo-tensorflow/directives/demo-tensorflow-drawable.directive';
 
-export abstract class DemoTensorflowBaseComponent extends BaseComponent implements AfterViewInit {
+export abstract class DemoTensorflowBaseComponent extends BaseComponent implements OnInit {
   public text = 'DemoTensorflow';
 
   constructor(protected platformId: Object) {
@@ -31,9 +31,15 @@ export abstract class DemoTensorflowBaseComponent extends BaseComponent implemen
 
   @ViewChild(DemoTensorflowDrawableDirective) canvas;
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.loadModel();
     this.trainNewModel();
+  }
+
+  async loadModel() {
+    const MODEL_PATH = `${environment.staticContentServerUrl}/tfjs-models/digit-recognition/model.json`;
+
+    this.model = await tf.loadModel(MODEL_PATH);
   }
 
   async trainNewModel() {
@@ -50,12 +56,6 @@ export abstract class DemoTensorflowBaseComponent extends BaseComponent implemen
   linearPrediction(val) {
     const output = this.linearModel.predict(tf.tensor2d([parseInt(val, 10)], [1, 1])) as any;
     this.prediction = Array.from(output.dataSync())[0];
-  }
-
-  async loadModel() {
-    const MODEL_PATH = `${environment.staticContentServerUrl}/tfjs-models/digit-recognition/model.json`;
-
-    this.model = await tf.loadModel(MODEL_PATH);
   }
 
   async predict(imageData: ImageData) {

@@ -63,3 +63,4 @@ typings/
 
 # angular environment variables file
 sources/applications/libs/core/environments/environment.ts
+sources/applications/.env.defaults

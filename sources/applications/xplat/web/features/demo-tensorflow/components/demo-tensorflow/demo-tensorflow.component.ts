@@ -1,4 +1,3 @@
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 
 import { DemoTensorflowBaseComponent } from '@application/features';
@@ -9,16 +8,7 @@ import { DemoTensorflowBaseComponent } from '@application/features';
   styleUrls: ['demo-tensorflow.component.scss']
 })
 export class DemoTensorflowComponent extends DemoTensorflowBaseComponent {
-  public isBrowser: Boolean = false;
   constructor(@Inject(PLATFORM_ID) platformId: Object) {
     super(platformId);
-    this.isBrowser = isPlatformBrowser(platformId);
-
-    if (isPlatformBrowser(this.platformId)) {
-      console.log(+new Date());
-    }
-    if (isPlatformServer(this.platformId)) {
-      console.log(+new Date());
-    }
   }
 }

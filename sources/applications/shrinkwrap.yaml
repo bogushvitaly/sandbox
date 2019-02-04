@@ -150,7 +150,7 @@ dependencies:
   ng2-charts: 1.6.0
   ngrx-store-freeze: 0.2.4
   ngx-auth-firebaseui: 2.2.1
-  ngx-auto-unsubscribe: 2.4.1
+  ngx-auto-unsubscribe: 3.0.0
   ngx-cookie-service: 2.1.0
   ngx-json-ld: 0.3.1
   ngx-keyboard-events: 0.1.9
@@ -192,8 +192,8 @@ dependencies:
   xhr2: 0.1.4
   zone.js: 0.8.29
 devDependencies:
-  '@angular-builders/custom-webpack': 7.2.0
-  '@angular-builders/dev-server': 7.2.1
+  '@angular-builders/custom-webpack': 7.3.0
+  '@angular-builders/dev-server': 7.3.0
   '@angular-devkit/build-angular': 0.13.0
   '@angular-devkit/build-ng-packagr': 0.13.0
   '@angular/cli': 7.3.0
@@ -239,7 +239,7 @@ devDependencies:
   '@types/paho-mqtt': 1.0.4
   '@types/three': 0.93.19
   '@types/webpack-env': 1.13.7
-  acorn: 6.0.6
+  acorn: 6.0.7
   allure-commandline: 2.9.0
   angular-tslint-rules: 1.12.1
   ast-source: 3.0.0
@@ -314,7 +314,7 @@ devDependencies:
   rollup-plugin-node-resolve: 4.0.0
   shelljs: 0.8.3
   shx: 0.3.2
-  sort-package-json: 1.18.0
+  sort-package-json: 1.19.0
   source-map-explorer: 1.6.0
   start-server-and-test: 1.7.11
   storybook-readme: 4.0.5
@@ -336,7 +336,7 @@ devDependencies:
   tsickle: 0.34.3
   tslib: 1.9.3
   tslint: 5.12.1
-  tslint-config-prettier: 1.17.0
+  tslint-config-prettier: 1.18.0
   tslint-config-standard: 8.0.1
   typescript: 3.2.4
   udk: 1.0.2
@@ -362,24 +362,24 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ie0eut/hiZF6yH4RHDi9aoY1vVfa84ZEDnlQFqwgMRSHmVxNHyaLcEljyHdFqBDfTxWeyPn6z4bGHH+g+zY1Cw==
-  /@angular-builders/custom-webpack/7.2.0:
+  /@angular-builders/custom-webpack/7.3.0:
     dependencies:
       lodash: 4.17.11
     dev: true
     engines:
       node: '>=8.9'
     peerDependencies:
-      '@angular-devkit/build-angular': '>=0.12.0'
+      '@angular-devkit/build-angular': '>=0.12.4'
     resolution:
-      integrity: sha512-m6K1T7rDofyxxxgRdAHEUfjbvu8G3RL3XKeAieDbbHSRhsptEAgYdBx5BpkW+xrrfgX5TWG6AZaEgfPNlJtbAA==
-  /@angular-builders/dev-server/7.2.1:
+      integrity: sha512-79opPTLxNEq30LRX3hAPvYjhqjTD0nJtD/DpZRUSXRdqvPJc3ZGXQXhH0Ksg/w4Cd7T5lOjtsH9PejwJXUWtsw==
+  /@angular-builders/dev-server/7.3.0:
     dev: true
     engines:
       node: '>=8.9'
     peerDependencies:
-      '@angular-devkit/build-angular': '>=0.12.1'
+      '@angular-devkit/build-angular': '>=0.12.4'
     resolution:
-      integrity: sha512-hQZD/aB/jMq4Yf3+lkkGpU8OFAQwZ+S+422P+m2NkZ40+UXLsJpVzDRFMcL0GGObjwTxhxrmw6wFUk+2V5TwIg==
+      integrity: sha512-wugFn1fCAFUPF+TH6wn41Zy7NzYUE06eO0WYt4RISuqlXXY7RKaqTNcgIXt/tKzVN7197M0lpNVw7cuJWVw30w==
   /@angular-devkit/architect/0.12.4:
     dependencies:
       '@angular-devkit/core': 7.2.4
@@ -4478,6 +4478,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-5M3G/A4uBSMIlfJ+h9W125vJvPFH/zirISsW5qfxF5YzEvXJCtolLoQvM5yZft0DvMcUrPGKPOlgEu55I6iUtA==
+  /acorn/6.0.7:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-HNJNgE60C9eOTgn974Tlp3dpLZdUr+SoxxDwPaY9J/kDNOLQTkaDgwBUXAF4SSsrAwD9RpdxuHK/EbuF+W9Ahw==
   /add-event-listener/0.0.1:
     dev: false
     resolution:
@@ -17780,10 +17787,10 @@ packages:
       firebase: ^5.7.0
     resolution:
       integrity: sha512-57fwsreKl38IBW122bam283nO2rhndkJj5Su5fpzmiVys5SE2gb7aZzeuSlCldBNf4OV3dO1LH2FUQrL1rlGbg==
-  /ngx-auto-unsubscribe/2.4.1:
+  /ngx-auto-unsubscribe/3.0.0:
     dev: false
     resolution:
-      integrity: sha512-hQNu4pxMuGeIBZqP6CdfxnwbjAer2OuEYvA+kBeT3nDhF2kIG3BAkgAx7wmkU18b/skNV2JvxN9EGsWJ+7Mojw==
+      integrity: sha512-tqcsuRab23DmJSN7EnmcPQGSkeZiu4gyV7guP3BLrit75WAHuFPi0Unh4dVT82PWDxiYMi75SkWNOYPrsToKgA==
   /ngx-cookie-service/2.1.0:
     dev: false
     peerDependencies:
@@ -23181,14 +23188,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-06bEjcKsl+a8lDZ2luA/bQnTeVI=
-  /sort-package-json/1.18.0:
+  /sort-package-json/1.19.0:
     dependencies:
       detect-indent: 5.0.0
       sort-object-keys: 1.1.2
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-OkUR/WjlMz4IFOOMhYTpVl9rDaL4XIIOabzTXUBQVck04Dh+DyhjCNnMcndwX2dz+u77Q3MUuj1ncyVjVesB7Q==
+      integrity: sha512-SRzbsvOG+g8jTuFYZCvljh+LOsNeCS04bH+MF6qf0Ukva0Eh3Y6Jf7a4GSNEeDHLHM6CWqhZuJo7OLdzycTH1A==
   /source-list-map/0.1.8:
     dev: true
     resolution:
@@ -25119,13 +25126,13 @@ packages:
   /tslib/1.9.3:
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /tslint-config-prettier/1.17.0:
+  /tslint-config-prettier/1.18.0:
     dev: true
     engines:
       node: '>=4.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-NKWNkThwqE4Snn4Cm6SZB7lV5RMDDFsBwz6fWUkTxOKGjMx8ycOHnjIbhn7dZd5XmssW3CwqUjlANR6EhP9YQw==
+      integrity: sha512-xPw9PgNPLG3iKRxmK7DWr+Ea/SzrvfHtjFt5LBl61gk2UBG/DB9kCXRjv+xyIU1rUtnayLeMUVJBcMX8Z17nDg==
   /tslint-config-standard/8.0.1:
     dependencies:
       tslint-eslint-rules: 5.4.0
@@ -27080,8 +27087,8 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   3d-force-graph: 1.45.0
-  '@angular-builders/custom-webpack': 7.2.0
-  '@angular-builders/dev-server': 7.2.1
+  '@angular-builders/custom-webpack': 7.3.0
+  '@angular-builders/dev-server': 7.3.0
   '@angular-devkit/build-angular': 0.13.0
   '@angular-devkit/build-ng-packagr': 0.13.0
   '@angular-material-extensions/password-strength': 3.4.1
@@ -27203,7 +27210,7 @@ specifiers:
   '@types/paho-mqtt': 1.0.4
   '@types/three': 0.93.19
   '@types/webpack-env': 1.13.7
-  acorn: 6.0.6
+  acorn: 6.0.7
   allure-commandline: 2.9.0
   angle-normals: 1.0.0
   angular-resize-event: 1.0.0
@@ -27330,7 +27337,7 @@ specifiers:
   ng2-charts: 1.6.0
   ngrx-store-freeze: 0.2.4
   ngx-auth-firebaseui: 2.2.1
-  ngx-auto-unsubscribe: 2.4.1
+  ngx-auto-unsubscribe: 3.0.0
   ngx-cookie-service: 2.1.0
   ngx-json-ld: 0.3.1
   ngx-keyboard-events: 0.1.9
@@ -27378,7 +27385,7 @@ specifiers:
   serve-static: 1.13.2
   shelljs: 0.8.3
   shx: 0.3.2
-  sort-package-json: 1.18.0
+  sort-package-json: 1.19.0
   source-map-explorer: 1.6.0
   spectre.css: 0.5.8
   start-server-and-test: 1.7.11
@@ -27407,7 +27414,7 @@ specifiers:
   tsickle: 0.34.3
   tslib: 1.9.3
   tslint: 5.12.1
-  tslint-config-prettier: 1.17.0
+  tslint-config-prettier: 1.18.0
   tslint-config-standard: 8.0.1
   typed-graphql: 1.0.2
   typeorm: 0.2.12

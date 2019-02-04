@@ -16,7 +16,7 @@ async function bootstrap(serverInstance) {
   app.enableCors();
   app.useStaticAssets({
     root: join(__dirname, 'assets'),
-    prefix: '/assets/'
+    prefix: '/'
   });
   IS_SERVERLESS
     ? app.init()
