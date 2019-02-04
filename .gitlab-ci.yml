@@ -179,6 +179,7 @@ applications-storybook:
   stage: test
   dependencies:
     - applications-dependencies-install
+    - applications-unit-tests
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull
