@@ -3,7 +3,7 @@ dependencies:
   '@angular-material-extensions/password-strength': 3.4.1
   '@angular-mdc/web': 0.43.7
   '@angular/animations': 7.2.3
-  '@angular/cdk': 7.3.0
+  '@angular/cdk': 7.3.1
   '@angular/common': 7.2.3
   '@angular/compiler': 7.2.3
   '@angular/core': 7.2.3
@@ -13,7 +13,7 @@ dependencies:
   '@angular/forms': 7.2.3
   '@angular/http': 7.2.3
   '@angular/language-service': 7.2.3
-  '@angular/material': 7.3.0
+  '@angular/material': 7.3.1
   '@angular/platform-browser': 7.2.3
   '@angular/platform-browser-dynamic': 7.2.3
   '@angular/platform-server': 7.2.3
@@ -118,7 +118,7 @@ dependencies:
   express-rate-limit: 3.3.2
   express-serve-static-core: 0.1.1
   express-static-gzip: 1.1.3
-  fastify: 1.13.4
+  fastify: 1.14.0
   fastify-formbody: 2.1.0
   fastify-static: 1.1.0
   firebase: 5.8.2
@@ -138,6 +138,7 @@ dependencies:
   load-bmfont: 1.4.0
   lodash: 4.17.11
   lodash-decorators: 6.0.1
+  lodash-fun: 1.5.0
   material-design-icons: 3.0.1
   moment: 2.24.0
   mouse-change: 1.4.0
@@ -232,7 +233,7 @@ devDependencies:
   '@types/isomorphic-fetch': 0.0.34
   '@types/jasmine': 3.3.8
   '@types/jasminewd2': 2.0.6
-  '@types/jest': 23.3.13
+  '@types/jest': 24.0.0
   '@types/jquery': 3.3.29
   '@types/lodash': 4.14.120
   '@types/node': 10.12.21
@@ -272,7 +273,7 @@ devDependencies:
   jest: 24.0.0
   jest-canvas-mock: 2.0.0-alpha.2
   jest-createspyobj: 1.2.2
-  jest-image-snapshot: 2.7.0
+  jest-image-snapshot: 2.8.0
   jest-preset-angular: 6.0.2
   json-server: 0.14.2
   karma: 4.0.0
@@ -343,7 +344,7 @@ devDependencies:
   wait-on: 3.2.0
   webgl-mock: 0.1.7
   webpack-bundle-analyzer: 3.0.3
-  webpack-cli: 3.2.1
+  webpack-cli: 3.2.3
   webpack-dotenv-extended-plugin: 1.0.0
   webpack-env: 0.8.0
   webpack-filter-warnings-plugin: 1.2.1
@@ -628,7 +629,7 @@ packages:
       '@angular/core': 7.2.3
     resolution:
       integrity: sha512-5WoiDnVS2OhGgJ1oepFNF2UcfR4sJj97KRnTmLWQ0S4N4WpXX83CoOQVXvXwfotyb8uNtl4zRi2NuvN/MIuFuA==
-  /@angular/cdk/7.3.0:
+  /@angular/cdk/7.3.1:
     dependencies:
       tslib: 1.9.3
     dev: false
@@ -638,7 +639,7 @@ packages:
       '@angular/common': '>=7.0.0'
       '@angular/core': '>=7.0.0'
     resolution:
-      integrity: sha512-8fH3wQ4WpOxgU06kxKf2MKelYBAq9ha6QrkXjtyb0ns6mJgsooSLX773G0dP9sAQn7rrqdsQh6SNj9zgvyRBDw==
+      integrity: sha512-m6hy+HPLDgVM+Y2C3UWvIG06euIV8oG5QxrCitZui8JZ/dj/0V5bxATKgWN62haYnYR4en4z1bfH0kOvQj+LEA==
   /@angular/cli/7.3.0:
     dependencies:
       '@angular-devkit/architect': 0.13.0
@@ -765,17 +766,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9FBVYbKaNx4Ap+Suz/2ZFBPca1voinZMOCN8LjXRYnfS2MHLQASQlTlK4qeZcomyRfy0FxWmO9R02S7YJ06cnw==
-  /@angular/material/7.3.0:
+  /@angular/material/7.3.1:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
       '@angular/animations': '>=7.0.0'
-      '@angular/cdk': 7.3.0
+      '@angular/cdk': 7.3.1
       '@angular/common': '>=7.0.0'
       '@angular/core': '>=7.0.0'
     resolution:
-      integrity: sha512-wWf7dSX8pu9dY9GWiXJfYLA3LTSBREtHLr1NxhN26tQWxGKQ7NJBXth1GTgvojmwt5GzL2j4uyfq/PPvnp95iw==
+      integrity: sha512-txq2y/JSB+05l8a/OfnByw7AEKSeAWAJ49jzCoeb3804sCeVEbvuWZfpmKBX8vCVTZh005Ypuk55R4NP5AIgaw==
   /@angular/platform-browser-dynamic/7.2.3:
     dependencies:
       tslib: 1.9.3
@@ -4011,6 +4012,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ePl4l+7dLLmCucIwgQHAgjiepY++qcI6nb8eAwGNkB6OxmTe3Z9rQU3rSpomqu42PCCnlThZbOoxsf+qylJsLA==
+  /@types/jest/24.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-kOafJnUTnMd7/OfEO/x3I47EHswNjn+dbz9qk3mtonr1RvKT+1FGVxnxAx08I9K8Tl7j9hpoJRE7OCf+t10fng==
   /@types/jquery/3.3.29:
     dependencies:
       '@types/sizzle': 2.3.2
@@ -6357,7 +6362,6 @@ packages:
     resolution:
       integrity: sha512-KE8NFMZr3mN2E0HcvCgRtX7DjhiIQrwle+nSVJVC/yqFb9+xznHl2ZcoBp2L9qzkI4t4cBFJ1efXF8Dwi132RA==
   /bluebird/3.5.3:
-    dev: true
     resolution:
       integrity: sha512-/qKPUQlaW1OyR51WeCPBvRnAlnZFUJkCSG5HzGnuIqhgyJtF+T94lFnn33eiazjRm2LAHVy2guNnaq48X9SJuw==
   /bn.js/4.11.8:
@@ -6415,6 +6419,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+  /bourne/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-Ou0l3W8+n1FuTOoIfIrCk9oF9WVWc+9fKoAl67XQr9Ws0z7LgILRZ7qtc9xdT4BveSKtnYXfKPgn8pFAqeQRew==
   /box-intersect/1.0.2:
     dependencies:
       bit-twiddle: 1.0.2
@@ -10875,12 +10883,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-cIo/96xyhZWmzL7dSJoIvmoJ1KxVW8a28cOqzFy6KYZ+ysb7Evx0TaiqMtLJnlevOUFASsutJG7GETXPeYVtPQ==
-  /fastify/1.13.4:
+  /fastify/1.14.0:
     dependencies:
       '@types/pino': 4.16.1
       abstract-logging: 1.0.0
       ajv: 6.8.1
       avvio: 5.9.0
+      bourne: 1.1.1
       end-of-stream: 1.4.1
       fast-json-stringify: 1.10.0
       find-my-way: 1.18.0
@@ -10894,7 +10903,7 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-3L791cNhfhbh5erCUnHLxCcUeHcgO8yPoN0QRvzaA/5wSSnYcjm9n+ewFsXTnwJoVidmoUqnjgmTPqUpIXoeYg==
+      integrity: sha512-NqRcrJlZ6Kr834ZFuh6+PYpGl9CUlu+JN+fOnsqAGxUdbcrOpMyRW/YdlcXCZPDO8dqReOOdHeF3FhazflJv5A==
   /fastparse/1.1.2:
     dev: true
     resolution:
@@ -11972,10 +11981,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-sxnA3UYH81PzvpzKTHL8FIxJ9EU=
-  /global-modules-path/2.3.1:
-    dev: true
-    resolution:
-      integrity: sha512-y+shkf4InI7mPRHSo2b/k6ix6+NLDtyccYv86whhxrSGX9wjPX1VMITmrDbE1eh7zkzhiWtW2sHklJYoQ62Cxg==
   /global-modules/1.0.0:
     dependencies:
       global-prefix: 1.0.2
@@ -14656,6 +14661,22 @@ packages:
       jest: '>=20 <=23'
     resolution:
       integrity: sha512-BlayrfEw+qtWiUrSeYIZFQwT4yEIYdXCt0yiUVLdL/dSrH5qg46PIfy8yvbUBhGJLR9KhPHLpB3dNVRNd1OaaA==
+  /jest-image-snapshot/2.8.0:
+    dependencies:
+      chalk: 1.1.3
+      get-stdin: 5.0.1
+      lodash: 4.17.11
+      mkdirp: 0.5.1
+      pixelmatch: 4.0.2
+      pngjs: 3.3.3
+      rimraf: 2.6.3
+    dev: true
+    engines:
+      node: '>=6.0.0'
+    peerDependencies:
+      jest: '>=20 <=23'
+    resolution:
+      integrity: sha512-z1pXPRfCsjg3RqssTgdRJjsEo3W4VNu+0q5d/W8UmmvXTpbjQnTQ3helDn1tX76EZjL5kU79uVhqPhGmeA/m6A==
   /jest-jasmine2/24.0.0:
     dependencies:
       '@babel/traverse': 7.2.3
@@ -15812,6 +15833,7 @@ packages:
     resolution:
       integrity: sha512-ZSFO3XnQNSKsHR/E2ZMga5btdiIa3sNoT6CZIZ8Hr1VHJWBNcRRurVYpQlaJqvQqwg3aOl09QpVOnjB9ajnYHQ==
   /lightercollective/0.1.0:
+    dev: false
     hasBin: true
     resolution:
       integrity: sha512-J9tg5uraYoQKaWbmrzDDexbG6hHnMcWS1qLYgJSWE+mpA3U5OCSeMUhb+K55otgZJ34oFdR0ECvdIb3xuO5JOQ==
@@ -16038,6 +16060,13 @@ packages:
   /lodash-es/4.17.11:
     resolution:
       integrity: sha512-DHb1ub+rMjjrxqlB3H56/6MXtm1lSksDp2rA2cNWjG8mlDUYFhUj3Di2Zn5IwSU87xLv8tNIQ7sSwE/YOX/D/Q==
+  /lodash-fun/1.5.0:
+    dependencies:
+      bluebird: 3.5.3
+      lodash: 4.17.11
+    dev: false
+    resolution:
+      integrity: sha512-Pmq/kIMrttIv3jLgPnRwPpf7JRQc7wrUJnEndZniNaphLDCDD7+aQqXhjdRZ0XZTE0HytiRh2UJH8EMTZe8Suw==
   /lodash-id/0.14.0:
     dev: true
     engines:
@@ -26019,17 +26048,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-naLWiRfmtH4UJgtUktRTLw6FdoZJ2RvCR9ePbwM9aRMsS/KjFerkPZG9epEvXRAw5d5oPdrs9+3p+afNjxW8Xw==
-  /webpack-cli/3.2.1:
+  /webpack-cli/3.2.3:
     dependencies:
       chalk: 2.4.2
       cross-spawn: 6.0.5
       enhanced-resolve: 4.1.0
       findup-sync: 2.0.0
       global-modules: 1.0.0
-      global-modules-path: 2.3.1
       import-local: 2.0.0
       interpret: 1.2.0
-      lightercollective: 0.1.0
       loader-utils: 1.2.3
       supports-color: 5.5.0
       v8-compile-cache: 2.0.2
@@ -26040,9 +26067,8 @@ packages:
     hasBin: true
     peerDependencies:
       webpack: 4.x.x
-    requiresBuild: true
     resolution:
-      integrity: sha512-jeJveHwz/vwpJ3B8bxEL5a/rVKIpRNJDsKggfKnxuYeohNDW4Y/wB9N/XHJA093qZyS0r6mYL+/crLsIol4WKA==
+      integrity: sha512-Ik3SjV6uJtWIAN5jp5ZuBMWEAaP5E4V78XJ2nI+paFPh8v4HPSwo/myN0r29Xc/6ZKnd2IdrAlpSgNOu2CDQ6Q==
   /webpack-core/0.6.9:
     dependencies:
       source-list-map: 0.1.8
@@ -27094,7 +27120,7 @@ specifiers:
   '@angular-material-extensions/password-strength': 3.4.1
   '@angular-mdc/web': 0.43.7
   '@angular/animations': 7.2.3
-  '@angular/cdk': 7.3.0
+  '@angular/cdk': 7.3.1
   '@angular/cli': 7.3.0
   '@angular/common': 7.2.3
   '@angular/compiler': 7.2.3
@@ -27106,7 +27132,7 @@ specifiers:
   '@angular/forms': 7.2.3
   '@angular/http': 7.2.3
   '@angular/language-service': 7.2.3
-  '@angular/material': 7.3.0
+  '@angular/material': 7.3.1
   '@angular/platform-browser': 7.2.3
   '@angular/platform-browser-dynamic': 7.2.3
   '@angular/platform-server': 7.2.3
@@ -27203,7 +27229,7 @@ specifiers:
   '@types/isomorphic-fetch': 0.0.34
   '@types/jasmine': 3.3.8
   '@types/jasminewd2': 2.0.6
-  '@types/jest': 23.3.13
+  '@types/jest': 24.0.0
   '@types/jquery': 3.3.29
   '@types/lodash': 4.14.120
   '@types/node': 10.12.21
@@ -27271,7 +27297,7 @@ specifiers:
   express-rate-limit: 3.3.2
   express-serve-static-core: 0.1.1
   express-static-gzip: 1.1.3
-  fastify: 1.13.4
+  fastify: 1.14.0
   fastify-formbody: 2.1.0
   fastify-static: 1.1.0
   firebase: 5.8.2
@@ -27301,7 +27327,7 @@ specifiers:
   jest: 24.0.0
   jest-canvas-mock: 2.0.0-alpha.2
   jest-createspyobj: 1.2.2
-  jest-image-snapshot: 2.7.0
+  jest-image-snapshot: 2.8.0
   jest-preset-angular: 6.0.2
   jpeg-js: 0.3.4
   json-server: 0.14.2
@@ -27318,6 +27344,7 @@ specifiers:
   local-web-server: 2.6.1
   lodash: 4.17.11
   lodash-decorators: 6.0.1
+  lodash-fun: 1.5.0
   make-dir-cli: 1.0.0
   material-design-icons: 3.0.1
   material-design-icons-iconfont: 4.0.4
@@ -27426,7 +27453,7 @@ specifiers:
   wait-on: 3.2.0
   webgl-mock: 0.1.7
   webpack-bundle-analyzer: 3.0.3
-  webpack-cli: 3.2.1
+  webpack-cli: 3.2.3
   webpack-dotenv-extended-plugin: 1.0.0
   webpack-env: 0.8.0
   webpack-filter-warnings-plugin: 1.2.1

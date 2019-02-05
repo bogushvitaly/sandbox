@@ -15,6 +15,8 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [x] Prerender SPA Plugin, Custom webpack builders for Angular
 - [x] Acceptance Test Driven Development with Codecept and Jest
 - [x] Design System Development using Storybook
+- [x] Nest.js Backend
+- [x] Machine Learning Capabilities: TensorFlow.js
 
 ## Subprojects
 
@@ -22,23 +24,24 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 
 ## In progress
 
+- [ ] Components Libraries: Angular Material, Covalent UI Platform, Material Web Components, MDBootstrap
+- [ ] Graphics Libraries: REGL, Babylon.js, Three.js
 - [ ] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth, Winston logging
-- [ ] Offline Storages: RxDB
-- [ ] Nest.js Backend
 - [ ] Cloud Backends: Firebase Platform, AWS AppSync, Prisma database API
+- [ ] Offline Storages: RxDB
 - [ ] Communication Styles: GraphQL with Apollo, REST, gRPC
 - [ ] Functional Programming Style: RxJS, Lodash FP, Lodash Decorators
-- [ ] Components Libraries: Angular Material, Covalent UI Platform, Material Web Components, MDBootstrap
 - [ ] Web Components libraries integration: Stencil.js
-- [ ] Graphics Libraries: REGL, Babylon.js, Three.js
 - [ ] API Integrations: Google APIs, Trello API, Coinbase API
-- [ ] Machine Learning Capabilities: TensorFlow.js Brain.js
 - [ ] Blockchain Networks and Decentralized Platform Integrations: Blockchain API, Ethereum API, SingularityNET API, Solid Platform API, IPFS, IPLD
 
 ## Checklist
 
 - [Project Guidelines](https://github.com/elsewhencode/project-guidelines)
 - [Clean Code Cheat Sheet ](https://www.planetgeek.ch/wp-content/uploads/2014/11/Clean-Code-V2.4.pdf)
-- [Clean Architecture Cheat Sheet ](https://www.planetgeek.ch/wp-content/uploads/2016/03/Clean-Architecture-V1.0.pdf)
 - [The Twelve-Factor App](https://12factor.net). [Beyond the Twelve-Factor App](https://assets.dynatrace.com/en/docs/report/beyond-the-twelve-factor-app-dynatrace-paper.pdf)
+
+## Architecture
+
+- [Clean Architecture Cheat Sheet ](https://www.planetgeek.ch/wp-content/uploads/2016/03/Clean-Architecture-V1.0.pdf)
 - [Cloud Native Computing Organizational Readiness Review](https://github.com/jdumars/cncorr)

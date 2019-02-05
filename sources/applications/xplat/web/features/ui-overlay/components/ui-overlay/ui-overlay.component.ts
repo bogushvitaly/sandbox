@@ -1,4 +1,13 @@
-import { animate, AnimationEvent, group, query, state, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  AnimationEvent,
+  group,
+  query,
+  state,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
 import { Component, EventEmitter, HostListener, Inject, Input } from '@angular/core';
 
 import { UiOverlayRef } from '../../ui-overlay-ref';

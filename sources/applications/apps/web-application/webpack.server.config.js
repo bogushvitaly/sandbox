@@ -59,6 +59,7 @@ module.exports = {
     'firebase-functions',
     'lodash',
     'lodash-decorators',
+    'lodash-fun',
     'ngx-auth-firebaseui',
     'reflect-metadata',
     'rxjs',

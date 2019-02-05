@@ -7,6 +7,7 @@
    "rules": {
 
      "forin": false,
+     "prefer-for-of": false,
      "ban-types": false,
      "interface-name": false,
      "max-classes-per-file": [true, 5, "exclude-class-expressions"],
