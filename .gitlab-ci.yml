@@ -23,15 +23,10 @@ cache:
 
 before_script:
   - npm config set registry $NPM_PRIVATE_REGISTERY_URL
-  - npm config set store .pnpm-store
-  - npm config set verify-store-integrity false
-  - npm config set rebuild-bundle false
+  - npm config set store .pnpm-store/
 
 applications-dependencies-install:
   stage: prepare
-  before_script:
-    - npm config set registry $NPM_PRIVATE_REGISTERY_URL
-    - npm config set store .pnpm-store
   cache:
     key: $CI_PROJECT_NAMESPACE
     policy: pull-push
@@ -66,6 +61,7 @@ web-application-build-staging:
       - sources/applications/dist
   when: always
   allow_failure: false
+
 web-application-build-production:
   stage: build
   environment:
@@ -126,6 +122,7 @@ applications-check-formatting:
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo Applications code formatting check finished
+  allow_failure: false
 
 applications-check-linting:
   stage: test
@@ -140,6 +137,7 @@ applications-check-linting:
     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
     - npm run --prefix sources/applications lint.check
     - echo Applications code linting check finished
+  allow_failure: false
 
 applications-unit-tests:
   stage: test
@@ -157,6 +155,7 @@ applications-unit-tests:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 applications-compodoc:
   stage: test
@@ -174,6 +173,7 @@ applications-compodoc:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 applications-storybook:
   stage: test
@@ -191,6 +191,7 @@ applications-storybook:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 applications-dependencies-graph:
   stage: test
@@ -208,6 +209,7 @@ applications-dependencies-graph:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 web-application-bundle-analysis:
   stage: test
@@ -225,6 +227,7 @@ web-application-bundle-analysis:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 web-application-end-to-end-tests:
   stage: test
@@ -243,6 +246,7 @@ web-application-end-to-end-tests:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 web-application-performance-audit:
   stage: audit
@@ -258,6 +262,7 @@ web-application-performance-audit:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 services-api-performance-audit:
   stage: audit
@@ -270,6 +275,7 @@ services-api-performance-audit:
   artifacts:
     paths:
       - sources/applications/reports
+  allow_failure: false
 
 web-application-deploy-staging:
   stage: staging
