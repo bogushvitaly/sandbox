@@ -38,36 +38,35 @@ applications-dependencies-install:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --prefix sources/applications
-    - pnpm install --prefix sources/applications/functions
+    # - pnpm install --prefix sources/applications
+    # - pnpm install --prefix sources/applications/functions
+    - curl s3.gitlab-managed-apps-sandbox:9000
+    - curl verdaccio-verdaccio.gitlab-managed-apps-sandbox:4873
     - echo Installing dependencies finished
   only:
     - master
   when: always
   allow_failure: false
-
-web-application-build-staging:
-  stage: build
-  environment:
-    name: staging
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    # - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    # - npm run --prefix sources/applications build.web.application.udk
-    - curl s3.gitlab-managed-apps-sandbox:9000
-    - curl verdaccio-verdaccio.gitlab-managed-apps-sandbox:4873
-    - echo Stage build completed
-  artifacts:
-    paths:
-      - sources/applications/dist
-  when: always
-  allow_failure: false
+# web-application-build-staging:
+#   stage: build
+#   environment:
+#     name: staging
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications build.web.application.udk
+#     - echo Stage build completed
+#   artifacts:
+#     paths:
+#       - sources/applications/dist
+#   when: always
+#   allow_failure: false
 # web-application-build-production:
 #   stage: build
 #   environment:
