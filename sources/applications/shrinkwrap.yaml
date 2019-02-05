@@ -27086,12 +27086,14 @@ packages:
     name: sqlite3
     requiresBuild: true
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/mapbox/node-sqlite3/tar.gz/081aebb0a4d017058dedf91d34632d2e75e0136a'
     version: 4.0.6
   github.com/mlaanderson/database-js-common/e4e114208175abbe286f8e27f321e6e8521b6817:
     dev: true
     name: database-js-common
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/mlaanderson/database-js-common/tar.gz/e4e114208175abbe286f8e27f321e6e8521b6817'
     version: 1.0.1
 registry: 'https://registry.npmjs.org/'
