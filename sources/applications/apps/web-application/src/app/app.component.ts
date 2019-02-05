@@ -66,10 +66,10 @@ export class AppComponent extends AppBaseComponent implements OnInit {
 
         let updateAccepted = confirm('Apply Updates!');
         if (updateAccepted) {
-          swUpdate.activateUpdate().then(() => window.reload());
+          this.swUpdate.activateUpdate().then(() => window.reload());
         }
       });
-      swUpdate.activated.subscribe(event => {
+      this.swUpdate.activated.subscribe(event => {
         this.logger.debug(`Service worker activated`);
         this.logger.debug(`old version was ${event.previous}`);
         this.logger.debug(`new version is ${event.current}`);

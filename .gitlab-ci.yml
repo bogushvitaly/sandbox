@@ -22,7 +22,7 @@ cache:
     - .pnpm-store/
 
 before_script:
-  - npm config set registry $NPM_PRIVATE_REGISTERY_URL
+  - npm config set registry $NPM_REGISTERY_URL
   - npm config set store .pnpm-store/
 
 applications-dependencies-install:
