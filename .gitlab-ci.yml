@@ -10,12 +10,12 @@ services:
 
 stages:
   - prepare
-  - build
-  - test
-  - staging
-  - audit
-  - reports
-  - production
+  # - build
+  # - test
+  # - staging
+  # - audit
+  # - reports
+  # - production
 
 cache:
   key: $CI_PROJECT_NAMESPACE
@@ -23,6 +23,7 @@ cache:
     - .pnpm-store/
 
 before_script:
+  # - npm adduser --registry verdaccio-verdaccio.gitlab-managed-apps-sandbox:4873
   - npm config set store .pnpm-store
   - npm config set verify-store-integrity false
   - npm config set rebuild-bundle false
@@ -57,302 +58,303 @@ web-application-build-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications build.web.application.udk
+    # - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    # - npm run --prefix sources/applications build.web.application.udk
+    - curl s3.gitlab-managed-apps-sandbox:9000
+    - curl verdaccio-verdaccio.gitlab-managed-apps-sandbox:4873
     - echo Stage build completed
   artifacts:
     paths:
       - sources/applications/dist
   when: always
   allow_failure: false
+# web-application-build-production:
+#   stage: build
+#   environment:
+#     name: production
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications build.web.application.udk
+#     - mkdir -p sources/applications/production
+#     - cp -r sources/applications/dist/apps/* sources/applications/production
+#     - echo Web Application Production build completed
+#   artifacts:
+#     paths:
+#       - sources/applications/production
+#   when: always
+#   allow_failure: false
 
-web-application-build-production:
-  stage: build
-  environment:
-    name: production
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications build.web.application.udk
-    - mkdir -p sources/applications/production
-    - cp -r sources/applications/dist/apps/* sources/applications/production
-    - echo Web Application Production build completed
-  artifacts:
-    paths:
-      - sources/applications/production
-  when: always
-  allow_failure: false
+# web-application-api-build-production:
+#   stage: build
+#   environment:
+#     name: production
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications build.web.application.api
+#     - mkdir -p sources/applications/production
+#     - cp -r sources/applications/dist/apps/* sources/applications/production
+#     - echo Web Application API Server Production build completed
+#   artifacts:
+#     paths:
+#       - sources/applications/dist
+#       - sources/applications/production
+#   when: always
+#   allow_failure: false
 
-web-application-api-build-production:
-  stage: build
-  environment:
-    name: production
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications build.web.application.api
-    - mkdir -p sources/applications/production
-    - cp -r sources/applications/dist/apps/* sources/applications/production
-    - echo Web Application API Server Production build completed
-  artifacts:
-    paths:
-      - sources/applications/dist
-      - sources/applications/production
-  when: always
-  allow_failure: false
+# applications-check-formatting:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
+#     - echo Applications code formatting check finished
 
-applications-check-formatting:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
-    - echo Applications code formatting check finished
+# applications-check-linting:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications lint.check
+#     - echo Applications code linting check finished
 
-applications-check-linting:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications lint.check
-    - echo Applications code linting check finished
+# applications-unit-tests:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications test.jest.coverage
+#     - echo Web Application unit tests finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-applications-unit-tests:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications test.jest.coverage
-    - echo Web Application unit tests finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# applications-compodoc:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications docs.compodoc
+#     - echo Web Application unit tests Compodoc generation finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-applications-compodoc:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications docs.compodoc
-    - echo Web Application unit tests Compodoc generation finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# applications-storybook:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications storybook.build
+#     - echo Applications storybook building finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-applications-storybook:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications storybook.build
-    - echo Applications storybook building finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# applications-dependencies-graph:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications dep-graph
+#     - echo Applications dependencies graph generation finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-applications-dependencies-graph:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications dep-graph
-    - echo Applications dependencies graph generation finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# web-application-bundle-analysis:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications analyze.web.application.bundle
+#     - echo Web Application bundle analysis finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-web-application-bundle-analysis:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications analyze.web.application.bundle
-    - echo Web Application bundle analysis finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# web-application-end-to-end-tests:
+#   stage: test
+#   dependencies:
+#     - applications-dependencies-install
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - npm run --prefix sources/applications e2e.web.application
+#     - npm run --prefix sources/applications e2e.web.application.allure
+#     - echo Web Application end-to-end tests finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-web-application-end-to-end-tests:
-  stage: test
-  dependencies:
-    - applications-dependencies-install
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - npm run --prefix sources/applications e2e.web.application
-    - npm run --prefix sources/applications e2e.web.application.allure
-    - echo Web Application end-to-end tests finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# web-application-performance-audit:
+#   stage: audit
+#   dependencies:
+#     - web-application-deploy-staging
+#   cache: {}
+#   script:
+#     - mkdir -p sources/applications/reports/lighthouse
+#     - CHROME_PATH=/usr/bin/chromium-browser
+#     - pwmetrics $WEB_APPLICATION_STAGING_URL --runs=3
+#     - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
+#     - echo Web Application Lighthouse analysis finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-web-application-performance-audit:
-  stage: audit
-  dependencies:
-    - web-application-deploy-staging
-  cache: {}
-  script:
-    - mkdir -p sources/applications/reports/lighthouse
-    - CHROME_PATH=/usr/bin/chromium-browser
-    - pwmetrics $WEB_APPLICATION_STAGING_URL --runs=3
-    - lighthouse-ci $WEB_APPLICATION_STAGING_URL --silent --report=sources/applications/reports/lighthouse
-    - echo Web Application Lighthouse analysis finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# services-api-performance-audit:
+#   stage: audit
+#   dependencies:
+#     - web-application-deploy-staging
+#   cache: {}
+#   script:
+#     - artillery quick --count 10 -n 20 https://artillery.io/
+#     - echo Example service Artillery load tests finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports
 
-services-api-performance-audit:
-  stage: audit
-  dependencies:
-    - web-application-deploy-staging
-  cache: {}
-  script:
-    - artillery quick --count 10 -n 20 https://artillery.io/
-    - echo Example service Artillery load tests finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# web-application-deploy-staging:
+#   stage: staging
+#   dependencies:
+#     - web-application-build-staging
+#     - web-application-api-build-production
+#   environment:
+#     name: staging
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
+#     - npm run --prefix sources/applications deploy.firebase
+#     - echo Staging deployment finished
+#   artifacts:
+#     paths:
+#       - sources/applications/dist
+#   when: always
 
-web-application-deploy-staging:
-  stage: staging
-  dependencies:
-    - web-application-build-staging
-    - web-application-api-build-production
-  environment:
-    name: staging
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
-    - npm run --prefix sources/applications deploy.firebase
-    - echo Staging deployment finished
-  artifacts:
-    paths:
-      - sources/applications/dist
-  when: always
+# web-application-deploy-production:
+#   stage: production
+#   dependencies:
+#     - web-application-build-production
+#     - web-application-api-build-production
+#   environment:
+#     name: production
+#   cache:
+#     key: $CI_PROJECT_NAMESPACE
+#     policy: pull
+#     paths:
+#       - .pnpm-store/
+#   script:
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+#     - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
+#     - rm -rf sources/applications/dist/apps
+#     - mkdir -p sources/applications/dist/apps
+#     - mv sources/applications/production/* sources/applications/dist/apps
+#     - npm run --prefix sources/applications deploy.firebase
+#     - echo Production deployment finished
+#   artifacts:
+#     paths:
+#       - sources/applications/production
+#   only:
+#     - master
+#   when: manual
 
-web-application-deploy-production:
-  stage: production
-  dependencies:
-    - web-application-build-production
-    - web-application-api-build-production
-  environment:
-    name: production
-  cache:
-    key: $CI_PROJECT_NAMESPACE
-    policy: pull
-    paths:
-      - .pnpm-store/
-  script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
-    - rm -rf sources/applications/dist/apps
-    - mkdir -p sources/applications/dist/apps
-    - mv sources/applications/production/* sources/applications/dist/apps
-    - npm run --prefix sources/applications deploy.firebase
-    - echo Production deployment finished
-  artifacts:
-    paths:
-      - sources/applications/production
-  only:
-    - master
-  when: manual
+# pages:
+#   stage: reports
+#   before_script:
+#     - echo Skip Before Scripts
+#   cache: {}
+#   dependencies:
+#     - applications-unit-tests
+#     - applications-compodoc
+#     - applications-storybook
+#     - applications-dependencies-graph
+#     - web-application-bundle-analysis
+#     - web-application-end-to-end-tests
+#     - web-application-performance-audit
+#   script:
+#     - mkdir -p public
+#     - cp -r sources/applications/tools/report-wrapper/* public
+#     - cp -r sources/applications/reports/* public
+#     - echo Pages publishing finished
+#   artifacts:
+#     paths:
+#       - public
+#       - sources/applications/reports
+#     expire_in: 30 days
 
-pages:
-  stage: reports
-  before_script:
-    - echo Skip Before Scripts
-  cache: {}
-  dependencies:
-    - applications-unit-tests
-    - applications-compodoc
-    - applications-storybook
-    - applications-dependencies-graph
-    - web-application-bundle-analysis
-    - web-application-end-to-end-tests
-    - web-application-performance-audit
-  script:
-    - mkdir -p public
-    - cp -r sources/applications/tools/report-wrapper/* public
-    - cp -r sources/applications/reports/* public
-    - echo Pages publishing finished
-  artifacts:
-    paths:
-      - public
-      - sources/applications/reports
-    expire_in: 30 days
-
-hiptest:
-  stage: reports
-  image: docker:stable
-  before_script:
-    - echo Skip Before Scripts
-  cache: {}
-  script:
-    - docker run --rm -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf
-    - echo Hiptest report pablishing finished
-  artifacts:
-    paths:
-      - sources/applications/reports
+# hiptest:
+#   stage: reports
+#   image: docker:stable
+#   before_script:
+#     - echo Skip Before Scripts
+#   cache: {}
+#   script:
+#     - docker run --rm -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf
+#     - echo Hiptest report pablishing finished
+#   artifacts:
+#     paths:
+#       - sources/applications/reports

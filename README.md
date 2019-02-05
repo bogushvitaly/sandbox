@@ -9,7 +9,7 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 ## Done
 
 - [x] [Skaffold](https://github.com/GoogleContainerTools/skaffold) tool for developing Multi-language Applications and Services
-- [x] A performant Continuous Delivery Pipeline: Local Minikube GitLab CI Runner with [Minio](https://www.minio.io/) Storage for multistage dependency caching, [pnpm](https://pnpm.js.org/) Package Manager for [performance](https://github.com/pnpm/benchmarks-of-javascript-package-managers), [Verdaccio](https://verdaccio.org/) npm proxy registry
+- [x] A performant Continuous Delivery Pipeline: Local Minikube GitLab CI Runner with [Minio](https://www.minio.io/) Storage for dependency caching, [pnpm](https://pnpm.js.org/) Package Manager for [performance](https://github.com/pnpm/benchmarks-of-javascript-package-managers), [Verdaccio](https://verdaccio.org/) npm proxy registry
 - [x] [NX](https://nrwl.io/nx/what-is-nx) Monorepo Workspace with [Xplat](https://nstudio.io/xplat/) architecture for [cross-platform development](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U), Progressive web applications with [Angular](https://angular.io/)
 - [x] Server-side Rendering with [Universal Development Kit](https://github.com/enten/udk), [Firebase](https://firebase.google.com/) platform for Serverless functions deployment,
 - [x] Page Prerender with [Prerender SPA Plugin](https://github.com/chrisvfritz/prerender-spa-plugin),
