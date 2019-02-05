@@ -30,6 +30,7 @@ before_script:
 applications-dependencies-install:
   stage: prepare
   before_script:
+    - npm config set registry $NPM_PRIVATE_REGISTERY_URL
     - npm config set store .pnpm-store
   cache:
     key: $CI_PROJECT_NAMESPACE
