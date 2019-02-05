@@ -94,7 +94,7 @@ configMap: |
   # To use `npm audit` uncomment the following section
   middlewares:
     audit:
-      enabled: true
+      enabled: false
   # log settings
   logs:
     - {type: stdout, format: pretty, level: http}
