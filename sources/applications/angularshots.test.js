@@ -6,9 +6,6 @@ import initStoryshots, {
 jest.mock('./reports/addon-jest.testresults.json', () => ({}), {
   virtual: true
 });
-jest.mock('apps/web-application/src/environment', () => ({}), {
-  virtual: true
-});
 
 initStoryshots({
   framework: 'angular',

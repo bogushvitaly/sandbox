@@ -8,15 +8,15 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 
 ## Done
 
-- [x] Skaffold tool for developing Multi-language Applications and Services
-- [x] A performant Continuous Delivery Pipeline: Local GitLab CI Runner with Minio Storage caching using Minikube, [pnpm Package Manager](https://github.com/pnpm/benchmarks-of-javascript-package-managers)
-- [x] NX Monorepo Workspace with Xplat architecture [Xplat architecture](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U), Angular PWA
-- [x] Server-side rendering, Firebase Cloud Function deployment, Universal Development Kit
-- [x] Prerender SPA Plugin, Custom webpack builders for Angular
-- [x] Acceptance Test Driven Development with Codecept and Jest
-- [x] Design System Development using Storybook
-- [x] Nest.js Backend
-- [x] Machine Learning Capabilities: TensorFlow.js
+- [x] [Skaffold](https://github.com/GoogleContainerTools/skaffold) tool for developing Multi-language Applications and Services
+- [x] A performant Continuous Delivery Pipeline: Local Minikube GitLab CI Runner with [Minio](https://www.minio.io/) Storage for multistage dependency caching, [pnpm](https://pnpm.js.org/) Package Manager for [performance](https://github.com/pnpm/benchmarks-of-javascript-package-managers), [Verdaccio](https://verdaccio.org/) npm proxy registry
+- [x] [NX](https://nrwl.io/nx/what-is-nx) Monorepo Workspace with [Xplat](https://nstudio.io/xplat/) architecture for [cross-platform development](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U), Progressive web applications with [Angular](https://angular.io/)
+- [x] Server-side Rendering with [Universal Development Kit](https://github.com/enten/udk), [Firebase](https://firebase.google.com/) platform for Serverless functions deployment,
+- [x] Page Prerender with [Prerender SPA Plugin](https://github.com/chrisvfritz/prerender-spa-plugin),
+- [x] Acceptance Test Driven Development with [Codecept](https://codecept.io/) and [Jest](https://jestjs.io/)
+- [x] Design System Development using [Storybook](https://storybook.js.org/)
+- [x] [Nest.js](https://nestjs.com/) Backend
+- [x] Machine Learning Capabilities: [TensorFlow.js](https://js.tensorflow.org/)
 
 ## Subprojects
 
