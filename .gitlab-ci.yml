@@ -3,7 +3,6 @@ image: bohushvitali/frontend-ci
 variables:
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://localhost:2375
-  WEB_APPLICATION_STAGING_URL: https://sandbox-50983.firebaseapp.com/
 
 services:
   - docker:dind
@@ -40,8 +39,7 @@ applications-dependencies-install:
   script:
     # - pnpm install --prefix sources/applications
     # - pnpm install --prefix sources/applications/functions
-    - curl s3.gitlab-managed-apps-sandbox:9000
-    - curl verdaccio-verdaccio.gitlab-managed-apps-sandbox:4873
+    - curl $NPM_PRIVATE_REGISTERY
     - echo Installing dependencies finished
   only:
     - master
