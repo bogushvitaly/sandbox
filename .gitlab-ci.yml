@@ -39,7 +39,6 @@ applications-dependencies-install:
   script:
     - pnpm install --prefix sources/applications
     - pnpm install --prefix sources/applications/functions
-    - curl $NPM_PRIVATE_REGISTERY_URL
     - echo Installing dependencies finished
   only:
     - master
