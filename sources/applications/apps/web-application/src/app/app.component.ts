@@ -48,10 +48,10 @@ export class AppComponent extends AppBaseComponent implements OnInit {
 
   public ngOnInit(): void {
     if (isPlatformServer(this.platformId)) {
-      this.logger.debug(`Application loaded ${+new Date().toISOString()}`);
+      this.logger.debug(`Application loaded at ${+new Date().toISOString()}`);
     }
     if (isPlatformBrowser(this.platformId)) {
-      this.logger.debug(`Application loaded ${+new Date().toISOString()}`);
+      this.logger.debug(`Application loaded at ${+new Date().toISOString()}`);
       const navEndEvent$ = this.router.events.pipe(filter(e => e instanceof NavigationEnd));
       navEndEvent$.subscribe((e: NavigationEnd) => {
         gtag('config', 'MY_ID', { page_path: e.urlAfterRedirects });
@@ -59,16 +59,30 @@ export class AppComponent extends AppBaseComponent implements OnInit {
     }
 
     if (environment.production && this.swUpdate.isEnabled) {
-      this.swUpdate.available.subscribe(evt => {
-        this.logger.debug(`Service worker updated`);
+      this.swUpdate.available.subscribe(event => {
+        this.logger.debug(`Service worker update available`);
+        this.logger.debug(`current version is ${event.current}`);
+        this.logger.debug(`available version is ${event.available}`);
+
+        let updateAccepted = confirm('Apply Updates!');
+        if (updateAccepted) {
+          swUpdate.activateUpdate().then(() => window.reload());
+        }
+      });
+      swUpdate.activated.subscribe(event => {
+        this.logger.debug(`Service worker activated`);
+        this.logger.debug(`old version was ${event.previous}`);
+        this.logger.debug(`new version is ${event.current}`);
       });
 
-      this.swUpdate
-        .checkForUpdate()
-        .then(() => {})
-        .catch(error => {
-          this.logger.error('Error when checking for update: ', error);
-        });
+      Observable.interval(6 * 60 * 60).subscribe(() =>
+        this.swUpdate
+          .checkForUpdate()
+          .then(() => {})
+          .catch(error => {
+            this.logger.error('Error when checking for update: ', error);
+          })
+      );
     }
   }
 }

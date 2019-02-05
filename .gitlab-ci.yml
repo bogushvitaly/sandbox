@@ -22,7 +22,7 @@ cache:
     - .pnpm-store/
 
 before_script:
-  - npm adduser --registry $NPM_PRIVATE_REGISTERY_URL
+  - npm config set registry $NPM_PRIVATE_REGISTERY_URL
   - npm config set store .pnpm-store
   - npm config set verify-store-integrity false
   - npm config set rebuild-bundle false
