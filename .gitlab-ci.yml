@@ -23,6 +23,7 @@ cache:
 
 before_script:
   - npm config set registry $NPM_PRIVATE_REGISTERY_URL
+  - npm adduser --registry $NPM_PRIVATE_REGISTERY_URL
   - npm config set store .pnpm-store
   - npm config set verify-store-integrity false
   - npm config set rebuild-bundle false
@@ -31,6 +32,7 @@ applications-dependencies-install:
   stage: prepare
   before_script:
     - npm config set registry $NPM_PRIVATE_REGISTERY_URL
+    - npm adduser --registry $NPM_PRIVATE_REGISTERY_URL
     - npm config set store .pnpm-store
   cache:
     key: $CI_PROJECT_NAMESPACE
