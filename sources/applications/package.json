@@ -74,7 +74,7 @@
     "prod.web.application.all": "pnpx npm-run-all -p --print-label prod.web.application.api prod.web.application.web",
     "prod.web.application.api": "node ./dist/apps/web-application-api/main.js",
     "prod.web.application.web": "node ./dist/apps/web-application/server/main.js",
-    "report.application.web.open": "sync-files --no-delete tools/report-wrapper reports/apps/web-application && ws --directory reports/apps/web-application --open",
+    "report.application.web.open": "sync-files --no-delete tools/report-wrapper reports && ws --directory reports --open",
     "start.static.content.server": "ng serve static-content-server --port=7772",
     "start.web.application.acceptance": "pnpx npm-run-all -p --print-label start.web.application.api start.web.application.hmr e2e.web.application.watch",
     "start.web.application.all": "pnpx npm-run-all -p --print-label start.web.application.api start.web.application.aot",

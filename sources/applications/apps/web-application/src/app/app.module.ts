@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TransferHttpModule, TransferHttpService } from '@gorniv/ngx-transfer-http';
+import { NgtUniversalModule } from '@ng-toolkit/universal';
 // libs
 import { TransferHttpCacheModule } from '@nguniversal/common';
 
@@ -28,14 +29,14 @@ import { SharedModule } from './features/shared/shared.module';
     TransferHttpModule,
     TransferHttpCacheModule,
     HttpClientModule,
+    NgtUniversalModule,
     BrowserTransferStateModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
-    }),
-    RouterModule
+    })
   ],
   declarations: [AppComponent],
   providers: [TransferHttpService, { provide: APP_BASE_HREF, useValue: '/' }],

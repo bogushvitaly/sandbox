@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { async, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -22,6 +23,7 @@ describe('AppComponent', () => {
       imports: [
         HttpClientTestingModule,
         LoggerTestingModule,
+        NgtUniversalModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,

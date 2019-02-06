@@ -1,4 +1,5 @@
 import { NGXLogger } from 'ngx-logger';
+import { interval } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
@@ -15,6 +16,7 @@ import {
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
+import { WINDOW } from '@ng-toolkit/universal';
 
 import { environment } from '../environments/environment';
 
@@ -32,12 +34,13 @@ export class AppComponent extends AppBaseComponent implements OnInit {
   private swUpdate: SwUpdate;
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(WINDOW) private window: Window,
     private injector: Injector,
     private logger: NGXLogger,
-    @Inject(PLATFORM_ID) private platformId: Object,
+    private router: Router,
     element: ElementRef,
-    renderer: Renderer2,
-    private router: Router
+    renderer: Renderer2
   ) {
     super();
 
@@ -66,7 +69,7 @@ export class AppComponent extends AppBaseComponent implements OnInit {
 
         let updateAccepted = confirm('Apply Updates!');
         if (updateAccepted) {
-          this.swUpdate.activateUpdate().then(() => window.reload());
+          this.swUpdate.activateUpdate().then(() => this.window.location.reload());
         }
       });
       this.swUpdate.activated.subscribe(event => {
@@ -75,7 +78,7 @@ export class AppComponent extends AppBaseComponent implements OnInit {
         this.logger.debug(`new version is ${event.current}`);
       });
 
-      Observable.interval(6 * 60 * 60).subscribe(() =>
+      interval(6 * 60 * 60).subscribe(() =>
         this.swUpdate
           .checkForUpdate()
           .then(() => {})
