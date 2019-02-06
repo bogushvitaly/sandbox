@@ -9,9 +9,10 @@ export const ROUTE_ENTITIES = [
   { name: 'Version', url: 'demo-version' },
   { name: 'Demo Items', url: 'demo-items' },
   { name: 'Heroes Example', url: 'demo-heroes' },
-  { name: 'Demo Angular Material', url: 'demo-angular-material' },
+  { name: 'Angular Material Demo', url: 'demo-angular-material' },
   { name: 'Firebase Authentication', url: 'ui-auth-firebase' },
-  { name: 'Tensorflow Integration', url: 'demo-tensorflow' }
+  { name: 'Tensorflow Integration', url: 'demo-tensorflow' },
+  { name: 'Custom Overlay Demo', url: 'demo-image-preview' }
 ];
 
 export interface IRouteBase {
@@ -21,6 +22,7 @@ export interface IRouteBase {
   demoTensorFlow: string;
   demoVersion: string;
   uiAuthFirebase: string;
+  demoImagePreview: string;
 }
 
 export function routeBase(
@@ -68,6 +70,11 @@ export function routeBase(
         {
           path: 'ui-auth-firebase',
           loadChildren: lazyLoad.uiAuthFirebase,
+          data: { preload: true, delay: true }
+        },
+        {
+          path: 'demo-image-preview',
+          loadChildren: lazyLoad.demoImagePreview,
           data: { preload: true, delay: true }
         }
       ]

@@ -70,3 +70,9 @@ firebase-debug.log*
 
 # Firebase cache
 .firebase/
+
+# environment variables file
+.env
+.env.defaults
+libs/core/environments/environment.ts
+

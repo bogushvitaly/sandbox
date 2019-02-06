@@ -38,4 +38,7 @@ export * from './ui-swiper';
 export * from './system-metadata';
 export * from './demo-wasm';
 export * from './demo-babylon';
-export * from './demo-css-flex';
+export * from './demo-css-flex'; 
+export * from './demo-image-preview';
+
+

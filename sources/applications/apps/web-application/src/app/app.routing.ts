@@ -7,7 +7,12 @@ import { SharedModule } from './features/shared/shared.module';
 
 import { LoadingStrategyService } from '@application/core';
 import { routeBase } from '@application/features';
-import { UiAppMenuComponent, UiAppMenuModule, UiAppShellComponent, UiAppShellModule } from '@application/web';
+import {
+  UiAppMenuComponent,
+  UiAppMenuModule,
+  UiAppShellComponent,
+  UiAppShellModule
+} from '@application/web';
 
 const rootRouteConfig: ExtraOptions = {
   useHash: false,
@@ -28,7 +33,8 @@ const rootRouteConfig: ExtraOptions = {
         demoAngularMaterial: './features/demoAngularMaterial.loader.module#DemoAngularMaterialLoaderModule',
         demoTensorFlow: './features/demoTensorFlow.loader.module#DemoTensorFlowLoaderModule',
         demoVersion: './features/demoVersion.loader.module#DemoVersionLoaderModule',
-        uiAuthFirebase: './features/uiAuthFirebase.loader.module#UiAuthFirebaseLoaderModule'
+        uiAuthFirebase: './features/uiAuthFirebase.loader.module#UiAuthFirebaseLoaderModule',
+        demoImagePreview: './features/demoImagePreview.loader.module#DemoImagePreviewLoaderModule'
       }),
       rootRouteConfig
     )

@@ -1,9 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { UiOverlayService } from '../../../ui-overlay/services/ui-overlay.service';
-import { UiOverlayRef } from '../../../ui-overlay/ui-overlay-ref';
-
+ 
 import { ROUTE_ENTITIES, UiAppMenuBaseComponent } from '@application/features';
 
 @Component({
@@ -15,11 +12,11 @@ export class UiAppMenuComponent extends UiAppMenuBaseComponent implements OnInit
     super();
   }
 
-  menuItems = ROUTE_ENTITIES;
+  routeItems = ROUTE_ENTITIES;
 
   ngOnInit() {}
 
-  navigate(menuItem) {
-    this.router.navigate([`/${menuItem.url}`]);
+  navigate(routeItem) {
+    this.router.navigate([`/${routeItem.url}`]);
   }
 }
