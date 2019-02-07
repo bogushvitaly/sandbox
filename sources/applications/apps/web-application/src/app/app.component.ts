@@ -13,7 +13,8 @@ import {
   PLATFORM_ID,
   Renderer2
 } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 import { WINDOW } from '@ng-toolkit/universal';
@@ -40,13 +41,56 @@ export class AppComponent extends AppBaseComponent implements OnInit {
     private logger: NGXLogger,
     private router: Router,
     element: ElementRef,
-    renderer: Renderer2
+    renderer: Renderer2,
+    private _iconRegistry: MatIconRegistry,
+    private _domSanitizer: DomSanitizer
   ) {
     super();
 
     if (environment.production) {
       this.swUpdate = this.injector.get(SwUpdate) as SwUpdate;
     }
+
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'teradata',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/teradata.svg')
+    );
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'github',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg')
+    );
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'covalent',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/covalent.svg')
+    );
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'covalent-mark',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/covalent-mark.svg')
+    );
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'teradata-ux',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/teradata-ux.svg')
+    );
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'appcenter',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/appcenter.svg')
+    );
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'listener',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/listener.svg')
+    );
+    this._iconRegistry.addSvgIconInNamespace(
+      'assets',
+      'querygrid',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/querygrid.svg')
+    );
   }
 
   public ngOnInit(): void {

@@ -1,13 +1,12 @@
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { UiAngularMaterialModule } from '../ui-angular-material';
+import { UiCovalentModule } from '../ui-covalent';
 import { NOTFOUND_COMPONENTS } from './components';
-import { MaterialModule } from './material.module';
 
 // libs
 import { UISharedModule } from '@application/features';
@@ -17,10 +16,8 @@ const MODULES = [
   RouterModule,
   FlexLayoutModule,
   FormsModule,
-  ReactiveFormsModule,
-  MaterialModule,
-  LayoutModule,
-  DragDropModule,
+  UiAngularMaterialModule,
+  UiCovalentModule,
   ReactiveFormsModule,
   UISharedModule
 ];

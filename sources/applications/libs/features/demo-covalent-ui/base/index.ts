@@ -5,3 +5,6 @@ export * from './demo-covalent-slack-chat.base-component';
 export * from './demo-covalent-langing-page.base-component';
 export * from './demo-covalent-contacts.base-component';
 export * from './demo-covalent-email.base-component';
+export * from './demo-covalent-login.base-component';
+export * from './demo-covalent-ui-users.base-component';
+export * from './demo-covalent-ui-users-form.base-component';

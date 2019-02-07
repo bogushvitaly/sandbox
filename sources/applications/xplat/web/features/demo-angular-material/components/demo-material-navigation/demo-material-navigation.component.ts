@@ -12,11 +12,11 @@ import { DemoMaterialNavigationBaseComponent } from '@application/features';
   styleUrls: ['demo-material-navigation.component.scss']
 })
 export class DemoMaterialNavigationComponent extends DemoMaterialNavigationBaseComponent {
-  constructor(private breakpointObserver: BreakpointObserver) {
-    super();
-  }
-
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    super();
+  }
 }

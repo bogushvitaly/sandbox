@@ -1,3 +1,3 @@
 export * from './components';
-export * from './material.module';
+export * from './ui.module.spec';
 export * from './ui.module';

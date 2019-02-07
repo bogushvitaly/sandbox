@@ -11,14 +11,15 @@ export const DEMOANGULARMATERIAL_COMPONENTS = [
   DemoMaterialAddressComponent,
   DemoMaterialDashboardComponent,
   DemoMaterialDragAndDropComponent,
-  DemoMaterialNavigationComponent,
   DemoMaterialTableComponent,
-  DemoMaterialTreeComponent
+  DemoMaterialTreeComponent,
+  DemoMaterialNavigationComponent
 ];
-export * from './demo-material-navigation/demo-material-navigation.component';
 export * from './demo-material-drag-and-drop/demo-material-drag-and-drop.component';
 export * from './demo-material-tree/demo-material-tree.component';
 export * from './demo-material-table/demo-material-table.component';
 export * from './demo-material-address/demo-material-address.component';
 export * from './demo-material-dashboard/demo-material-dashboard.component';
 export * from './demo-angular-material/demo-angular-material.component';
+export * from './demo-material-navigation/demo-material-navigation.component';
+

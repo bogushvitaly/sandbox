@@ -15,15 +15,15 @@ export function routeDemoAngularMaterial(
       children: [
         {
           path: '',
-          redirectTo: 'address'
-        },
-        {
-          path: 'address',
-          component: address
+          redirectTo: 'dashboard'
         },
         {
           path: 'dashboard',
           component: dashboard
+        },
+        {
+          path: 'address',
+          component: address
         },
         {
           path: 'drag-and-drop',

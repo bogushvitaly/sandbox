@@ -561,7 +561,7 @@ packages:
       '@types/duplexify': 3.6.0
       '@types/request': 2.48.1
       arrify: 1.0.1
-      duplexify: 3.6.1
+      duplexify: 3.7.1
       ent: 2.2.0
       extend: 3.0.2
       google-auth-library: 3.0.1
@@ -621,7 +621,7 @@ packages:
       async: 2.6.1
       compressible: 2.0.15
       concat-stream: 2.0.0
-      duplexify: 3.6.1
+      duplexify: 3.7.1
       extend: 3.0.2
       gcs-resumable-upload: 0.14.1
       hash-stream-validation: 0.2.1
@@ -1658,7 +1658,7 @@ packages:
       integrity: sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
   /babel-runtime/6.26.0:
     dependencies:
-      core-js: 2.6.3
+      core-js: 2.6.4
       regenerator-runtime: 0.11.1
     dev: false
     resolution:
@@ -2006,7 +2006,7 @@ packages:
       integrity: sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
   /compressible/2.0.15:
     dependencies:
-      mime-db: 1.37.0
+      mime-db: 1.38.0
     dev: false
     engines:
       node: '>= 0.6'
@@ -2095,10 +2095,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-sU3ek2xkDAV5prUMq8wTLdYSfjs=
-  /core-js/2.6.3:
+  /core-js/2.6.4:
     dev: false
     resolution:
-      integrity: sha512-l00tmFFZOBHtYhN4Cz7k32VM7vTn3rE2ANjQDxdEN6zmXZ/xq1jQuutnmHvMG1ZJ7xd72+TA5YpUK8wz3rWsfQ==
+      integrity: sha512-05qQ5hXShcqGkPZpXEFLIpxayZscVD2kuMBZewxiIPPEagukO4mqgPA9CWhUvFBJfy3ODdK2p9xyHh7FTU9/7A==
   /core-util-is/1.0.2:
     dev: false
     resolution:
@@ -2289,7 +2289,7 @@ packages:
     optional: true
     resolution:
       integrity: sha512-tUMXrxlExSW6U2EXiiKGSBVdYgtV8qlHL+C10TsW4PURY/ic+eaysnSkwB4kA/mBlCyy/IKDJ+Lc3wbWeaXtuQ==
-  /duplexify/3.6.1:
+  /duplexify/3.7.1:
     dependencies:
       end-of-stream: 1.4.1
       inherits: 2.0.3
@@ -2298,7 +2298,7 @@ packages:
     dev: false
     optional: true
     resolution:
-      integrity: sha512-vM58DwdnKmty+FSPzT14K9JXb90H+j5emaR4KYbr2KTIz00WHGbWOe5ghQTx233ZCLZtrGDALzKwcjEtSt35mA==
+      integrity: sha512-07z8uv2wMyS51kKhD1KsdXJg5WQ6t93RneqRxUHnskXVtlYYkLqM0gqStQZ3pj073g687jPCHrqNfCzawLYh5g==
   /ecc-jsbn/0.1.2:
     dependencies:
       jsbn: 0.1.1
@@ -2910,7 +2910,7 @@ packages:
     dependencies:
       '@grpc/grpc-js': 0.3.5
       '@grpc/proto-loader': 0.4.0
-      duplexify: 3.6.1
+      duplexify: 3.7.1
       google-auth-library: 3.0.1
       google-proto-files: 0.18.0
       grpc: 1.18.0
@@ -3809,6 +3809,13 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-R3C4db6bgQhlIhPU48fUtdVmKnflq+hRdad7IyKhtFj06VPNVdk2RhiYL3UjQIlso8L+YxAtFkobT0VK+S/ybg==
+  /mime-db/1.38.0:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    optional: true
+    resolution:
+      integrity: sha512-bqVioMFFzc2awcdJZIzR3HjZFX20QhilVS7hytkKrv7xFAn8bM1gzc/FOX2awLISvWe0PV8ptFKcon+wZ5qYkg==
   /mime-types/2.1.21:
     dependencies:
       mime-db: 1.37.0
@@ -4243,7 +4250,7 @@ packages:
       integrity: sha512-ruPMNRkN3MHP1cWJc9OWr+T/xDP0jhXYCLfJcBuX54hhfIBnaQmAUMfDcG4DM5UMWByBbJY69QSphm3jtDKIkA==
   /pumpify/1.5.1:
     dependencies:
-      duplexify: 3.6.1
+      duplexify: 3.7.1
       inherits: 2.0.3
       pump: 2.0.1
     dev: false

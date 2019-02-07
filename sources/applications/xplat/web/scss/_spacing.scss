@@ -26,7 +26,8 @@ $spacers: (0: (x: 0, y: 0),
 /**
  * Margin and Padding
  * The following creates this pattern:
- * .m-0{margin:0}.m-t-0{margin-top:0}.m-r-0{margin-right:0}.m-b-0{margin-bottom:0}.m-l-0{margin-left:0}.m-x-0{margin-right:0;margin-left:0}.m-y-0{margin-top:0;margin-bottom:0}
+ * .m-0{margin:0}.m-t-0{margin-top:0}.m-r-0{margin-right:0}.m-b-0{margin-bottom:0}
+ * .m-l-0{margin-left:0}.m-x-0{margin-right:0;margin-left:0}.m-y-0{margin-top:0;margin-bottom:0}
  * Same for Padding (using the 'p' abbreviation)
  * From 0, 2, 5, 10, 15, 20, 25, 30
 **/

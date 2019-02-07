@@ -2,33 +2,39 @@ dependencies:
   3d-force-graph: 1.45.0
   '@angular-material-extensions/password-strength': 3.4.1
   '@angular-mdc/web': 0.43.7
-  '@angular/animations': 7.2.3
+  '@angular/animations': 7.2.4
   '@angular/cdk': 7.3.1
-  '@angular/common': 7.2.3
-  '@angular/compiler': 7.2.3
-  '@angular/core': 7.2.3
-  '@angular/elements': 7.2.3
+  '@angular/common': 7.2.4
+  '@angular/compiler': 7.2.4
+  '@angular/core': 7.2.4
+  '@angular/elements': 7.2.4
   '@angular/fire': 5.1.1
   '@angular/flex-layout': 7.0.0-beta.23
-  '@angular/forms': 7.2.3
-  '@angular/http': 7.2.3
-  '@angular/language-service': 7.2.3
+  '@angular/forms': 7.2.4
+  '@angular/http': 7.2.4
+  '@angular/language-service': 7.2.4
   '@angular/material': 7.3.1
-  '@angular/platform-browser': 7.2.3
-  '@angular/platform-browser-dynamic': 7.2.3
-  '@angular/platform-server': 7.2.3
+  '@angular/platform-browser': 7.2.4
+  '@angular/platform-browser-dynamic': 7.2.4
+  '@angular/platform-server': 7.2.4
   '@angular/pwa': 0.13.0
-  '@angular/router': 7.2.3
-  '@angular/service-worker': 7.2.3
+  '@angular/router': 7.2.4
+  '@angular/service-worker': 7.2.4
   '@angularclass/hmr': 2.1.3
   '@application/scss': 'link:libs/scss'
   '@application/web': 'link:xplat/web'
+  '@covalent/core': 2.0.1
+  '@covalent/dynamic-forms': 2.0.1
+  '@covalent/highlight': 2.0.1
+  '@covalent/http': 2.0.1
+  '@covalent/http-deprec': 2.0.1
+  '@covalent/markdown': 2.0.1
   '@google-cloud/firestore': 1.0.1
   '@gorniv/ngx-transfer-http': 2.2.9
   '@ionic-native/core': 5.0.0
   '@ionic-native/splash-screen': 5.0.0
   '@ionic-native/status-bar': 5.0.0
-  '@ionic/angular': 4.0.0
+  '@ionic/angular': 4.0.1
   '@ionic/angular-toolkit': 1.3.0
   '@nestjs/common': 5.7.0
   '@nestjs/core': 5.7.0
@@ -70,10 +76,12 @@ dependencies:
   '@rdfjs/parser-jsonld': 1.1.1
   '@rdfjs/serializer-jsonld': 1.2.0
   '@swimlane/ngx-charts': 10.0.0
+  '@swimlane/ngx-datatable': 14.0.0
+  '@swimlane/ngx-ui': 25.1.0
   '@tensorflow-models/coco-ssd': 0.1.1
   '@tensorflow-models/mobilenet': 0.2.2
   '@tensorflow-models/posenet': 0.2.3
-  '@tensorflow-models/speech-commands': 0.2.3
+  '@tensorflow-models/speech-commands': 0.2.4
   '@tensorflow/tfjs': 0.15.0
   '@tensorflow/tfjs-node': 0.2.3
   angle-normals: 1.0.0
@@ -82,7 +90,7 @@ dependencies:
   angular2-notifications: 2.0.0
   angulartics2: 7.4.1
   apollo-angular: 1.5.0
-  apollo-angular-link-http: 1.4.0
+  apollo-angular-link-http: 1.5.0
   apollo-cache-inmemory: 1.4.2
   apollo-client: 2.4.12
   aws-amplify: 1.1.19
@@ -107,10 +115,11 @@ dependencies:
   compression: 1.7.3
   connect: 3.6.6
   cookie-parser: 1.4.3
-  core-js: 2.6.3
+  core-js: 2.6.4
   cors: 2.8.5
   csurf: 1.9.0
   cuint: 0.2.2
+  d3: 5.8.2
   document-register-element: 1.13.1
   earcut: 2.1.5
   ease-component: 1.0.0
@@ -138,7 +147,7 @@ dependencies:
   load-bmfont: 1.4.0
   lodash: 4.17.11
   lodash-decorators: 6.0.1
-  lodash-fun: 1.5.0
+  lodash-fun: 1.6.1
   moment: 2.24.0
   mouse-change: 1.4.0
   mouse-wheel: 1.2.0
@@ -197,7 +206,7 @@ devDependencies:
   '@angular-devkit/build-angular': 0.13.0
   '@angular-devkit/build-ng-packagr': 0.13.0
   '@angular/cli': 7.3.0
-  '@angular/compiler-cli': 7.2.3
+  '@angular/compiler-cli': 7.2.4
   '@babel/cli': 7.2.3
   '@babel/core': 7.2.2
   '@babel/preset-env': 7.3.1
@@ -229,6 +238,7 @@ devDependencies:
   '@types/cookie-parser': 1.4.1
   '@types/cors': 2.8.4
   '@types/express': 4.16.1
+  '@types/hammerjs': 2.0.36
   '@types/isomorphic-fetch': 0.0.34
   '@types/jasmine': 3.3.8
   '@types/jasminewd2': 2.0.6
@@ -270,7 +280,7 @@ devDependencies:
   jasmine-marbles: 0.4.1
   jasmine-spec-reporter: 4.2.1
   jest: 24.1.0
-  jest-canvas-mock: 2.0.0-alpha.2
+  jest-canvas-mock: 2.0.0-alpha.3
   jest-createspyobj: 1.2.2
   jest-image-snapshot: 2.8.0
   jest-preset-angular: 6.0.2
@@ -302,7 +312,7 @@ devDependencies:
   postcss-loader: 3.0.0
   prerender-spa-plugin: 3.4.0
   prettier: 1.16.4
-  prisma: 1.25.7
+  prisma: 1.26.3
   protractor: 5.4.2
   puppeteer: 1.12.2
   read-pkg: 4.0.1
@@ -323,7 +333,7 @@ devDependencies:
   stylelint-config-prettier: 4.0.0
   stylelint-config-recommended-scss: 3.2.0
   stylelint-config-standard: 18.2.0
-  stylelint-scss: 3.5.2
+  stylelint-scss: 3.5.3
   supertest: 3.4.2
   sync-files: 1.0.3
   terser: 3.14.1
@@ -620,14 +630,14 @@ packages:
       '@angular/core': '>=7.0.0'
     resolution:
       integrity: sha512-7edqp5LJB0Y+bZq4pFo+ezxFV7uQuCZY1pF6uP6RxW/kO07EqjSWsYWb25cTppTB61sKM4rK6tpCdN8DFOF1qA==
-  /@angular/animations/7.2.3:
+  /@angular/animations/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.3
+      '@angular/core': 7.2.4
     resolution:
-      integrity: sha512-5WoiDnVS2OhGgJ1oepFNF2UcfR4sJj97KRnTmLWQ0S4N4WpXX83CoOQVXvXwfotyb8uNtl4zRi2NuvN/MIuFuA==
+      integrity: sha512-Wx6cqU6koFOASlyl4aCygtbtROoehU6OKwV2EZTkfzHx6Eu/QyTiSa5kyoApVM5LMmCNeb8SxJMSAnKXztNl0A==
   /@angular/cdk/7.3.1:
     dependencies:
       tslib: 1.9.3
@@ -661,22 +671,22 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-6+NoHsW1MYG7GBHUg71zaWIFeIRps/SVksCmRFCpW0RXqErCQmzf0GZuDTZZ2Yo4RzU01150sVp1R8wEvEZfZQ==
-  /@angular/common/7.2.3:
+  /@angular/common/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.3
+      '@angular/core': 7.2.4
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-VZOTZdvkitaKEhkxL6daHxPcKqAFwNJm0U4NFB4LRP9KspsFTE60QFVB63o129PTIH9iOQ2D3HRKSRl4o78ZKg==
-  /@angular/compiler-cli/7.2.3:
+      integrity: sha512-3/i8RtnLTx/90gJHk5maE8zwsSiHgHvLItaa0qVfNlWiU0eCId/PL6TgDkut5vN9SQYL0oxhxFaVd35HmwsmuQ==
+  /@angular/compiler-cli/7.2.4:
     dependencies:
       canonical-path: 1.0.0
       chokidar: 1.7.0
       convert-source-map: 1.6.0
       dependency-graph: 0.7.2
-      magic-string: 0.25.1
+      magic-string: 0.25.2
       minimist: 1.2.0
       reflect-metadata: 0.1.13
       shelljs: 0.8.3
@@ -688,17 +698,17 @@ packages:
       node: '>=8.0'
     hasBin: true
     peerDependencies:
-      '@angular/compiler': 7.2.3
+      '@angular/compiler': 7.2.4
       typescript: '>=3.1.1 <3.3'
     resolution:
-      integrity: sha512-31hcfTrU2GW66cvvaS629dNVPfiUrUWPncI28optvmKHBaH0mFqkdYNgabuslsXZV5AeidKMUJvR7GITjtvkQA==
-  /@angular/compiler/7.2.3:
+      integrity: sha512-UhLosSeuwFIfaGqGcYOh9WSOuzEpeuhIRAOt81MeqOQEqkoreUjfxrQq8XWNkdqsPZHtiptF5ZwXlMBxlj9jJg==
+  /@angular/compiler/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     resolution:
-      integrity: sha512-UM6n4MyZkR5+VVjlwhLH8IfqdWBkdFcF5at4ckJXOJ/gkIUq97irbis9pGj1b0TO7MAl8uhF4b68xe5lk8b49g==
-  /@angular/core/7.2.3:
+      integrity: sha512-+zyMzPCL45ePEV9nrnYJvhAVgp2Y19bDaq0f0YdZAqAjgDqHzXGGR6wX8GueyJWmUYWx5vwK6Apla4HwDrYA1w==
+  /@angular/core/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
@@ -706,17 +716,17 @@ packages:
       rxjs: ^6.0.0
       zone.js: ~0.8.26
     resolution:
-      integrity: sha512-6Ql+sJJnrsxh8O0/IgIP1GgT4eLOHk+dlBs7zBbjstmLuhaQdY+awO9WKoQow+TiD1Go7FW1J3vZ2PTWXKxqjQ==
-  /@angular/elements/7.2.3:
+      integrity: sha512-kfAxhIxl89PmB7y81FR/RAv0yWRFcEYxEnTwV+o8jKGfemAXtQ0g/Vh+lJR0SD/TBgFilMxotN1mhwH4A8GShw==
+  /@angular/elements/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.3
-      '@angular/platform-browser': 7.2.3
+      '@angular/core': 7.2.4
+      '@angular/platform-browser': 7.2.4
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-PWWUVaTFKU7dQjho8d4eQIcnHa4D3srkluDmKxW2C9iqXKCaAjPE/+c/pnJftUossUe0VXZMEghffJIbXSzbig==
+      integrity: sha512-5V4kFmpncQTJEVdREaSBb4DVjZz88eLQBjzzvEUM3r7szhbQ1DYuubG7Sj2a1iIYSI/HTkPPvX57rQk3vq6AEw==
   /@angular/fire/5.1.1:
     dev: false
     peerDependencies:
@@ -740,31 +750,31 @@ packages:
       rxjs: ^6.0.0
     resolution:
       integrity: sha512-jH2i3i/M7SbK6scVlj2urVL5OhzwavbQ7KwvUjyc/UwccKnnzuOuWEGCINLja/aoaUO3I35LluCLv6a6VN0olA==
-  /@angular/forms/7.2.3:
+  /@angular/forms/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.3
-      '@angular/core': 7.2.3
-      '@angular/platform-browser': 7.2.3
+      '@angular/common': 7.2.4
+      '@angular/core': 7.2.4
+      '@angular/platform-browser': 7.2.4
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-mZpyonfSmRwSvM6efvwFwkLJkK6wHQrm7X4OhVVu3s9i7BI253eLDY7WIRXFvoxJ/5jWIIarVnd/9UA7GINZGw==
-  /@angular/http/7.2.3:
+      integrity: sha512-DAtOrdlTRsgvmZrsvczCAkY8dhTwZb5DXBmPuSXh0UR9lvEiCgNHGbwEiIiIkAHpw1wSeXZrq0qyy/oJRvf18g==
+  /@angular/http/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/core': 7.2.3
-      '@angular/platform-browser': 7.2.3
+      '@angular/core': 7.2.4
+      '@angular/platform-browser': 7.2.4
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-wzvBKbO/TcSR3U8AQbsGftH8x1OdAgVGHlfXQPmZL1KjIDHrM1VpnkSvgqIt8coG+4OPfWcNklUCrTdEGwqMqw==
-  /@angular/language-service/7.2.3:
+      integrity: sha512-kazJREm7MtSCYbE+9zU/CcUXI5Csu53PooeQlAp80/TOHqry6fVKIMHCI892Db9ScY2ds0SzbyTmrxEQo7PP1A==
+  /@angular/language-service/7.2.4:
     dev: false
     resolution:
-      integrity: sha512-9FBVYbKaNx4Ap+Suz/2ZFBPca1voinZMOCN8LjXRYnfS2MHLQASQlTlK4qeZcomyRfy0FxWmO9R02S7YJ06cnw==
+      integrity: sha512-A9Rud/27hHMSUUjpgn57nVeLsoYgdvFwJhtlZA/oCuSpmlD+LqqBsEpPhivwn++u44+DSrFXsic29jlFnsBotw==
   /@angular/material/7.3.1:
     dependencies:
       tslib: 1.9.3
@@ -776,27 +786,27 @@ packages:
       '@angular/core': '>=7.0.0'
     resolution:
       integrity: sha512-txq2y/JSB+05l8a/OfnByw7AEKSeAWAJ49jzCoeb3804sCeVEbvuWZfpmKBX8vCVTZh005Ypuk55R4NP5AIgaw==
-  /@angular/platform-browser-dynamic/7.2.3:
+  /@angular/platform-browser-dynamic/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.3
-      '@angular/compiler': 7.2.3
-      '@angular/core': 7.2.3
-      '@angular/platform-browser': 7.2.3
+      '@angular/common': 7.2.4
+      '@angular/compiler': 7.2.4
+      '@angular/core': 7.2.4
+      '@angular/platform-browser': 7.2.4
     resolution:
-      integrity: sha512-M8Kiz5FUhnFybJuk/mgOhBjVbRgKDC4bGWKWH9Z9SXBR2dS/FL3QOJsLIthQcWlHOzSoJdEoPBRhn0R4pyLBSw==
-  /@angular/platform-browser/7.2.3:
+      integrity: sha512-J/xWlmaYOPUoCHZ5TiIRiyYa4uRMtCz3aGdBfY8k/NWtNo8SCYaS3aut7Sk4RS5rK8aAVi+aYFlY5YOrlW+Hbg==
+  /@angular/platform-browser/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.3
-      '@angular/core': 7.2.3
+      '@angular/common': 7.2.4
+      '@angular/core': 7.2.4
     resolution:
-      integrity: sha512-DH0Y2lgEgcrP1I/DUQB/krL7Ob7yL685fu4sRapW17SndTQa2pqSFMBVf+mN3FupTXp7nJHSvlIktzedIk04+g==
-  /@angular/platform-server/7.2.3:
+      integrity: sha512-Klt8aKR5SP9bqfMfpSY5vQOY7AQEs8JGuZOk5Bfc2dUtYT2IEIvK2IqO8v2rcFRVO13HOPUxl328efyHqLgI7g==
+  /@angular/platform-server/7.2.4:
     dependencies:
       domino: 2.1.1
       tslib: 1.9.3
@@ -805,15 +815,15 @@ packages:
     engines:
       node: '>=8.0'
     peerDependencies:
-      '@angular/animations': 7.2.3
-      '@angular/common': 7.2.3
-      '@angular/compiler': 7.2.3
-      '@angular/core': 7.2.3
-      '@angular/http': 7.2.3
-      '@angular/platform-browser': 7.2.3
-      '@angular/platform-browser-dynamic': 7.2.3
+      '@angular/animations': 7.2.4
+      '@angular/common': 7.2.4
+      '@angular/compiler': 7.2.4
+      '@angular/core': 7.2.4
+      '@angular/http': 7.2.4
+      '@angular/platform-browser': 7.2.4
+      '@angular/platform-browser-dynamic': 7.2.4
     resolution:
-      integrity: sha512-RXTFuuTlvy02YOtjWsrs8q+wnmXNW1JHueEseb8cWrgJz46ezhjuW3vwquDv1PwO5KZD2wlamZcrlbkwsdyzZw==
+      integrity: sha512-3KbLHw7xMbkxun93HeYX8pSiPmFWim3ftvKbfPlB01fjhdZvhHpf39Dn4T7iyT1vrZMccXL87psv4/lJkTf04A==
   /@angular/pwa/0.13.0:
     dependencies:
       '@angular-devkit/core': 7.3.0
@@ -827,27 +837,27 @@ packages:
       npm: '>= 5.5.1'
     resolution:
       integrity: sha512-E1rOMduecaUw6sZfm5u3nFWi2B90SD6NriGjciVTcKCjPmHKeIWmpWGhVdgGEzCbg1Gxj8ZhsvvBjJzfbDPF6g==
-  /@angular/router/7.2.3:
+  /@angular/router/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     peerDependencies:
-      '@angular/common': 7.2.3
-      '@angular/core': 7.2.3
-      '@angular/platform-browser': 7.2.3
+      '@angular/common': 7.2.4
+      '@angular/core': 7.2.4
+      '@angular/platform-browser': 7.2.4
       rxjs: ^6.0.0
     resolution:
-      integrity: sha512-SH7H2I9WTj1puei4m4g5n0/Cp28HS14q4r8lOgW0gLWuT6Ls7MqH/nDjOMiW924iRR6zjQQs7G+WbhL1jmZc2A==
-  /@angular/service-worker/7.2.3:
+      integrity: sha512-T8Uqf2H1SV1MQI38WwYJ4aa+4NNnvlp2Tp/rkfg6tKcp/cLkKqE6OOfiy9lmW+i/624v8tMgYoBMOUNBjAG23g==
+  /@angular/service-worker/7.2.4:
     dependencies:
       tslib: 1.9.3
     dev: false
     hasBin: true
     peerDependencies:
-      '@angular/common': 7.2.3
-      '@angular/core': 7.2.3
+      '@angular/common': 7.2.4
+      '@angular/core': 7.2.4
     resolution:
-      integrity: sha512-9ldQdzwg82FJJzvJMBctvSOYbZfgxXRcfozfpt2mdDtVDZoojl8GnqjskCZQlrTgh6bFm7aREKqVZxyu2dyG2A==
+      integrity: sha512-IYsHshkgCYYmWLwtP7wwk8tfwphE4IJrkUitEu+ST6x+er/K9LyLo09WQeEZHIwDaPm9icoqc3TJJdXI46mrmg==
   /@angularclass/hmr/2.1.3:
     dev: false
     resolution:
@@ -1701,6 +1711,64 @@ packages:
       node: '>= 6.0.0'
     resolution:
       integrity: sha512-9J0KkmuuuvDHxH0oREgrgbqdEFqcltQXIBofeYdIyMKzI3A+pN1Ji4zfi7x1ql0Ax7qQKemp8XWP+cCpP0qY+w==
+  /@covalent/core/2.0.1:
+    dependencies:
+      tslib: 1.9.3
+    dev: false
+    peerDependencies:
+      '@angular/cdk': ^7.0.0
+      '@angular/common': ^7.0.0
+      '@angular/core': ^7.0.0
+      '@angular/forms': ^7.0.0
+      '@angular/material': ^7.0.0
+      '@angular/router': ^7.0.0
+    resolution:
+      integrity: sha512-AZ+sWLoYs1IvKFrVJCA98irtbsAgU4c4dIfsHhiXt9qzRri4u/B2S6T3GvITWp3U83MCIfCAdPAVBIX0aKIgTA==
+  /@covalent/dynamic-forms/2.0.1:
+    dependencies:
+      '@covalent/core': 2.0.1
+      tslib: 1.9.3
+    dev: false
+    resolution:
+      integrity: sha512-GBGVOyo+JB507tVcwBiHOXHyGRwiqHbxNNl5ML2elNzHj5wwGcLxQIXIK/10MT1UfpQrhATSoihgkMP9FPSmxA==
+  /@covalent/highlight/2.0.1:
+    dependencies:
+      highlight.js: 9.11.0
+      tslib: 1.9.3
+    dev: false
+    peerDependencies:
+      '@angular/common': ^7.0.0
+      '@angular/core': ^7.0.0
+    resolution:
+      integrity: sha512-1dxtlNYUhp27m62LMPJXLt/4lo9qoaH4ya2+LUYkqpgl9t7Ye8poST+d8SsLTxM0dbA1YqlxNpvjpOtjFRDUaA==
+  /@covalent/http-deprec/2.0.1:
+    dependencies:
+      tslib: 1.9.3
+    dev: false
+    peerDependencies:
+      '@angular/core': ^7.0.0
+      '@angular/http': ^7.0.0
+    resolution:
+      integrity: sha512-H/cLrqKcNR93wB6/o+9xz/ycM6qXlQnU6GCQTJMm8WcRVXtDpsPPw9Wrdavr6Um07Sicdyt+Yxj/8qbu35oYxg==
+  /@covalent/http/2.0.1:
+    dependencies:
+      tslib: 1.9.3
+    dev: false
+    peerDependencies:
+      '@angular/common': ^7.0.0
+      '@angular/core': ^7.0.0
+    resolution:
+      integrity: sha512-yATessVQNtqwoegAiGjOCszwjcbgSx3wpGjqlNjAr8LZNNi+zp0bmI186jAIBmF65m6WLfSN+VzfY8DXV3+tqg==
+  /@covalent/markdown/2.0.1:
+    dependencies:
+      showdown: 1.6.4
+      tslib: 1.9.3
+    dev: false
+    peerDependencies:
+      '@angular/common': ^7.0.0
+      '@angular/core': ^7.0.0
+    resolution:
+      integrity: sha512-LbCqcdQrbEH+qmf2PIv3IEJgyi3kJyulQ35BMGG0+99/mi476gMdEZyZ4kj1Sb1jIBf187CG1Gf91z2ktJWhxQ==
   /@dsherret/to-absolute-glob/2.0.2:
     dependencies:
       is-absolute: 1.0.0
@@ -2340,9 +2408,9 @@ packages:
       '@angular-devkit/schematics': '>=0.7.2 <8.0.0'
     resolution:
       integrity: sha512-GOoAx/cs6Hhl0FiOhZAFPCG3cgz2DbyfYflhWFbi08MLIQD2aCoVg6wIpcBoMHQf4eob5WDDIlbOO0t9LVn3dg==
-  /@ionic/angular/4.0.0:
+  /@ionic/angular/4.0.1:
     dependencies:
-      '@ionic/core': 4.0.0
+      '@ionic/core': 4.0.1
       tslib: 1.9.3
     dev: false
     peerDependencies:
@@ -2359,13 +2427,13 @@ packages:
       rxjs: '>=6.2.0'
       zone.js: ^0.8.26
     resolution:
-      integrity: sha512-kxvlZN5daRql/VRcbB7YWMcmE4jKDgwlPRykzNvmYWFDr9vg1AbXirLHAPtR7BaKWJEN4dJwlibjBEJQw8kVYQ==
-  /@ionic/core/4.0.0:
+      integrity: sha512-wuElEP6yXfaZ1q1Aamf6lUC7kVSGL79kF+ZQMMyLKZ7bTXTVt2sjSYO8WxXBjUd2TP+vwL6vg3RxONntOaXPPg==
+  /@ionic/core/4.0.1:
     dependencies:
       ionicons: 4.5.5
     dev: false
     resolution:
-      integrity: sha512-/hW4882TyjcJTiNBYpoLGRYxkQhRidSuVjCL2RvfMS8a7FDQoS2dkje5KBGG+O2TCjtyXE5de1A6HvUgvDqjGA==
+      integrity: sha512-2Zgrs8C+SiGUTPKIAjcVomrPd7cT1A09kSt6CiGDoXtKYRaaF1bVr5NvrjyPa2rfplCtKH5TGhgiAvCvzxLLZQ==
   /@kbrandwijk/swagger-to-graphql/2.4.3/graphql@14.1.1:
     dependencies:
       babel-runtime: 6.26.0
@@ -3683,7 +3751,7 @@ packages:
       d3-interpolate: 1.3.2
       d3-scale: 1.0.7
       d3-selection: 1.4.0
-      d3-shape: 1.3.3
+      d3-shape: 1.3.4
       d3-time-format: 2.1.3
     dev: false
     peerDependencies:
@@ -3699,6 +3767,44 @@ packages:
       zone.js: ^0.8.26
     resolution:
       integrity: sha512-66GY+VJ1eLq5WZkRwuSzQymBoyyqPxFY1Vf2LCfAAb+QKq7lh1b+TJK1ThDWvbB0lJ5IPbbYHZ3+zILGSCcTZg==
+  /@swimlane/ngx-datatable/14.0.0:
+    dev: false
+    peerDependencies:
+      '@angular/common': <8.0.0
+      '@angular/compiler': <8.0.0
+      '@angular/core': <8.0.0
+      '@angular/platform-browser': <8.0.0
+      '@angular/platform-browser-dynamic': <8.0.0
+      core-js: ^2.5.0
+      rxjs: ^6.0.0
+    resolution:
+      integrity: sha512-zgRY58MzTpg9Jb575cg0O87mLtXYi6fx7NLRPRHdQ/FqH9mKjZ3i7+OjqtR8/w3KRmFP2Hnkmx52VzldZIKspg==
+  /@swimlane/ngx-ui/25.1.0:
+    dependencies:
+      '@angular/flex-layout': 7.0.0-beta.23
+      mousetrap: 1.6.2
+      ng2-file-upload: 1.3.0
+      normalize.css: 5.0.0
+      tslib: 1.9.3
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    peerDependencies:
+      '@angular/animations': ^7.0.0
+      '@angular/cdk': ^7.0.0
+      '@angular/common': ^7.0.0
+      '@angular/core': ^7.0.0
+      '@angular/forms': ^7.0.0
+      '@angular/platform-browser': ^7.0.0
+      ajv: ^6.5.0
+      codemirror: 5.42.0
+      core-js: ^2.5.0
+      moment: ^2.21.0
+      moment-timezone: ^0.5.23
+      rxjs: ^6.0.0
+      zone.js: ^0.8.26
+    resolution:
+      integrity: sha512-tmWW0yy2XsU3IQu6lJgFIYH0RxcBbnPm+Y26NHkis2BWn4WECCnE6YfZT4Tiv8xjeUqFclGq1gfJtDqS2wcPpg==
   /@tensorflow-models/coco-ssd/0.1.1:
     dev: false
     peerDependencies:
@@ -3717,12 +3823,12 @@ packages:
       '@tensorflow/tfjs': ^0.13.0
     resolution:
       integrity: sha512-PcYnxkUW9FMPRROVk2RhE9rzxnmi0pd/psVRmhkTX76Y4BX8VArlT9S0z2yBjEG7hs/iCFsKeu98L2ahDmGZpA==
-  /@tensorflow-models/speech-commands/0.2.3:
+  /@tensorflow-models/speech-commands/0.2.4:
     dev: false
     peerDependencies:
-      '@tensorflow/tfjs': ^0.14.1
+      '@tensorflow/tfjs': ^0.14.2
     resolution:
-      integrity: sha512-nkCjgPksvV6hpKjsgzesUWPwFBUjzQ1oQ+joDgm6gSbsNAW3uwB14jCeApiMDDV7jrWUBYPUhKqLNNB8W+wAsQ==
+      integrity: sha512-AXgHLZyNieQgfUtWxZUcBdEY/NcjwWLVUcybOVKO2+8t8larCHAuFSGh0AUDZmhTF0yjlYjdFpLHs0FE+7QV6A==
   /@tensorflow/tfjs-converter/0.7.2/@tensorflow!tfjs-core@0.14.5:
     dependencies:
       '@tensorflow/tfjs-core': 0.14.5
@@ -3993,6 +4099,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-wXAVyLfkG1UMkKOdMijVWFky39+OD/41KftzqfX1Oejd0Gm6dOIKjCihSVECg6X7PHjftxXmfOKA/d1H79ZfvQ==
+  /@types/hammerjs/2.0.36:
+    dev: true
+    resolution:
+      integrity: sha512-7TUK/k2/QGpEAv/BCwSHlYu3NXZhQ9ZwBYpzr9tjlPIL2C5BeGhH3DmVavRx3ZNyELX5TLC91JTz/cen6AAtIQ==
   /@types/isomorphic-fetch/0.0.34:
     dev: true
     resolution:
@@ -4889,7 +4999,7 @@ packages:
       node: '>=4.6.1'
     resolution:
       integrity: sha1-7klza2ObTxCLbp5ibG2pkwa0FpI=
-  /apollo-angular-link-http-common/1.4.0:
+  /apollo-angular-link-http-common/1.5.0:
     dependencies:
       tslib: 1.9.3
     dev: false
@@ -4899,10 +5009,10 @@ packages:
       apollo-link: ^1.0.0
       graphql: '>=0.11.0 <0.14.0 || ^14.0.0'
     resolution:
-      integrity: sha512-VAneRp1YYwaggOKgbMGVSuLMpYroLL6tEgS5WH3iNBg4P7cBcubo3uajWRih7E4pZlzX+bCJ5GNqNDJ6xMFT7Q==
-  /apollo-angular-link-http/1.4.0:
+      integrity: sha512-N/+0BYAbHS16YFghQTaTrbsunKRCB8bjip11NmS9waWNGODbAJHn0oW813MoWpLV8TynaWz1VZRTu5RHkzDlAg==
+  /apollo-angular-link-http/1.5.0:
     dependencies:
-      apollo-angular-link-http-common: 1.4.0
+      apollo-angular-link-http-common: 1.5.0
       tslib: 1.9.3
     dev: false
     peerDependencies:
@@ -4911,7 +5021,7 @@ packages:
       apollo-link: ^1.0.0
       graphql: '>=0.11.0 <0.14.0 || ^14.0.0'
     resolution:
-      integrity: sha512-YMtk4ZmmQ32kvQVnKNhkqk4QQQ+xb5aaq5XVxLv7AX6S7jDfHDLi18Hc25C4c8revM6gLoGV2Xj9ijvyGGbRCg==
+      integrity: sha512-CCDem+mRPn0UbRL2vkHIU6G/aqXfMTMP1Apte6ucvxUOy91jV5gnwc+nB8lZdCxUQNPO1ZWyJAY1F0SyVeYeDw==
   /apollo-angular/1.5.0:
     dependencies:
       semver: 5.6.0
@@ -6925,7 +7035,6 @@ packages:
     resolution:
       integrity: sha1-fB0W1nmhu+WcoCys7PsBHiAfWh8=
   /camelcase/3.0.0:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -8244,6 +8353,10 @@ packages:
   /core-js/2.6.3:
     resolution:
       integrity: sha512-l00tmFFZOBHtYhN4Cz7k32VM7vTn3rE2ANjQDxdEN6zmXZ/xq1jQuutnmHvMG1ZJ7xd72+TA5YpUK8wz3rWsfQ==
+  /core-js/2.6.4:
+    dev: false
+    resolution:
+      integrity: sha512-05qQ5hXShcqGkPZpXEFLIpxayZscVD2kuMBZewxiIPPEagukO4mqgPA9CWhUvFBJfy3ODdK2p9xyHh7FTU9/7A==
   /core-util-is/1.0.2:
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
@@ -8717,6 +8830,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-KHW6M86R+FUPYGb3R5XiYjXPq7VzwxZ22buHhAEVG5ztoEcZZMLov530mmccaqA1GghZArjQV46fuc8kUqhhHw==
+  /d3-axis/1.0.12:
+    dev: false
+    resolution:
+      integrity: sha512-ejINPfPSNdGFKEOAtnBtdkpr24c4d4jsei6Lg98mxf424ivoDP2956/5HDpIAtmHo85lqT4pruy+zEgvRUBqaQ==
   /d3-axis/1.0.8:
     dev: false
     resolution:
@@ -8752,6 +8869,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-fexPC6iG9xP+ERxF92NBT290yiw=
+  /d3-chord/1.0.6:
+    dependencies:
+      d3-array: 1.2.4
+      d3-path: 1.0.7
+    dev: false
+    resolution:
+      integrity: sha512-JXA2Dro1Fxw9rJe33Uv+Ckr5IrAa74TlfDEhE/jfLOaXegMQFQTAgAw9WnZL8+HxVBRXaRGCkrNU7pJeylRIuA==
   /d3-collection/1.0.4:
     dev: false
     resolution:
@@ -8768,6 +8892,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-x37qq3ChOTLd26hnps36lexMRhNXEtVxZ4B25rL0DVdDsGQIJGB18S7y9XDwlDD6MD/ZBzITCf4JjGMM10TZkw==
+  /d3-contour/1.3.2:
+    dependencies:
+      d3-array: 1.2.4
+    dev: false
+    resolution:
+      integrity: sha512-hoPp4K/rJCu0ladiH6zmJUEz6+u3lgR+GSm/QdM2BBvDraU39Vr7YdDCicJcxP1z8i9B/2dJLgDC1NcvlF8WCg==
   /d3-dispatch/1.0.3:
     dev: false
     resolution:
@@ -8816,6 +8946,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Ct1O//ly5y5lFM9YTdu+ygq7LleSgSE4oj7vUt9tPLHUi8VCV7QoizGpdWRWAwCO9LdYzIrQDg97+hGVdsSGPQ==
+  /d3-fetch/1.1.2:
+    dependencies:
+      d3-dsv: 1.0.10
+    dev: false
+    resolution:
+      integrity: sha512-S2loaQCV/ZeyTyIF2oP8D1K9Z4QizUzW7cWeAOAS4U88qOt3Ucf6GsmgthuYSdyB2HyEm4CeGvkQxWsmInsIVA==
   /d3-force-3d/2.0.1:
     dependencies:
       d3-binarytree: 0.1.4
@@ -8852,6 +8988,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Z18Dprj96ExragQ0DeGi+SYPQ7pPfRMtUXtsg/ChVIKNBCzjO8XYJvRTC1usblx52lqge56V5ect+frYTQc8WQ==
+  /d3-geo/1.11.3:
+    dependencies:
+      d3-array: 1.2.4
+    dev: false
+    resolution:
+      integrity: sha512-n30yN9qSKREvV2fxcrhmHUdXP9TNH7ZZj3C/qnaoU0cVf/Ea85+yT7HY7i8ySPwkwjCNYtmKqQFTvLFngfkItQ==
   /d3-geo/1.9.1:
     dependencies:
       d3-array: 1.2.4
@@ -8894,6 +9036,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-FoiOkCZGCTPysXllKtN4Ik04LGI=
+  /d3-polygon/1.0.5:
+    dev: false
+    resolution:
+      integrity: sha512-RHhh1ZUJZfhgoqzWWuRhzQJvO7LavchhitSTHGu9oj6uuLFzYZVeBzaWTQ2qSO6bz2w55RMoOCf0MsLCDB6e0w==
   /d3-quadtree/1.0.3:
     dev: false
     resolution:
@@ -8910,6 +9056,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ZkLlBsb6OmSFldKyRpeIqNElKdM=
+  /d3-random/1.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-6AK5BNpIFqP+cx/sreKzNjWbwZQCSUatxq+pPRmFIQaWuoD+NrbVWw7YWpHiXpCQ/NanKdtGDuB+VQcZDaEmYQ==
   /d3-request/1.0.6:
     dependencies:
       d3-collection: 1.0.7
@@ -8933,11 +9083,22 @@ packages:
       d3-color: 1.2.3
       d3-format: 1.3.2
       d3-interpolate: 1.3.2
-      d3-time: 1.0.10
+      d3-time: 1.0.11
       d3-time-format: 2.1.3
     dev: false
     resolution:
       integrity: sha512-KvU92czp2/qse5tUfGms6Kjig0AhHOwkzXG0+PqIJB3ke0WUv088AHMZI0OssO9NCkXt4RP8yju9rpH8aGB7Lw==
+  /d3-scale/2.2.2:
+    dependencies:
+      d3-array: 1.2.4
+      d3-collection: 1.0.7
+      d3-format: 1.3.2
+      d3-interpolate: 1.3.2
+      d3-time: 1.0.11
+      d3-time-format: 2.1.3
+    dev: false
+    resolution:
+      integrity: sha512-LbeEvGgIb8UMcAa0EATLNX0lelKWGYDQiPdHj+gLblGVhGLyNbaCn3EvrJf0A3Y/uOOU5aD6MTh5ZFCdEwGiCw==
   /d3-selection/1.3.0:
     dev: false
     resolution:
@@ -8952,28 +9113,28 @@ packages:
     dev: false
     resolution:
       integrity: sha1-RdAVOPBkuv0F6j1tLLdI/YxB93c=
-  /d3-shape/1.3.3:
+  /d3-shape/1.3.4:
     dependencies:
       d3-path: 1.0.7
     dev: false
     resolution:
-      integrity: sha512-f7V9wHQCmv4s4N7EmD5i0mwJ5y09L8r1rWVrzH1Av0YfgBKJCnTJGho76rS4HNUIw6tTBbWfFcs4ntP/MKWF4A==
+      integrity: sha512-izaz4fOpOnY3CD17hkZWNxbaN70sIGagLR/5jb6RS96Y+6VqX+q1BQf1av6QSBRdfULi3Gb8Js4CzG4+KAPjMg==
   /d3-time-format/2.1.1:
     dependencies:
-      d3-time: 1.0.10
+      d3-time: 1.0.11
     dev: false
     resolution:
       integrity: sha512-8kAkymq2WMfzW7e+s/IUNAtN/y3gZXGRrdGfo6R8NKPAA85UBTxZg5E61bR6nLwjPjj4d3zywSQe1CkYLPFyrw==
   /d3-time-format/2.1.3:
     dependencies:
-      d3-time: 1.0.10
+      d3-time: 1.0.11
     dev: false
     resolution:
       integrity: sha512-6k0a2rZryzGm5Ihx+aFMuO1GgelgIz+7HhB4PH4OEndD5q2zGn1mDfRdNrulspOfR6JXkb2sThhDK41CSK85QA==
-  /d3-time/1.0.10:
+  /d3-time/1.0.11:
     dev: false
     resolution:
-      integrity: sha512-hF+NTLCaJHF/JqHN5hE8HVGAXPStEq6/omumPE/SxyHVrR7/qQxusFDo0t0c/44+sCGHthC7yNGFZIEgju0P8g==
+      integrity: sha512-Z3wpvhPLW4vEScGeIMUckDW7+3hWKOQfAWg/U7PlWBnQmeKQ00gCUsTtWSYulrKNA7ta8hJ+xXc6MHrMuITwEw==
   /d3-time/1.0.8:
     dev: false
     resolution:
@@ -9012,6 +9173,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Fodmfo8TotFYyAwUgMWinLDYlzw=
+  /d3-voronoi/1.1.4:
+    dev: false
+    resolution:
+      integrity: sha512-dArJ32hchFsrQ8uMiTBLq256MpnZjeuBtdHpaDlYuQyjU0CVzCJl/BVW+SkszaAeH95D/8gxqAhgx0ouAWAfRg==
   /d3-zoom/1.7.1:
     dependencies:
       d3-dispatch: 1.0.5
@@ -9022,6 +9187,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-sZHQ55DGq5BZBFGnRshUT8tm2sfhPHFnOlmPbbwTkAoPeVdRTkB4Xsf9GCY0TSHrTD8PeJPZGmP/TpGicwJDJQ==
+  /d3-zoom/1.7.3:
+    dependencies:
+      d3-dispatch: 1.0.5
+      d3-drag: 1.2.3
+      d3-interpolate: 1.3.2
+      d3-selection: 1.4.0
+      d3-transition: 1.2.0
+    dev: false
+    resolution:
+      integrity: sha512-xEBSwFx5Z9T3/VrwDkMt+mr0HCzv7XjpGURJ8lWmIC8wxe32L39eWHIasEe/e7Ox8MPU4p1hvH8PKN2olLzIBg==
   /d3/3.5.17:
     dev: true
     resolution:
@@ -9061,6 +9236,42 @@ packages:
     dev: false
     resolution:
       integrity: sha512-l8c4+0SldjVKLaE2WG++EQlqD7mh/dmQjvi2L2lKPadAVC+TbJC4ci7Uk9bRi+To0+ansgsS0iWfPjD7DBy+FQ==
+  /d3/5.8.2:
+    dependencies:
+      d3-array: 1.2.4
+      d3-axis: 1.0.12
+      d3-brush: 1.0.6
+      d3-chord: 1.0.6
+      d3-collection: 1.0.7
+      d3-color: 1.2.3
+      d3-contour: 1.3.2
+      d3-dispatch: 1.0.5
+      d3-drag: 1.2.3
+      d3-dsv: 1.0.10
+      d3-ease: 1.0.5
+      d3-fetch: 1.1.2
+      d3-force: 1.2.0
+      d3-format: 1.3.2
+      d3-geo: 1.11.3
+      d3-hierarchy: 1.1.8
+      d3-interpolate: 1.3.2
+      d3-path: 1.0.7
+      d3-polygon: 1.0.5
+      d3-quadtree: 1.0.5
+      d3-random: 1.1.2
+      d3-scale: 2.2.2
+      d3-scale-chromatic: 1.3.3
+      d3-selection: 1.4.0
+      d3-shape: 1.3.4
+      d3-time: 1.0.11
+      d3-time-format: 2.1.3
+      d3-timer: 1.0.9
+      d3-transition: 1.2.0
+      d3-voronoi: 1.1.4
+      d3-zoom: 1.7.3
+    dev: false
+    resolution:
+      integrity: sha512-XUaQCj3DwnLsjhzg7aiICkA7Jy4zIvLFqdynKv/23y8gHnULqC9p7xAjs3Vw3lYtFE5UUmWoUzLj26O2fXAybg==
   /dagre-d3-renderer/0.4.26:
     dependencies:
       d3: 3.5.17
@@ -10127,7 +10338,6 @@ packages:
   /error-ex/1.3.2:
     dependencies:
       is-arrayish: 0.2.1
-    dev: true
     resolution:
       integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==
   /error-inject/1.0.0:
@@ -11172,7 +11382,6 @@ packages:
     dependencies:
       path-exists: 2.1.0
       pinkie-promise: 2.0.1
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -12871,6 +13080,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-SoWtZYgfYoV/xwr3F0oRhNzM4ys=
+  /highlight.js/9.11.0:
+    dev: false
+    resolution:
+      integrity: sha1-R/mMc5mRhwDbLK8jDe0SzsQahK4=
   /highlight.js/9.12.0:
     dev: true
     resolution:
@@ -12925,7 +13138,6 @@ packages:
     resolution:
       integrity: sha512-HRcs+2mr52W0K+x8RzcLzuPPmVIKMSv97RGHy0Ea9y/mpcaK+xTrjICA04KAHi4GRzxliNqNJEFYWHghy3rSfQ==
   /hosted-git-info/2.7.1:
-    dev: true
     resolution:
       integrity: sha512-7T/BxH19zbcCTa8XkMlbK5lTo1WtgkFi3GvdWEyNuc4Vex7/9Dqbnpsf4JMydcfj9HCg4zUWFTL3Za6lapg5/w==
   /hpack.js/2.1.6:
@@ -13707,7 +13919,6 @@ packages:
     resolution:
       integrity: sha512-pyfU/0kHdISIgslFfZN9nfY1Gk3MquQgUm1mJTjdkEPpkAKNWuBTSqFwewOpR7N351VkErCiyV71zX7mlQQqsg==
   /is-arrayish/0.2.1:
-    dev: true
     resolution:
       integrity: sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=
   /is-binary-path/1.0.1:
@@ -14138,7 +14349,6 @@ packages:
     resolution:
       integrity: sha1-tyihjPaS5NFtprlMdAioEdsNBJI=
   /is-utf8/0.2.1:
-    dev: true
     resolution:
       integrity: sha1-Sw2hRCEE0bM2NA6AeX6GXPOffXI=
   /is-webgl-context/1.1.0:
@@ -14477,13 +14687,13 @@ packages:
       node: '>= 6.9.x'
     resolution:
       integrity: sha1-43zwsX8ZnM4jvqcbIDk5Uka07E4=
-  /jest-canvas-mock/2.0.0-alpha.2:
+  /jest-canvas-mock/2.0.0-alpha.3:
     dependencies:
       cssfontparser: 1.2.1
       parse-color: 1.0.0
     dev: true
     resolution:
-      integrity: sha512-Tjsi2R6nQsmeFacNDSCATiBUl5lBmazoFHV60UGvIGWou8fBjGnWXDqmKK6UvndrUUAKrd2U2NNtUqCsN7242Q==
+      integrity: sha512-IB+zC2mN0RgZXfeE87LAEKxv4Q+R07/MREN1/gJjW4f/2updm+UGIpRfgUePfbKWIGm4LyNZ47Ser87CjBOT9w==
   /jest-changed-files/24.0.0:
     dependencies:
       execa: 1.0.0
@@ -15914,7 +16124,6 @@ packages:
       pify: 2.3.0
       pinkie-promise: 2.0.1
       strip-bom: 2.0.0
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -16039,13 +16248,13 @@ packages:
   /lodash-es/4.17.11:
     resolution:
       integrity: sha512-DHb1ub+rMjjrxqlB3H56/6MXtm1lSksDp2rA2cNWjG8mlDUYFhUj3Di2Zn5IwSU87xLv8tNIQ7sSwE/YOX/D/Q==
-  /lodash-fun/1.5.0:
+  /lodash-fun/1.6.1:
     dependencies:
       bluebird: 3.5.3
       lodash: 4.17.11
     dev: false
     resolution:
-      integrity: sha512-Pmq/kIMrttIv3jLgPnRwPpf7JRQc7wrUJnEndZniNaphLDCDD7+aQqXhjdRZ0XZTE0HytiRh2UJH8EMTZe8Suw==
+      integrity: sha512-qwT/xM6RdwVs09S6X3dKJkpZvut9fgHeq6tAt7QS1AEdSLln7fBTkdHXajYTowp0LiyyTGrB7Xvbp8gXePxWyg==
   /lodash-id/0.14.0:
     dev: true
     engines:
@@ -16585,6 +16794,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-sCuTz6pYom8Rlt4ISPFn6wuFodbKMIHUMv4Qko9P17dpxb7s52KJTmRuZZqHdGmLCK9AOcDare039nRIcfdkEg==
+  /magic-string/0.25.2:
+    dependencies:
+      sourcemap-codec: 1.4.4
+    dev: true
+    resolution:
+      integrity: sha512-iLs9mPjh9IuTtRsqqhNGYcZXGei0Nh/A4xirrsqW7c+QhKVFL2vm7U09ru6cHRD22azaP/wMDgI+HCqbETMTtg==
   /make-dir-cli/1.0.0:
     dependencies:
       make-dir: 1.3.0
@@ -17672,6 +17887,13 @@ packages:
       '@angular/core': ^2.3.0 || >=4.0.0
     resolution:
       integrity: sha512-9w0WH69x5/nuqC1og2WaY39NbaBqTGIP1+5gZaH7/KPN6UEPonNg/pYnsIVklLj1DWPWXKa8+XXIJZ1jy5nLxg==
+  /ng2-file-upload/1.3.0:
+    dev: false
+    peerDependencies:
+      '@angular/common': ^2.3.1 || >=4.0.0
+      '@angular/core': ^2.3.1 || >=4.0.0
+    resolution:
+      integrity: sha512-Pudxik6LWYsT8hNiEW7RfjgGWAnvfQywxwJYMdt1snTUe+KnlRc/QqPv3QEQW6plXTanuLkYz/TbqilSfSHOsw==
   /ngraph.events/0.0.3:
     dev: false
     resolution:
@@ -18263,6 +18485,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-YcMnjqeoUckXTPKZSAsPjUPLxH85XotbpqK3w4RyCwdFQSU5FxxBys8buehkSfg0j9fKvV1hn7O0+8reEgkAiw==
+  /normalize-package-data/2.5.0:
+    dependencies:
+      hosted-git-info: 2.7.1
+      resolve: 1.10.0
+      semver: 5.6.0
+      validate-npm-package-license: 3.0.4
+    resolution:
+      integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==
   /normalize-path/2.1.1:
     dependencies:
       remove-trailing-separator: 1.1.0
@@ -18286,6 +18516,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-0LFF62kRicY6eNIB3E/bEpPvDAM=
+  /normalize.css/5.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-fOyHXOgXilMzxN6Ato6pwYudfDc=
   /normalize.css/8.0.1:
     dev: false
     resolution:
@@ -19260,7 +19494,6 @@ packages:
   /parse-json/2.2.0:
     dependencies:
       error-ex: 1.3.2
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -19364,7 +19597,6 @@ packages:
   /path-exists/2.1.0:
     dependencies:
       pinkie-promise: 2.0.1
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -19389,7 +19621,6 @@ packages:
     resolution:
       integrity: sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
   /path-parse/1.0.6:
-    dev: true
     resolution:
       integrity: sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
   /path-to-regexp/0.1.7:
@@ -19413,7 +19644,6 @@ packages:
       graceful-fs: 4.1.15
       pify: 2.3.0
       pinkie-promise: 2.0.1
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -19550,7 +19780,6 @@ packages:
     resolution:
       integrity: sha512-9CT4NFlDcosssyg8KVFltgokyKZIFjoBxw8CTGy+5F38Y1eQWrt8tRayiUOXE+zVKQnYu5BR8JjCtvK3BcnBhg==
   /pify/2.3.0:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -19568,13 +19797,11 @@ packages:
   /pinkie-promise/2.0.1:
     dependencies:
       pinkie: 2.0.4
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-ITXW36ejWMBprJsXh3YogihFD/o=
   /pinkie/2.0.4:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -20071,7 +20298,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-VR1iadSfok+3MweY9HS2V5ExzwtS3TVvJyJUtdPc8K8dblg2m6H3YOKnlMdZlzp31AaGnM95GKhIFITo6j02OQ==
-  /prisma-cli-core/1.25.7:
+  /prisma-cli-core/1.26.3:
     dependencies:
       adm-zip: 0.4.13
       archiver: 2.1.1
@@ -20097,11 +20324,11 @@ packages:
       node-forge: 0.7.6
       npm-run: 4.1.2
       opn: 5.4.0
-      prisma-client-lib: /prisma-client-lib/1.25.7/graphql@14.1.1
-      prisma-datamodel: 1.25.7
-      prisma-db-introspection: 1.25.7
-      prisma-generate-schema: 1.25.7
-      prisma-yml: 1.25.7
+      prisma-client-lib: /prisma-client-lib/1.26.3/graphql@14.1.1
+      prisma-datamodel: 1.26.3
+      prisma-db-introspection: 1.26.3
+      prisma-generate-schema: 1.26.3
+      prisma-yml: 1.26.3
       scuid: 1.1.0
       sillyname: 0.1.0
       source-map-support: 0.4.18
@@ -20110,8 +20337,8 @@ packages:
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-uuAwv9C+TWdEr668XpT01+lBLK3xKYW5BIE5liCNEsxwuaOFrbm4QvrnRUeebB2C2VtjNfZVLBpVt+u/NHq2gQ==
-  /prisma-cli-engine/1.25.7:
+      integrity: sha512-q/rs1rQrdup8N6rU+/qB2bPgUZ/Vr9UdkQ3V2UQsU7jSfk1uNAh09qXiXwOz5EjTBQeHUdbcDE/ECesk16wr0A==
+  /prisma-cli-engine/1.26.3:
     dependencies:
       '@heroku/linewrap': 1.0.0
       ansi-escapes: 3.2.0
@@ -20147,7 +20374,7 @@ packages:
       mkdirp: 0.5.1
       opn: 5.4.0
       prisma-json-schema: 0.1.3
-      prisma-yml: 1.25.7
+      prisma-yml: 1.26.3
       raven: 2.6.4
       rwlockfile: 1.4.12
       scuid: 1.1.0
@@ -20160,8 +20387,8 @@ packages:
       update-notifier: 2.5.0
     dev: true
     resolution:
-      integrity: sha512-BX6kBknOonUR3mzWXrp7UAW/h/M8ZaWjNDTBn1WfQJCNnSeZPzYF3cuXkdd8EIU+Xh1J6gmS3NIcZYoKHhUz7g==
-  /prisma-client-lib/1.25.7/graphql@14.1.1:
+      integrity: sha512-FmSEtZYoqouZJqrOIE+P5gh4hneBZ8F1jFKafla6iy8wT/jBcvrFp3EQ3RKjsf4+oxty4e1lHRsZXj+gM2etNw==
+  /prisma-client-lib/1.26.3/graphql@14.1.1:
     dependencies:
       '@types/node': 10.12.21
       '@types/prettier': 1.15.2
@@ -20173,27 +20400,27 @@ packages:
       jsonwebtoken: 8.4.0
       lodash.flatten: 4.4.0
       prettier: 1.16.4
-      prisma-datamodel: 1.25.7
-      prisma-generate-schema: 1.25.7
+      prisma-datamodel: 1.26.3
+      prisma-generate-schema: 1.26.3
       subscriptions-transport-ws: /subscriptions-transport-ws/0.9.15/graphql@14.1.1
       uppercamelcase: 3.0.0
       ws: 6.1.3
       zen-observable: 0.8.13
     dev: true
-    id: registry.npmjs.org/prisma-client-lib/1.25.7
+    id: registry.npmjs.org/prisma-client-lib/1.26.3
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
     resolution:
-      integrity: sha512-VEb8zjhthex59u+VWCSYkHXSx/jKKKulnI8zfmaRm8d3rhOzJghlwE0cid7jwIbihl1Pes7i6YblAWS3QupWJg==
-  /prisma-datamodel/1.25.7:
+      integrity: sha512-pA3BvSMu1n1AqYzW1Ya4AR09u6df6KDe5R6uvLXypBn5MFJgRX0R9/9eYHomD4mIR6Set49A7/7AgFJNA+6vIw==
+  /prisma-datamodel/1.26.3:
     dependencies:
       graphql: 14.1.1
       pluralize: 7.0.0
       popsicle: 10.0.1
     dev: true
     resolution:
-      integrity: sha512-/X4qqpe6cnpd1fv/rSrsYrD4dFFDaSa22TGmgF5H/4eKfaioPhAM2+8tmdtvaIPDcUQlT9RcO1MEBS4w5+ASIw==
-  /prisma-db-introspection/1.25.7:
+      integrity: sha512-lMi4NsFYYu0mhp+CW5TivVQmLh4AD4dAZSnYJmdG58a8J2MgzdIgJA6dQKIicOKNgqPkdkfEDn4VqeRTx/zFsQ==
+  /prisma-db-introspection/1.26.3:
     dependencies:
       '@types/mongodb': 3.1.19
       graphql-request: 1.8.2
@@ -20201,22 +20428,22 @@ packages:
       mongodb: 3.1.13
       pg: /pg/7.8.0/pg@7.8.0
       pluralize: 7.0.0
-      prisma-datamodel: 1.25.7
-      prisma-yml: 1.25.7
+      prisma-datamodel: 1.26.3
+      prisma-yml: 1.26.3
       scuid: 1.1.0
       uppercamelcase: 3.0.0
     dev: true
     resolution:
-      integrity: sha512-8Z8VaKiN/tvg7YjlHbsJrWWlzlmvu5eGxC4BLnnKFt+ykHoYnUZXiReS+Kn8EDg9hYv/PATX4dFb4Fdpzg60Hg==
-  /prisma-generate-schema/1.25.7:
+      integrity: sha512-qbAHuXj6AzPLo67ZfQRSZCwVf0P2L+rGFqHVn4KV8OuvfNcQJWA3ty30/fUb9qz8FAZv/hEVWH4bgrqa/h1Ykg==
+  /prisma-generate-schema/1.26.3:
     dependencies:
       graphql: 14.1.1
       pluralize: 7.0.0
       popsicle: 10.0.1
-      prisma-datamodel: 1.25.7
+      prisma-datamodel: 1.26.3
     dev: true
     resolution:
-      integrity: sha512-vpw1b4THnOjNRiILd4XXuL58eODMiV51CfEBwb7xvLrfYpQXFP+2TEBQgF9hdjbjfabWnJAN8zO11UKi1Wu7RQ==
+      integrity: sha512-hEeukPB1hLx6gF3bx5w9V0J95ZDPQwV27W1i7fserrw0tIXvYYt0EZN4QE0jnQsrLOzC8Q2BJkr75sFWPtn+3A==
   /prisma-json-schema/0.1.3:
     dev: true
     resolution:
@@ -20244,7 +20471,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wI/lOQrD78de2+ZNzJlbEYcYiUANtpdyT0VzAS+YbF5+1/O+shOnpwYsBtjrVL5Er0RwMkwH7j+oZQM61ENBMQ==
-  /prisma-yml/1.25.7:
+  /prisma-yml/1.26.3:
     dependencies:
       ajv: 5.5.2
       bluebird: 3.5.3
@@ -20266,12 +20493,12 @@ packages:
       yaml-ast-parser: 0.0.40
     dev: true
     resolution:
-      integrity: sha512-YGl+UKmdTTSFV2xSTOJdu39Uq8VhdIpJt7et/LL4fbCSXWiqKHxBeX9jjQeCfuyKCdRga+fDE84EPeL7NDnX7Q==
-  /prisma/1.25.7:
+      integrity: sha512-6tBO5gD7sx2wg+x+DtMOhmYrIsOu2JrdueL5/9U+iKUYGErFSfyiUkROdtVUqs+m8990yOsTkvgcIatpDaVxMw==
+  /prisma/1.26.3:
     dependencies:
       fs-extra: 7.0.1
-      prisma-cli-core: 1.25.7
-      prisma-cli-engine: 1.25.7
+      prisma-cli-core: 1.26.3
+      prisma-cli-engine: 1.26.3
       semver: 5.6.0
       source-map-support: 0.4.18
     dev: true
@@ -20279,7 +20506,7 @@ packages:
       node: '>=6.13.0'
     hasBin: true
     resolution:
-      integrity: sha512-vrQlHrvpLQuDq909GHV1zTcccIM+QYOF8keqXXt2VTz4Pidx5CbvYaz6bRFPRv2e6Z8Yma6D3A7Zxx2scBc4+w==
+      integrity: sha512-/6IG3Vw/cx88bkV9WUNhgQ3+DA3KiJCTsE6RlCKC60/ThWR0X9ZGAJu51pVCayUj9WJuTRRAX5DRyrChubtQ3Q==
   /prismjs/1.15.0:
     dev: true
     optionalDependencies:
@@ -21211,7 +21438,6 @@ packages:
     dependencies:
       find-up: 1.1.2
       read-pkg: 1.1.0
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -21246,9 +21472,8 @@ packages:
   /read-pkg/1.1.0:
     dependencies:
       load-json-file: 1.1.0
-      normalize-package-data: 2.4.2
+      normalize-package-data: 2.5.0
       path-type: 1.1.0
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -21934,7 +22159,6 @@ packages:
   /resolve/1.10.0:
     dependencies:
       path-parse: 1.0.6
-    dev: true
     resolution:
       integrity: sha512-3sUr9aq5OfSg2S9pNtPA9hL1FVEAjvfOC4leW0SNf/mpnaakz2a9femSd6LqAww2RaFctwyf1lCqnTHuF1rxDg==
   /resolve/1.7.1:
@@ -22665,6 +22889,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4UnZgr9gDdA1kaKj/38IiudfC3KHKhDc1zi/HSxd9FQDR0VLwH3/y79tZJLsVYPsJgIjeHjqIWaWVRJUj9qZOQ==
+  /showdown/1.6.4:
+    dependencies:
+      yargs: 6.6.0
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-BWu7ZU7NuNhkOuEtbVl4k8yvRsY=
   /shuffle-array/1.0.1:
     dev: true
     resolution:
@@ -23336,22 +23567,18 @@ packages:
     dependencies:
       spdx-expression-parse: 3.0.0
       spdx-license-ids: 3.0.3
-    dev: true
     resolution:
       integrity: sha512-lr2EZCctC2BNR7j7WzJ2FpDznxky1sjfxvvYEyzxNyb6lZXHODmEoJeFu4JupYlkfha1KZpJyoqiJ7pgA1qq8Q==
   /spdx-exceptions/2.2.0:
-    dev: true
     resolution:
       integrity: sha512-2XQACfElKi9SlVb1CYadKDXvoajPgBVPn/gOQLrTvHdElaVhr7ZEbqJaRnJLVNeaI4cMEAgVCeBMKF6MWRDCRA==
   /spdx-expression-parse/3.0.0:
     dependencies:
       spdx-exceptions: 2.2.0
       spdx-license-ids: 3.0.3
-    dev: true
     resolution:
       integrity: sha512-Yg6D3XpRD4kkOmTpdgbUiEJFKghJH03fiC1OPll5h/0sO6neh2jqRDVHOQ4o/LMea0tgCkbMgea5ip/e+MkWyg==
   /spdx-license-ids/3.0.3:
-    dev: true
     resolution:
       integrity: sha512-uBIcIl3Ih6Phe3XHK1NqboJLdGfwr1UN3k6wSD1dZpmPsIkb8AGNbZYJ1fOBk834+Gxy8rpfDxrS6XLEMZMY2g==
   /spdy-transport/3.0.0:
@@ -23874,7 +24101,6 @@ packages:
   /strip-bom/2.0.0:
     dependencies:
       is-utf8: 0.2.1
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -23970,7 +24196,7 @@ packages:
       stylelint: ^8.3.0 || ^9.0.0
     resolution:
       integrity: sha512-07x0TaSIzvXlbOioUU4ORkCIM07kyIuojkbSVCyFWNVgXMXYHfhnQSCkqu+oHWJf3YADAnPGWzdJ53NxkoJ7RA==
-  /stylelint-scss/3.5.2:
+  /stylelint-scss/3.5.3:
     dependencies:
       lodash: 4.17.11
       postcss-media-query-parser: 0.2.3
@@ -23983,7 +24209,7 @@ packages:
     peerDependencies:
       stylelint: ^8.0.0 || ^9.0.0
     resolution:
-      integrity: sha512-HL95s8Q6wihbJe7c7z6rL9GHVHOF3H3tXkVmGutitwn14LYR52JYMwCkcifqlf4nRsvXrUDaoH6OHOdilifyjw==
+      integrity: sha512-QESQUOY1ldU5tlJTTM3Megz/QtJ39S58ByjZ7dZobGDq9qMjy5jbC7PDUasrv/T7pB1UbpPojpxX9K1OR7IPEg==
   /stylelint/9.10.1:
     dependencies:
       autoprefixer: 9.4.7
@@ -25784,7 +26010,6 @@ packages:
     dependencies:
       spdx-correct: 3.1.0
       spdx-expression-parse: 3.0.0
-    dev: true
     resolution:
       integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==
   /validate-npm-package-name/3.0.0:
@@ -26405,7 +26630,6 @@ packages:
     resolution:
       integrity: sha1-RztRfsFZ4rhQBUl6E5g/CVQS404=
   /which-module/1.0.0:
-    dev: true
     resolution:
       integrity: sha1-u6Y8qGGUiZT/MHc2CJ47lgJsKk8=
   /which-module/2.0.0:
@@ -26784,6 +27008,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-UIE1XRnZ0MjF2BrakIy05tGGZk8=
+  /yargs-parser/4.2.1:
+    dependencies:
+      camelcase: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha1-KczqwNxPA8bIe0qfIX3RjJ90hxw=
   /yargs-parser/5.0.0:
     dependencies:
       camelcase: 3.0.0
@@ -26929,6 +27159,24 @@ packages:
     dev: true
     resolution:
       integrity: sha1-M1UUSXfQV1fbuG1uOOwFYSOzpm4=
+  /yargs/6.6.0:
+    dependencies:
+      camelcase: 3.0.0
+      cliui: 3.2.0
+      decamelize: 1.2.0
+      get-caller-file: 1.0.3
+      os-locale: 1.4.0
+      read-pkg-up: 1.0.1
+      require-directory: 2.1.1
+      require-main-filename: 1.0.1
+      set-blocking: 2.0.0
+      string-width: 1.0.2
+      which-module: 1.0.0
+      y18n: 3.2.1
+      yargs-parser: 4.2.1
+    dev: false
+    resolution:
+      integrity: sha1-eC7CHvQDNF+DCoCMo9UTr1YGUgg=
   /yargs/7.0.2:
     dependencies:
       camelcase: 3.0.0
@@ -27082,12 +27330,14 @@ packages:
     name: sqlite3
     requiresBuild: true
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/mapbox/node-sqlite3/tar.gz/081aebb0a4d017058dedf91d34632d2e75e0136a'
     version: 4.0.6
   github.com/mlaanderson/database-js-common/e4e114208175abbe286f8e27f321e6e8521b6817:
     dev: true
     name: database-js-common
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/mlaanderson/database-js-common/tar.gz/e4e114208175abbe286f8e27f321e6e8521b6817'
     version: 1.0.1
 registry: 'https://registry.npmjs.org/'
@@ -27101,26 +27351,26 @@ specifiers:
   '@angular-devkit/build-ng-packagr': 0.13.0
   '@angular-material-extensions/password-strength': 3.4.1
   '@angular-mdc/web': 0.43.7
-  '@angular/animations': 7.2.3
+  '@angular/animations': 7.2.4
   '@angular/cdk': 7.3.1
   '@angular/cli': 7.3.0
-  '@angular/common': 7.2.3
-  '@angular/compiler': 7.2.3
-  '@angular/compiler-cli': 7.2.3
-  '@angular/core': 7.2.3
-  '@angular/elements': 7.2.3
+  '@angular/common': 7.2.4
+  '@angular/compiler': 7.2.4
+  '@angular/compiler-cli': 7.2.4
+  '@angular/core': 7.2.4
+  '@angular/elements': 7.2.4
   '@angular/fire': 5.1.1
   '@angular/flex-layout': 7.0.0-beta.23
-  '@angular/forms': 7.2.3
-  '@angular/http': 7.2.3
-  '@angular/language-service': 7.2.3
+  '@angular/forms': 7.2.4
+  '@angular/http': 7.2.4
+  '@angular/language-service': 7.2.4
   '@angular/material': 7.3.1
-  '@angular/platform-browser': 7.2.3
-  '@angular/platform-browser-dynamic': 7.2.3
-  '@angular/platform-server': 7.2.3
+  '@angular/platform-browser': 7.2.4
+  '@angular/platform-browser-dynamic': 7.2.4
+  '@angular/platform-server': 7.2.4
   '@angular/pwa': 0.13.0
-  '@angular/router': 7.2.3
-  '@angular/service-worker': 7.2.3
+  '@angular/router': 7.2.4
+  '@angular/service-worker': 7.2.4
   '@angularclass/hmr': 2.1.3
   '@application/scss': 'file:libs/scss'
   '@application/web': 'file:xplat/web'
@@ -27129,12 +27379,18 @@ specifiers:
   '@babel/preset-env': 7.3.1
   '@biesbjerg/ngx-translate-extract': 2.3.4
   '@compodoc/compodoc': 1.1.7
+  '@covalent/core': 2.0.1
+  '@covalent/dynamic-forms': 2.0.1
+  '@covalent/highlight': 2.0.1
+  '@covalent/http': 2.0.1
+  '@covalent/http-deprec': 2.0.1
+  '@covalent/markdown': 2.0.1
   '@google-cloud/firestore': 1.0.1
   '@gorniv/ngx-transfer-http': 2.2.9
   '@ionic-native/core': 5.0.0
   '@ionic-native/splash-screen': 5.0.0
   '@ionic-native/status-bar': 5.0.0
-  '@ionic/angular': 4.0.0
+  '@ionic/angular': 4.0.1
   '@ionic/angular-toolkit': 1.3.0
   '@nestjs/common': 5.7.0
   '@nestjs/core': 5.7.0
@@ -27196,10 +27452,12 @@ specifiers:
   '@storybook/angular': next
   '@storybook/react-dev-utils': 5.0.0
   '@swimlane/ngx-charts': 10.0.0
+  '@swimlane/ngx-datatable': 14.0.0
+  '@swimlane/ngx-ui': 25.1.0
   '@tensorflow-models/coco-ssd': 0.1.1
   '@tensorflow-models/mobilenet': 0.2.2
   '@tensorflow-models/posenet': 0.2.3
-  '@tensorflow-models/speech-commands': 0.2.3
+  '@tensorflow-models/speech-commands': 0.2.4
   '@tensorflow/tfjs': 0.15.0
   '@tensorflow/tfjs-node': 0.2.3
   '@types/body-parser': 1.17.0
@@ -27208,6 +27466,7 @@ specifiers:
   '@types/cookie-parser': 1.4.1
   '@types/cors': 2.8.4
   '@types/express': 4.16.1
+  '@types/hammerjs': 2.0.36
   '@types/isomorphic-fetch': 0.0.34
   '@types/jasmine': 3.3.8
   '@types/jasminewd2': 2.0.6
@@ -27227,7 +27486,7 @@ specifiers:
   angular2-notifications: 2.0.0
   angulartics2: 7.4.1
   apollo-angular: 1.5.0
-  apollo-angular-link-http: 1.4.0
+  apollo-angular-link-http: 1.5.0
   apollo-cache-inmemory: 1.4.2
   apollo-client: 2.4.12
   ast-source: 3.0.0
@@ -27262,7 +27521,7 @@ specifiers:
   connect: 3.6.6
   cookie-parser: 1.4.3
   copy-node-modules: 1.1.1
-  core-js: 2.6.3
+  core-js: 2.6.4
   cors: 2.8.5
   cp-cli: 1.1.2
   cp-dep: 3.0.1
@@ -27270,6 +27529,7 @@ specifiers:
   css-loader: 2.1.0
   csurf: 1.9.0
   cuint: 0.2.2
+  d3: 5.8.2
   document-register-element: 1.13.1
   dotenv-extended: 2.3.0
   earcut: 2.1.5
@@ -27307,7 +27567,7 @@ specifiers:
   jasmine-marbles: 0.4.1
   jasmine-spec-reporter: 4.2.1
   jest: 24.1.0
-  jest-canvas-mock: 2.0.0-alpha.2
+  jest-canvas-mock: 2.0.0-alpha.3
   jest-createspyobj: 1.2.2
   jest-image-snapshot: 2.8.0
   jest-preset-angular: 6.0.2
@@ -27326,7 +27586,7 @@ specifiers:
   local-web-server: 2.6.1
   lodash: 4.17.11
   lodash-decorators: 6.0.1
-  lodash-fun: 1.5.0
+  lodash-fun: 1.6.1
   make-dir-cli: 1.0.0
   material-design-icons-iconfont: 4.0.4
   mocha-junit-reporter: 1.18.0
@@ -27372,7 +27632,7 @@ specifiers:
   preboot: 7.0.0
   prerender-spa-plugin: 3.4.0
   prettier: 1.16.4
-  prisma: 1.25.7
+  prisma: 1.26.3
   protractor: 5.4.2
   puppeteer: 1.12.2
   rdflib: 0.19.1
@@ -27403,7 +27663,7 @@ specifiers:
   stylelint-config-prettier: 4.0.0
   stylelint-config-recommended-scss: 3.2.0
   stylelint-config-standard: 18.2.0
-  stylelint-scss: 3.5.2
+  stylelint-scss: 3.5.3
   supertest: 3.4.2
   swiper: 4.4.6
   sync-files: 1.0.3

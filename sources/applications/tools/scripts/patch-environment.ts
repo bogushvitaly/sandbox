@@ -43,9 +43,9 @@ const options = {
     /projectId: '(.*)?'/,
     /storageBucket: '(.*)?'/,
     /messagingSenderId: '(.*)?'/,
+    /gaTrackingCode: '(.*)?'/,
     /apiUrl: '(.*)?'/,
-    /staticContentServerUrl: '(.*)?'/,
-    /gaTrackingCode: '(.*)?'/
+    /staticContentServerUrl: '(.*)?'/
   ],
   to: [
     `apiKey: '${process.env.API_KEY}'`,
@@ -54,9 +54,9 @@ const options = {
     `projectId: '${process.env.PROJECT_ID}'`,
     `storageBucket: '${process.env.STORAGE_BUCKET}'`,
     `messagingSenderId: '${process.env.MESSAGING_SENDER_ID}'`,
+    `gaTrackingCode: '${process.env.GA_TRACKING_CODE}'`,
     `apiUrl: '${process.env.APPLICATION_API_URL}'`,
-    `staticContentServerUrl: '${process.env.STATIC_CONTENT_SERVER_URL}'`,
-    `gaTrackingCode: '${process.env.GA_TRACKING_CODE}'`
+    `staticContentServerUrl: '${process.env.STATIC_CONTENT_SERVER_URL}'`
   ]
 };
 

@@ -26,6 +26,7 @@ const rootRouteConfig: ExtraOptions = {
         demoHeroes: './features/demoHeroes.loader.module#DemoHeroesLoaderModule',
         demoItems: './features/demoItems.loader.module#DemoItemsLoaderModule',
         demoAngularMaterial: './features/demoAngularMaterial.loader.module#DemoAngularMaterialLoaderModule',
+        demoCovalentUi: './features/demoCovalentUi.loader.module#DemoCovalentUiLoaderModule',
         demoTensorFlow: './features/demoTensorFlow.loader.module#DemoTensorFlowLoaderModule',
         demoVersion: './features/demoVersion.loader.module#DemoVersionLoaderModule',
         uiAuthFirebase: './features/uiAuthFirebase.loader.module#UiAuthFirebaseLoaderModule',

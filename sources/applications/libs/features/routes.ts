@@ -10,6 +10,7 @@ export const ROUTE_ENTITIES = [
   { name: 'Demo Items', url: 'demo-items' },
   { name: 'Heroes Example', url: 'demo-heroes' },
   { name: 'Angular Material Demo', url: 'demo-angular-material' },
+  { name: 'Covalent Ui Demo', url: 'demo-covalent-ui' },
   { name: 'Firebase Authentication', url: 'ui-auth-firebase' },
   { name: 'Tensorflow Integration', url: 'demo-tensorflow' },
   { name: 'Custom Overlay Demo', url: 'demo-image-preview' }
@@ -19,6 +20,7 @@ export interface IRouteBase {
   demoHeroes: string;
   demoItems: string;
   demoAngularMaterial: string;
+  demoCovalentUi: string;
   demoTensorFlow: string;
   demoVersion: string;
   uiAuthFirebase: string;
@@ -55,6 +57,11 @@ export function routeBase(
         {
           path: 'demo-angular-material',
           loadChildren: lazyLoad.demoAngularMaterial,
+          data: { preload: true, delay: true }
+        },
+        {
+          path: 'demo-covalent-ui',
+          loadChildren: lazyLoad.demoCovalentUi,
           data: { preload: true, delay: true }
         },
         {

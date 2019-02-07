@@ -42,3 +42,4 @@ export * from './demo-wasm';
 export * from './demo-babylon';
 export * from './demo-css-flex';
 export * from './demo-image-preview';
+export * from './demo-bpmn-editor';

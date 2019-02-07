@@ -6,7 +6,7 @@ exports.config = {
   output: path.join(REPORTS_PATH, 'codecept'),
   helpers: {
     Puppeteer: {
-      url: process.env.APPLICATION_URL,
+      url: process.env.WEB_APPLICATION_DEV_URL,
       chrome: {
         executablePath: process.env.CHROME_BIN
       },
