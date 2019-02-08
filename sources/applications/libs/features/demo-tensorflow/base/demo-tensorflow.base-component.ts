@@ -16,7 +16,7 @@ import { features, labels } from '../data/data';
 import { BaseComponent, environment } from '@application/core';
 import { DemoTensorflowDrawableDirective } from '@application/web/features/demo-tensorflow/directives/demo-tensorflow-drawable.directive';
 
-export abstract class DemoTensorflowBaseComponent extends BaseComponent implements AfterViewInit {
+export abstract class DemoTensorflowBaseComponent extends BaseComponent implements OnInit {
   public text = 'DemoTensorflow';
 
   constructor(protected platformId: Object) {
@@ -31,11 +31,9 @@ export abstract class DemoTensorflowBaseComponent extends BaseComponent implemen
 
   @ViewChild(DemoTensorflowDrawableDirective) canvas;
 
-  ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.loadModel();
-      this.trainNewModel();
-    }
+  ngOnInit() {
+    this.loadModel();
+    this.trainNewModel();
   }
 
   async loadModel() {
