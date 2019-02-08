@@ -17,21 +17,22 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [x] Design System Development using [Storybook](https://storybook.js.org/)
 - [x] [Nest.js](https://nestjs.com/) Backend
 - [x] Machine Learning Capabilities: [TensorFlow.js](https://js.tensorflow.org/)
+- [ ] Components Libraries: [Angular Material](https://material.angular.io/), [Covalent UI Platform](https://teradata.github.io/covalent/)
 
 ## Subprojects
 
 - [x] ATDD application development - Tour of Heroes Angular Example
+- [ ] Computer Science Concepts: Algorithms, Data Structures, Algebraic Data Types, Utility Functions
 
 ## In progress
 
-- [ ] Components Libraries: Angular Material, Covalent UI Platform, Material Web Components, MDBootstrap
+- [ ] Components Libraries: Material Web Components, MDBootstrap, Stencil.js
 - [ ] Graphics Libraries: REGL, Babylon.js, Three.js
 - [ ] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth, Winston logging
 - [ ] Cloud Backends: Firebase Platform, AWS AppSync, Prisma database API
 - [ ] Offline Storages: RxDB
 - [ ] Communication Styles: GraphQL with Apollo, REST, gRPC
 - [ ] Functional Programming Style: RxJS, Lodash FP, Lodash Decorators
-- [ ] Web Components libraries integration: Stencil.js
 - [ ] API Integrations: Google APIs, Trello API, Coinbase API
 - [ ] Blockchain Networks and Decentralized Platform Integrations: Blockchain API, Ethereum API, SingularityNET API, Solid Platform API, IPFS, IPLD
 

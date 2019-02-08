@@ -236,3 +236,7 @@ a[mat-icon-button] {
     }
   }
 }
+
+mat-divider[mat-inset] {
+  margin-left: 0;
+}

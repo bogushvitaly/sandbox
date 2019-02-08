@@ -2,9 +2,9 @@
   <head>
     <title>Reports Dashboard</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.3.41/css/materialdesignicons.min.css" />
+    <link href="https://cdn.materialdesignicons.com/1.3.41/css/materialdesignicons.min.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
 
@@ -12,6 +12,18 @@
       $(document).ready(function() {
         const baseUrl = $(location).attr('href');
 
+        const hiptestCredentials = {
+          username: 'singularitytest1@gmail.com',
+          password: 'test1'
+        };
+
+        const projectLinks = {
+          github: 'https://github.com/bohushvitali/sandbox/',
+          gitlab: 'https://gitlab.com/bohushvitali/sandbox/pipelines/',
+          hiptest: 'https://app.hiptest.com/projects/105770/test-plan/folders/722126/',
+          staging: 'https://sandbox-50983.firebaseapp.com/',
+          production: ''
+        };
         const urlMap = {
           bundle: 'apps/web-application/bundle/index.html',
           coverage: 'coverage/lcov-report/index.html',
@@ -54,7 +66,48 @@
             .closest('.menu-button')
             .removeClass('expanded');
         });
+
+        $('.projectLinks').on('click', function(e) {
+          e.stopPropagation();
+          e.preventDefault();
+
+          switch (e.target.id) {
+            case 'linkStaging':
+              openUrl(projectLinks.staging);
+            case 'linkHiptest':
+              openUrl(projectLinks.hiptest);
+            case 'linkGiglab':
+              openUrl(projectLinks.github);
+            case 'linkGithub':
+              openUrl(projectLinks.gitlab);
+            case 'copyHiptestUsername':
+              copyToClipboard(hiptestCredentials.username);
+            case 'copyHiptestPassword':
+              copyToClipboard(hiptestCredentials.password);
+          }
+        });
+
+        function copyToClipboard(str) {
+          const el = document.createElement('textarea');
+          el.value = str;
+          el.setAttribute('readonly', '');
+          el.style.position = 'absolute';
+          el.style.left = '-9999px';
+          document.body.appendChild(el);
+          const selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+          if (selected) {
+            document.getSelection().removeAllRanges();
+            document.getSelection().addRange(selected);
+          }
+        }
       });
+
+      function openUrl(url) {
+        window.open(url, '_blank');
+      }
     </script>
     <style>
       iframe {
@@ -210,15 +263,30 @@
           border-radius: 0;
         }
       }
+
+      .copy-link {
+        cursor: pointer;
+      }
+
+      .copy-link:hover {
+        color: #dc5050;
+        cursor: pointer;
+      }
     </style>
   </head>
 
   <body>
     <div class="wrap">
-      <header>
+      <header class="projectLinks">
         <h1>Reports Dashboard</h1>
-
-        <p><a href="https://sandbox-50983.firebaseapp.com/" target="_blank">View Staging Build</a></p>
+        <p><a href="javascript:void(0)" id="linkStaging">Staging Build</a></p>
+        <p>
+          <a href="javascript:void(0)" id="linkHiptest">Living Documentation</a>
+          <span class="copy-link" id="copyHiptestUsername"> Copy Username </span>
+          <span class="copy-link" id="copyHiptestPassword"> Copy Password </span>
+        </p>
+        <p><a href="javascript:void(0)" id="linkGiglab">CI Pipelines</a></p>
+        <p><a href="javascript:void(0)" id="linkGithub">Code Repository</a></p>
       </header>
       <iframe name="innerContent" src="about:blank"></iframe>
     </div>

@@ -7,7 +7,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
-  "start_url": "/?utm_source=a2hs",
+  "start_url": "https://sandbox-50983.firebaseapp.com/?utm_source=a2hs",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
