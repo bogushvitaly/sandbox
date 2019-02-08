@@ -136,7 +136,7 @@
               "budgets": [{
                 "type": "initial",
                 "maximumWarning": "2mb",
-                "maximumError": "5mb"
+                "maximumError": "6mb"
               }],
               "serviceWorker": true
             },
@@ -157,7 +157,7 @@
               "budgets": [{
                 "type": "initial",
                 "maximumWarning": "2mb",
-                "maximumError": "5mb"
+                "maximumError": "6mb"
               }],
               "serviceWorker": true
             }
