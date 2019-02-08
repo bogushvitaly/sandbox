@@ -68,7 +68,7 @@
     "postpatch.babylon": "sync-files tools/custom-packages/babylonjs-mesh-writer node_modules/babylonjs-mesh-writer",
     "patch.jest": "replace-in-file jest-resolve/build/default_resolver jest-resolve/build/defaultResolver node_modules/.registry.npmjs.org/@nrwl/builders/7.5.1/node_modules/@nrwl/builders/plugins/jest/resolver.js",
     "postinstall.windows": "npm rebuild node-sass",
-    "precommit": "pnpx npm-run-all -s --print-label format.write lint.write test.jest.generate-output e2e.web.application",
+    "precommit": "pnpx npm-run-all -s --print-label format.write lint.write test.jest.generate-output e2e.web.application storybook",
     "prettier": "prettier --write ./{apps,libs}/**/*.{ts,js,scss}",
     "prettier.check": "prettier --list-different ./{apps,libs}/**/*.{ts,js,scss}",
     "prod.web.application.all": "pnpx npm-run-all -p --print-label prod.web.application.api prod.web.application.web",
