@@ -1,7 +1,6 @@
 import { map } from 'rxjs/operators';
 
 import { Injectable } from '@angular/core';
-import { Response } from '@angular/http';
 import { HttpInterceptorService, RESTService } from '@covalent/http-deprec';
 
 import { COVALENT_MOCK_API } from '../configs/api.config';
@@ -17,7 +16,7 @@ export class DemoCovalentUiItemsService extends RESTService<any> {
 
   staticQuery(): any {
     return this._http.get('/assets/demo-covalent-mock-data/items.json').pipe(
-      map((res: Response) => {
+      map(res => {
         return res.json();
       })
     );
@@ -25,7 +24,7 @@ export class DemoCovalentUiItemsService extends RESTService<any> {
 
   staticGet(id: string): any {
     return this._http.get('/assets/demo-covalent-mock-data/items.json').pipe(
-      map((res: Response) => {
+      map(res => {
         let item: any;
         res.json().forEach((s: any) => {
           if (s.item_id === id) {

@@ -1,7 +1,6 @@
 import { map } from 'rxjs/operators';
 
 import { Injectable } from '@angular/core';
-import { Response } from '@angular/http';
 import { HttpInterceptorService } from '@covalent/http-deprec';
 
 @Injectable()
@@ -10,7 +9,7 @@ export class DemoCovalentUiAlertsService {
 
   query(): any {
     return this._http.get('/assets/demo-covalent-mock-data/alerts.json').pipe(
-      map((res: Response) => {
+      map(res => {
         return res.json();
       })
     );
@@ -18,7 +17,7 @@ export class DemoCovalentUiAlertsService {
 
   get(id: string): any {
     return this._http.get('/assets/demo-covalent-mock-data/alerts.json').pipe(
-      map((res: Response) => {
+      map(res => {
         let item: any;
         res.json().forEach((s: any) => {
           if (s.item_id === id) {

@@ -2,7 +2,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Injectable, InjectionToken, Optional, Provider, SkipSelf } from '@angular/core';
-import { Response } from '@angular/http';
 import { HttpInterceptorService, RESTService } from '@covalent/http-deprec';
 
 import { COVALENT_MOCK_API } from '../configs/api.config';
@@ -19,7 +18,7 @@ export class DemoCovalentUiUserService extends RESTService<CovalentUser> {
 
   staticQuery(): Observable<CovalentUser[]> {
     return this._http.get('/assets/demo-covalent-mock-data/users.json').pipe(
-      map((res: Response) => {
+      map(res => {
         return res.json();
       })
     );

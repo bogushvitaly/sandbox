@@ -554,7 +554,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1QWhGGu03NjPYk45w5muLq6a43Fhvd5+LGZrPydXLs7/FgQHqW6aSKmJClTwBHP1rynLSLLA7+9E/35cur6g/g==
-  /@google-cloud/common/0.30.2:
+  /@google-cloud/common/0.31.0:
     dependencies:
       '@google-cloud/projectify': 0.3.2
       '@google-cloud/promisify': 0.3.1
@@ -564,7 +564,7 @@ packages:
       duplexify: 3.7.1
       ent: 2.2.0
       extend: 3.0.2
-      google-auth-library: 3.0.1
+      google-auth-library: 3.1.0
       pify: 4.0.1
       retry-request: 4.0.0
     dev: false
@@ -572,7 +572,7 @@ packages:
       node: '>=6.0.0'
     optional: true
     resolution:
-      integrity: sha512-JLIaSpMhhUetiwS30iC2SwNP51mayuSbyhRVdagqFC6rDVcqMHHsN8QJwUhCjOoHyfQ04n9SinfMCQzJTR9Liw==
+      integrity: sha512-mO7WFavzqmr24btNb2zimUh+M3fGnIKGbkR1VT6ZG3yDV+S7BiZPmPiFHKRJVrxwi5sA9U6X6fpNpHgj7j2a2w==
   /@google-cloud/firestore/1.0.1:
     dependencies:
       '@google-cloud/projectify': 0.3.2
@@ -612,9 +612,9 @@ packages:
     optional: true
     resolution:
       integrity: sha512-QzB0/IMvB0eFxFK7Eqh+bfC8NLv3E9ScjWQrPOk6GgfNroxcVITdTlT8NRsRrcp5+QQJVPLkRqKG0PUdaWXmHw==
-  /@google-cloud/storage/2.4.1:
+  /@google-cloud/storage/2.4.2:
     dependencies:
-      '@google-cloud/common': 0.30.2
+      '@google-cloud/common': 0.31.0
       '@google-cloud/paginator': 0.1.2
       '@google-cloud/promisify': 0.3.1
       arrify: 1.0.1
@@ -639,7 +639,7 @@ packages:
       node: '>=6.0.0'
     optional: true
     resolution:
-      integrity: sha512-g9GQ/CWkB2Y1wyMnlWvj7dGbChIxfuran0O6kUtvqTKTLBpZpsvWo86xQV723JMXi/BenLkE1vy353bnRsa3Fw==
+      integrity: sha512-G4rlt5h2oypPYU2ZtmF3N0FpE47aRvsxp8NmZEdlScd5LgjDAu5Ha01hMOA/ZHBVsUlOGFfa+TxU5Ei/56+0Gg==
   /@grpc/grpc-js/0.3.5:
     dependencies:
       semver: 5.6.0
@@ -850,7 +850,7 @@ packages:
     dependencies:
       chalk: 2.4.2
       consola: 1.4.5
-      esm: 3.2.0
+      esm: 3.2.4
       node-fetch: 2.3.0
     dev: false
     engines:
@@ -1032,7 +1032,7 @@ packages:
   /@tensorflow/tfjs-data/0.1.7/@tensorflow!tfjs-core@0.14.5:
     dependencies:
       '@tensorflow/tfjs-core': 0.14.5
-      '@types/node-fetch': 2.1.4
+      '@types/node-fetch': 2.1.6
       node-fetch: 2.1.2
       seedrandom: 2.4.4
     dev: false
@@ -1044,7 +1044,7 @@ packages:
   /@tensorflow/tfjs-data/0.2.0/@tensorflow!tfjs-core@0.15.0:
     dependencies:
       '@tensorflow/tfjs-core': 0.15.0
-      '@types/node-fetch': 2.1.4
+      '@types/node-fetch': 2.1.6
       node-fetch: 2.1.2
       seedrandom: 2.4.4
     dev: false
@@ -1113,7 +1113,7 @@ packages:
   /@types/body-parser/1.17.0:
     dependencies:
       '@types/connect': 3.4.32
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
     dev: false
     resolution:
       integrity: sha512-a2+YeUjPkztKJu5aIF2yArYFQQp8d51wZ7DavSHjFuY1mqVgidGyzEQ41JIVNy82fXj8yPgy2vJmfIywgESW6w==
@@ -1124,7 +1124,7 @@ packages:
       integrity: sha512-FhlMa34NHp9K5MY1Uz8yb+ZvuX0pnvn3jScRSNAb75KHGB8d3rEU6hqMs3Z2vjuytcMfRg6c5CHMc3wtYyD2/A==
   /@types/connect/3.4.32:
     dependencies:
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
     dev: false
     resolution:
       integrity: sha512-4r8qa0quOvh7lGD0pre62CAb1oni1OO6ecJLGCezTmhQ8Fz50Arx9RUszryR8KlgK6avuSXvviL6yWyViQABOg==
@@ -1136,14 +1136,14 @@ packages:
       integrity: sha512-ipZjBVsm2tF/n8qFGOuGBkUij9X9ZswVi9G3bx/6dz7POpVa6gVHcj1wsX/LVEn9MMF41fxK/PnZPPoTD1UFPw==
   /@types/duplexify/3.6.0:
     dependencies:
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
     dev: false
     optional: true
     resolution:
       integrity: sha512-5zOA53RUlzN74bvrSGwjudssD9F3a797sDZQkiYpUOxW+WHaXTCPz4/d5Dgi6FKnOqZ2CpaTo0DhgIfsXAOE/A==
   /@types/express-serve-static-core/4.16.1:
     dependencies:
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
       '@types/range-parser': 1.2.3
     dev: false
     resolution:
@@ -1158,7 +1158,7 @@ packages:
       integrity: sha512-V0clmJow23WeyblmACoxbHBu2JKlE5TiIme6Lem14FnPW9gsttyHtk6wq7njcdIWH1njAaFgR8gW09lgY98gQg==
   /@types/form-data/2.2.1:
     dependencies:
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
     dev: false
     optional: true
     resolution:
@@ -1169,7 +1169,7 @@ packages:
       integrity: sha512-wXAVyLfkG1UMkKOdMijVWFky39+OD/41KftzqfX1Oejd0Gm6dOIKjCihSVECg6X7PHjftxXmfOKA/d1H79ZfvQ==
   /@types/jsonwebtoken/7.2.8:
     dependencies:
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
     dev: false
     resolution:
       integrity: sha512-XENN3YzEB8D6TiUww0O8SRznzy1v+77lH7UmuN54xq/IHIsyWjWOzZuFFTtoiRuaE782uAoRwBe/wwow+vQXZw==
@@ -1185,31 +1185,31 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1w52Nyx4Gq47uuu0EVcsHBxZFJgurQ+rTKS3qMHxR1GY2T8c2AJYd6vZoZ9q1rupaDjU0yT+Jc2XTyXkjeMA+Q==
-  /@types/mime/2.0.0:
+  /@types/mime/2.0.1:
     dev: false
     resolution:
-      integrity: sha512-A2TAGbTFdBw9azHbpVd+/FkdW2T6msN1uct1O9bH3vTerEHKZhTXJUQXy+hNq1B0RagfU8U+KBdqiZpxjhOUQA==
-  /@types/node-fetch/2.1.4:
+      integrity: sha512-FwI9gX75FgVBJ7ywgnq/P7tw+/o1GUbtP0KzbtusLigAOgIgNISRK0ZPl4qertvXSIE8YbsVJueQ90cDt9YYyw==
+  /@types/node-fetch/2.1.6:
     dependencies:
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
     dev: false
     resolution:
-      integrity: sha512-tR1ekaXUGpmzOcDXWU9BW73YfA2/VW1DF1FH+wlJ82BbCSnWTbdX+JkqWQXWKIGsFPnPsYadbXfNgz28g+ccWg==
-  /@types/node/10.12.21:
+      integrity: sha512-Hv1jgh3pfpUEl2F2mqUd1AfLSk1YbUCeBJFaP36t7esAO617dErqdxWb5cdG2NfJGOofkmBW36fdx0dVewxDRg==
+  /@types/node/10.12.24:
     dev: false
     resolution:
-      integrity: sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
-  /@types/node/8.10.39:
+      integrity: sha512-GWWbvt+z9G5otRBW8rssOFgRY87J9N/qbhqfjMZ+gUuL6zoL+Hm6gP/8qQBG4jjimqdaNLCehcVapZ/Fs2WjCQ==
+  /@types/node/8.10.40:
     dev: false
     resolution:
-      integrity: sha512-rE7fktr02J8ybFf6eysife+WF+L4sAHWzw09DgdCebEu+qDwMvv4zl6Bc+825ttGZP73kCKxa3dhJOoGJ8+5mA==
+      integrity: sha512-RRSjdwz63kS4u7edIwJUn8NqKLLQ6LyqF/X4+4jp38MBT3Vwetewi2N4dgJEshLbDwNgOJXNYoOwzVZUSSLhkQ==
   /@types/range-parser/1.2.3:
     dev: false
     resolution:
       integrity: sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
   /@types/rdf-js/2.0.1:
     dependencies:
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
     dev: false
     resolution:
       integrity: sha512-x3Qct8TPilUos4znM1gANmtTvjOFdDRItmpEM2Nu9QgAx258FN9k22OvOu2TmPzOlx8a1FLdEW3o33UXHQt5ow==
@@ -1217,7 +1217,7 @@ packages:
     dependencies:
       '@types/caseless': 0.12.1
       '@types/form-data': 2.2.1
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
       '@types/tough-cookie': 2.3.5
     dev: false
     optional: true
@@ -1230,7 +1230,7 @@ packages:
   /@types/serve-static/1.13.2:
     dependencies:
       '@types/express-serve-static-core': 4.16.1
-      '@types/mime': 2.0.0
+      '@types/mime': 2.0.1
     dev: false
     resolution:
       integrity: sha512-/BZ4QRLpH/bNYgZgwhKEh+5AsboDBcUdlBYgzoLX0fpj3Y2gp6EApyOlM3bK53wQS/OE1SrdSYBAbux2D1528Q==
@@ -1300,7 +1300,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-RZXPviBTtfmtka9n9sy1N5M5b82CbxWIR6HIis4s3WQTXDJamc/0gpCWNGz6EWdWp4DOfjzJfhz/AS9zVPjjWg==
-  /ajv/6.8.1:
+  /ajv/6.9.1:
     dependencies:
       fast-deep-equal: 2.0.1
       fast-json-stable-stringify: 2.0.0
@@ -1308,7 +1308,7 @@ packages:
       uri-js: 4.2.2
     dev: false
     resolution:
-      integrity: sha512-eqxCp82P+JfqL683wwsL73XmFs1eG6qjw+RD3YHx+Jll1r0jNd4dh8QG9NYAeNGA/hnZjeEDgtTskgJULbxpWQ==
+      integrity: sha512-XDN92U311aINL77ieWHmqCcNlwjoP5cHXDxIxbf2MaPYuCXOHS7gHH8jktxeK5omgd52XbSTX6a4Piwd1pQmzA==
   /amazon-cognito-auth-js/1.2.4:
     dependencies:
       js-cookie: 2.2.0
@@ -2429,12 +2429,12 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
-  /esm/3.2.0:
+  /esm/3.2.4:
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-yK4IiHmmInOk9q4xbJXdUfPV0ju7GbRCbhtpe5/gH7nRiD6RAb12Ix7zfsqQkDL5WERwzFlq/eT6zTXDWwIk+w==
+      integrity: sha512-wOuWtQCkkwD1WKQN/k3RsyGSSN+AmiUzdKftn8vaC+uV9JesYmQlODJxgXaaRz0LaaFIlUxZaUu5NPiUAjKAAA==
   /etag/1.8.1:
     dev: false
     engines:
@@ -2681,7 +2681,7 @@ packages:
     dependencies:
       '@firebase/app': 0.3.8
       '@firebase/database': /@firebase/database/0.3.11/@firebase!app@0.3.8
-      '@types/node': 8.10.39
+      '@types/node': 8.10.40
       jsonwebtoken: 8.1.0
       node-forge: 0.7.4
     dev: false
@@ -2689,7 +2689,7 @@ packages:
       node: '>=6.0.0'
     optionalDependencies:
       '@google-cloud/firestore': 1.0.1
-      '@google-cloud/storage': 2.4.1
+      '@google-cloud/storage': 2.4.2
     resolution:
       integrity: sha512-uYJVRuq8/b9PeJrgZwE2OIfr/MQAVhWxUpOa4AnWEEjzM7hzw2CQjY2iFzH6o0/7rTyAiGeFPQQQLBMg/xuQ6w==
   /firebase-functions/2.2.0:
@@ -2808,7 +2808,7 @@ packages:
     optional: true
     resolution:
       integrity: sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
-  /gaxios/1.2.8:
+  /gaxios/1.5.1:
     dependencies:
       extend: 3.0.2
       https-proxy-agent: 2.2.1
@@ -2816,10 +2816,10 @@ packages:
     dev: false
     optional: true
     resolution:
-      integrity: sha512-fmZsiW3/F27GB7pdvZGh2UXNzW0rH2pe6fTpJKP0u29FoXXkjQuymEe0mwYI65HCZKZHzSFqkC0tZtl6vs9OoA==
+      integrity: sha512-gqVZy/mvjx/VzSlr3ZwRvG7fx8ZxtZiSTHvEBB/enBu0ccsnt0Vr0PqgyTuKU7cGAa6BSH09Oy0UeN85lT61Fg==
   /gcp-metadata/0.9.3:
     dependencies:
-      gaxios: 1.2.8
+      gaxios: 1.5.1
       json-bigint: 0.3.0
     dev: false
     engines:
@@ -2830,7 +2830,7 @@ packages:
   /gcs-resumable-upload/0.14.1:
     dependencies:
       configstore: 4.0.0
-      google-auth-library: 3.0.1
+      google-auth-library: 3.1.0
       pumpify: 1.5.1
       request: 2.88.0
       stream-events: 1.0.5
@@ -2889,11 +2889,11 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-yTzMmKygLp8RUpG1Ymu2VXPSJQZjNAZPD4ywgYEaG7e4tBJeUQBO8OpXrf1RCNcEs5alsoJYPAMiIHP0cmeC7w==
-  /google-auth-library/3.0.1:
+  /google-auth-library/3.1.0:
     dependencies:
       base64-js: 1.3.0
       fast-text-encoding: 1.0.0
-      gaxios: 1.2.8
+      gaxios: 1.5.1
       gcp-metadata: 0.9.3
       gtoken: 2.3.2
       https-proxy-agent: 2.2.1
@@ -2905,13 +2905,13 @@ packages:
       node: '>=6'
     optional: true
     resolution:
-      integrity: sha512-ZGTBMiQga/pwEw26ZKCn+q9PTPXvE4v5sL2V9HV3f2Gt0lrS+2H7XgbVCx850jrvlEL59JIheFiDqEn9CIa0nA==
+      integrity: sha512-EntjrOgSffw5EhZGoV8+ROPwEK/aQpoMZaULw3bKailEGdjaUI25PmmFc4AN6vG/Q24YEUiuLxtTXa1Usar5Eg==
   /google-gax/0.24.0:
     dependencies:
       '@grpc/grpc-js': 0.3.5
       '@grpc/proto-loader': 0.4.0
       duplexify: 3.7.1
-      google-auth-library: 3.0.1
+      google-auth-library: 3.1.0
       google-proto-files: 0.18.0
       grpc: 1.18.0
       is-stream-ended: 0.1.4
@@ -2990,7 +2990,7 @@ packages:
       integrity: sha512-M0K67Zhv2ZzCjrTbQvjWgYFPB929L+qAVnbNgXepbfO5kJxUYc30dP8m8vb+o8QdahLHAeYfIqRoIzZRcCB98Q==
   /gtoken/2.3.2:
     dependencies:
-      gaxios: 1.2.8
+      gaxios: 1.5.1
       google-p12-pem: 1.0.3
       jws: 3.2.1
       mime: 2.4.0
@@ -3009,7 +3009,7 @@ packages:
       integrity: sha1-qUwiJOvKwEeCoNkDVSHyRzW37JI=
   /har-validator/5.1.3:
     dependencies:
-      ajv: 6.8.1
+      ajv: 6.9.1
       har-schema: 2.0.0
     dev: false
     engines:
@@ -4220,7 +4220,7 @@ packages:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/long': 4.0.0
-      '@types/node': 10.12.21
+      '@types/node': 10.12.24
       long: 4.0.0
     dev: false
     hasBin: true

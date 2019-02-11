@@ -25,6 +25,17 @@ before_script:
   - npm config set registry $NPM_REGISTERY_URL
   - npm config set store .pnpm-store/
 
+wasm-test:
+  stage: prepare
+  script:
+    - cd wasm
+    - emcc -v
+    - emcc hello.c -s WASM=1 -o hello.html
+  only:
+    - master
+  when: always
+  allow_failure: true
+
 applications-dependencies-install:
   stage: prepare
   cache:
