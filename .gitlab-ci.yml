@@ -65,7 +65,7 @@ web-application-build-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.udk
     - echo Stage build completed
   artifacts:
@@ -86,7 +86,7 @@ web-application-build-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.udk
     - mkdir -p sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
@@ -109,7 +109,7 @@ web-application-api-build-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications build.web.application.api
     - mkdir -p sources/applications/production
     - cp -r sources/applications/dist/apps/* sources/applications/production
@@ -131,7 +131,7 @@ applications-check-formatting:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications format.check $(git rev-parse $CI_COMMIT_SHA) $CI_COMMIT_SHA
     - echo Applications code formatting check finished
   allow_failure: false
@@ -146,7 +146,7 @@ applications-check-linting:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications lint.check
     - echo Applications code linting check finished
   allow_failure: false
@@ -161,7 +161,7 @@ applications-unit-tests:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications test.jest.coverage
     - echo Web Application unit tests finished
   artifacts:
@@ -179,7 +179,7 @@ applications-compodoc:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications docs.compodoc
     - echo Web Application unit tests Compodoc generation finished
   artifacts:
@@ -197,7 +197,7 @@ applications-storybook:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications storybook.build
     - echo Applications storybook building finished
   artifacts:
@@ -215,7 +215,7 @@ applications-dependencies-graph:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications dep-graph
     - echo Applications dependencies graph generation finished
   artifacts:
@@ -233,7 +233,7 @@ web-application-bundle-analysis:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications analyze.web.application.bundle
     - echo Web Application bundle analysis finished
   artifacts:
@@ -251,7 +251,7 @@ web-application-end-to-end-tests:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
+    - pnpm install --prefix sources/applications
     - npm run --prefix sources/applications e2e.web.application
     - npm run --prefix sources/applications e2e.web.application.allure
     - echo Web Application end-to-end tests finished
@@ -302,8 +302,8 @@ web-application-deploy-staging:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
+    - pnpm install --prefix sources/applications
+    - pnpm install --prefix sources/applications/functions
     - npm run --prefix sources/applications deploy.firebase
     - echo Staging deployment finished
   artifacts:
@@ -324,8 +324,8 @@ web-application-deploy-production:
     paths:
       - .pnpm-store/
   script:
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications
-    - pnpm install --offline --package-import-method=hardlink --verify-store-integrity=false --prefix sources/applications/functions
+    - pnpm install --prefix sources/applications
+    - pnpm install --prefix sources/applications/functions
     - rm -rf sources/applications/dist/apps
     - mkdir -p sources/applications/dist/apps
     - mv sources/applications/production/* sources/applications/dist/apps
