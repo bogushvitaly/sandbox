@@ -27,11 +27,9 @@ before_script:
 
 wasm-test:
   stage: prepare
+  image: trzeci/emscripten-slim
   script:
     - cd wasm
-    - ls /
-    - ls /opt
-    - cd /opt/emsdk/emsdk-portable && . ./emsdk_env.sh
     - emcc -v
     - emcc hello.c -s WASM=1 -o hello.html
   only:
