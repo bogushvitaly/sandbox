@@ -14189,7 +14189,7 @@ packages:
       p-each-series: 1.0.0
       pirates: 4.0.0
       prompts: 2.0.2
-      realpath-native: 1.0.2
+      realpath-native: 1.1.0
       rimraf: 2.6.3
       slash: 2.0.0
       string-length: 2.0.0
@@ -14218,7 +14218,7 @@ packages:
       jest-validate: 24.0.0
       micromatch: 3.1.10
       pretty-format: 24.0.0
-      realpath-native: 1.0.2
+      realpath-native: 1.1.0
     dev: true
     engines:
       node: '>= 6'
@@ -14435,7 +14435,7 @@ packages:
     dependencies:
       browser-resolve: 1.11.3
       chalk: 2.4.2
-      realpath-native: 1.0.2
+      realpath-native: 1.1.0
     dev: true
     resolution:
       integrity: sha512-XyoRxNtO7YGpQDmtQCmZjum1MljDqUCob7XlZ6jy9gsMugHdN2hY4+Acz9Qvjz2mSsOnPSH7skBmDYCHXVZqkA==
@@ -14443,7 +14443,7 @@ packages:
     dependencies:
       browser-resolve: 1.11.3
       chalk: 2.4.2
-      realpath-native: 1.0.2
+      realpath-native: 1.1.0
     dev: true
     engines:
       node: '>= 6'
@@ -14489,7 +14489,7 @@ packages:
       jest-util: 24.0.0
       jest-validate: 24.0.0
       micromatch: 3.1.10
-      realpath-native: 1.0.2
+      realpath-native: 1.1.0
       slash: 2.0.0
       strip-bom: 3.0.0
       write-file-atomic: 2.4.1
@@ -20896,14 +20896,14 @@ packages:
       node: '>=0.10'
     resolution:
       integrity: sha512-1JU/8q+VgFZyxwrJ+SVIOsh+KywWGpds3NTqikiKpDMZWScmAYyKIgqkO+ARvNWJfXeXR1zxz7aHF4u4CyH6vQ==
-  /realpath-native/1.0.2:
+  /realpath-native/1.1.0:
     dependencies:
       util.promisify: 1.0.0
     dev: true
     engines:
       node: '>=4'
     resolution:
-      integrity: sha512-+S3zTvVt9yTntFrBpm7TQmQ3tzpCrnA1a/y+3cUHAc9ZR6aIjG0WNLR+Rj79QpJktY+VeW/TQtFlQ1bzsehI8g==
+      integrity: sha512-wlgPA6cCIIg9gKz0fgAPjnzh4yR/LnXovwuo9hvyGvx3h8nX4+/iLZplfUWasXpqD8BdnGnP5njOFjkUwPzvjA==
   /recast/0.11.23:
     dependencies:
       ast-types: 0.9.6
