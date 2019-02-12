@@ -29,6 +29,9 @@ wasm-test:
   stage: prepare
   script:
     - cd wasm
+    - ls /
+    - ls /opt
+    - cd /opt/emsdk/emsdk-portable && . ./emsdk_env.sh
     - emcc -v
     - emcc hello.c -s WASM=1 -o hello.html
   only:
