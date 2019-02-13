@@ -11,6 +11,7 @@ export const environment = {
     messagingSenderId: ''
   },
   gaTrackingCode: '',
+  googeMapsApiKey: '',
   googleAnalytics: true,
   baseRoutePath: '',
   itemsRoutePath: 'items',

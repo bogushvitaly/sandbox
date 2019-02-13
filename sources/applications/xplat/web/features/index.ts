@@ -41,6 +41,10 @@ export * from './demo-babylon';
 export * from './demo-css-flex'; 
 export * from './demo-image-preview';
 export * from './demo-bpmn-editor';
+export * from './demo-google-maps';
+export * from './demo-knowledge-base';
+
+
 
 
 

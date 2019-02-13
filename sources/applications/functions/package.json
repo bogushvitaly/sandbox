@@ -12,6 +12,8 @@
     "start": "npm run shell"
   },
   "dependencies": {
+    "@angular-material-extensions/faq": "3.0.3",
+    "@angular-material-extensions/google-maps-autocomplete": "1.4.0",
     "@angular-material-extensions/password-strength": "3.4.1",
     "@angular-mdc/web": "0.43.7",
     "@angular/animations": "7.2.4",

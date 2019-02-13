@@ -1,25 +1,30 @@
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
+import { AgmCoreModule } from '@agm/core';
+import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { Inject, ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserTransferStateModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TransferHttpModule, TransferHttpService } from '@gorniv/ngx-transfer-http';
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { TranslateService } from '@ngx-translate/core';
 import { NxModule } from '@nrwl/nx';
 
-// app
 import { environment } from './environments/environment';
 import { CORE_PROVIDERS, LoadingStrategyService, PlatformLanguageToken } from './services';
 import { LogService } from './services/log.service';
 
-// libs
 import { throwIfAlreadyLoaded } from '@application/utils';
 
-/**
- * DEBUGGING
- */
 LogService.DEBUG.LEVEL_4 = !environment.production;
 
 export const BASE_PROVIDERS: any[] = [
@@ -34,10 +39,23 @@ export const BASE_PROVIDERS: any[] = [
   imports: [
     CommonModule,
     NxModule.forRoot(),
+    LoggerModule.forRoot({ level: NgxLoggerLevel.DEBUG }),
+    TransferHttpModule,
+    TransferHttpCacheModule,
+    HttpClientModule,
+    NgtUniversalModule,
+    BrowserTransferStateModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
     AngularFireModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.googeMapsApiKey,
+      libraries: ['places']
+    }),
+    MatGoogleMapsAutocompleteModule.forRoot(),
     NgxAuthFirebaseUIModule.forRoot(environment.firebaseConfig)
   ],
   providers: [LoadingStrategyService]

@@ -1,3 +1,3 @@
 export * from './base';
-export * from './demo-wasm.module';
+export * from './demo-knowledge-base.module';
 export * from './routes';

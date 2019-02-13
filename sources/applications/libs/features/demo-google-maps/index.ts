@@ -1,3 +1,3 @@
 export * from './base';
-export * from './demo-wasm.module';
+export * from './demo-google-maps.module';
 export * from './routes';

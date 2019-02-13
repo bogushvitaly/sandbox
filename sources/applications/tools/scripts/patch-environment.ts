@@ -45,7 +45,8 @@ const options = {
     /messagingSenderId: '(.*)?'/,
     /gaTrackingCode: '(.*)?'/,
     /apiUrl: '(.*)?'/,
-    /staticContentServerUrl: '(.*)?'/
+    /staticContentServerUrl: '(.*)?'/,
+    /googeMapsApiKey: '(.*)?'/
   ],
   to: [
     `apiKey: '${process.env.API_KEY}'`,
@@ -56,7 +57,8 @@ const options = {
     `messagingSenderId: '${process.env.MESSAGING_SENDER_ID}'`,
     `gaTrackingCode: '${process.env.GA_TRACKING_CODE}'`,
     `apiUrl: '${process.env.APPLICATION_API_URL}'`,
-    `staticContentServerUrl: '${process.env.STATIC_CONTENT_SERVER_URL}'`
+    `staticContentServerUrl: '${process.env.STATIC_CONTENT_SERVER_URL}'`,
+    `googeMapsApiKey: '${process.env.GOOGLE_MAPS_API_KEY}'`
   ]
 };
 

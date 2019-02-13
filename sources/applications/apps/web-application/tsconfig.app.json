@@ -1,11 +1,21 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/apps/web-application"
+    "outDir": "../../dist/out-tsc/apps/web-application",
+    "types": [
+      "googlemaps",
+      "webpack-env"
+    ]
   },
   "angularCompilerOptions": {
     "enableIvy": false
   },
-  "include": ["**/*.ts"],
-  "exclude": ["test.ts", "**/*.spec.ts", "src/stories/**/*.ts"]
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts",
+    "src/stories/**/*.ts"
+  ]
 }

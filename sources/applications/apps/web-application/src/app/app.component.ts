@@ -3,16 +3,7 @@ import { interval } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  Inject,
-  Injector,
-  OnInit,
-  PLATFORM_ID,
-  Renderer2
-} from '@angular/core';
+import { Component, ElementRef, Inject, Injector, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
@@ -28,7 +19,9 @@ declare var gtag;
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  template: `
+    <router-outlet></router-outlet>
+  `
 })
 export class AppComponent extends AppBaseComponent implements OnInit {
   title = 'Web Application';
