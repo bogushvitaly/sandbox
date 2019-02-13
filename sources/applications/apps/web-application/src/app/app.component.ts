@@ -6,7 +6,7 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Component, ElementRef, Inject, Injector, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
-import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 import { WINDOW } from '@ng-toolkit/universal';
 

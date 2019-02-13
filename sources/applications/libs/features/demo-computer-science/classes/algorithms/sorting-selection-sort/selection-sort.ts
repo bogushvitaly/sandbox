@@ -1,7 +1,7 @@
 /**
  * Sorts an array using insertion sort
  */
-export function insertionSort(array: number[]): number[] {
+export function selectionSort(array: number[]): number[] {
   array = array.slice();
   for (let i = 1; i < array.length; i++) {
     const current = array[i];

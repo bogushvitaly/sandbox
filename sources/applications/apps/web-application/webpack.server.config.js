@@ -5,10 +5,6 @@ var nodeModules = {};
 module.exports = {
   target: 'node',
   externals: [
-    '@angular-material-extensions/faq',
-    '@angular-material-extensions/google-maps-autocomplete',
-    '@angular-material-extensions/password-strength',
-    '@angular-mdc/web',
     '@angular/animations',
     '@angular/cdk',
     '@angular/common',
@@ -27,7 +23,6 @@ module.exports = {
     '@angular/pwa',
     '@angular/router',
     '@angular/service-worker',
-    '@angularclass/hmr',
     '@nestjs/common',
     '@nestjs/core',
     '@nestjs/graphql',

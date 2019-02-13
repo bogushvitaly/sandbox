@@ -5,7 +5,7 @@ const shell = require('shelljs');
 const replace = require('replace-in-file');
 
 const EXTERNAL_DEPENDENCIES = [
-  '@angular',
+  '@angular/',
   '@nguniversal',
   '@rdfjs',
   '@tensorflow',
