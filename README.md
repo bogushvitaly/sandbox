@@ -29,7 +29,9 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [ ] Communication Styles: GraphQL with Apollo, REST, gRPC
 - [ ] Functional Programming Style: RxJS, Lodash FP, Lodash Decorators
 - [ ] API Integrations: Google APIs, Trello API, Coinbase API
-- [ ] Blockchain Networks and Decentralized Platform Integrations: Blockchain API, Ethereum API, SingularityNET API, Solid Platform API, IPFS, IPLD
+- [ ] Blockchain Networks Integrations, Blockchain API, Ethereum API
+- [ ] Smart Contracts Development: Solidity, OpenZeppelin
+- [ ] Decentralized Platform Integrations: , SingularityNET API, Solid Platform API, IPFS, IPLD
 
 ## Subprojects
 

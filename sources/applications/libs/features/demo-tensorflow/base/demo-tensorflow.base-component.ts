@@ -60,7 +60,7 @@ export abstract class DemoTensorflowBaseComponent extends BaseComponent implemen
 
   async predict(imageData: ImageData) {
     const pred = await tf.tidy(() => {
-      let img = tf.fromPixels(imageData, 1);
+      let img = tf.browser.fromPixels(imageData, 1);
       img = img.reshape([1, 28, 28, 1] as any);
       img = tf.cast(img, 'float32');
 
