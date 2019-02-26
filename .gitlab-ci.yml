@@ -2,7 +2,7 @@ image: bohushvitali/frontend-ci
 
 variables:
   DOCKER_DRIVER: overlay2
-  DOCKER_HOST: tcp://localhost:2375
+  DOCKER_HOST: tcp://minikube:2375
 
 services:
   - docker:dind
@@ -371,6 +371,7 @@ hiptest:
   script:
     # - docker run --rm -v $(pwd):/app hiptest/hiptest-publisher --config-file=sources/applications/hiptest-publisher.conf
     # - echo Hiptest report pablishing finished
+    - echo hostname
     - docker run hello-world
   artifacts:
     paths:
