@@ -6,10 +6,27 @@
 
 The Project's purpose is to demonstrate technology integrations to ensure best practices compliance
 
+## Target state
+
+- Eclipse Thea containerized development workspace.
+- Git workflow. GitOps pull requests flow.
+- Skaffold tool for development / build / deployment
+- Bazel managed remove/local build execution and cached dependencies.
+- Buildkite CI/CD pipeline.
+- Helm packaged stack-independent back-end services.
+- Wasm packaged language-agnostic libraries.
+- Nx workspace + xplat architecture.
+- Framework-independent application state management system.
+- Acceptance test-driven development flow.
+- Progressive web applications: Angular / Stencil / React.
+- Cross-platform native applications: NativeScript / Unreal Engine.
+- Cloud platform-agnostic kubernetes deployment.
+- Cloud platform-agnostic serverless functions deployment.
+
 ## Done
 
 - [x] [Skaffold](https://github.com/GoogleContainerTools/skaffold) tool for developing Multi-language Applications and Services
-- [x] A performant Continuous Delivery Pipeline: Local Minikube GitLab CI Runner with [Minio](https://www.minio.io/) Storage for dependency caching, [pnpm](https://pnpm.js.org/) Package Manager. [Benchmark](https://github.com/pnpm/benchmarks-of-javascript-package-managers), [Verdaccio](https://verdaccio.org/) npm proxy registry
+- [x] A performant Continuous Delivery Pipeline: Local Minikube GitLab CI Runner with [Minio](https://www.minio.io/) Storage for dependency caching, [Verdaccio](https://verdaccio.org/) NPM proxy registry
 - [x] [NX](https://nrwl.io/nx/what-is-nx) Monorepo Workspace with [Xplat](https://nstudio.io/xplat/) architecture for [cross-platform development](https://docs.google.com/document/d/1gUcPuHWjyO6nI3FLWCCfj-7rgAkcHUewdMYj_Izlm9U), Progressive web applications with [Angular](https://angular.io/)
 - [x] Server-side Rendering with [Universal Development Kit](https://github.com/enten/udk), [Firebase](https://firebase.google.com/) platform for Serverless functions deployment,
 - [x] Page Prerender with [Prerender SPA Plugin](https://github.com/chrisvfritz/prerender-spa-plugin),
@@ -18,10 +35,14 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [x] [Nest.js](https://nestjs.com/) Backend
 - [x] Machine Learning Capabilities: [TensorFlow.js](https://js.tensorflow.org/)
 - [x] Components Libraries: [Angular Material](https://material.angular.io/), [Covalent UI Platform](https://teradata.github.io/covalent/)
+- [x] [WebAssembly](https://webassembly.org/) Integration
+- [x] Stencil.js Application example
 
 ## In progress
 
-- [ ] Components Libraries: Material Web Components, MDBootstrap, Stencil.js
+- [ ] Bazel Build System
+- [ ] Components Libraries: Material Web Components, MDBootstrap
+- [ ] Cross-platform application: NativeScript Integration, Ionic Integration, Capacitor Integration: iOS, Android, Electron
 - [ ] Graphics Libraries: REGL, Babylon.js, Three.js
 - [ ] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth, Winston logging
 - [ ] Cloud Backends: Firebase Platform, AWS AppSync, Prisma database API
@@ -31,12 +52,12 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [ ] API Integrations: Google APIs, Trello API, Coinbase API
 - [ ] Blockchain Networks Integrations, Blockchain API, Ethereum API
 - [ ] Smart Contracts Development: Solidity, OpenZeppelin
-- [ ] Decentralized Platform Integrations: , SingularityNET API, Solid Platform API, IPFS, IPLD
+- [ ] Decentralized Platform Integrations: SingularityNET, Holochain Network, Solid Platform, IPFS, IPLD
 
 ## Subprojects
 
 - [x] ATDD application development - Tour of Heroes Angular Example
-- [ ] Computer Science Concepts: Algorithms, Data Structures, Algebraic Data Types, Utility Functions
+- [x] Rust and WebAssembly Example
 
 ## Checklist
 
