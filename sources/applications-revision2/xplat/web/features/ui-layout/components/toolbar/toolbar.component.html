@@ -1,0 +1,38 @@
+<mat-toolbar
+  fxLayout="row"
+  fxLayoutAlign="end center"
+  [ngStyle]="{ 'background-color': 'transparent' }"
+>
+  <app-toolbar-menu-left></app-toolbar-menu-left>
+  <app-toolbar-logo></app-toolbar-logo>
+  <app-toolbar-menu-right></app-toolbar-menu-right>
+  <app-toolbar-lang
+    [langList]="langList"
+    [currentLang]="currentLang"
+    (changeLanguage)="changeLanguage.emit($event)"
+  ></app-toolbar-lang>
+</mat-toolbar>
+
+<!-- 
+
+<div
+  gdAreas="header | content | footer"
+  gdColumns="auto"
+  gdRows="64px auto 64px"
+  [ngStyle]="{ width: 'auto', height: '100%' }"
+>
+  <app-toolbar gdArea="header" [ngStyle]="{ 'z-index': 1 }"></app-toolbar>
+  <main
+    role="main"
+    gdColumn="header-start / header-end"
+    gdRow="header-start / footer-end"
+    [@fadeAnimation]="{
+      value: o.isActivated ? o.activatedRoute : '',
+      params: { padding: '64px 0' }
+    }"
+  >
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+
+  <app-footer gdArea="footer" [ngStyle]="{ 'z-index': 1 }"></app-footer>
+</div> -->

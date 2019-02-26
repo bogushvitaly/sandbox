@@ -1,0 +1,23 @@
+<div
+  gdAreas="header | content | footer"
+  gdColumns="auto"
+  gdRows="64px auto 64px"
+  [ngStyle]="{ width: 'auto', height: '100%' }"
+>
+  <app-toolbar gdArea="header" [ngStyle]="{ 'z-index': 1 }"></app-toolbar>
+  <main
+    role="main"
+    gdColumn="header-start / header-end"
+    gdRow="header-start / footer-end"
+    [@fadeAnimation]="{
+      value: o.isActivated ? o.activatedRoute : '',
+      params: { padding: '64px 0', duration: '0.2' }
+    }"
+  >
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+
+  <app-footer gdArea="footer" [ngStyle]="{ 'z-index': 1 }"></app-footer>
+</div>
+
+<app-fun-menu></app-fun-menu>

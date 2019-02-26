@@ -1,0 +1,10 @@
+/**
+ * Element tag overrides
+ */
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  &.dark-backdrop {
+    opacity: 0.85;
+    background: #000;
+  }
+}

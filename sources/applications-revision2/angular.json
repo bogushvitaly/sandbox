@@ -1,0 +1,440 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "libs": {
+      "root": "libs",
+      "sourceRoot": "libs",
+      "projectType": "library",
+      "prefix": "app",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/jest.config.js",
+            "tsConfig": "libs/tsconfig.spec.json",
+            "setupFile": "libs/test-setup.ts"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/tsconfig.json",
+              "libs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "xplat": {
+      "root": "xplat",
+      "sourceRoot": "xplat",
+      "projectType": "library",
+      "prefix": "app",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "xplat/jest.config.js",
+            "tsConfig": "xplat/tsconfig.spec.json",
+            "setupFile": "xplat/test-setup.ts"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "xplat/tsconfig.json",
+              "xplat/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "portal-web": {
+      "root": "apps/portal-web/",
+      "sourceRoot": "apps/portal-web/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "showCircularDependencies": false,
+            "customWebpackConfig": {
+              "path": "apps/portal-web/config.angular.browser.js",
+              "mergeStrategies": {
+                "externals": "append"
+              }
+            },
+            "outputPath": "dist/apps/portal-web",
+            "index": "apps/portal-web/src/index.html",
+            "main": "apps/portal-web/src/main.ts",
+            "polyfills": "apps/portal-web/src/polyfills.ts",
+            "tsConfig": "apps/portal-web/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "apps/portal-web/src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "apps/portal-web/src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "manifest.json",
+                "input": "apps/portal-web/src",
+                "output": "/"
+              },
+              {
+                "glob": "apple-touch-icon.png",
+                "input": "apps/portal-web/src/assets/icons",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "apps/portal-web/src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-auth-firebaseui/assets/",
+                "output": "/assets"
+              }
+            ],
+            "styles": [],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal-web/src/environments/environment.ts",
+                  "with": "apps/portal-web/src/environments/browser/environment.ts"
+                }
+              ]
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal-web/src/environments/environment.ts",
+                  "with": "apps/portal-web/src/environments/browser/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "10mb"
+                }
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/portal-web/ngsw-config.json"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "portal-web:build",
+            "hmrWarning": false
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "portal-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "portal-web:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/portal-web/tsconfig.app.json",
+              "apps/portal-web/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/portal-web/jest.config.js",
+            "tsConfig": "apps/portal-web/tsconfig.spec.json",
+            "setupFile": "apps/portal-web/src/test-setup.ts"
+          }
+        },
+        "server": {
+          "builder": "@angular-builders/custom-webpack:server",
+          "options": {
+            "showCircularDependencies": false,
+            "customWebpackConfig": {
+              "path": "apps/portal-web/config.angular.server.js",
+              "replaceDuplicatePlugins": false
+            },
+            "outputPath": "dist/apps/portal-web-server",
+            "main": "apps/portal-web/src/main.server.ts",
+            "tsConfig": "apps/portal-web/tsconfig.server.json"
+          },
+          "configurations": {
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal-web/src/environments/environment.ts",
+                  "with": "apps/portal-web/src/environments/server/environment.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal-web/src/environments/environment.ts",
+                  "with": "apps/portal-web/src/environments/server/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
+          }
+        },
+        "udk": {
+          "builder": "udk:udk-builder",
+          "options": {
+            "browserTarget": "portal-web:build:development",
+            "serverTarget": "portal-web:server:development",
+            "partialBrowserConfig": "apps/portal-web/config.udk.browser.js",
+            "partialServerConfig": "apps/portal-web/config.udk.server.js"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "portal-web:build:production",
+              "serverTarget": "portal-web:server:production",
+              "verbose": false
+            }
+          }
+        }
+      }
+    },
+    "portal-web-e2e": {
+      "root": "apps/portal-web-e2e/",
+      "projectType": "application"
+    },
+    "portal-api": {
+      "root": "apps/portal-api",
+      "sourceRoot": "apps/portal-api/src",
+      "projectType": "application",
+      "prefix": "portal-api",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/builders:node-build",
+          "options": {
+            "outputPath": "dist/apps/portal-api",
+            "main": "apps/portal-api/src/main.ts",
+            "tsConfig": "apps/portal-api/tsconfig.app.json",
+            "assets": [
+              "apps/portal-api/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal-api/src/environments/environment.ts",
+                  "with": "apps/portal-api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/builders:node-execute",
+          "options": {
+            "buildTarget": "portal-api:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/portal-api/tsconfig.app.json",
+              "apps/portal-api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/portal-api/jest.config.js",
+            "tsConfig": "apps/portal-api/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "portal-static": {
+      "root": "apps/portal-static",
+      "sourceRoot": "apps/portal-static/src",
+      "projectType": "application",
+      "prefix": "portal-static",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/builders:node-build",
+          "options": {
+            "outputPath": "dist/apps/portal-static",
+            "main": "apps/portal-static/src/main.ts",
+            "tsConfig": "apps/portal-static/tsconfig.app.json",
+            "assets": [
+              "apps/portal-static/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/portal-static/src/environments/environment.ts",
+                  "with": "apps/portal-static/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/builders:node-execute",
+          "options": {
+            "buildTarget": "portal-static:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/portal-static/tsconfig.app.json",
+              "apps/portal-static/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/portal-static/jest.config.js",
+            "tsConfig": "apps/portal-static/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "ngx-fun-menu": {
+      "root": "libs/ngx-fun-menu",
+      "sourceRoot": "libs/ngx-fun-menu/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ngx-fun-menu/tsconfig.lib.json",
+            "project": "libs/ngx-fun-menu/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-fun-menu/tsconfig.lib.json",
+              "libs/ngx-fun-menu/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ngx-fun-menu/jest.config.js",
+            "tsConfig": "libs/ngx-fun-menu/tsconfig.spec.json",
+            "setupFile": "libs/ngx-fun-menu/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nstudio/schematics",
+    "packageManager": "yarn"
+  },
+  "schematics": {
+    "@nrwl/schematics:application": {
+      "style": "scss"
+    },
+    "@nrwl/schematics:library": {
+      "style": "scss"
+    },
+    "@schematics/angular:component": {
+      "styleext": "scss",
+      "changeDetection": "OnPush"
+    }
+  },
+  "defaultProject": "portal-web"
+}

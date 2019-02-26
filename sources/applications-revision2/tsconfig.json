@@ -1,0 +1,42 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
+    "baseUrl": ".",
+    "declaration": false,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": ["esnext", "es2018", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowJs": false,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@applications/portal-web/environment/*": [
+        "apps/portal-web/src/environments/*"
+      ],
+      "@applications/demo-heroes-models": [
+        "libs/features/demo-heroes/models/index.ts"
+      ],
+      "@applications/version-data": [
+        "libs/features/demo-version/data/index.ts"
+      ],
+      "@applications/web": ["xplat/web/index.ts"],
+      "@applications/web/*": ["xplat/web/*"],
+      "@applications/*": ["libs/*"],
+      "@applications/ngx-fun-menu": ["libs/ngx-fun-menu/src/index.ts"]
+    },
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": false,
+    "target": "es5",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules", "reports", "tmp", "references.d.ts"]
+}

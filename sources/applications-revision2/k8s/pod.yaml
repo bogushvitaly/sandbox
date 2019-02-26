@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node
+spec:
+  containers:
+    - name: node
+      image: gcr.io/sandbox-228621/sandbox-web-portal
+      ports:
+        - containerPort: 4000

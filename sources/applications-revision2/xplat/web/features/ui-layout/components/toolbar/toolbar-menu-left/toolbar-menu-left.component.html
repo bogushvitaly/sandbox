@@ -1,0 +1,8 @@
+<button
+  mat-button
+  *ngFor="let link of navLinks"
+  [routerLink]="[link.path]"
+  routerLinkActive="active"
+>
+  {{ link.label | translate }}
+</button>

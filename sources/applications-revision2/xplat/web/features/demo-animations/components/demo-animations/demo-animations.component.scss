@@ -1,0 +1,41 @@
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin-right: 5px;
+
+  place-content: center;
+}
+
+small {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.btn {
+  font-size: inherit;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #666;
+  border: none;
+  border-radius: 2px;
+  background-color: #d6d6d6;
+}
+
+.btn:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.box {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  border-radius: 3px;
+  background-color: #5f5f5f;
+}

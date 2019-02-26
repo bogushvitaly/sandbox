@@ -1,0 +1,19 @@
+{
+  "APP_NAME": "Portal Internetowy",
+  "DEFAULT": {
+    "TITLE": "Portal Internetowy",
+    "DESC": "Portal Internetowy"
+  },
+  "WELCOME": {
+    "TITLE": "Witamy",
+    "DESC": "Opis"
+  },
+  "BACK": {
+    "GET_REQUEST": "GET zapytanie z opóźnieniem 3 sekund",
+    "POST_REQUEST": "POST zapytanie"
+  },
+  "MENU": {
+    "HOME": "Główna",
+    "GUIDE": "Przewodnik"
+  }
+}

@@ -1,0 +1,64 @@
+.item-content h1 {
+  margin: 0;
+  color: #ff4081;
+}
+
+.top-controls-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.items-controls-container {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #bdb8b894;
+}
+
+.content {
+  overflow: visible scroll;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #bdb8b852;
+}
+
+.mat-raised-button {
+  margin: 5px;
+}
+
+.mat-input-element {
+  color: #2196f3;
+}
+
+.options-container {
+  text-align: center;
+}
+
+.active {
+  background-color: cyan;
+}
+
+.item {
+  box-sizing: border-box;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 3px;
+  background: #ff4081;
+}
+
+.items-input {
+  padding: 5px;
+}
+
+:host ::ng-deep .mat-select-value-text span {
+  color: #2196f3;
+}
+:host ::ng-deep .mat-form-field-label {
+  color: black;
+}
+
+.axis-title,
+.axis-title p {
+  font-size: 20px;
+  color: rgb(233, 30, 99);
+}

@@ -1,0 +1,33 @@
+{
+  "npmScope": "applications",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "libs": {
+      "tags": []
+    },
+    "xplat": {
+      "tags": []
+    },
+    "portal-web": {
+      "tags": []
+    },
+    "portal-api": {
+      "tags": []
+    },
+    "portal-static": {
+      "tags": []
+    },
+    "portal-web-e2e": {
+      "tags": []
+    },
+    "ngx-fun-menu": {
+      "tags": []
+    }
+  }
+}

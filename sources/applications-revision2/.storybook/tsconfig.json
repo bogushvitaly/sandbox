@@ -1,0 +1,13 @@
+{
+  "extends": "../apps/storybook/tsconfig.app.json",
+  "compilerOptions": {
+    "types": ["node", "webpack-env"],
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "../apps/**/*.spec.ts",
+    "../libs/**/*.spec.ts",
+    "../xplat/**/*.spec.ts"
+  ],
+  "include": ["./*.ts", "../apps/storybook/**/*"]
+}

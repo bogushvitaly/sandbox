@@ -1,0 +1,19 @@
+{
+  "APP_NAME": "Web Portal",
+  "DEFAULT": {
+    "TITLE": "Web Portal",
+    "DESC": "Web Portal"
+  },
+  "WELCOME": {
+    "TITLE": "Welcome View",
+    "DESC": "Welcome View Description"
+  },
+  "BACK": {
+    "GET_REQUEST": "GET request with a delay of 3 seconds",
+    "POST_REQUEST": "POST request"
+  },
+  "MENU": {
+    "HOME": "Home",
+    "GUIDE": "Guide"
+  }
+}

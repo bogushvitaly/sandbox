@@ -1,0 +1,79 @@
+{
+  "extends": ["tslint-config-prettier"],
+  "rules": {
+    "arrow-return-shorthand": false,
+    "callable-types": false,
+    "class-name": false,
+    "component-class-suffix": true,
+    "component-selector": [true, "element", "app", "kebab-case"],
+    "deprecation": {
+      "severity": "warn"
+    },
+    "directive-class-suffix": true,
+    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "import-blacklist": [false, "rxjs/Rx"],
+    "interface-over-type-literal": true,
+    "member-access": false,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "no-arg": false,
+    "no-bitwise": true,
+    "no-console": [false, "debug", "time", "timeEnd", "trace"],
+    "no-construct": false,
+    "no-debugger": true,
+    "no-duplicate-super": true,
+    "no-empty": false,
+    "no-empty-interface": false,
+    "no-eval": false,
+    "no-inferrable-types": [true, "ignore-params"],
+    "no-input-rename": true,
+    "no-misused-new": false,
+    "no-non-null-assertion": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-shadowed-variable": false,
+    "no-string-literal": false,
+    "no-string-throw": true,
+    "no-switch-case-fall-through": false,
+    "no-unnecessary-initializer": true,
+    "no-unused-expression": false,
+    "no-use-before-declare": true,
+    "no-var-keyword": true,
+    "nx-enforce-module-boundaries": [
+      false,
+      {
+        "allow": [],
+        "depConstraints": [
+          {
+            "onlyDependOnLibsWithTags": ["*"],
+            "sourceTag": "*"
+          }
+        ]
+      }
+    ],
+    "object-literal-sort-keys": false,
+    "prefer-const": false,
+    "radix": false,
+    "triple-equals": [false, "allow-null-check"],
+    "unified-signatures": true,
+    "use-host-property-decorator": true,
+    "use-input-property-decorator": true,
+    "use-life-cycle-interface": true,
+    "use-output-property-decorator": true,
+    "use-pipe-transform-interface": true,
+    "variable-name": false
+  },
+  "rulesDirectory": [
+    "node_modules/codelyzer",
+    "node_modules/@nrwl/schematics/src/tslint"
+  ]
+}

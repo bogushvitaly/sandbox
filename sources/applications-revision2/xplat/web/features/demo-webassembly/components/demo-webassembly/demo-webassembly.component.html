@@ -1,0 +1,34 @@
+<div class="center">
+  <div style="text-align:center">
+    <p>
+      <strong>Rust</strong> language based
+      <strong>WebAssembly(WASM)</strong> running inside
+      <strong>Angular</strong> application
+    </p>
+
+    <div class="container">
+      <div class="flex-row">
+        <label>Factorial</label>
+        <input
+          type="text"
+          [value]="factor"
+          (input)="factor = $event.target.value"
+        />
+        <button (click)="calcFactorial()">calculate factorial</button>
+      </div>
+      <h2>Result: {{ factorial }}</h2>
+
+      <div class="flex-row">
+        <label>Fibonacci</label>
+        <input
+          type="text"
+          [value]="fibo"
+          (input)="fibo = $event.target.value"
+        />
+        <button (click)="calcFibonacci()">calculate fibonacci</button>
+      </div>
+
+      <h2>Result: {{ fibonacci }}</h2>
+    </div>
+  </div>
+</div>
