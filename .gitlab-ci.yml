@@ -8,13 +8,13 @@ services:
   - docker:dind
 
 stages:
-  - prepare
-  - build
-  - test
-  - staging
+  # - prepare
+  # - build
+  # - test
+  # - staging
   - audit
   - reports
-  - production
+  # - production
 
 cache:
   key: $CI_PROJECT_NAMESPACE
