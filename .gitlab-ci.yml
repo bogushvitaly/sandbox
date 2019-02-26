@@ -2,7 +2,7 @@ image: bohushvitali/frontend-ci
 
 variables:
   DOCKER_DRIVER: overlay2
-  DOCKER_HOST: tcp://minikube:2375
+  DOCKER_HOST: tcp://hostname:2375
 
 services:
   - docker:dind
