@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.1.0](https://github.com/bogushvitaly/sandbox/compare/v1.0.0...v1.1.0) (2019-02-26)
+
+
+### Bug Fixes
+
+* **application:** base path ([b1bf7d8](https://github.com/bogushvitaly/sandbox/commit/b1bf7d8))
+* **applications:** change ngsw-config ([bea9894](https://github.com/bogushvitaly/sandbox/commit/bea9894))
+* **applications:** refactor storybook, generate env variables ([f92c976](https://github.com/bogushvitaly/sandbox/commit/f92c976))
+* **apps:** add tensorjs demo is browser check ([f5fd575](https://github.com/bogushvitaly/sandbox/commit/f5fd575))
+* **apps:** fix tsconfig storybook ([19e2ffb](https://github.com/bogushvitaly/sandbox/commit/19e2ffb))
+* **apps:** increase bundle limit ([0b4f24f](https://github.com/bogushvitaly/sandbox/commit/0b4f24f))
+* **apps:** rename test file ([9f57fa5](https://github.com/bogushvitaly/sandbox/commit/9f57fa5))
+* **apps:** report wrapper, tf-demo ([be4d4a7](https://github.com/bogushvitaly/sandbox/commit/be4d4a7))
+* **apps:** reports wrapper ([6e8249b](https://github.com/bogushvitaly/sandbox/commit/6e8249b))
+* **apps:** storybook ([51881f7](https://github.com/bogushvitaly/sandbox/commit/51881f7))
+* **apps:** tensorflowjs example ([96f2013](https://github.com/bogushvitaly/sandbox/commit/96f2013))
+* **apps:** universal error ([073c330](https://github.com/bogushvitaly/sandbox/commit/073c330))
+* **apps:** update tensorjs demo ([aee702e](https://github.com/bogushvitaly/sandbox/commit/aee702e))
+* add firebase project ([d054220](https://github.com/bogushvitaly/sandbox/commit/d054220))
+* ci config ([0310107](https://github.com/bogushvitaly/sandbox/commit/0310107))
+* config ([6372cd8](https://github.com/bogushvitaly/sandbox/commit/6372cd8))
+* env file ([39ecfe7](https://github.com/bogushvitaly/sandbox/commit/39ecfe7))
+* ngsw ([2f6c1a2](https://github.com/bogushvitaly/sandbox/commit/2f6c1a2))
+* npm config, sw ([ee49146](https://github.com/bogushvitaly/sandbox/commit/ee49146))
+* remove canvas dev deps ([d3eeb10](https://github.com/bogushvitaly/sandbox/commit/d3eeb10))
+* storybook ([7b7a15d](https://github.com/bogushvitaly/sandbox/commit/7b7a15d))
+* **apps:** update patch environment ([cae6efe](https://github.com/bogushvitaly/sandbox/commit/cae6efe))
+* **web-application:** add gzip express support ([ee63f87](https://github.com/bogushvitaly/sandbox/commit/ee63f87))
+* **web-application:** add missing package.json ([a68e952](https://github.com/bogushvitaly/sandbox/commit/a68e952))
+* **web-application:** linting ([9045847](https://github.com/bogushvitaly/sandbox/commit/9045847))
+* **web-application:** navigation ([104efad](https://github.com/bogushvitaly/sandbox/commit/104efad))
+
+
+### Features
+
+* **apps:** add covalent ui demo, adjust metadata ([21d634d](https://github.com/bogushvitaly/sandbox/commit/21d634d))
+* **apps:** add demos boilerplates ([49fb3ac](https://github.com/bogushvitaly/sandbox/commit/49fb3ac))
+* **apps:** add design patterns examples ([3e0dacb](https://github.com/bogushvitaly/sandbox/commit/3e0dacb))
+* **apps:** add image preview demo ([a47faa8](https://github.com/bogushvitaly/sandbox/commit/a47faa8))
+* **apps:** Add Revision 2 ([f2d40b1](https://github.com/bogushvitaly/sandbox/commit/f2d40b1))
+* **apps:** add utility functions descriptions ([6ca9c63](https://github.com/bogushvitaly/sandbox/commit/6ca9c63))
+* **apps:** add utility functions examples ([b9c3557](https://github.com/bogushvitaly/sandbox/commit/b9c3557))
+* **apps:** loading models from cloud bucket ([fc95677](https://github.com/bogushvitaly/sandbox/commit/fc95677))
+* **libs:** Add assemblyscript, rust examples ([d165063](https://github.com/bogushvitaly/sandbox/commit/d165063))
+* **services:** add go services examples ([4bf0b26](https://github.com/bogushvitaly/sandbox/commit/4bf0b26))
+* **web-app:** add algorithm examples ([de6f6eb](https://github.com/bogushvitaly/sandbox/commit/de6f6eb))
+
+
+
 <a name="1.0.0"></a>
 ## 1.0.0 (2019-01-28)
 
