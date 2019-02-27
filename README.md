@@ -11,7 +11,7 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - Eclipse Thea containerized development workspace.
 - Git workflow. GitOps pull requests flow.
 - Skaffold tool for development / build / deployment
-- Bazel managed remove/local build execution and cached dependencies.
+- Bazel managed language-agnostic local / remove build execution and dependencies caching.
 - Buildkite CI/CD pipeline.
 - Helm packaged stack-independent back-end services.
 - Wasm packaged language-agnostic libraries.
