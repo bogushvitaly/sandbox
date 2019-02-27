@@ -8,3 +8,5 @@ kubectl create clusterrolebinding gitlab-cluster-admin --clusterrole=cluster-adm
 helm init --tiller-namespace gitlab-managed-apps-$PROJECT_NAME
 helm repo update
 helm repo add gitlab https://charts.gitlab.io
+
+
