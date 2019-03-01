@@ -4,34 +4,36 @@
 
 > Work in progress
 
-The Project's purpose is to demonstrate technology integrations to ensure best practices compliance
+The Project's purpose is to demonstrate technology integrations to ensure best practices compliance.
 
 ## Target state
 
 - Cloud-native development / build / deployment.
 - Containerized development workspace.
 - GitOps workflow.
-- Language-agnostic build execution and dependencies caching.
+- Language-agnostic build execution / dependencies caching.
 - Cloud-native CI/CD pipeline.
 - Acceptance test-driven development flow.
 - Stack-independent back-end services.
-- Language-agnostic frontend libraries
-- Nx workspace with xplat architecture.
-- Micro frontends apps composition.
-- Framework-independent application state management.
-- Framework-agnostic components libraries.
-- Progressive web applications.
-- Cross-platform immersive graphics.
 - Cross-cloud services / serverless functions deployment.
+- Microservices / serverless API Gateway.
+- Nx workspace with xplat architecture.
+- Progressive web applications compliance.
+- Micro frontends apps composition.
+- Framework-independent application state management system.
+- Framework-agnostic components libraries.
+- Cross-platform immersive graphics experiences.
 
 ## Technology stack
+- [Eclipse Che](https://www.eclipse.org/che/)
 - [Gardener](https://gardener.cloud/)
 - [Skaffold](https://skaffold.dev/)
-- [Eclipse Che](https://www.eclipse.org/che/)
-- [Kubeapps](https://kubeapps.com/)
 - [Helm](https://helm.sh/)
-- [Kubeflow](https://www.kubeflow.org/)
+- [Kubeapps](https://kubeapps.com/)
 - [Argo](https://argoproj.github.io/)
+- [Gloo](https://gloo.solo.io/)
+- [Nuclio](https://nuclio.io/)
+- [Kubeflow](https://www.kubeflow.org/)
 - [Bazel](https://bazel.build/)
 - [Nx workspace](https://nx.dev/)
 - [Apollo](https://www.apollographql.com/)
