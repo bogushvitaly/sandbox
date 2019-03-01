@@ -11,6 +11,6 @@ helm dependency update
 
 export CHE_DOMAIN=$(minikube ip)
 
-helm upgrade --install che --namespace che --set cheImage=eclipse/che-server:latest --set global.cheWorkspacesNamespace="che" --set global.ingressDomain=${CHE_DOMAIN}.nip.io ./
+helm upgrade --install che --namespace che --set cheImage=eclipse/che-server:nightly --set global.cheWorkspacesNamespace="che" --set global.ingressDomain=${CHE_DOMAIN}.nip.io ./
 
-helm upgrade che --set cheImage=eclipse/che-server:nightly --reuse-values .
+xdg-open http://che-che.${CHE_DOMAIN}.nip.io

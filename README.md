@@ -8,20 +8,40 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 
 ## Target state
 
-- Eclipse Thea containerized development workspace.
-- Git workflow. GitOps pull requests flow.
-- Skaffold tool for development / build / deployment
-- Bazel managed language-agnostic local / remove build execution and dependencies caching.
-- Buildkite CI/CD pipeline.
-- Helm packaged stack-independent back-end services.
-- Wasm packaged language-agnostic libraries.
-- Nx workspace + xplat architecture.
-- Framework-independent application state management system.
+- Cloud-native development / build / deployment.
+- Containerized development workspace.
+- GitOps workflow.
+- Language-agnostic build execution and dependencies caching.
+- Cloud-native CI/CD pipeline.
 - Acceptance test-driven development flow.
-- Progressive web applications: Angular / Stencil / React.
-- Cross-platform native applications: NativeScript / Unreal Engine.
-- Cloud platform-agnostic kubernetes deployment.
-- Cloud platform-agnostic serverless functions deployment.
+- Stack-independent back-end services.
+- Language-agnostic frontend libraries
+- Nx workspace with xplat architecture.
+- Micro frontends apps composition.
+- Framework-independent application state management system.
+- Framework-agnostic components libraries.
+- Progressive web applications.
+- Cross-platform immersive graphics.
+- Cross-cloud services / serverless functions deployment.
+
+## Technology stack
+- [Gardener](https://gardener.cloud/)
+- [Skaffold](https://skaffold.dev/)
+- [Eclipse Che](https://www.eclipse.org/che/)
+- [Kubeapps](https://kubeapps.com/)
+- [Helm](https://helm.sh/)
+- [Kubeflow](https://www.kubeflow.org/)
+- [Argo](https://argoproj.github.io/)
+- [Bazel](https://bazel.build/)
+- [Nx workspace](https://nx.dev/)
+- [Nest](https://nestjs.com/)
+- [Angular](https://angular.io/)
+- [Stencil](https://stenciljs.com/)
+- [Babylon](https://www.babylonjs.com/)
+- [Unreal Engine](https://www.unrealengine.com/)
+- [WebAssembly](https://webassembly.org/)
+- [Jest](https://jestjs.io/)
+- [Codeceptjs](https://codecept.io/)
 
 ## Done
 
