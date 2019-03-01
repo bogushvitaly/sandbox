@@ -18,7 +18,7 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - Language-agnostic frontend libraries
 - Nx workspace with xplat architecture.
 - Micro frontends apps composition.
-- Framework-independent application state management system.
+- Framework-independent application state management.
 - Framework-agnostic components libraries.
 - Progressive web applications.
 - Cross-platform immersive graphics.
@@ -34,6 +34,8 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [Argo](https://argoproj.github.io/)
 - [Bazel](https://bazel.build/)
 - [Nx workspace](https://nx.dev/)
+- [Apollo](https://www.apollographql.com/)
+- [Prisma](https://www.prisma.io/)
 - [Nest](https://nestjs.com/)
 - [Angular](https://angular.io/)
 - [Stencil](https://stenciljs.com/)
@@ -42,6 +44,10 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [WebAssembly](https://webassembly.org/)
 - [Jest](https://jestjs.io/)
 - [Codeceptjs](https://codecept.io/)
+
+## Dependencies
+- [graphql-lodash](https://github.com/APIs-guru/graphql-lodash)
+- [lodash-decorators](https://github.com/steelsojka/lodash-decorators)
 
 ## Done
 
