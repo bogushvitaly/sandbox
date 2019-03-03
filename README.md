@@ -8,9 +8,9 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 
 ## Target state
 
-- Cloud-native development / build / deployment.
-- Containerized development workspace.
-- GitOps workflow.
+- Portable containerized development workspace to edit / build / run / debug.
+- Cloud-native continuous development / build / deployment.
+- GitOps pull requests workflow.
 - Language-agnostic build execution / dependencies caching.
 - Cloud-native CI/CD pipeline.
 - Acceptance test-driven development flow.
@@ -18,14 +18,16 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - Cross-cloud services / serverless functions deployment.
 - Microservices / serverless API Gateway.
 - Nx workspace with xplat architecture.
-- Progressive web applications compliance.
 - Micro frontends apps composition.
+- Progressive web applications compliance.
+- Cross-platform immersive graphics experiences.
 - Framework-independent application state management system.
 - Framework-agnostic components libraries.
-- Cross-platform immersive graphics experiences.
+- Central tests / performance analysis reporting dashboards.
 
 ## Technology stack
 - [Eclipse Che](https://www.eclipse.org/che/)
+- [Kubernetes](https://kubernetes.io/)
 - [Gardener](https://gardener.cloud/)
 - [Skaffold](https://skaffold.dev/)
 - [Helm](https://helm.sh/)
@@ -46,6 +48,9 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [WebAssembly](https://webassembly.org/)
 - [Jest](https://jestjs.io/)
 - [Codeceptjs](https://codecept.io/)
+- [Artillery](https://artillery.io/)
+- [Sitespeed](https://www.sitespeed.io/)
+- [Allure](http://allure.qatools.ru/)
 
 ## Dependencies
 - [graphql-lodash](https://github.com/APIs-guru/graphql-lodash)

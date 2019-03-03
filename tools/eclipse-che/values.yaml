@@ -56,7 +56,7 @@ global:
     loggerConfig: ""
     appenderName: "plaintext"
   tracingEnabled: false
-  metricsEnabled: false
+  metricsEnabled: true
 
 prometheus:
   alertmanager:
