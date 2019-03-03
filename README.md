@@ -41,6 +41,7 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [Apollo](https://www.apollographql.com/)
 - [Prisma](https://www.prisma.io/)
 - [Nest](https://nestjs.com/)
+- [XState](https://xstate.js.org/docs/)
 - [Angular](https://angular.io/)
 - [Stencil](https://stenciljs.com/)
 - [Babylon](https://www.babylonjs.com/)
