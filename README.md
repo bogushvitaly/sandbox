@@ -100,5 +100,7 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [Clean Code Cheat Sheet ](https://www.planetgeek.ch/wp-content/uploads/2014/11/Clean-Code-V2.4.pdf)
 - [The Twelve-Factor App](https://12factor.net). [Beyond the Twelve-Factor App](https://assets.dynatrace.com/en/docs/report/beyond-the-twelve-factor-app-dynatrace-paper.pdf)
 - [The Reactive Manifesto](https://www.reactivemanifesto.org/)
+- [The Ten Most Critical Web Application Security Risks](https://www.owasp.org/images/b/b0/OWASP_Top_10_2017_RC2_Final.pdf)
+- [OWASP Top Ten Proactive Controls ](https://www.owasp.org/images/b/bc/OWASP_Top_10_Proactive_Controls_V3.pdf)
 - [Clean Architecture Cheat Sheet ](https://www.planetgeek.ch/wp-content/uploads/2016/03/Clean-Architecture-V1.0.pdf)
 - [Cloud Native Computing Organizational Readiness Review](https://github.com/jdumars/cncorr)
