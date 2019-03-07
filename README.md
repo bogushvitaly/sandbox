@@ -71,22 +71,20 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [x] Components Libraries: [Angular Material](https://material.angular.io/), [Covalent UI Platform](https://teradata.github.io/covalent/)
 - [x] [WebAssembly](https://webassembly.org/) Integration
 - [x] Stencil.js Application example
+- [x] Graphics Libraries: REGL, Babylon.js, Three.js
+- [x] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth
 
 ## In progress
 
 - [ ] Bazel Build System
-- [ ] Components Libraries: Material Web Components, MDBootstrap
-- [ ] Cross-platform application: NativeScript Integration, Ionic Integration, Capacitor Integration: iOS, Android, Electron
-- [ ] Graphics Libraries: REGL, Babylon.js, Three.js
-- [ ] Application Features: NGXS State Manager, Google Tag Manager, Firebase Auth, Winston logging
 - [ ] Cloud Backends: Firebase Platform, AWS AppSync, Prisma database API
 - [ ] Offline Storages: RxDB
 - [ ] Communication Styles: GraphQL with Apollo, REST, gRPC
 - [ ] Functional Programming Style: RxJS, Lodash FP, Lodash Decorators
 - [ ] API Integrations: Google APIs, Trello API, Coinbase API
 - [ ] Blockchain Networks Integrations, Blockchain API, Ethereum API
-- [ ] Smart Contracts Development: Solidity, OpenZeppelin
 - [ ] Decentralized Platform Integrations: SingularityNET, Holochain Network, Solid Platform, IPFS, IPLD
+- [ ] Cross-platform support: NativeScript Integration, Capacitor Integration
 
 ## Subprojects
 
