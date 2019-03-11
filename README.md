@@ -31,6 +31,7 @@ The Project's purpose is to demonstrate technology integrations to ensure best p
 - [Gardener](https://gardener.cloud/)
 - [Skaffold](https://skaffold.dev/)
 - [Helm](https://helm.sh/)
+- [Draft](https://draft.sh/)
 - [Kubeapps](https://kubeapps.com/)
 - [Argo](https://argoproj.github.io/)
 - [Gloo](https://gloo.solo.io/)
